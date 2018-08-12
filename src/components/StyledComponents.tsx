@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import Link from 'gatsby-link'
-
 import { heights, dimensions, colors } from '../styles/variables'
 import { onEvent, fade } from '../styles/mixins'
 
