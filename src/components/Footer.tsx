@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { StyledFooter, H4Footer, PFooter, StyledFooterDiv, StyledBR, StyledIMG } from './StyledComponents';
 
-const logo_1: string = require('../content/images/icons/IKS_LOGO_weiss-300x104.png')
-const logo_2: string = require('../content/images/icons/logo_baum.png')
+const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
+const logo_2: string = require('../images/icons/logo_baum.png')
 
 interface FooterProps { }
 
