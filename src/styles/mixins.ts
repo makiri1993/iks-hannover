@@ -1,4 +1,4 @@
-import { css, SimpleInterpolation } from 'styled-components'
+import { css, SimpleInterpolation, keyframes } from 'styled-components'
 import { dimensions } from './variables'
 
 export const getEmSize = (size: number) => size / dimensions.fontSize.regular
@@ -34,4 +34,14 @@ export const onEvent = (styles: TemplateStringsArray, ...interpolations: SimpleI
   &:focus {
     ${css(styles, ...interpolations)};
   }
+`
+
+export const fade = keyframes`
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+
 `

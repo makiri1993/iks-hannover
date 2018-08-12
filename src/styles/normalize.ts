@@ -92,7 +92,7 @@ injectGlobal`
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.black};
+    color: ${colors.orange};
     font-weight: 600;
     line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
@@ -116,8 +116,11 @@ injectGlobal`
   }
 
   p {
+    font-size: ${dimensions.headingSizes.p}rem
     margin-top: 0;
     margin-bottom: 1rem;
+    line-height: 1.8em;
+    color: ${colors.black}
   }
 
   strong {

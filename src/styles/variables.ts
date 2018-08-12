@@ -13,12 +13,14 @@ export const colors = {
   },
   code: '#fcf6f0',
   gray: {
+    header: '#A3A3A3',
     dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
     copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
     calm: 'rgba(0, 0, 0, 0.54)'
   },
-  white: '#fff',
-  black: '#000'
+  white: '#FCFCFC',
+  orange: '#F17E13',
+  black: '#545456'
 }
 
 export const fonts = {
@@ -44,14 +46,15 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
+    regular: 13,
     large: 18
   },
   headingSizes: {
     h1: 2.441,
     h2: 1.953,
-    h3: 1.563,
-    h4: 1.25
+    h3: 1.7,
+    h4: 1.6,
+    p: 1.1
   },
   lineHeight: {
     regular: 1.45,

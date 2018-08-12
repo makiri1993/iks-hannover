@@ -1,11 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
-
-const StyledLayoutMain = styled.main`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-`
+import { StyledLayoutMain } from './StyledComponents'
 
 interface LayoutMainProps {
   className?: string

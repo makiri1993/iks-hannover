@@ -1,11 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
-
-const StyledLayoutRoot = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`
+import { StyledLayoutRoot } from './StyledComponents'
 
 interface LayoutRootProps {
   className?: string
