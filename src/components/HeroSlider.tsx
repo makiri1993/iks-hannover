@@ -12,6 +12,7 @@ interface State {
   indexOfActiveImage: number
   image: JSX.Element[]
   activeSlider: JSX.Element
+  checkForActive: boolean[]
 }
 
 interface Props {}
@@ -20,9 +21,10 @@ export default class HeroSlider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
+      indexOfActiveImage: 0,
+      checkForActive: [true, false, false, false, false],
       activeImage: slider_1,
       activeSlider: <HeroImage src={slider_1} alt="" />,
-      indexOfActiveImage: 0,
       image: [
         <HeroImage key={0} src={slider_1} alt="" />,
         <HeroImage key={1} src={slider_2} alt="" />,
@@ -40,22 +42,39 @@ export default class HeroSlider extends React.Component<Props, State> {
   }
 
   private nextImage() {
-    console.log(this.state.indexOfActiveImage + '    ' + this.state.image.length)
-    const newIndex = this.state.indexOfActiveImage + 1
-    if (this.state.indexOfActiveImage === this.state.image.length - 1) {
+    console.log(this.state.indexOfActiveImage + '    ' + this.state.checkForActive.length)
+    const checksForActive: boolean[] = this.state.checkForActive
+    const newIndex: number = this.state.indexOfActiveImage + 1
+
+    if (this.state.indexOfActiveImage === 4) {
+      checksForActive[this.state.indexOfActiveImage] = false
+      checksForActive[0] = true
       this.setState({
         activeSlider: this.state.image[0],
+        checkForActive: checksForActive,
         indexOfActiveImage: 0
       })
     } else {
+      checksForActive[newIndex - 1] = false
+      checksForActive[newIndex] = true
       this.setState({
         activeSlider: this.state.image[newIndex],
+        checkForActive: checksForActive,
         indexOfActiveImage: newIndex
       })
     }
+    console.log(this.state.indexOfActiveImage + '    ' + this.state.checkForActive.length)
   }
 
   render() {
-    return <Hero>{this.state.activeSlider}</Hero>
+    return (
+      <Hero>
+        {this.state.checkForActive[0] ? <HeroImage key={0} src={slider_1} alt="" /> : ''}
+        {this.state.checkForActive[1] ? <HeroImage key={1} src={slider_2} alt="" /> : ''}
+        {this.state.checkForActive[2] ? <HeroImage key={2} src={slider_3} alt="" /> : ''}
+        {this.state.checkForActive[3] ? <HeroImage key={3} src={slider_4} alt="" /> : ''}
+        {this.state.checkForActive[4] ? <HeroImage key={4} src={slider_5} alt="" /> : ''}
+      </Hero>
+    )
   }
 }
