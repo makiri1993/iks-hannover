@@ -2,7 +2,6 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 
 import Page from '../components/Page'
-import Container from '../components/Container'
 import HeroSlider from '../components/HeroSlider'
 import { CenteredH1, CenteredH4, CenteredP, CenteredText } from '../components/StyledComponents'
 
