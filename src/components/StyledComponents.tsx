@@ -115,6 +115,14 @@ export const CenteredP = styled.p`
 export const StyledBR = styled.br`
 `
 
+export const FlexDivContentCenter = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
 
 export const StyledFooter = styled.footer`
   height: auto;
@@ -123,7 +131,7 @@ export const StyledFooter = styled.footer`
   background-color: ${colors.orange};
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
 `
 export const StyledFooterDiv = styled.div`
   text-align: left;
@@ -144,3 +152,29 @@ export const StyledIMG = styled.img`
   width: auto;
   height: 100px;
 `
+
+export const CenteredH1Green = CenteredH1.extend`
+  color: ${colors.green};
+`
+
+export const CenteredH4Green = CenteredH4.extend`
+  color: ${colors.green};
+`
+export const PflegedienstP = styled.p`
+  color: black;
+`
+
+export const PflegedienstPGreen = PflegedienstP.extend`
+  color: ${colors.green};
+`
+
+export const ButtonGreen = styled.button`
+  background-color: ${colors.green};
+  color: ${colors.white};
+  padding: 25px 25px 25px 25px;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 20px;
+`
+
