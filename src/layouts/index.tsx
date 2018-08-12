@@ -6,6 +6,7 @@ import '../styles/normalize'
 import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
+import Footer from '../components/Footer';
 
 interface WrapperProps {
   children: () => any
@@ -30,6 +31,7 @@ const IndexLayout: React.SFC<WrapperProps> = ({ children, data }) => (
     />
     <Header />
     <LayoutMain>{children()}</LayoutMain>
+    <Footer />
   </LayoutRoot>
 )
 

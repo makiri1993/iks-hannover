@@ -19,7 +19,7 @@ export const colors = {
     calm: 'rgba(0, 0, 0, 0.54)'
   },
   white: '#FCFCFC',
-  orange: '#F17E13',
+  orange: '#ee7917',
   black: '#545456'
 }
 

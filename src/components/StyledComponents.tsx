@@ -112,3 +112,36 @@ export const CenteredH4 = styled.h4`
 export const CenteredP = styled.p`
   text-align: center;
 `
+
+export const StyledBR = styled.br`
+`
+
+
+export const StyledFooter = styled.footer`
+  height: auto;
+  width: 100%;
+  padding: 0 ${dimensions.containerPadding}rem;
+  background-color: ${colors.orange};
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+`
+export const StyledFooterDiv = styled.div`
+  text-align: left;
+  width: 500px;
+`
+
+export const H4Footer = styled.h4`
+  color: ${colors.white};
+  font-weight: 500;
+  /* padding: 1.4rem; */
+`
+
+export const PFooter = styled.p`
+  color: ${colors.white};
+`
+
+export const StyledIMG = styled.img`
+  width: auto;
+  height: 100px;
+`
