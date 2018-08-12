@@ -178,3 +178,52 @@ export const ButtonGreen = styled.button`
   margin: 20px;
 `
 
+export const CenteredH1Red = CenteredH1.extend`
+  color: ${colors.red};
+`
+
+export const CenteredH4Red = styled.h4`
+  color: ${colors.red};
+`
+
+export const PflegedienstPRed = PflegedienstP.extend`
+  color: ${colors.red};
+`
+
+export const LinkRed = styled.a`
+  color: ${colors.red};
+`
+
+export const LinkEmail = styled.a`
+  cursor: pointer;
+  color: ${colors.black};
+  text-decoration: underline;
+  text-decoration-color: red;
+`
+
+export const StyledUL = styled.ul`
+`
+
+export const StyledLI = styled.li`
+  color: ${colors.red};
+`
+
+export const StyledSpan = styled.span`
+  color: ${colors.black};
+  font-size: 16px;
+`
+export const PRed = styled.p`
+  font-style: italic;
+  color: ${colors.red};
+`
+export const PItalicAndSmall = styled.p`
+  font-size: 12px;
+`
+
+export const DivCenter = styled.div`
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
