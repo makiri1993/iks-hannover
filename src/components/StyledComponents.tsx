@@ -266,3 +266,42 @@ export const DivCenter = styled.div`
   justify-content: center;
   align-items: center;
 `
+export const CardMainDiv = styled.div`
+  width: 350px;
+  height: 250px;
+  background-color: red;
+  position: relative;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 25px;
+`
+export const CardImg = styled.img`
+  width: 100%;
+  height: auto;
+`
+export const CardDiv = styled.div`
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  position: absolute;
+  background-color: ${colors.orange};
+`
+export const CardH4 = styled.h4`
+  text-align: center;
+  color: ${colors.white};
+  cursor: pointer;
+  font-size: 15px;
+`
+
+export const CenteredH1Orange = CenteredH1.extend`
+  color: ${colors.orange};
+`
+
+export const FlexDivCards = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
