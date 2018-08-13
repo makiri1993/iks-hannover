@@ -80,6 +80,22 @@ export const HeroImage = styled.img`
   animation: ${fade};
   animation-duration: 1.3s;
 `
+export const EmployeeImage = styled.img`
+  width: 250px;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  animation: ${fade};
+  animation-duration: 1.3s;
+`
+
+export const SignatureImage = styled.img`
+  width: 166px;
+  left: 12%;
+  object-fit: cover;
+  animation: ${fade};
+  animation-duration: 1.3s;
+`
 
 export const StyledPage = styled.div`
   display: block;
@@ -111,9 +127,11 @@ export const CenteredH4 = styled.h4`
 export const CenteredP = styled.p`
   text-align: center;
 `
-
-export const StyledBR = styled.br`
+export const CenteredPWithWidth = styled(CenteredP)`
+  width: 250px;
 `
+
+export const StyledBR = styled.br``
 
 export const FlexDivContentCenter = styled.div`
   height: auto;
@@ -122,6 +140,29 @@ export const FlexDivContentCenter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+`
+
+export const FlexDivContentEmployeeCenter = styled.div`
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+export const EmployeeDiv = styled.div`
+  width: 250px;
+  margin: 2rem;
+  /* height: auto;
+  padding: 10px; */
+`
+
+export const ButtonForIcon = styled.button``
+
+export const IconForButton = styled.i``
+
+export const OneColumn = styled.div`
+  width: 25 vw;
+  margin: 3rem;
 `
 
 export const StyledFooter = styled.footer`
@@ -201,8 +242,7 @@ export const LinkEmail = styled.a`
   text-decoration-color: red;
 `
 
-export const StyledUL = styled.ul`
-`
+export const StyledUL = styled.ul``
 
 export const StyledLI = styled.li`
   color: ${colors.red};
@@ -226,4 +266,3 @@ export const DivCenter = styled.div`
   justify-content: center;
   align-items: center;
 `
-

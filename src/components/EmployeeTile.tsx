@@ -1,12 +1,21 @@
-import React from 'react'
+import * as React from 'react'
+import { EmployeeImage, SignatureImage, CenteredPWithWidth, EmployeeDiv, CenteredH4 } from './StyledComponents'
 
 interface Props {
   image: string
-  signatureImage: string
+  signature: string
+  name: string
 }
 
-export default class contactTile extends React.Component<Props> {
+export default class EmployeeTile extends React.Component<Props> {
   render() {
-    return <div />
+    return (
+      <EmployeeDiv>
+        <EmployeeImage src={this.props.image} alt="" />
+        <CenteredH4>{this.props.name}</CenteredH4>
+        <CenteredPWithWidth>Geschäftsführerin</CenteredPWithWidth>
+        <SignatureImage src={this.props.signature} alt="" />
+      </EmployeeDiv>
+    )
   }
 }

@@ -1,9 +1,15 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 
 import Page from '../components/Page'
 import HeroSlider from '../components/HeroSlider'
-import { CenteredH1, CenteredH4, CenteredP, CenteredText } from '../components/StyledComponents'
+import EmployeeTile from '../components/EmployeeTile'
+import { CenteredH1, CenteredH4, CenteredP, CenteredText, FlexDivContentCenter } from '../components/StyledComponents'
+
+const signatureJasmin: string = require('../images/mitarbeiter/unterschrift_Jasmin.png')
+const jasminImage: string = require('../images/mitarbeiter//Mitarbeiter_Jasmin_2.jpg')
+const signatureGalina: string = require('../images/mitarbeiter/unterschrift_Galina.png')
+const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
 
 export default () => (
   <Page>
@@ -20,6 +26,11 @@ export default () => (
       </CenteredP>
       <CenteredP>Herzlichst, Ihre</CenteredP>
     </CenteredText>
+    <FlexDivContentCenter>
+      <EmployeeTile name={'Jasmin Arbabian-Vogel'} image={jasminImage} signature={signatureJasmin} />
+      <EmployeeTile name={'Galina Fiksman'} image={galinaImage} signature={signatureGalina} />
+    </FlexDivContentCenter>
+
     {/* <Link to="/page-2/" href="/page-2/">
       Go to page 2
     </Link> */}
