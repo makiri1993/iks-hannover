@@ -10,70 +10,66 @@ const slider_5: string = require('../images/Slider_5.jpg')
 interface State {
   activeImage: string
   indexOfActiveImage: number
-  image: JSX.Element[]
-  activeSlider: JSX.Element
-  checkForActive: boolean[]
+  image: string[]
+  newImage: HTMLImageElement[]
 }
-
 interface Props {}
-
 export default class HeroSlider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      indexOfActiveImage: 0,
-      checkForActive: [true, false, false, false, false],
       activeImage: slider_1,
-      activeSlider: <HeroImage src={slider_1} alt="" />,
-      image: [
-        <HeroImage key={0} src={slider_1} alt="" />,
-        <HeroImage key={1} src={slider_2} alt="" />,
-        <HeroImage key={2} src={slider_3} alt="" />,
-        <HeroImage key={3} src={slider_4} alt="" />,
-        <HeroImage key={4} src={slider_5} alt="" />
-      ]
+      indexOfActiveImage: 0,
+      image: [slider_1, slider_2, slider_3, slider_4, slider_5],
+      newImage: []
     }
   }
 
   componentDidMount() {
+    this.setAllImages()
     setInterval(() => {
       this.nextImage()
     }, 5000)
   }
+  private setAllImages() {
+    const sliderA: HTMLImageElement = new Image()
+    const sliderB: HTMLImageElement = new Image()
+    const sliderC: HTMLImageElement = new Image()
+    const sliderD: HTMLImageElement = new Image()
+    const sliderE: HTMLImageElement = new Image()
 
+    sliderA.src = slider_1
+    sliderB.src = slider_2
+    sliderC.src = slider_3
+    sliderD.src = slider_4
+    sliderE.src = slider_5
+
+    this.state.newImage.push(sliderA)
+    this.state.newImage.push(sliderB)
+    this.state.newImage.push(sliderC)
+    this.state.newImage.push(sliderD)
+    this.state.newImage.push(sliderE)
+  }
   private nextImage() {
-    console.log(this.state.indexOfActiveImage + '    ' + this.state.checkForActive.length)
-    const checksForActive: boolean[] = this.state.checkForActive
-    const newIndex: number = this.state.indexOfActiveImage + 1
-
-    if (this.state.indexOfActiveImage === 4) {
-      checksForActive[this.state.indexOfActiveImage] = false
-      checksForActive[0] = true
+    console.log(this.state.indexOfActiveImage + '    ' + this.state.image.length)
+    const newIndex = this.state.indexOfActiveImage + 1
+    if (this.state.indexOfActiveImage === this.state.image.length - 1) {
+      console.log('letztes Bild')
       this.setState({
-        activeSlider: this.state.image[0],
-        checkForActive: checksForActive,
+        activeImage: this.state.image[0],
         indexOfActiveImage: 0
       })
     } else {
-      checksForActive[newIndex - 1] = false
-      checksForActive[newIndex] = true
       this.setState({
-        activeSlider: this.state.image[newIndex],
-        checkForActive: checksForActive,
+        activeImage: this.state.image[newIndex],
         indexOfActiveImage: newIndex
       })
     }
-    console.log(this.state.indexOfActiveImage + '    ' + this.state.checkForActive.length)
   }
-
   render() {
     return (
       <Hero>
-        {this.state.checkForActive[0] ? <HeroImage key={0} src={slider_1} alt="" /> : ''}
-        {this.state.checkForActive[1] ? <HeroImage key={1} src={slider_2} alt="" /> : ''}
-        {this.state.checkForActive[2] ? <HeroImage key={2} src={slider_3} alt="" /> : ''}
-        {this.state.checkForActive[3] ? <HeroImage key={3} src={slider_4} alt="" /> : ''}
-        {this.state.checkForActive[4] ? <HeroImage key={4} src={slider_5} alt="" /> : ''}
+        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
       </Hero>
     )
   }
