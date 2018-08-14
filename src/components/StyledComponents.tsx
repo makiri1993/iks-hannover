@@ -193,6 +193,11 @@ export const StyledIMG = styled.img`
   width: auto;
   height: 100px;
 `
+export const StyledIMGBig = styled.img`
+
+  width: 550px;
+  height: auto;
+`
 
 export const CenteredH1Green = CenteredH1.extend`
   color: ${colors.green};
@@ -327,4 +332,31 @@ export const StyledLIOrange = styled.li`
 export const imgSmall = styled.img`
   width: 250px;
   height: 250px;
+`
+
+export const DivColCenter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 450px;
+`
+export const imgBig = StyledIMG.extend`
+  width: 450px;
+  height: 450px;
+`
+
+export const POrangeCenter = POrange.extend`
+  text-align: center;
+`
+export const PflegedienstPCenter = PflegedienstP.extend`
+  text-align: center;
+`
+export const LinkEmailOrange = LinkEmail.extend`
+  text-decoration: underline;
+  color: ${colors.orange};
+`
+
+export const H4OrangeCenter = H4Orange.extend`
+  text-align: center;
 `
