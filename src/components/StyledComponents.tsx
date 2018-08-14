@@ -52,7 +52,7 @@ export const LinkWrapper = styled.div`
 `
 
 export const HomepageLink = styled(Link)`
-  position: absolute;
+  /* position: absolute; */
   color: ${colors.white};
   top: 35%;
   /* left: 50; */
@@ -61,6 +61,22 @@ export const HomepageLink = styled(Link)`
   ${onEvent`
     text-decoration: none;
   `};
+`
+export const HomepageLinkGreen = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.green};
+  margin-left: 3px;
+`
+export const HomepageLinkBlue = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.blue};
+  margin-left: 3px;
+`
+
+export const HomepageLinkRed = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.red};
+  margin-left: 3px;
 `
 
 export const Hero = styled.div`
@@ -121,11 +137,15 @@ export const CenteredH4 = styled.h4`
   text-align: center;
   font-weight: 500;
   /* padding: 1.4rem; */
-  margin: 1em;
+  margin: 0.824em;
 `
 
 export const CenteredP = styled.p`
   text-align: center;
+`
+
+export const CenteredPLeft = styled.p`
+  text-align: left;
 `
 export const CenteredPWithWidth = styled(CenteredP)`
   width: 250px;
@@ -156,13 +176,16 @@ export const EmployeeDiv = styled.div`
   padding: 10px; */
 `
 
-export const ButtonForIcon = styled.button``
-
-export const IconForButton = styled.i``
+export const IconForButton = styled.img`
+  width: 120px;
+  height: 120px;
+`
 
 export const OneColumn = styled.div`
-  width: 25 vw;
+  width: 24vw;
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
 `
 
 export const StyledFooter = styled.footer`
@@ -194,13 +217,22 @@ export const StyledIMG = styled.img`
   height: 100px;
 `
 export const StyledIMGBig = styled.img`
-
   width: 550px;
   height: auto;
 `
 
 export const CenteredH1Green = CenteredH1.extend`
   color: ${colors.green};
+`
+export const CenteredH1GreenForColumn = CenteredH1Green.extend`
+  font-weight: 250;
+  margin: 0;
+`
+export const CenteredH1BlueForColumn = CenteredH1GreenForColumn.extend`
+  color: ${colors.blue};
+`
+export const CenteredH1RedForColumn = CenteredH1GreenForColumn.extend`
+  color: ${colors.red};
 `
 
 export const CenteredH4Green = CenteredH4.extend`
