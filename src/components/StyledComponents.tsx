@@ -266,6 +266,7 @@ export const DivCenter = styled.div`
   justify-content: center;
   align-items: center;
 `
+
 export const CardMainDiv = styled.div`
   width: 350px;
   height: 250px;
@@ -304,4 +305,26 @@ export const FlexDivCards = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+`
+
+export const DivCenterCol = StyledFooter.extend`
+  background-color: ${colors.white};
+`
+export const DivCenterRow = StyledFooter.extend`
+  background-color: ${colors.white};
+  flex-direction: row;
+`
+export const H4Orange = styled.h4`
+  color: ${colors.orange};
+`
+export const POrange = PflegedienstP.extend`
+  color: ${colors.orange};
+`
+
+export const StyledLIOrange = styled.li`
+  color: ${colors.orange};
+`
+export const imgSmall = styled.img`
+  width: 250px;
+  height: 250px;
 `
