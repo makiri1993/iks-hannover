@@ -147,6 +147,16 @@ export const CenteredP = styled.p`
 export const CenteredPLeft = styled.p`
   text-align: left;
 `
+export const CenteredPLeftWithMargin = styled.p`
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: left;
+`
+
+export const CenteredPLeftWithMarginInOrange = styled(CenteredPLeftWithMargin)`
+  color: ${colors.orange};
+`
+
 export const CenteredPWithWidth = styled(CenteredP)`
   width: 250px;
 `
@@ -281,6 +291,21 @@ export const LinkEmail = styled.a`
 
 export const StyledUL = styled.ul``
 
+export const StyledUlWithoutBullets = styled.ul`
+  list-style-type: none;
+`
+
+export const StyledLiWithOrangeBullet = styled.li`
+  list-style-type: none;
+  margin: 16px;
+  color: ${colors.black};
+  &:before {
+    content: "•";
+    color: ${colors.orange}
+    padding-right: 1rem;
+    }
+`
+
 export const StyledLI = styled.li`
   color: ${colors.red};
 `
@@ -351,6 +376,20 @@ export const DivCenterRow = StyledFooter.extend`
   background-color: ${colors.white};
   flex-direction: row;
 `
+
+export const DivCenterRowLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: left;
+  padding: 2rem;
+`
+
+export const SmallerPBehindBigText = styled.p`
+  padding-left: 20px;
+  padding-top: 18px;
+`
+
 export const H4Orange = styled.h4`
   color: ${colors.orange};
 `
@@ -391,4 +430,12 @@ export const LinkEmailOrange = LinkEmail.extend`
 
 export const H4OrangeCenter = H4Orange.extend`
   text-align: center;
+`
+
+export const BigTextInOrange = styled.div`
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.5rem;
+  color: ${colors.orange};
+  letter-spacing: 0.5rem;
 `
