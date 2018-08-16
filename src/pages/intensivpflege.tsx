@@ -72,11 +72,11 @@ export default () => (
       <StyledBR />
       <StyledBR />
       <CenteredH4Red>Marion Hartmann | Leitung der Intensivpflege</CenteredH4Red>
-      <LinkEmail>hartmann@iks-hannover.de</LinkEmail>
+      <LinkEmail href="mailto:hartmann@iks-hannover.de">hartmann@iks-hannover.de</LinkEmail>
       <CenteredH4Red>Agnieszka Spouncer | Fachliche Leitung</CenteredH4Red>
-      <LinkEmail>spouncer@iks-hannover.de</LinkEmail>
+      <LinkEmail href="mailto:spouncer@iks-hannover.de">spouncer@iks-hannover.de</LinkEmail>
     </CenteredText>
     <StyledBR />
     <StyledBR />
-  </Page >
+  </Page>
 )
