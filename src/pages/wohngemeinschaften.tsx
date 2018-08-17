@@ -19,6 +19,15 @@ import {
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Wohngemeinschaften - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Wenn Sie nicht in ein Alterheim ziehen möchten bieten Ihnen unsere Wohngemeinschaften in Hannover eine sehr gute Alternative. Unsere Pflegedienst kümmert sich dort um alle Ihre Anliegen.'
+        }
+      ]}
+    />
     <Container>
       <BigTextInOrange>Wohngemeinschaften</BigTextInOrange>
       <CenteredPLeftWithMargin>
@@ -63,7 +72,7 @@ export default () => (
       <DivCenterRowLeft>
         <H4Orange>Galina Fiksman</H4Orange> <SmallerPBehindBigText>| Leitung der Intensivpflege</SmallerPBehindBigText>
       </DivCenterRowLeft>
-      <LinkEmailOrange>fiksmann@iks-hannover.de</LinkEmailOrange>
+      <LinkEmailOrange href="mailto:fiksmann@iks-hannover.de" titel="Email Adresse">fiksmann@iks-hannover.de</LinkEmailOrange>
     </Container>
   </Page>
 )

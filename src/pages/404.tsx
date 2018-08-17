@@ -6,16 +6,25 @@ import Container from '../components/Container'
 
 const NotFoundPage = () => (
   <Page>
+    <Helmet
+      title={'Seite nicht gefunden - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Die Seite wurde nicht gefunden. '
+        }
+      ]}
+    />
     <Container>
-      <h1>404: Page not found.</h1>
+      <h1>404: Seite nicht gefunden</h1>
       <p>
-        You've hit the void.{' '}
+        Die Seite wurde nicht gefunden.{' '}
         <Link to="/" href="/">
-          Go back.
+          Hier kommen sie zurück.
         </Link>
       </p>
     </Container>
-  </Page>
+  </Page >
 )
 
 export default NotFoundPage

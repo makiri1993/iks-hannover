@@ -26,7 +26,7 @@ const IndexLayout: React.SFC<WrapperProps> = ({ children, data }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: 'gatsbyjs, gatsby, javascript, sample, something' }
+        { name: 'keywords', content: data.site.siteMetadata.keywords }
       ]}
     />
     <Header />
@@ -43,6 +43,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        keywords
       }
     }
   }

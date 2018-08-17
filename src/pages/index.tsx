@@ -28,8 +28,8 @@ export default () => (
       <CenteredP>Herzlichst, Ihre</CenteredP>
     </CenteredText>
     <FlexDivContentCenter>
-      <EmployeeTile name={'Jasmin Arbabian-Vogel'} image={jasminImage} signature={signatureJasmin} />
-      <EmployeeTile name={'Galina Fiksman'} image={galinaImage} signature={signatureGalina} />
+      <EmployeeTile title="Jasmin Arbabian-Vogel" alt="Bild von Jasmin Arbabian-Vogel" name={'Jasmin Arbabian-Vogel'} image={jasminImage} signature={signatureJasmin} />
+      <EmployeeTile title="Jasmin Galina Fiksman" alt="Bild von Jasmin Galina Fiksman" name={'Galina Fiksman'} image={galinaImage} signature={signatureGalina} />
     </FlexDivContentCenter>
     <FourColumns />
     {/* <Link to="/page-2/" href="/page-2/">

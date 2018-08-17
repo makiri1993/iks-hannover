@@ -1,5 +1,5 @@
 import * as React from 'react'
-// import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 import Page from '../components/Page'
 import { DivCenter, CenteredH1Orange, DivColCenter, StyledIMGBig, POrange, CenteredText, PflegedienstP, PflegedienstPCenter, POrangeCenter, StyledBR, LinkEmail, LinkEmailOrange, H4Orange, H4OrangeCenter } from '../components/StyledComponents';
@@ -8,6 +8,15 @@ const map: string = require('../images/maps.png')
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Impressum - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.'
+        }
+      ]}
+    />
     <DivCenter>
       <DivColCenter>
         <CenteredH1Orange>ANFAHRT</CenteredH1Orange>
@@ -27,7 +36,7 @@ export default () => (
           FAX: 0511 / 210 10 66
         </PflegedienstPCenter>
         <POrangeCenter>
-          MAIL: <LinkEmailOrange href="mailto:iks-hannover@iks-hannover.de">iks-hannover@iks-hannover.de</LinkEmailOrange>
+          MAIL: <LinkEmailOrange titel="Email" href="mailto:iks-hannover@iks-hannover.de">iks-hannover@iks-hannover.de</LinkEmailOrange>
         </POrangeCenter>
         <PflegedienstPCenter>
           Registergericht: Amtsgericht Hannover
@@ -62,7 +71,7 @@ export default () => (
         <POrangeCenter>
           <LinkEmailOrange target="_blank" rel="noopener noreferrer" href="www.s-artifaction.com">www.s-artifaction.com</LinkEmailOrange>
           <StyledBR />
-          <LinkEmailOrange href="mailto:s.artisfaction@googlemail.com">s.artisfaction@googlemail.com</LinkEmailOrange>
+          <LinkEmailOrange titel="Email" href="mailto:s.artisfaction@googlemail.com">s.artisfaction@googlemail.com</LinkEmailOrange>
         </POrangeCenter>
       </DivColCenter>
     </DivCenter>

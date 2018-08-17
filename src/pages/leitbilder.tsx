@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import {
@@ -18,6 +18,15 @@ import {
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Leitbilder - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Seit 1996 verfolgen wir als regionales Unternehmen in Hannover das Ziel die Lebensqualität der Bürger zu verbessern. Durch unsere Vielfalt an Sprachen und Kulturen können wir Ihnen in jeder Lage helfen.'
+        }
+      ]}
+    />
     <Container>
       <BigTextInOrange>Leitbilder</BigTextInOrange>
       <CenteredPLeftWithMarginInOrange>

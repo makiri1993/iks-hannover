@@ -5,16 +5,18 @@ interface Props {
   image: string
   signature: string
   name: string
+  alt: string
+  title: string
 }
 
 export default class EmployeeTile extends React.Component<Props> {
   render() {
     return (
       <EmployeeDiv>
-        <EmployeeImage src={this.props.image} alt="" />
+        <EmployeeImage title={this.props.title} alt={this.props.alt} src={this.props.image} />
         <CenteredH4>{this.props.name}</CenteredH4>
         <CenteredPWithWidth>Geschäftsführerin</CenteredPWithWidth>
-        <SignatureImage src={this.props.signature} alt="" />
+        <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
       </EmployeeDiv>
     )
   }

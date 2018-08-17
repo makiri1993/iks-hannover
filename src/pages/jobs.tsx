@@ -1,8 +1,11 @@
 import * as React from 'react'
-// import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 import Page from '../components/Page'
-import { DivCenterCol, StyledFooterDiv, CenteredH1Orange, PflegedienstP, StyledBR, H4Orange, POrange, StyledUL, StyledLIOrange, StyledSpan, DivCenterRow } from '../components/StyledComponents';
+import {
+  DivCenterCol, StyledFooterDiv, CenteredH1Orange, PflegedienstP, StyledBR, H4Orange, POrange, StyledUL, StyledLIOrange, StyledSpan,
+  DivCenterRow
+} from '../components/StyledComponents';
 import ImgWithLink from '../components/ImgWithLink'
 
 const p1: string = require('../images/partner/p1.jpg')
@@ -11,6 +14,15 @@ const p3: string = require('../images/partner/p3.jpg')
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Jobs, Kooperationen und Partner - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Die Seite unserer Stellenangebote und Informationen über den Bundesfreiwilligendienst, Kooperationen und Partner.'
+        }
+      ]}
+    />
     <DivCenterCol>
       <StyledFooterDiv>
         <CenteredH1Orange>JOBS</CenteredH1Orange>

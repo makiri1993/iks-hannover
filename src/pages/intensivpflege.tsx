@@ -1,5 +1,6 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+
 
 import Page from '../components/Page'
 import { CenteredText, CenteredH1Red, PflegedienstP, StyledBR, LinkRed, CenteredH4Red, StyledIMG, FlexDivContentCenter, StyledFooterDiv, StyledUL, StyledLI, StyledSpan, PRed, PItalicAndSmall, LinkEmail, DivCenter } from '../components/StyledComponents';
@@ -10,10 +11,19 @@ const flylerLink: string = require('../images/intensivpflege/IKS-AIWG-Flyer_ku_w
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.'
+        }
+      ]}
+    />
     <CenteredText>
       <DivCenter>
-        <StyledIMG src={logo_1} />
-        <StyledIMG src={logo_2} />
+        <StyledIMG alt="Logo der Wohngemeinschaft List" title="Wohngemeinschaft List" src={logo_1} />
+        <StyledIMG alt="Logo der Wohngemeinschaft List" title="Wohngemeinschaft List" src={logo_2} />
       </DivCenter>
       <CenteredH1Red>AUßERKLINISCHE INTENSIVPFLEGE</CenteredH1Red>
       <PflegedienstP>
@@ -72,9 +82,9 @@ export default () => (
       <StyledBR />
       <StyledBR />
       <CenteredH4Red>Marion Hartmann | Leitung der Intensivpflege</CenteredH4Red>
-      <LinkEmail href="mailto:hartmann@iks-hannover.de">hartmann@iks-hannover.de</LinkEmail>
+      <LinkEmail title="Email Adresse" href="mailto:hartmann@iks-hannover.de">hartmann@iks-hannover.de</LinkEmail>
       <CenteredH4Red>Agnieszka Spouncer | Fachliche Leitung</CenteredH4Red>
-      <LinkEmail href="mailto:spouncer@iks-hannover.de">spouncer@iks-hannover.de</LinkEmail>
+      <LinkEmail title="Email Adresse" href="mailto:spouncer@iks-hannover.de">spouncer@iks-hannover.de</LinkEmail>
     </CenteredText>
     <StyledBR />
     <StyledBR />

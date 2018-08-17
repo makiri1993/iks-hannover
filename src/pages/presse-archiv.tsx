@@ -1,6 +1,5 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-
+import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import { H4Footer, CenteredH1Orange, FlexDivContentCenter, FlexDivCards } from '../components/StyledComponents'
 import Card from '../components/Card'
@@ -65,6 +64,15 @@ const link27: string = require('../images/presse-archiv/Artikel/27_Presse_1998_P
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Presse - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Schauen Sie sich alle unsere Erwähnungen in der Presse an. Hier finden Sie alle Artikel von 1998 bis heute aus z.B Zeitungen in Hannover.'
+        }
+      ]}
+    />
     <CenteredH1Orange>PRESSE 2017</CenteredH1Orange>
     <FlexDivCards>
       <Card link={link1} alt="Zeitungsartikel von 2017" img={a1} name="NP | 30.09.2017 96 & Flüchtlinge" />

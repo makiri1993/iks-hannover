@@ -1,9 +1,7 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-
+import Helmet from 'react-helmet'
 import Page from '../components/Page'
-import { CenteredH1, CenteredH4, CenteredP, CenteredText, CenteredH1Green, CenteredH4Green, PflegedienstP, StyledBR, PflegedienstPGreen, ButtonGreen, ButtonGreenLink, FlexDivContentCenter, StyledFooterDiv, DivCenter, DivCenterRow } from '../components/StyledComponents'
-import { log } from 'util';
+import { CenteredText, CenteredH1Green, CenteredH4Green, PflegedienstP, StyledBR, PflegedienstPGreen, ButtonGreen, FlexDivContentCenter, DivCenterRow } from '../components/StyledComponents'
 
 const link1: string = require('../images/pflegedienst/Tabelle_Pflegegrade.jpg')
 const link2: string = require('../images/pflegedienst/Preise_Pflegedienstleistungen.jpg')
@@ -11,6 +9,15 @@ const link3: string = require('../images/pflegedienst/MedizinischePflege.jpg')
 
 export default () => (
   <Page>
+    <Helmet
+      title={'Pflegedienst - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content: 'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Pfelgedienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.'
+        }
+      ]}
+    />
     <CenteredText>
       <CenteredH1Green>PFLEGEDIENST</CenteredH1Green>
       <CenteredH4Green>Was bedeutet eigentlich Pflege?</CenteredH4Green>
