@@ -6,7 +6,7 @@ import { CenteredText, CenteredH1Red, PflegedienstP, StyledBR, LinkRed, Centered
 
 const logo_1: string = require('../images/icons/Schriftzug_Wohngemeinschaft.png')
 const logo_2: string = require('../images/icons/logo_baum.png')
-
+const flylerLink: string = require('../images/intensivpflege/IKS-AIWG-Flyer_ku_web.pdf')
 
 export default () => (
   <Page>
@@ -23,7 +23,7 @@ export default () => (
         Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.
         <StyledBR />
         <StyledBR />
-        <LinkRed href="#">Unseren Flyer finden Sie hier.</LinkRed>
+        <LinkRed target="_blank" title="link zu Flyer Intensivpflege" href={flylerLink}>Unseren Flyer finden Sie hier.</LinkRed>
         <StyledBR />
         <StyledBR />
       </PflegedienstP>
