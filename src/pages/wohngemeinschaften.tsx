@@ -16,6 +16,7 @@ import {
   DivCenterRowLeft,
   SmallerPBehindBigText
 } from '../components/StyledComponents'
+import { Helmet } from 'react-helmet'
 
 export default () => (
   <Page>
@@ -24,7 +25,8 @@ export default () => (
       meta={[
         {
           name: 'description',
-          content: 'Wenn Sie nicht in ein Alterheim ziehen möchten bieten Ihnen unsere Wohngemeinschaften in Hannover eine sehr gute Alternative. Unsere Pflegedienst kümmert sich dort um alle Ihre Anliegen.'
+          content:
+            'Wenn Sie nicht in ein Alterheim ziehen möchten bieten Ihnen unsere Wohngemeinschaften in Hannover eine sehr gute Alternative. Unsere Pflegedienst kümmert sich dort um alle Ihre Anliegen.'
         }
       ]}
     />
@@ -72,7 +74,7 @@ export default () => (
       <DivCenterRowLeft>
         <H4Orange>Galina Fiksman</H4Orange> <SmallerPBehindBigText>| Leitung der Intensivpflege</SmallerPBehindBigText>
       </DivCenterRowLeft>
-      <LinkEmailOrange href="mailto:fiksmann@iks-hannover.de" titel="Email Adresse">fiksmann@iks-hannover.de</LinkEmailOrange>
+      <LinkEmailOrange href="mailto:fiksmann@iks-hannover.de">fiksmann@iks-hannover.de</LinkEmailOrange>
     </Container>
   </Page>
 )
