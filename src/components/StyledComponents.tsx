@@ -256,14 +256,15 @@ export const PflegedienstPGreen = PflegedienstP.extend`
   color: ${colors.green};
 `
 
-export const ButtonGreen = styled.button`
+export const ButtonGreen = styled.a`
   background-color: ${colors.green};
   color: ${colors.white};
   padding: 25px 25px 25px 25px;
   border-radius: 15px;
   font-size: 15px;
   cursor: pointer;
-  margin: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
 `
 
 export const CenteredH1Red = CenteredH1.extend`

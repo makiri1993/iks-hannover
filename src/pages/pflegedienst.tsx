@@ -2,7 +2,12 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 
 import Page from '../components/Page'
-import { CenteredH1, CenteredH4, CenteredP, CenteredText, CenteredH1Green, CenteredH4Green, PflegedienstP, StyledBR, PflegedienstPGreen, ButtonGreen, ButtonGreenLink, FlexDivContentCenter, StyledFooterDiv } from '../components/StyledComponents'
+import { CenteredH1, CenteredH4, CenteredP, CenteredText, CenteredH1Green, CenteredH4Green, PflegedienstP, StyledBR, PflegedienstPGreen, ButtonGreen, ButtonGreenLink, FlexDivContentCenter, StyledFooterDiv, DivCenter, DivCenterRow } from '../components/StyledComponents'
+import { log } from 'util';
+
+const link1: string = require('../images/pflegedienst/Tabelle_Pflegegrade.jpg')
+const link2: string = require('../images/pflegedienst/Preise_Pflegedienstleistungen.jpg')
+const link3: string = require('../images/pflegedienst/MedizinischePflege.jpg')
 
 export default () => (
   <Page>
@@ -45,10 +50,10 @@ export default () => (
       </PflegedienstP>
     </CenteredText>
     <FlexDivContentCenter>
-      <StyledFooterDiv>
-        <ButtonGreen>PFLEGEGRADE</ButtonGreen>
-        <ButtonGreen>PFLEGEDIENSTLEISTUNGEN</ButtonGreen>
-      </StyledFooterDiv>
+      <DivCenterRow>
+        <ButtonGreen title="Pflegerade" href={link1}>PFLEGEGERADE</ButtonGreen>
+        <ButtonGreen title="Preise für Pflegedienstleistungen" href={link2}>PFLEGEDIENSTLEISTUNGEN</ButtonGreen>
+      </DivCenterRow>
     </FlexDivContentCenter>
     <CenteredText>
       <PflegedienstP>
@@ -81,10 +86,8 @@ export default () => (
       </PflegedienstP>
       <StyledBR />
     </CenteredText>
-    <FlexDivContentCenter>
-      <StyledFooterDiv>
-        <ButtonGreen>MEDIZINISCHE LEISTUNGEN</ButtonGreen>
-      </StyledFooterDiv>
-    </FlexDivContentCenter>
+    <DivCenterRow>
+      <ButtonGreen title="Link zu den medizinischen Leistungen" href={link3}>MEDIZINISCHE LEISTUNGEN</ButtonGreen>
+    </DivCenterRow>
   </Page>
 )
