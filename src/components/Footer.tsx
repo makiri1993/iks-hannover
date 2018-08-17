@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyledFooter, H4Footer, PFooter, StyledFooterDiv, StyledBR, StyledIMG } from './StyledComponents';
+import { StyledFooter, H4Footer, PFooter, StyledFooterDiv, StyledBR, StyledIMG, LinkWrapper, LinkWhite, LinkEmail } from './StyledComponents';
 
 const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
 const logo_2: string = require('../images/icons/logo_baum.png')
@@ -22,10 +22,15 @@ const Footer: React.SFC<FooterProps> = () => (
         FAX    0511 - 210 10 66
         <StyledBR />
         <StyledBR />
-        MAIL   iks-hannover@iks-hannover.de
+        MAIL: <LinkEmail title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de" >iks-hannover@iks-hannover.de</LinkEmail>
+        <StyledBR />
+        Impressum: <LinkWhite href="/impressum" title="Link zu der Seite impressum des Pflegedienstes">Impressum</LinkWhite>
+        <StyledBR />
+        Sitemap: <LinkWhite href="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">Inhaltsverzeichnis</LinkWhite>
         <StyledBR />
         <StyledBR />
         <StyledIMG src={logo_1} />
+
       </PFooter>
     </StyledFooterDiv>
     <StyledFooterDiv>

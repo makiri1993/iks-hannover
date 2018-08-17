@@ -1,9 +1,8 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import Container from '../components/Container'
-import { LinkRed } from '../components/StyledComponents';
+import { LinkRed } from '../components/StyledComponents'
 
 const NotFoundPage = () => (
   <Page>
@@ -17,7 +16,7 @@ const NotFoundPage = () => (
       ]}
     />
     <Container>
-      <h1>Verzeichnis</h1>
+      <h1>Inhaltsverzeichnis</h1>
       <p>> <LinkRed title="Link zu der Startseite" href="/">Home</LinkRed></p>
       <p>> <LinkRed title="Link zu der Pflegedienst" href="/pflegedienst">Pflegedienst</LinkRed></p>
       <p>> <LinkRed title="Link zu der Wohngemeinschaft" href="/wohngemeinschaften">Wohngemeinschaften</LinkRed></p>

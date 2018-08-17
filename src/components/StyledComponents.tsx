@@ -206,6 +206,9 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 export const StyledFooterDiv = styled.div`
   text-align: left;
@@ -277,6 +280,10 @@ export const CenteredH4Red = styled.h4`
 
 export const PflegedienstPRed = PflegedienstP.extend`
   color: ${colors.red};
+`
+
+export const LinkWhite = styled.a`
+  color: ${colors.white};
 `
 
 export const LinkRed = styled.a`
