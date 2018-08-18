@@ -2,8 +2,6 @@ import * as React from 'react'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
-import { BigTextInOrange } from '../components/StyledComponents'
-import EmployeeTile from '../components/EmployeeTile'
 import styled from 'styled-components'
 import { colors } from '../styles/variables'
 
@@ -52,6 +50,13 @@ export default () => (
   </Page>
 )
 
+export const BigTextInOrange = styled.div`
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.5rem;
+  color: ${colors.orange};
+  letter-spacing: 0.5rem;
+`
 export const FlexDivContentCenter = styled.div`
   height: auto;
   width: 100%;

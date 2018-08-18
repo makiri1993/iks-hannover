@@ -2,19 +2,8 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import Container from '../components/Container'
-import {
-  CenteredPLeftWithMargin,
-  BigTextInOrange,
-  LinkEmailOrange,
-  H4Orange,
-  DivCenterRowLeft,
-  SmallerPBehindBigText,
-  CenteredPLeftWithMarginInOrange,
-  StyledUL,
-  StyledLIOrange,
-  StyledLiWithOrangeBullet,
-  StyledUlWithoutBullets
-} from '../components/StyledComponents'
+import styled from 'styled-components'
+import { colors } from '../styles/variables'
 
 export default () => (
   <Page>
@@ -23,7 +12,8 @@ export default () => (
       meta={[
         {
           name: 'description',
-          content: 'Seit 1996 verfolgen wir als regionales Unternehmen in Hannover das Ziel die Lebensqualität der Bürger zu verbessern. Durch unsere Vielfalt an Sprachen und Kulturen können wir Ihnen in jeder Lage helfen.'
+          content:
+            'Seit 1996 verfolgen wir als regionales Unternehmen in Hannover das Ziel die Lebensqualität der Bürger zu verbessern. Durch unsere Vielfalt an Sprachen und Kulturen können wir Ihnen in jeder Lage helfen.'
         }
       ]}
     />
@@ -155,3 +145,53 @@ export default () => (
     </Container>
   </Page>
 )
+
+export const BigTextInOrange = styled.div`
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.5rem;
+  color: ${colors.orange};
+  letter-spacing: 0.5rem;
+`
+
+export const CenteredP = styled.p`
+  text-align: center;
+`
+
+export const CenteredPLeft = styled.p`
+  text-align: left;
+`
+export const CenteredPLeftWithMargin = styled.p`
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: left;
+`
+
+export const CenteredPLeftWithMarginInOrange = styled(CenteredPLeftWithMargin)`
+  color: ${colors.orange};
+`
+
+export const CenteredPWithWidth = styled(CenteredP)`
+  width: 250px;
+`
+
+export const StyledUL = styled.ul``
+
+export const StyledUlWithoutBullets = styled.ul`
+  list-style-type: none;
+`
+
+export const StyledLiWithOrangeBullet = styled.li`
+  list-style-type: none;
+  margin: 16px;
+  color: ${colors.black};
+  &:before {
+    content: "•";
+    color: ${colors.orange}
+    padding-right: 1rem;
+    }
+`
+
+export const H4Orange = styled.h4`
+  color: ${colors.orange};
+`
