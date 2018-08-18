@@ -14,8 +14,8 @@ interface State {
   toggleBurger: boolean
 }
 
-const Desktop = props => <Responsive {...props} minWidth={992} />
-const Mobile = props => <Responsive {...props} maxWidth={767} />
+const Desktop = props => <Responsive {...props} minWidth={breakpoints.sm} />
+const Mobile = props => <Responsive {...props} maxWidth={breakpoints.sm} />
 
 export default class Header extends React.Component<Props, State> {
   constructor(props: Props) {
