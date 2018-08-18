@@ -62,11 +62,8 @@ export const CenteredH4 = styled.h4`
   margin: 0.824em;
 `
 
-export const CenteredP = styled.p`
+export const CenteredPWithWidth = styled.p`
   text-align: center;
-`
-
-export const CenteredPWithWidth = styled(CenteredP)`
   width: 250px;
 `
 
