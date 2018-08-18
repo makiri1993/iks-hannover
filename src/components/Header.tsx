@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import Responsive from 'react-responsive'
 import { heights, dimensions, colors, widths, breakpoints } from '../styles/variables'
 import { getEmSize, onEvent } from '../styles/mixins'
 import { transparentize } from 'polished'
@@ -12,6 +13,9 @@ interface State {
   screenSize: boolean
   toggleBurger: boolean
 }
+
+const Desktop = props => <Responsive {...props} minWidth={992} />
+const Mobile = props => <Responsive {...props} maxWidth={767} />
 
 export default class Header extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -161,7 +165,12 @@ export default class Header extends React.Component<Props, State> {
   }
 
   render() {
-    return <StyledHeader>{this.state.screenSize ? this.getDesktopNavbar() : [this.getMobileNavbar(), this.getBurgerMenu()]}</StyledHeader>
+    return (
+      <StyledHeader>
+        <Desktop>{this.getDesktopNavbar()}</Desktop>
+        <Mobile>{[this.getMobileNavbar(), this.getBurgerMenu()]}</Mobile>
+      </StyledHeader>
+    )
   }
 }
 

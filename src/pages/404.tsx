@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
-
+import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import Container from '../components/Container'
 
@@ -24,7 +24,7 @@ const NotFoundPage = () => (
         </Link>
       </p>
     </Container>
-  </Page >
+  </Page>
 )
 
 export default NotFoundPage
