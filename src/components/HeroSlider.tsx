@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { Hero, HeroImage } from './StyledComponents'
+import styled from 'styled-components'
+import { colors } from '../styles/variables'
+import { fade } from '../styles/mixins'
 
 const slider_1: string = require('../images/Slider_1.jpg')
 const slider_2: string = require('../images/Slider_2.jpg')
@@ -74,3 +76,21 @@ export default class HeroSlider extends React.Component<Props, State> {
     )
   }
 }
+
+export const Hero = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.white};
+  text-align: center;
+  width: 100vw;
+  background-size: cover;
+`
+export const HeroImage = styled.img`
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  animation: ${fade};
+  animation-duration: 1.3s;
+`

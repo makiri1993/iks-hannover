@@ -1,17 +1,9 @@
 import * as React from 'react'
-import {
-  FlexDivContentCenter,
-  OneColumn,
-  IconForButton,
-  HomepageLink,
-  CenteredPLeft,
-  CenteredH1GreenForColumn,
-  CenteredH1BlueForColumn,
-  CenteredH1RedForColumn,
-  HomepageLinkBlue,
-  HomepageLinkGreen,
-  HomepageLinkRed
-} from './StyledComponents'
+import styled from 'styled-components'
+import { colors } from '../styles/variables'
+import Link from 'gatsby-link'
+import { onEvent } from '../styles/mixins'
+
 const handIcon: string = require('../images/icons/IKS_icons_hand.png')
 const hausIcon: string = require('../images/icons/IKS_icons_haus.png')
 const augeIcon: string = require('../images/icons/IKS_icons_auge.png')
@@ -67,3 +59,77 @@ export default class FourColumns extends React.Component<Props> {
     )
   }
 }
+
+export const FlexDivContentCenter = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+export const OneColumn = styled.div`
+  width: 24vw;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+`
+
+export const CenteredPLeft = styled.p`
+  text-align: left;
+`
+
+export const HomepageLink = styled(Link)`
+  /* position: absolute; */
+  color: ${colors.white};
+  top: 35%;
+  /* left: 50; */
+  text-align: center;
+  font-weight: 600;
+  ${onEvent`
+    text-decoration: none;
+  `};
+`
+export const HomepageLinkGreen = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.green};
+  margin-left: 3px;
+`
+
+export const HomepageLinkRed = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.red};
+  margin-left: 3px;
+`
+
+export const IconForButton = styled.img`
+  width: 120px;
+  height: 120px;
+`
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+`
+
+export const CenteredH1Green = CenteredH1.extend`
+  color: ${colors.green};
+`
+
+export const CenteredH1GreenForColumn = CenteredH1Green.extend`
+  font-weight: 250;
+  margin: 0;
+`
+export const CenteredH1BlueForColumn = CenteredH1GreenForColumn.extend`
+  color: ${colors.blue};
+`
+export const CenteredH1RedForColumn = CenteredH1GreenForColumn.extend`
+  color: ${colors.red};
+`
+
+export const HomepageLinkBlue = styled(HomepageLink)`
+  /* position: absolute; */
+  color: ${colors.blue};
+  margin-left: 3px;
+`

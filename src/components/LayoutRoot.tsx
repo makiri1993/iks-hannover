@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyledLayoutRoot } from './StyledComponents'
+import styled from 'styled-components'
 
 interface LayoutRootProps {
   className?: string
@@ -10,3 +10,9 @@ const LayoutRoot: React.SFC<LayoutRootProps> = ({ children, className }) => (
 )
 
 export default LayoutRoot
+
+export const StyledLayoutRoot = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+`
