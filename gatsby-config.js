@@ -4,8 +4,9 @@ const cssnext = require('postcss-cssnext')
 
 module.exports = {
   siteMetadata: {
-    title: 'Interkultureller Pflegedienst Hannover',
-    description: 'Interkultureller Pflegedienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.',
+    title: 'Interkultureller Sozialdienst Hannover',
+    description:
+      'Interkultureller Sozialdienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.',
     siteUrl: 'https://www.interkulturellepflege.de',
     keywords: 'Altenpflege, Interkuller, Pflegedienst, Hannover, Ambulant, Intensivpflege, Pflegegerade',
     author: {
@@ -19,7 +20,8 @@ module.exports = {
       email: 'karim_om@me.com'
     }
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
@@ -27,18 +29,21 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-sitemap`
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        name: `img`,
-        path: `${__dirname}/src/images/`
+        host: 'https://www.interkulturellepflege.de',
+        sitemap: 'https://www.interkulturellepflege.de/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'
@@ -68,8 +73,6 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-next',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet'
   ]
 }
