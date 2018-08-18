@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { dimensions, colors } from '../styles/variables'
+import { dimensions, colors, breakpoints } from '../styles/variables'
 
 import Page from '../components/Page'
 
@@ -143,18 +143,29 @@ export const DivCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    flex-direction: column;
+  }
 `
 
 export const CenteredText = styled.div`
   width: 46vw;
   margin-left: auto;
   margin-right: auto;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 export const CenteredH1 = styled.h1`
   text-align: center;
   font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    font-weight: 300;
+  }
 `
 
 export const CenteredH1Red = CenteredH1.extend`
