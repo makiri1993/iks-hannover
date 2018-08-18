@@ -3,7 +3,7 @@ import * as React from 'react'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, breakpoints } from '../styles/variables'
 
 const fubaImage: string = require('../images/partner/96-2.jpg')
 const alzImage: string = require('../images/partner/alzheimer.jpg')
@@ -44,8 +44,9 @@ export default () => (
         Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
         Stadt-Hannover-Preis ausgezeichnet worden.
       </PWithMargin>
-      {images.map(el => <EngagementImage src={el.src} alt={el.alt} />)}
-      <FlexDivContentCenter />
+      <FlexDivContentCenter>
+        {images.map(el => <EngagementImage src={el.src} alt={el.alt} />)}
+      </FlexDivContentCenter>
     </Container>
   </Page>
 )
@@ -56,6 +57,9 @@ export const BigTextInOrange = styled.div`
   margin: 1.5rem;
   color: ${colors.orange};
   letter-spacing: 0.5rem;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    font-size: 2rem;
+  }
 `
 export const FlexDivContentCenter = styled.div`
   height: auto;
@@ -65,14 +69,17 @@ export const FlexDivContentCenter = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 export const EngagementImage = styled.img`
   width: 189px;
   height: 143px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-right: 21rem;
+  margin: 0 auto;
 `
 
 export const MarginForTile = styled.div`
