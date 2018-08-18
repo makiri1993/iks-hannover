@@ -7,14 +7,16 @@ import Link from 'gatsby-link'
 
 interface Props {}
 interface State {
-  showDropdown: boolean
+  showDropdownHome: boolean
+  showDropdownLeitbild: boolean
 }
 
 export default class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      showDropdown: false
+      showDropdownHome: false,
+      showDropdownLeitbild: false
     }
   }
 
@@ -28,34 +30,46 @@ export default class Header extends React.Component<Props, State> {
           }}
           > */}
           <HomepageLink
-            onMouseEnter={() => this.setState({ showDropdown: true })}
-            onMouseLeave={() => this.setState({ showDropdown: false })}
+            onMouseEnter={() => this.setState({ showDropdownHome: true })}
+            onMouseLeave={() => this.setState({ showDropdownHome: false })}
             title="Navigation zu der Startseite"
             to="/"
             href="/"
           >
             HOME
+            <FlexColumn
+              display={this.state.showDropdownHome}
+              onMouseEnter={() => this.setState({ showDropdownHome: true })}
+              onMouseLeave={() => this.setState({ showDropdownHome: false })}
+            >
+              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/pflegedienst" href="/">
+                PFLEGEDIENST
+              </HomepageLinkAbsolute>
+              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
+                WOHNGEMEINSCHAFTEN
+              </HomepageLinkAbsolute>
+              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/intensivpflege" href="/">
+                AUßERKLINISCHE INTENSIVPFLEGE
+              </HomepageLinkAbsolute>
+            </FlexColumn>
           </HomepageLink>
-          <FlexColumn display={this.state.showDropdown}>
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/" href="/">
-              PFLEGEDIENST
-            </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/" href="/">
-              WOHNGEMEINSCHAFTEN
-            </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/" href="/">
-              AUßERKLINISCHE INTENSIVPFLEGE
-            </HomepageLinkAbsolute>
-          </FlexColumn>
-          {/* {this.state.showDropdown ? (
-              <LinkWrapperDropDown>
-                <HomepageLink title="Navigation zu der Startseite" to="/" href="/">
-                  PFLEGEDIENST
-                </HomepageLink>
-              </LinkWrapperDropDown>
-            ) : null} */}
-          <HomepageLink title="Navigation zu der Seite Leitbilder" to="/leitbilder" href="/">
+          <HomepageLink
+            onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
+            onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
+            title="Navigation zu der Seite Leitbilder"
+            to="/leitbilder"
+            href="/"
+          >
             LEITBILDER
+            <FlexColumnMoreRight
+              display={this.state.showDropdownLeitbild}
+              onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
+              onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
+            >
+              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/presse-archiv" href="/">
+                PRESSE | ARCHIV
+              </HomepageLinkAbsolute>
+            </FlexColumnMoreRight>
           </HomepageLink>
           <HomepageLink title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
             TEAM | KONTAKT
@@ -119,6 +133,7 @@ export const LinkWrapperDropDown = styled.div`
 interface props {
   display?: boolean
 }
+
 export const FlexColumn = styled.div<props>`
   position: absolute;
   width: 30%;
@@ -128,7 +143,20 @@ export const FlexColumn = styled.div<props>`
   display: flex;
   opacity: 0;
   flex-direction: column;
-  transition: opacity 1s;
+  transition: opacity 0.3s ease-in-out;
+  ${props => (props.display ? 'opacity: 1;' : '')};
+`
+
+export const FlexColumnMoreRight = styled.div<props>`
+  position: absolute;
+  width: 30%;
+  left: 160px;
+  top: ${heights.header}px;
+  z-index: 3;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  transition: opacity 0.3s ease-in-out;
   ${props => (props.display ? 'opacity: 1;' : '')};
 `
 
@@ -158,6 +186,6 @@ export const HomepageLink = styled(Link)`
   `};
   :hover {
     background-color: ${colors.orange};
-    transition-duration: 1s;
+    transition-duration: 0.3s;
   }
 `
