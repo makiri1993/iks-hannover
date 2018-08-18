@@ -2,8 +2,8 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 
 import Page from '../components/Page'
-import { DivCenter, CenteredH1Orange, DivColCenter, StyledIMGBig, POrange, CenteredText, PflegedienstP, PflegedienstPCenter, POrangeCenter, StyledBR, LinkEmail, LinkEmailOrange, H4Orange, H4OrangeCenter } from '../components/StyledComponents';
-
+import styled from 'styled-components'
+import { dimensions, colors } from '../styles/variables'
 const map: string = require('../images/maps.png')
 
 export default () => (
@@ -77,3 +77,72 @@ export default () => (
     </DivCenter>
   </Page>
 )
+
+export const StyledIMGBig = styled.img`
+  width: 550px;
+  height: auto;
+`
+
+export const DivCenter = styled.div`
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const DivColCenter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 450px;
+`
+
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+`
+
+export const CenteredH1Orange = CenteredH1.extend`
+  color: ${colors.orange};
+`
+
+export const H4Orange = styled.h4`
+  color: ${colors.orange};
+`
+
+export const H4OrangeCenter = H4Orange.extend`
+  text-align: center;
+`
+
+export const PflegedienstP = styled.p`
+  color: black;
+`
+
+export const POrange = PflegedienstP.extend`
+  color: ${colors.orange};
+`
+
+export const POrangeCenter = POrange.extend`
+  text-align: center;
+`
+
+export const PflegedienstPCenter = PflegedienstP.extend`
+  text-align: center;
+`
+
+export const StyledBR = styled.br``
+
+export const LinkEmail = styled.a`
+  cursor: pointer;
+  color: ${colors.black};
+  text-decoration: underline;
+  text-decoration-color: red;
+`
+
+export const LinkEmailOrange = LinkEmail.extend`
+  text-decoration: underline;
+  color: ${colors.orange};
+`

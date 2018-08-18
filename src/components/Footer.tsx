@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { StyledFooter, H4Footer, PFooter, StyledFooterDiv, StyledBR, StyledIMG, LinkWrapper, LinkWhite, LinkEmail } from './StyledComponents';
+import styled from 'styled-components'
+import { dimensions, colors } from '../styles/variables'
 
 const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
 const logo_2: string = require('../images/icons/logo_baum.png')
@@ -55,3 +56,47 @@ const Footer: React.SFC<FooterProps> = () => (
 )
 
 export default Footer
+
+export const StyledFooter = styled.footer`
+  height: auto;
+  width: 100%;
+  padding: 0 ${dimensions.containerPadding}rem;
+  background-color: ${colors.orange};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+`
+export const StyledFooterDiv = styled.div`
+  text-align: left;
+  width: 500px;
+`
+
+export const H4Footer = styled.h4`
+  color: ${colors.white};
+  font-weight: 500;
+  /* padding: 1.4rem; */
+`
+
+export const PFooter = styled.p`
+  color: ${colors.white};
+`
+
+export const StyledIMG = styled.img`
+  width: auto;
+  height: 100px;
+`
+
+export const StyledBR = styled.br``
+
+export const LinkEmail = styled.a`
+  cursor: pointer;
+  color: ${colors.black};
+  text-decoration: underline;
+  text-decoration-color: red;
+`
+export const LinkWhite = styled.a`
+  color: ${colors.white};
+`

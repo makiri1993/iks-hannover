@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
-import { H4Footer, CenteredH1Orange, FlexDivContentCenter, FlexDivCards } from '../components/StyledComponents'
+import styled from 'styled-components'
+import { dimensions, colors } from '../styles/variables'
 import Card from '../components/Card'
 
 // Path to images
@@ -145,3 +146,23 @@ export default () => (
     </FlexDivCards>
   </Page>
 )
+
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+`
+
+export const CenteredH1Orange = CenteredH1.extend`
+  color: ${colors.orange};
+`
+
+export const FlexDivCards = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`

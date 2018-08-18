@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
-import { CenteredText, CenteredH1Green, CenteredH4Green, PflegedienstP, StyledBR, PflegedienstPGreen, ButtonGreen, FlexDivContentCenter, DivCenterRow } from '../components/StyledComponents'
+import styled from 'styled-components'
+import { dimensions, colors } from '../styles/variables'
 
 const link1: string = require('../images/pflegedienst/Tabelle_Pflegegrade.jpg')
 const link2: string = require('../images/pflegedienst/Preise_Pflegedienstleistungen.jpg')
@@ -98,3 +99,82 @@ export default () => (
     </DivCenterRow>
   </Page>
 )
+
+export const PRed = styled.p`
+  font-style: italic;
+  color: ${colors.red};
+`
+
+export const CenteredH4 = styled.h4`
+  text-align: center;
+  font-weight: 500;
+  /* padding: 1.4rem; */
+  margin: 0.824em;
+`
+
+export const CenteredText = styled.div`
+  width: 46vw;
+  margin-left: auto;
+  margin-right: auto;
+`
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+`
+
+export const StyledBR = styled.br``
+
+export const FlexDivContentCenter = styled.div`
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+
+export const CenteredH1Green = CenteredH1.extend`
+  color: ${colors.green};
+`
+
+export const CenteredH4Green = CenteredH4.extend`
+  color: ${colors.green};
+`
+export const PflegedienstP = styled.p`
+  color: black;
+`
+
+export const PflegedienstPGreen = PflegedienstP.extend`
+  color: ${colors.green};
+`
+
+export const ButtonGreen = styled.a`
+  background-color: ${colors.green};
+  color: ${colors.white};
+  padding: 25px 25px 25px 25px;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-right: 25px;
+`
+
+export const StyledFooter = styled.footer`
+  height: auto;
+  width: 100%;
+  padding: 0 ${dimensions.containerPadding}rem;
+  background-color: ${colors.orange};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+`
+
+export const DivCenterRow = StyledFooter.extend`
+  background-color: ${colors.white};
+  flex-direction: row;
+`

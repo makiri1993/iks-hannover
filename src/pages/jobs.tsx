@@ -2,10 +2,8 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 
 import Page from '../components/Page'
-import {
-  DivCenterCol, StyledFooterDiv, CenteredH1Orange, PflegedienstP, StyledBR, H4Orange, POrange, StyledUL, StyledLIOrange, StyledSpan,
-  DivCenterRow
-} from '../components/StyledComponents';
+import styled from 'styled-components'
+import { dimensions, colors } from '../styles/variables'
 import ImgWithLink from '../components/ImgWithLink'
 
 const p1: string = require('../images/partner/p1.jpg')
@@ -47,7 +45,6 @@ export default () => (
         <PflegedienstP>Ebenso besteht eine Kooperation mit der Anna-Siemsen-Schule im Bereich der Altenpflegeausbildung. Auch hier können die Altenpflegeschüler ihr Praktikum in unserem Betrieb absolvieren.</PflegedienstP>
         <POrange>PDL-Ausbildung</POrange>
         <PflegedienstP>Mit der DAA (Deutsche Angestellten-Akademie) besteht eine Zusammenarbeit bei der Ausbildung von Fachkräften zur Pflegedienstleitung (PDL). Diese können ebenfalls bei uns ihre Praktika absolvieren.</PflegedienstP>
-        <StyledBR />
         <CenteredH1Orange>PARTNER</CenteredH1Orange>
         <PflegedienstP>Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio VitaList in Hannover-List.“</PflegedienstP>
         <DivCenterRow>
@@ -77,3 +74,64 @@ export default () => (
     </DivCenterCol>
   </Page>
 )
+
+export const StyledFooter = styled.footer`
+  height: auto;
+  width: 100%;
+  padding: 0 ${dimensions.containerPadding}rem;
+  background-color: ${colors.orange};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+`
+
+export const DivCenterCol = StyledFooter.extend`
+  background-color: ${colors.white};
+`
+export const StyledFooterDiv = styled.div`
+  text-align: left;
+  width: 500px;
+`
+
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+`
+
+export const CenteredH1Orange = CenteredH1.extend`
+  color: ${colors.orange};
+`
+
+export const H4Orange = styled.h4`
+  color: ${colors.orange};
+`
+
+export const PflegedienstP = styled.p`
+  color: black;
+`
+export const POrange = PflegedienstP.extend`
+  color: ${colors.orange};
+`
+
+export const StyledBR = styled.br``
+
+export const StyledUL = styled.ul``
+
+export const StyledLIOrange = styled.li`
+  color: ${colors.orange};
+`
+
+export const StyledSpan = styled.span`
+  color: ${colors.black};
+  font-size: 16px;
+`
+export const DivCenterRow = StyledFooter.extend`
+  background-color: ${colors.white};
+  flex-direction: row;
+`
+

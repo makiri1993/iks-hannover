@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { imgSmall, CardImg } from './StyledComponents'
+import styled from 'styled-components'
 
 class ImgWithLink extends React.Component {
   render() {
@@ -9,7 +9,12 @@ class ImgWithLink extends React.Component {
           <CardImg src={this.props.img} alt={this.props.alt} title={this.props.title} />
         </a>
       </div>
-    );
+    )
   }
 }
 export default ImgWithLink
+
+const CardImg = styled.img`
+  width: 100%;
+  height: auto;
+`

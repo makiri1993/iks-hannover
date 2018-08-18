@@ -237,6 +237,7 @@ export const StyledIMGBig = styled.img`
 export const CenteredH1Green = CenteredH1.extend`
   color: ${colors.green};
 `
+
 export const CenteredH1GreenForColumn = CenteredH1Green.extend`
   font-weight: 250;
   margin: 0;
@@ -322,6 +323,7 @@ export const StyledSpan = styled.span`
   color: ${colors.black};
   font-size: 16px;
 `
+
 export const PRed = styled.p`
   font-style: italic;
   color: ${colors.red};

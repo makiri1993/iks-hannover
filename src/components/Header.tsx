@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { StyledHeader, HeaderInner, LinkWrapper, HomepageLink } from './StyledComponents'
 
-interface HeaderProps { }
+interface HeaderProps {
+  show: boolean
+}
 
 const Header: React.SFC<HeaderProps> = () => (
   <StyledHeader>
@@ -39,5 +41,4 @@ const Header: React.SFC<HeaderProps> = () => (
     </HeaderInner>
   </StyledHeader>
 )
-
 export default Header
