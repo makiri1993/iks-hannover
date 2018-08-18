@@ -3,20 +3,10 @@ import Link from 'gatsby-link'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
-import {
-  CenteredPLeft,
-  CenteredH1,
-  CenteredPWithWidth,
-  CenteredPLeftWithMargin,
-  BigTextInOrange,
-  LinkEmailOrange,
-  H4Orange,
-  DivCenterRow,
-  StyledSpan,
-  DivCenterRowLeft,
-  SmallerPBehindBigText
-} from '../components/StyledComponents'
+
 import { Helmet } from 'react-helmet'
+import styled from 'styled-components'
+import { colors } from '../styles/variables'
 
 export default () => (
   <Page>
@@ -78,3 +68,46 @@ export default () => (
     </Container>
   </Page>
 )
+
+export const H4Orange = styled.h4`
+  color: ${colors.orange};
+`
+
+export const CenteredPLeft = styled.p`
+  text-align: left;
+`
+export const CenteredPLeftWithMargin = styled.p`
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: left;
+`
+
+export const BigTextInOrange = styled.div`
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.5rem;
+  color: ${colors.orange};
+  letter-spacing: 0.5rem;
+`
+
+export const LinkEmailOrange = styled.a`
+  cursor: pointer;
+  color: ${colors.black};
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration: underline;
+  color: ${colors.orange};
+`
+
+export const SmallerPBehindBigText = styled.p`
+  padding-left: 20px;
+  padding-top: 18px;
+`
+
+export const DivCenterRowLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: left;
+  padding: 2rem;
+`
