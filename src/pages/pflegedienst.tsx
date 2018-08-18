@@ -2,7 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import styled from 'styled-components'
-import { dimensions, colors } from '../styles/variables'
+import { dimensions, colors, breakpoints } from '../styles/variables'
 
 const link1: string = require('../images/pflegedienst/Tabelle_Pflegegrade.jpg')
 const link2: string = require('../images/pflegedienst/Preise_Pflegedienstleistungen.jpg')
@@ -112,20 +112,6 @@ export const CenteredH4 = styled.h4`
   margin: 0.824em;
 `
 
-export const CenteredText = styled.div`
-  width: 46vw;
-  margin-left: auto;
-  margin-right: auto;
-`
-export const CenteredH1 = styled.h1`
-  text-align: center;
-  font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
-`
-
-export const StyledBR = styled.br``
-
 export const FlexDivContentCenter = styled.div`
   height: auto;
   width: 100%;
@@ -133,7 +119,32 @@ export const FlexDivContentCenter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+  }
 `
+
+export const CenteredText = styled.div`
+  width: 46vw;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`
+
+export const CenteredH1 = styled.h1`
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+`
+
+export const StyledBR = styled.br``
+
 
 export const CenteredH1Green = CenteredH1.extend`
   color: ${colors.green};
@@ -159,6 +170,9 @@ export const ButtonGreen = styled.a`
   cursor: pointer;
   margin-left: 25px;
   margin-right: 25px;
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 25px;
+  }
 `
 
 export const StyledFooter = styled.footer`
@@ -177,4 +191,7 @@ export const StyledFooter = styled.footer`
 export const DivCenterRow = StyledFooter.extend`
   background-color: ${colors.white};
   flex-direction: row;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `
