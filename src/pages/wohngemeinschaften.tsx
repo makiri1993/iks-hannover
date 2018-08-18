@@ -88,15 +88,24 @@ export const BigTextInOrange = styled.div`
   margin: 1.5rem;
   color: ${colors.orange};
   letter-spacing: 0.5rem;
+  @media only screen and (max-width: 500px) {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `
 
 export const LinkEmailOrange = styled.a`
   cursor: pointer;
+  margin: auto;
   color: ${colors.black};
   text-decoration: underline;
   text-decoration-color: red;
   text-decoration: underline;
   color: ${colors.orange};
+  margin-left: 30px;
 `
 
 export const SmallerPBehindBigText = styled.p`
