@@ -78,7 +78,6 @@ export default () => (
 export const StyledFooter = styled.footer`
   height: auto;
   width: 100%;
-  padding: 0 ${dimensions.containerPadding}rem;
   background-color: ${colors.orange};
   display: flex;
   flex-direction: row;
@@ -93,7 +92,10 @@ export const DivCenterCol = StyledFooter.extend`
 `
 export const StyledFooterDiv = styled.div`
   text-align: left;
-  width: auto;
+  width: 500px;
+  @media only screen and (max-width: 770px) {
+    width: auto;
+  }
 `
 
 export const CenteredH1 = styled.h1`
