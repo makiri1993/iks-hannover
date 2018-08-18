@@ -9,6 +9,8 @@ interface Props {}
 interface State {
   showDropdownHome: boolean
   showDropdownLeitbild: boolean
+  screenSize: boolean
+  toggleBurger: boolean
 }
 
 export default class Header extends React.Component<Props, State> {
@@ -16,76 +18,150 @@ export default class Header extends React.Component<Props, State> {
     super(props)
     this.state = {
       showDropdownHome: false,
-      showDropdownLeitbild: false
+      showDropdownLeitbild: false,
+      screenSize: false,
+      toggleBurger: false
     }
+
+    this.updatePredicate = this.updatePredicate.bind(this)
+  }
+  componentDidMount() {
+    this.updatePredicate()
+    window.addEventListener('resize', this.updatePredicate)
+    window.addEventListener('onClick', this.handleClick)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updatePredicate)
+    window.removeEventListener('onClick', this.handleClick)
+  }
+
+  private updatePredicate() {
+    this.setState({ screenSize: window.innerWidth > breakpoints.sm })
+  }
+
+  private handleClick() {
+    this.setState({
+      toggleBurger: false
+    })
+  }
+  private getDesktopNavbar() {
+    return (
+      <HeaderInner>
+        <HomepageLink
+          onMouseEnter={() => this.setState({ showDropdownHome: true })}
+          onMouseLeave={() => this.setState({ showDropdownHome: false })}
+          title="Navigation zu der Startseite"
+          to="/"
+          href="/"
+        >
+          HOME
+          <FlexColumn
+            display={this.state.showDropdownHome}
+            onMouseEnter={() => this.setState({ showDropdownHome: true })}
+            onMouseLeave={() => this.setState({ showDropdownHome: false })}
+          >
+            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/pflegedienst" href="/">
+              PFLEGEDIENST
+            </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
+              WOHNGEMEINSCHAFTEN
+            </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/intensivpflege" href="/">
+              AUßERKLINISCHE INTENSIVPFLEGE
+            </HomepageLinkAbsolute>
+          </FlexColumn>
+        </HomepageLink>
+        <HomepageLink
+          onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
+          onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
+          title="Navigation zu der Seite Leitbilder"
+          to="/leitbilder"
+          href="/"
+        >
+          LEITBILDER
+          <FlexColumnMoreRight
+            display={this.state.showDropdownLeitbild}
+            onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
+            onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
+          >
+            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/presse-archiv" href="/">
+              PRESSE | ARCHIV
+            </HomepageLinkAbsolute>
+          </FlexColumnMoreRight>
+        </HomepageLink>
+        <HomepageLink title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
+          TEAM | KONTAKT
+        </HomepageLink>
+        <HomepageLink title="Navigation zu der Seite Jobs" to="/jobs" href="/">
+          JOBS | PARTNER
+        </HomepageLink>
+        <HomepageLink title="Navigation zu der Seite Engagement" to="/engagement" href="/">
+          ENGAGEMENT
+        </HomepageLink>
+        <HomepageLink title="Navigation zu der Seite Impressum" to="/impressum" href="/">
+          IMPRESSUM | ANFAHRT
+        </HomepageLink>
+      </HeaderInner>
+    )
+  }
+
+  private getMobileNavbar() {
+    return (
+      <HeaderInner>
+        <Container
+          onClick={() => {
+            console.log(this.state.toggleBurger)
+            this.setState({ toggleBurger: !this.state.toggleBurger })
+          }}
+        >
+          <Bar />
+          <Bar />
+          <Bar />
+        </Container>
+      </HeaderInner>
+    )
+  }
+
+  private getBurgerMenu() {
+    return (
+      <BurgerMenu menuBar={this.state.toggleBurger}>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/" href="/">
+          HOME
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/pflegedienst" href="/">
+          PFLEGEDIENST
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
+          WOHNGEMEINSCHAFTEN
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/intensivpflege" href="/">
+          AUßERKLINISCHE INTENSIVPFLEGE
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Leitbilder" to="/leitbilder" href="/">
+          LEITBILDER
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/presse-archiv" href="/">
+          PRESSE | ARCHIV
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
+          TEAM | KONTAKT
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Jobs" to="/jobs" href="/">
+          JOBS | PARTNER
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Engagement" to="/engagement" href="/">
+          ENGAGEMENT
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Impressum" to="/impressum" href="/">
+          IMPRESSUM | ANFAHRT
+        </HomepageLink>
+      </BurgerMenu>
+    )
   }
 
   render() {
-    return (
-      <StyledHeader>
-        <HeaderInner>
-          {/* onMouseOver={() => {
-            this.setState({ showDropdown: !this.state.showDropdown })
-            console.log(this.state.showDropdown)
-          }}
-          > */}
-          <HomepageLink
-            onMouseEnter={() => this.setState({ showDropdownHome: true })}
-            onMouseLeave={() => this.setState({ showDropdownHome: false })}
-            title="Navigation zu der Startseite"
-            to="/"
-            href="/"
-          >
-            HOME
-            <FlexColumn
-              display={this.state.showDropdownHome}
-              onMouseEnter={() => this.setState({ showDropdownHome: true })}
-              onMouseLeave={() => this.setState({ showDropdownHome: false })}
-            >
-              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/pflegedienst" href="/">
-                PFLEGEDIENST
-              </HomepageLinkAbsolute>
-              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
-                WOHNGEMEINSCHAFTEN
-              </HomepageLinkAbsolute>
-              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/intensivpflege" href="/">
-                AUßERKLINISCHE INTENSIVPFLEGE
-              </HomepageLinkAbsolute>
-            </FlexColumn>
-          </HomepageLink>
-          <HomepageLink
-            onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
-            onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
-            title="Navigation zu der Seite Leitbilder"
-            to="/leitbilder"
-            href="/"
-          >
-            LEITBILDER
-            <FlexColumnMoreRight
-              display={this.state.showDropdownLeitbild}
-              onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
-              onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
-            >
-              <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/presse-archiv" href="/">
-                PRESSE | ARCHIV
-              </HomepageLinkAbsolute>
-            </FlexColumnMoreRight>
-          </HomepageLink>
-          <HomepageLink title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
-            TEAM | KONTAKT
-          </HomepageLink>
-          <HomepageLink title="Navigation zu der Seite Jobs" to="/jobs" href="/">
-            JOBS | PARTNER
-          </HomepageLink>
-          <HomepageLink title="Navigation zu der Seite Engagement" to="/engagement" href="/">
-            ENGAGEMENT
-          </HomepageLink>
-          <HomepageLink title="Navigation zu der Seite Impressum" to="/impressum" href="/">
-            IMPRESSUM | ANFAHRT
-          </HomepageLink>
-        </HeaderInner>
-      </StyledHeader>
-    )
+    return <StyledHeader>{this.state.screenSize ? this.getDesktopNavbar() : [this.getMobileNavbar(), this.getBurgerMenu()]}</StyledHeader>
   }
 }
 
@@ -110,8 +186,9 @@ export const HeaderInner = styled(StyledContainer)`
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: ${breakpoints.sm}px) {
+    justify-content: left;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
   }
 `
 export const LinkWrapper = styled.div`
@@ -136,6 +213,7 @@ export const LinkWrapperDropDown = styled.div`
 
 interface props {
   display?: boolean
+  menuBar?: boolean
 }
 
 export const FlexColumn = styled.div<props>`
@@ -192,4 +270,38 @@ export const HomepageLink = styled(Link)`
     background-color: ${colors.orange};
     transition-duration: 0.3s;
   }
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    width: 90%;
+    text-align: left;
+    padding: 5%;
+  }
+`
+
+const Container = styled.div`
+  display: inline-block;
+  cursor: pointer;
+`
+
+const Bar = styled.div`
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 14s;
+`
+
+const BurgerMenu = styled.div<props>`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  width: 75vw;
+  top: 60px;
+  left: 0px;
+  z-index: 3;
+  opacity: 0;
+  background-color: ${colors.orange};
+  -webkit-font-smoothing: antialiased;
+  transition: opacity 0.3s ease-in-out;
+  ${props => (props.menuBar ? 'opacity: 1;' : '')};
 `
