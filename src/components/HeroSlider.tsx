@@ -85,7 +85,7 @@ export const Hero = styled.div`
   width: 100vw;
   height: 50vh;
   @media only screen and (max-width: ${breakpoints.sm}px) {
-    height: 30vh;
+    height: 25vh;
   }
 `
 export const HeroImage = styled.img`

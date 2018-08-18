@@ -22,10 +22,12 @@ export default class EmployeeTile extends React.Component<Props> {
         <CenteredH4>{this.props.name}</CenteredH4>
         <CenteredPWithWidth>{this.props.job}</CenteredPWithWidth>
         {this.props.team ? (
-          <LinkEmailOrange title={this.props.title} href={'mailto:' + this.props.email}>{this.props.email}</LinkEmailOrange>
+          <LinkEmailOrange title={this.props.title} href={'mailto:' + this.props.email}>
+            {this.props.email}
+          </LinkEmailOrange>
         ) : (
-            <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
-          )}
+          <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
+        )}
       </EmployeeDiv>
     )
   }
@@ -40,7 +42,7 @@ export const EmployeeDiv = styled.div`
   /* height: auto;
   padding: 10px; */
   @media only screen and (max-width: ${breakpoints.sm}px) {
-    margin:0 auto;
+    margin: 0 auto;
   }
 `
 
@@ -82,8 +84,7 @@ export const LinkEmailOrange = LinkEmail.extend`
 
 export const SignatureImage = styled.img`
   width: 166px;
-  left: 12%;
-  object-fit: cover;
+  object-fit: contain;
   animation: ${fade};
   animation-duration: 1.3s;
   @media only screen and (max-width: ${breakpoints.sm}px) {
