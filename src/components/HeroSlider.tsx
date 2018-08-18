@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, breakpoints } from '../styles/variables'
 import { fade } from '../styles/mixins'
 
 const slider_1: string = require('../images/Slider_1.jpg')
@@ -31,7 +31,7 @@ export default class HeroSlider extends React.Component<Props, State> {
     this.setAllImages()
     setInterval(() => {
       this.nextImage()
-    }, 50000)
+    }, 3000)
   }
   private setAllImages() {
     const sliderA: HTMLImageElement = new Image()
@@ -69,11 +69,6 @@ export default class HeroSlider extends React.Component<Props, State> {
   render() {
     return (
       <Hero>
-        {/* <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" /> */}
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
         <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
       </Hero>
     )
@@ -81,20 +76,27 @@ export default class HeroSlider extends React.Component<Props, State> {
 }
 
 export const Hero = styled.div`
-  display: flex;
+  display: block;
+  position: relative;
   align-items: center;
   justify-content: center;
   color: ${colors.white};
   text-align: center;
   width: 100vw;
   height: 50vh;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    height: 30vh;
+  }
 `
 export const HeroImage = styled.img`
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   top: 0px;
   left: 0px;
   object-fit: cover;
   animation: ${fade};
   animation-duration: 1.3s;
-  overflow: ;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    object-fit: fill;
+  }
 `

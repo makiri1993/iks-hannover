@@ -8,7 +8,6 @@ import FourColumns from '../components/FourColumns'
 import styled from 'styled-components'
 import { breakpoints } from '../styles/variables'
 
-
 const signatureJasmin: string = require('../images/mitarbeiter/unterschrift_Jasmin.png')
 const jasminImage: string = require('../images/mitarbeiter//Mitarbeiter_Jasmin_2.jpg')
 const signatureGalina: string = require('../images/mitarbeiter/unterschrift_Galina.png')
@@ -48,9 +47,6 @@ export default () => (
       />
     </FlexDivContentCenter>
     <FourColumns />
-    {/* <Link to="/page-2/" href="/page-2/">
-      Go to page 2
-    </Link> */}
   </Page>
 )
 
