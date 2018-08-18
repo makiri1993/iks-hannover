@@ -115,7 +115,6 @@ export default class Header extends React.Component<Props, State> {
       <HeaderInner>
         <Container
           onClick={() => {
-            console.log(this.state.toggleBurger)
             this.setState({ toggleBurger: !this.state.toggleBurger })
           }}
         >

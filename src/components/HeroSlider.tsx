@@ -53,10 +53,8 @@ export default class HeroSlider extends React.Component<Props, State> {
     this.state.newImage.push(sliderE)
   }
   private nextImage() {
-    console.log(this.state.indexOfActiveImage + '    ' + this.state.image.length)
     const newIndex = this.state.indexOfActiveImage + 1
     if (this.state.indexOfActiveImage === this.state.image.length - 1) {
-      console.log('letztes Bild')
       this.setState({
         activeImage: this.state.image[0],
         indexOfActiveImage: 0
