@@ -1,7 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-class ImgWithLink extends React.Component {
+interface Props {
+  img: string
+  alt: string
+  link: string
+  title: string
+}
+class ImgWithLink extends React.Component<Props> {
   render() {
     return (
       <div>
