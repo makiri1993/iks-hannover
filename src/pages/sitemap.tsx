@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import styled from 'styled-components'
 import { colors } from '../styles/variables'
 
-const NotFoundPage = () => (
+const Sitemap = () => (
   <Page>
     <Helmet
       title={'Verzeichnis - Interkultureller Pflegedienst Hannover'}
@@ -56,7 +56,7 @@ const NotFoundPage = () => (
       </p>
       <p>
         >{' '}
-        <LinkRed title="Link zu der Team | Kontakt" href="/">
+        <LinkRed title="Link zu der Team | Kontakt" href="/team-kontakt">
           Team | Kontakt
         </LinkRed>
       </p>
@@ -68,7 +68,7 @@ const NotFoundPage = () => (
       </p>
       <p>
         >{' '}
-        <LinkRed title="Link zu der Engagement" href="/">
+        <LinkRed title="Link zu der Engagement" href="/engagement">
           Engagement
         </LinkRed>
       </p>
@@ -82,7 +82,7 @@ const NotFoundPage = () => (
   </Page>
 )
 
-export default NotFoundPage
+export default Sitemap
 
 export const LinkRed = styled.a`
   color: ${colors.red};

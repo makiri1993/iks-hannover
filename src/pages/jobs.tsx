@@ -83,8 +83,8 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media only screen and (max-width: 500px) {
-    flex-direction: column;
+  @media only screen and (max-width: 770px) {
+    flex-direction: column-reverse;
   }
 `
 
@@ -93,14 +93,17 @@ export const DivCenterCol = StyledFooter.extend`
 `
 export const StyledFooterDiv = styled.div`
   text-align: left;
-  width: 500px;
+  width: auto;
 `
 
 export const CenteredH1 = styled.h1`
   text-align: center;
   font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  @media only screen and (max-width: 890px) {
+    font-weight: 300px;
+  }
 `
 
 export const CenteredH1Orange = CenteredH1.extend`
