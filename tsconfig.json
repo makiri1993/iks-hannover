@@ -13,7 +13,5 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["./src/**/*"]
 }

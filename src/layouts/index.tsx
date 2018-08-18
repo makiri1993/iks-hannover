@@ -6,7 +6,7 @@ import '../styles/normalize'
 import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 
 interface WrapperProps {
   children: () => any
@@ -15,6 +15,7 @@ interface WrapperProps {
       siteMetadata: {
         title: string
         description: string
+        keywords: string
       }
     }
   }
