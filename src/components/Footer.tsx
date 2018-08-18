@@ -8,54 +8,63 @@ const logo_2: string = require('../images/icons/logo_baum.png')
 interface FooterProps { }
 
 const Footer: React.SFC<FooterProps> = () => (
-  <StyledFooter>
-    <StyledFooterDiv>
-      <H4Footer>Interkultureller Sozialdienst</H4Footer>
-      <PFooter>
+  <FooterDiv>
+    <StyledFooter>
+      <StyledFooterDiv>
+        <H4Footer>Interkultureller Sozialdienst</H4Footer>
+        <PFooter>
+          <StyledBR />
+          Plaza De Rosalia 1
         <StyledBR />
-        Plaza De Rosalia 1
+          30449 Hannover
         <StyledBR />
-        30449 Hannover
+          <StyledBR />
+          Tel.   0511 - 210 10 44
         <StyledBR />
+          Fax    0511 - 210 10 66
         <StyledBR />
-        TEL   0511 - 210 10 44
-        <StyledBR />
-        FAX    0511 - 210 10 66
-        <StyledBR />
-        <StyledBR />
-        MAIL: <LinkEmail title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de" >iks-hannover@iks-hannover.de</LinkEmail>
-        <StyledBR />
-        Impressum: <LinkWhite href="/impressum" title="Link zu der Seite impressum des Pflegedienstes">Impressum</LinkWhite>
-        <StyledBR />
-        Sitemap: <LinkWhite href="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">Inhaltsverzeichnis</LinkWhite>
-        <StyledBR />
-        <StyledBR />
-        <StyledIMG src={logo_1} />
+          <StyledBR />
+          Mail: <LinkEmail title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de" >iks-hannover@iks-hannover.de</LinkEmail>
+          <StyledBR />
+          Impressum: <LinkEmail href="/impressum" title="Link zu der Seite impressum des Pflegedienstes">Impressum</LinkEmail>
+          <StyledBR />
+          Sitemap: <LinkEmail href="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">Inhaltsverzeichnis</LinkEmail>
+          <StyledBR />
+          <StyledBR />
+          <StyledIMG src={logo_1} />
 
-      </PFooter>
-    </StyledFooterDiv>
-    <StyledFooterDiv>
-      <H4Footer>Außerklinische Intensiv- und Beatmungspflege</H4Footer>
-      <PFooter>
+        </PFooter>
+      </StyledFooterDiv>
+      <StyledFooterDiv>
+        <H4Footer>Außerklinische Intensiv- und Beatmungspflege</H4Footer>
+        <PFooter>
+          <StyledBR />
+          Voßstraße 1
         <StyledBR />
-        Voßstraße 1
+          30161 Hannover
         <StyledBR />
-        30161 Hannover
+          <StyledBR />
+          Tel. 0511 - 866 43 43 4
         <StyledBR />
+          Fax 0511 - 866 43 43 5
         <StyledBR />
-        TEL 0511 - 866 43 43 4
-        <StyledBR />
-        FAX 0511 - 866 43 43 5
-        <StyledBR />
-        <StyledBR />
-        <StyledBR />
-        <StyledIMG src={logo_2} />
-      </PFooter>
-    </StyledFooterDiv>
-  </StyledFooter>
+          <StyledBR />
+          <StyledBR />
+          <StyledIMG src={logo_2} />
+        </PFooter>
+      </StyledFooterDiv>
+    </StyledFooter>
+    <LinkEmail title="link zu der immajung seite" href="https://www.immajung.com">code by immajung</LinkEmail>
+  </FooterDiv>
 )
-
 export default Footer
+
+export const FooterDiv = styled.div`
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: ${colors.orange};
+`
 
 export const StyledFooter = styled.footer`
   height: auto;
@@ -69,9 +78,10 @@ export const StyledFooter = styled.footer`
     flex-direction: column;
   }
 `
+
 export const StyledFooterDiv = styled.div`
   text-align: left;
-  width: 500px;
+  width: auto;
 `
 
 export const H4Footer = styled.h4`
@@ -93,10 +103,11 @@ export const StyledBR = styled.br``
 
 export const LinkEmail = styled.a`
   cursor: pointer;
-  color: ${colors.black};
+  color: ${colors.white};
   text-decoration: underline;
-  text-decoration-color: red;
+  text-decoration-color: white;
 `
+
 export const LinkWhite = styled.a`
   color: ${colors.white};
 `

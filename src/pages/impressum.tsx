@@ -101,8 +101,8 @@ export const DivColCenter = styled.div`
 export const CenteredH1 = styled.h1`
   text-align: center;
   font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
+  margin-top: 25px;
+  margin-bottom: 50px;
 `
 
 export const CenteredH1Orange = CenteredH1.extend`
