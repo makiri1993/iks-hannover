@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { dimensions, colors, breakpoints } from '../styles/variables'
+import Link from 'gatsby-link'
 
 const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
 const logo_2: string = require('../images/icons/logo_baum.png')
@@ -24,11 +25,11 @@ const Footer: React.SFC<FooterProps> = () => (
           Fax    0511 - 210 10 66
         <StyledBR />
           <StyledBR />
-          Mail: <LinkEmail title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de" >iks-hannover@iks-hannover.de</LinkEmail>
+          Mail: <LinkEmailOut title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de" >iks-hannover@iks-hannover.de</LinkEmailOut>
           <StyledBR />
-          Impressum: <LinkEmail href="/impressum" title="Link zu der Seite impressum des Pflegedienstes">Impressum</LinkEmail>
+          Impressum: <LinkEmail to="/impressum" title="Link zu der Seite impressum des Pflegedienstes">Impressum</LinkEmail>
           <StyledBR />
-          Sitemap: <LinkEmail href="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">Inhaltsverzeichnis</LinkEmail>
+          Sitemap: <LinkEmail to="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">Inhaltsverzeichnis</LinkEmail>
           <StyledBR />
           <StyledBR />
           <StyledIMG src={logo_1} />
@@ -54,7 +55,7 @@ const Footer: React.SFC<FooterProps> = () => (
         </PFooter>
       </StyledFooterDiv>
     </StyledFooter>
-    <LinkEmail title="link zu der immajung seite" href="https://www.immajung.com">code by immajung</LinkEmail>
+    <LinkEmailOut title="link zu der immajung seite" href="https://www.immajung.com">code by immajung</LinkEmailOut>
   </FooterDiv>
 )
 export default Footer
@@ -101,7 +102,13 @@ export const StyledIMG = styled.img`
 
 export const StyledBR = styled.br``
 
-export const LinkEmail = styled.a`
+export const LinkEmail = styled(Link)`
+  cursor: pointer;
+  color: ${colors.white};
+  text-decoration: underline;
+  text-decoration-color: white;
+`
+export const LinkEmailOut = styled.a`
   cursor: pointer;
   color: ${colors.white};
   text-decoration: underline;
