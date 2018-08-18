@@ -6,6 +6,8 @@ import HeroSlider from '../components/HeroSlider'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
 import styled from 'styled-components'
+import { breakpoints } from '../styles/variables'
+
 
 const signatureJasmin: string = require('../images/mitarbeiter/unterschrift_Jasmin.png')
 const jasminImage: string = require('../images/mitarbeiter//Mitarbeiter_Jasmin_2.jpg')
@@ -59,19 +61,28 @@ export const FlexDivContentCenter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+  }
 `
 
 export const CenteredText = styled.div`
   width: 46vw;
   margin-left: auto;
   margin-right: auto;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 export const CenteredH1 = styled.h1`
   text-align: center;
   font-weight: 500;
   padding: 2.4rem;
-  margin: 1em;
 `
 
 export const CenteredH4 = styled.h4`

@@ -1,13 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, breakpoints } from '../styles/variables'
 import Link from 'gatsby-link'
 import { onEvent } from '../styles/mixins'
 
 const handIcon: string = require('../images/icons/IKS_icons_hand.png')
 const hausIcon: string = require('../images/icons/IKS_icons_haus.png')
 const augeIcon: string = require('../images/icons/IKS_icons_auge.png')
-interface Props {}
+interface Props { }
 
 export default class FourColumns extends React.Component<Props> {
   render() {
@@ -67,12 +67,21 @@ export const FlexDivContentCenter = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (max-width: 799px) {
+    flex-direction: column;
+  }
 `
 export const OneColumn = styled.div`
   width: 24vw;
   margin: 3rem;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 799px) {
+    flex-direction: column;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `
 
 export const CenteredPLeft = styled.p`

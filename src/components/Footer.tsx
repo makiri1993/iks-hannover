@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { dimensions, colors } from '../styles/variables'
+import { dimensions, colors, breakpoints } from '../styles/variables'
 
 const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
 const logo_2: string = require('../images/icons/logo_baum.png')
@@ -65,7 +65,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: ${breakpoints.sm}px) {
     flex-direction: column;
   }
 `

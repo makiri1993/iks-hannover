@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { fade } from '../styles/mixins'
-import { colors } from '../styles/variables'
+import { colors, breakpoints } from '../styles/variables'
 
 interface Props {
   team?: boolean
@@ -22,10 +22,10 @@ export default class EmployeeTile extends React.Component<Props> {
         <CenteredH4>{this.props.name}</CenteredH4>
         <CenteredPWithWidth>{this.props.job}</CenteredPWithWidth>
         {this.props.team ? (
-          <LinkEmailOrange href={'mailto:' + this.props.email}>{this.props.email}</LinkEmailOrange>
+          <LinkEmailOrange title={this.props.title} href={'mailto:' + this.props.email}>{this.props.email}</LinkEmailOrange>
         ) : (
-          <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
-        )}
+            <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
+          )}
       </EmployeeDiv>
     )
   }
@@ -39,6 +39,9 @@ export const EmployeeDiv = styled.div`
   flex-wrap: wrap;
   /* height: auto;
   padding: 10px; */
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    margin:0 auto;
+  }
 `
 
 export const EmployeeImage = styled.img`
@@ -83,4 +86,7 @@ export const SignatureImage = styled.img`
   object-fit: cover;
   animation: ${fade};
   animation-duration: 1.3s;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    left: 0%;
+  }
 `
