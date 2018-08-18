@@ -64,12 +64,8 @@ module.exports = {
       }
     },
     'gatsby-transformer-json',
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
-      }
-    },
+    'gatsby-plugin-canonical-urls',
+
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-next',
