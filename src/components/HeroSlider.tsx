@@ -31,7 +31,7 @@ export default class HeroSlider extends React.Component<Props, State> {
     this.setAllImages()
     setInterval(() => {
       this.nextImage()
-    }, 5000)
+    }, 50000)
   }
   private setAllImages() {
     const sliderA: HTMLImageElement = new Image()
@@ -69,6 +69,11 @@ export default class HeroSlider extends React.Component<Props, State> {
   render() {
     return (
       <Hero>
+        {/* <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" /> */}
+        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
+        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
+        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
+        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
         <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
       </Hero>
     )
@@ -82,8 +87,7 @@ export const Hero = styled.div`
   color: ${colors.white};
   text-align: center;
   width: 100vw;
-  height: auto;
-  background-size: cover;
+  height: 50vh;
 `
 export const HeroImage = styled.img`
   width: 100vw;
@@ -92,4 +96,5 @@ export const HeroImage = styled.img`
   object-fit: cover;
   animation: ${fade};
   animation-duration: 1.3s;
+  overflow: ;
 `
