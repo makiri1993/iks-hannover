@@ -18,11 +18,21 @@ export default Card
 export const CardMainDiv = styled.div`
   width: 350px;
   height: 250px;
-  background-color: red;
+  background-color: ${colors.orange};;
   position: relative;
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 25px;
+  @media only screen and (max-width: 890px) {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media only screen and (max-width: 390px) {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 export const CardImg = styled.img`

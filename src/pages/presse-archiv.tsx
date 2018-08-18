@@ -2,7 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import styled from 'styled-components'
-import { dimensions, colors } from '../styles/variables'
+import { breakpoints, colors } from '../styles/variables'
 import Card from '../components/Card'
 
 // Path to images
@@ -165,4 +165,7 @@ export const FlexDivCards = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media only screen and (max-width: 890px) {
+    flex-direction: column;
+  }
 `
