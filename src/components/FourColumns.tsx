@@ -1,20 +1,20 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, breakpoints } from '../styles/variables'
+import { colors } from '../styles/variables'
 import Link from 'gatsby-link'
 import { onEvent } from '../styles/mixins'
 
 const handIcon: string = require('../images/icons/IKS_icons_hand.png')
 const hausIcon: string = require('../images/icons/IKS_icons_haus.png')
 const augeIcon: string = require('../images/icons/IKS_icons_auge.png')
-interface Props { }
+interface Props {}
 
 export default class FourColumns extends React.Component<Props> {
   render() {
     return (
       <FlexDivContentCenter>
         <OneColumn>
-          <HomepageLink to="/" href="/">
+          <HomepageLink to="/pflegedienst" href="/">
             <IconForButton src={handIcon} />
           </HomepageLink>
           <CenteredH1GreenForColumn>Pflegedienst</CenteredH1GreenForColumn>
@@ -22,26 +22,26 @@ export default class FourColumns extends React.Component<Props> {
             Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung, verankert im elften Sozialgesetzbuch (SGB XI). Sie ist die
             vierte Säule des Gesundheitssystems und finanziert - wenn auch nur zum Teil - diejenigen Kosten, die entstehen, wenn Versicherte
             pflegebedürftig werden.
-            <HomepageLinkGreen to="/" href="/">
+            <HomepageLinkGreen to="/pflegedienst" href="/">
               ...
             </HomepageLinkGreen>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to="/" href="/">
+          <HomepageLink to="/wohngemeinschaften" href="/">
             <IconForButton src={hausIcon} />
           </HomepageLink>
           <CenteredH1BlueForColumn>Wohngemeinschaft</CenteredH1BlueForColumn>
           <CenteredPLeft>
             Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, stehen unsere Wohngemeinschaften in den Stadtteilen
             Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
-            <HomepageLinkBlue to="/" href="/">
+            <HomepageLinkBlue to="/wohngemeinschaften" href="/">
               ...
             </HomepageLinkBlue>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to="/" href="/">
+          <HomepageLink to="/intensivpflege" href="/">
             <IconForButton src={augeIcon} />
           </HomepageLink>
           <CenteredH1RedForColumn>Außerklinische Pflege</CenteredH1RedForColumn>
@@ -50,7 +50,7 @@ export default class FourColumns extends React.Component<Props> {
             häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht
             werden. Wir stimmen Therapie und ambulante Versorgung in kleinen, spezialisierten Teams und gemeinsam mit Ihren Ärzten auf Ihre
             individuellen Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
-            <HomepageLinkRed to="/" href="/">
+            <HomepageLinkRed to="/intensivpflege" href="/">
               ...
             </HomepageLinkRed>
           </CenteredPLeft>

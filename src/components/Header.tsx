@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { heights, dimensions, colors, widths } from '../styles/variables'
-import { getEmSize, onEvent, fade, fadeLonger } from '../styles/mixins'
+import { heights, dimensions, colors, widths, breakpoints } from '../styles/variables'
+import { getEmSize, onEvent } from '../styles/mixins'
 import { transparentize } from 'polished'
 import Link from 'gatsby-link'
 
@@ -109,6 +109,10 @@ export const HeaderInner = styled(StyledContainer)`
   height: 100%;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: ${breakpoints.sm}px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 `
 export const LinkWrapper = styled.div`
   width: 100%;

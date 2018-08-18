@@ -45,8 +45,3 @@ export const fade = keyframes`
     }
 
 `
-export const fadeLonger = keyframes`
-    from { opacity: 0; }
-      to { opacity: 1; }
-
-`
