@@ -82,6 +82,7 @@ export const Hero = styled.div`
   color: ${colors.white};
   text-align: center;
   width: 100vw;
+  height: auto;
   background-size: cover;
 `
 export const HeroImage = styled.img`
