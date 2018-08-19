@@ -1,9 +1,8 @@
-'use strict'
-
-const cssnext = require('postcss-cssnext')
-
 module.exports = {
   siteMetadata: {
+    title: 'Interkultureller Pflegedienst Hannover',
+    description:
+      'Interkultureller Pflegedienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.',
     title: 'Interkultureller Sozialdienst Hannover',
     description:
       'Interkultureller Sozialdienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.',
@@ -29,6 +28,7 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
       resolve: `gatsby-plugin-sitemap`
     },
     {
@@ -39,6 +39,8 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -64,11 +66,17 @@ module.exports = {
       }
     },
     'gatsby-transformer-json',
-    'gatsby-plugin-canonical-urls',
-
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+      }
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-next',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet'
   ]
 }
