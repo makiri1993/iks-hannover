@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import styledTS from 'styled-components-ts'
 import Responsive from 'react-responsive'
 import { heights, dimensions, colors, widths, breakpoints } from '../styles/variables'
 import { getEmSize, onEvent } from '../styles/mixins'
@@ -202,7 +203,6 @@ export const HeaderInner = styled(StyledContainer)`
 export const LinkWrapper = styled.div`
   width: 100%;
   height: 100%;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   position: relative;
@@ -219,12 +219,7 @@ export const LinkWrapperDropDown = styled.div`
   background-color: ${colors.orange};
 `
 
-interface props {
-  display?: boolean
-  menuBar?: boolean
-}
-
-export const FlexColumn = styled.div<props>`
+export const FlexColumn = styledTS<{ display: boolean }>(styled.div)`
   position: absolute;
   width: 30%;
   left: 0px;
@@ -237,7 +232,7 @@ export const FlexColumn = styled.div<props>`
   ${props => (props.display ? 'opacity: 1;' : '')};
 `
 
-export const FlexColumnMoreRight = styled.div<props>`
+export const FlexColumnMoreRight = styled<{ display: boolean }, 'div'>('div')`
   position: absolute;
   width: 30%;
   left: 160px;
