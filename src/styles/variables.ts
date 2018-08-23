@@ -49,10 +49,11 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 13,
+    regular: 15,
     large: 18
   },
   headingSizes: {
+    siteHeader: 2.6,
     h1: 2.441,
     h2: 1.953,
     h3: 1.7,
@@ -63,7 +64,10 @@ export const dimensions = {
     regular: 1.45,
     heading: 1.2
   },
-  containerPadding: 1.5
+  containerPadding: 1.5,
+  letterSpacing: {
+    small: 0.2
+  }
 }
 
 export const heights = {

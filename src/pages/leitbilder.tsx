@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, dimensions } from '../styles/variables'
 
 export default () => (
   <Page>
@@ -18,7 +18,7 @@ export default () => (
       ]}
     />
     <Container>
-      <BigTextInOrange>Leitbilder</BigTextInOrange>
+      <BigTextInOrange>LEITBILDER</BigTextInOrange>
       <CenteredPLeftWithMarginInOrange>
         Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, bieten sich unsere Wohngemeinschaften in den Stadtteilen
         Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative an.
@@ -38,6 +38,8 @@ export default () => (
         Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und
         Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
       </CenteredPLeftWithMargin>
+      <br />
+
       <H4Orange>UNTERNEHMENSLEITBILD</H4Orange>
       <CenteredPLeftWithMarginInOrange>Der Betrieb</CenteredPLeftWithMarginInOrange>
       <CenteredPLeftWithMargin>
@@ -78,6 +80,8 @@ export default () => (
         Wir verpflichten uns dem Prinzip des respektierenden Umgangs miteinander, in einem Gewalt-, Sexismus-, Rassismus-, und
         Vorurteilsfreien Raum.
       </CenteredPLeftWithMargin>
+      <br />
+
       <H4Orange>PFLEGELEITBILD</H4Orange>
       <CenteredPLeftWithMarginInOrange>Der Mensch</CenteredPLeftWithMarginInOrange>
       <CenteredPLeftWithMargin>
@@ -105,6 +109,7 @@ export default () => (
         kann. Wir als Pflegende verpflichten uns, die Werte und Traditionen unserer Klienten in den Pflegeprozess einzubeziehen und zu
         respektieren, auch wenn es nicht die unseren sind.
       </CenteredPLeftWithMargin>
+      <br />
       <H4Orange>DIE MOTIVE</H4Orange>
 
       <StyledLiWithOrangeBullet>
@@ -114,6 +119,7 @@ export default () => (
         Eine Konzeption von Pflege zu entwickeln, die mehr sein kann als „warm, satt, sauber“, und die psycho-sozialen Aspekte sowie die
         religiös-kulturellen Gegebenheiten der Patienten mit einschließt.
       </StyledLiWithOrangeBullet>
+      <br />
 
       <H4Orange>FÜHRUNGSLEITBILD</H4Orange>
       <CenteredPLeftWithMarginInOrange>Nachhaltigkeit</CenteredPLeftWithMarginInOrange>
@@ -147,11 +153,10 @@ export default () => (
 )
 
 export const BigTextInOrange = styled.div`
-  font-size: 3rem;
+  font-size: ${dimensions.headingSizes.siteHeader}rem;
   text-align: center;
   margin: 1.5rem;
   color: ${colors.orange};
-  letter-spacing: 0.5rem;
 `
 
 export const CenteredP = styled.p`

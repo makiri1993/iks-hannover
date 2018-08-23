@@ -4,7 +4,7 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import EmployeeTile from '../components/EmployeeTile'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, dimensions } from '../styles/variables'
 
 const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
 const marionImage: string = require('../images/mitarbeiter/Marion.jpg')
@@ -110,7 +110,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
 export default () => (
   <Page>
     <Container>
-      <BigTextInOrange>Unser Team</BigTextInOrange>
+      <BigTextInOrange>UNSER TEAM</BigTextInOrange>
       <FlexDivContentCenter>
         {mitarbeiterTeam.map(el => (
           <MarginForTile>
@@ -124,11 +124,10 @@ export default () => (
 )
 
 export const BigTextInOrange = styled.div`
-  font-size: 3rem;
+  font-size: ${dimensions.headingSizes.siteHeader}rem;
   text-align: center;
   margin: 1.5rem;
   color: ${colors.orange};
-  letter-spacing: 0.5rem;
 `
 
 export const FlexDivContentCenter = styled.div`
@@ -142,7 +141,7 @@ export const FlexDivContentCenter = styled.div`
 `
 
 export const MarginForTile = styled.div`
-  margin: 0.4rem;
+  margin: 0.1rem;
 `
 
 export const TeamImage = styled.img`

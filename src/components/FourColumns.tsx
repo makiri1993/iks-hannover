@@ -31,7 +31,7 @@ export default class FourColumns extends React.Component<Props> {
           <HomepageLink to="/wohngemeinschaften" href="/">
             <IconForButton src={hausIcon} />
           </HomepageLink>
-          <CenteredH1BlueForColumn>Wohngemeinschaft</CenteredH1BlueForColumn>
+          <CenteredH1BlueForColumn>Wohngemeinschaften</CenteredH1BlueForColumn>
           <CenteredPLeft>
             Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, stehen unsere Wohngemeinschaften in den Stadtteilen
             Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
@@ -48,8 +48,7 @@ export default class FourColumns extends React.Component<Props> {
           <CenteredPLeft>
             Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
             häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht
-            werden. Wir stimmen Therapie und ambulante Versorgung in kleinen, spezialisierten Teams und gemeinsam mit Ihren Ärzten auf Ihre
-            individuellen Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+            werden.
             <HomepageLinkRed to="/intensivpflege" href="/">
               ...
             </HomepageLinkRed>

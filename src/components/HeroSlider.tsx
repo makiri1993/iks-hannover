@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { colors, breakpoints } from '../styles/variables'
 import { fade } from '../styles/mixins'
 
-const slider_1: string = require('../images/Slider_1.jpg')
-const slider_2: string = require('../images/Slider_2.jpg')
-const slider_3: string = require('../images/Slider_3.jpg')
-const slider_4: string = require('../images/Slider_4.jpg')
-const slider_5: string = require('../images/Slider_5.jpg')
+const slider_1: string = require('../images/Slider_1.jpeg')
+const slider_2: string = require('../images/Slider_2.jpeg')
+const slider_3: string = require('../images/Slider_3.jpeg')
+const slider_4: string = require('../images/Slider_4.jpeg')
+const slider_5: string = require('../images/Slider_5.jpeg')
 
 interface State {
   activeImage: string

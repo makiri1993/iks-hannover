@@ -13,7 +13,8 @@ export default () => (
       meta={[
         {
           name: 'description',
-          content: 'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.'
+          content:
+            'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.'
         }
       ]}
     />
@@ -22,13 +23,9 @@ export default () => (
         <CenteredH1Orange>ANFAHRT</CenteredH1Orange>
         <StyledIMGBig src={map} alt="Bilder der Karte zum Büro" title="Bild zur Anfahrt zu unserem Büro" />
         <CenteredH1Orange>IMPRESSUM</CenteredH1Orange>
-        <POrangeCenter>
-          Interkultureller Sozialdienst GmbH
-          Ambulante Alten- und Krankenpflege
-        </POrangeCenter>
+        <POrangeCenter>Interkultureller Sozialdienst GmbH Ambulante Alten- und Krankenpflege</POrangeCenter>
         <PflegedienstPCenter>
-          Plaza De Rosalia 1
-          <StyledBR />
+          Plaza De Rosalia 1<StyledBR />
           30449 Hannover
           <StyledBR />
           TEL: 0511 / 210 10 44
@@ -36,7 +33,10 @@ export default () => (
           FAX: 0511 / 210 10 66
         </PflegedienstPCenter>
         <POrangeCenter>
-          MAIL: <LinkEmailOrange titel="Email" href="mailto:iks-hannover@iks-hannover.de">iks-hannover@iks-hannover.de</LinkEmailOrange>
+          MAIL:{' '}
+          <LinkEmailOrange titel="Email" href="mailto:iks-hannover@iks-hannover.de">
+            iks-hannover@iks-hannover.de
+          </LinkEmailOrange>
         </POrangeCenter>
         <PflegedienstPCenter>
           Registergericht: Amtsgericht Hannover
@@ -50,28 +50,28 @@ export default () => (
           Steuernummer Finanzamt Nord: 25/210/19598
           <StyledBR />
         </PflegedienstPCenter>
-        <H4OrangeCenter>
-          HAFTUNGSHINWEIS
-        </H4OrangeCenter>
+        <H4OrangeCenter>HAFTUNGSHINWEIS</H4OrangeCenter>
         <PflegedienstPCenter>
-          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der
+          verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
         </PflegedienstPCenter>
         <StyledBR />
-        <POrangeCenter>
-          Gestaltung
-        </POrangeCenter>
+        <POrangeCenter>Gestaltung</POrangeCenter>
         <PflegedienstPCenter>
           s.artisfaction
           <StyledBR />
           Hannover
           <StyledBR />
-          0177 648 554 0
-          <StyledBR />
+          0177 648 554 0<StyledBR />
         </PflegedienstPCenter>
         <POrangeCenter>
-          <LinkEmailOrange target="_blank" rel="noopener noreferrer" href="www.s-artifaction.com">www.s-artifaction.com</LinkEmailOrange>
+          <LinkEmailOrange target="_blank" rel="noopener noreferrer" href="www.s-artifaction.com">
+            www.s-artifaction.com
+          </LinkEmailOrange>
           <StyledBR />
-          <LinkEmailOrange titel="Email" href="mailto:s.artisfaction@googlemail.com">s.artisfaction@googlemail.com</LinkEmailOrange>
+          <LinkEmailOrange titel="Email" href="mailto:s.artisfaction@googlemail.com">
+            s.artisfaction@googlemail.com
+          </LinkEmailOrange>
         </POrangeCenter>
       </DivColCenter>
     </DivCenter>
@@ -117,9 +117,7 @@ export const H4OrangeCenter = H4Orange.extend`
   text-align: center;
 `
 
-export const PflegedienstP = styled.p`
-  color: black;
-`
+export const PflegedienstP = styled.p``
 
 export const POrange = PflegedienstP.extend`
   color: ${colors.orange};
