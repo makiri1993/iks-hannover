@@ -14,6 +14,7 @@ injectGlobal`
   *,
   *::before,
   *::after {
+    color: ${colors.black};
     box-sizing: inherit;
   }
 

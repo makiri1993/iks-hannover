@@ -5,7 +5,7 @@ import Container from '../components/Container'
 
 import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, dimensions } from '../styles/variables'
 
 export default () => (
   <Page>
@@ -20,7 +20,7 @@ export default () => (
       ]}
     />
     <Container>
-      <BigTextInOrange>Wohngemeinschaften</BigTextInOrange>
+      <BigTextInBlue>WOHNGEMEINSCHAFTEN</BigTextInBlue>
       <CenteredPLeftWithMargin>
         Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, bieten sich unsere Wohngemeinschaften in den Stadtteilen
         Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative an.
@@ -61,15 +61,15 @@ export default () => (
         Für eine umfassende Beratung und Besichtigung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gern zur Verfügung.
       </CenteredPLeftWithMargin>
       <DivCenterRowLeft>
-        <H4Orange>Galina Fiksman</H4Orange> <SmallerPBehindBigText>| Leitung der Intensivpflege</SmallerPBehindBigText>
+        <CustomH4>Galina Fiksman</CustomH4> <SmallP>| Pflegedienstleitung</SmallP>
       </DivCenterRowLeft>
-      <LinkEmailOrange href="mailto:fiksmann@iks-hannover.de">fiksmann@iks-hannover.de</LinkEmailOrange>
+      <LinkEmail href="mailto:fiksmann@iks-hannover.de">fiksmann@iks-hannover.de</LinkEmail>
     </Container>
   </Page>
 )
 
-export const H4Orange = styled.h4`
-  color: ${colors.orange};
+export const CustomH4 = styled.h4`
+  color: ${colors.blue};
 `
 
 export const CenteredPLeft = styled.p`
@@ -81,12 +81,12 @@ export const CenteredPLeftWithMargin = styled.p`
   text-align: left;
 `
 
-export const BigTextInOrange = styled.div`
-  font-size: 3rem;
+export const BigTextInBlue = styled.div`
+  font-size: ${dimensions.headingSizes.siteHeader}rem;
   text-align: center;
   margin: 1.5rem;
-  color: ${colors.orange};
-  letter-spacing: 0.5rem;
+  color: ${colors.blue};
+
   @media only screen and (max-width: 500px) {
     font-size: 2rem;
     letter-spacing: 0.3rem;
@@ -96,20 +96,19 @@ export const BigTextInOrange = styled.div`
   }
 `
 
-export const LinkEmailOrange = styled.a`
+export const LinkEmail = styled.a`
   cursor: pointer;
   margin: auto;
-  color: ${colors.black};
+  color: ${colors.blue};
   text-decoration: underline;
   text-decoration-color: red;
   text-decoration: underline;
-  color: ${colors.orange};
   margin-left: 30px;
 `
 
-export const SmallerPBehindBigText = styled.p`
+export const SmallP = styled.p`
   padding-left: 20px;
-  padding-top: 18px;
+  padding-top: 24px;
 `
 
 export const DivCenterRowLeft = styled.div`
