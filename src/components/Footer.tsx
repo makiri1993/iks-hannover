@@ -93,7 +93,7 @@ export const StyledFooterDiv = styled.div`
   margin-right: 20px;
 `
 
-export const H4Footer = styled.h4`
+export const H4Footero = styled.h4`
   color: ${colors.white};
   font-weight: 500;
   /* padding: 1.4rem; */
