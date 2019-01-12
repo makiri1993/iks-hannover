@@ -125,6 +125,7 @@ export const LinkEmailOut = styled.a`
   color: ${colors.blue};
   text-decoration: underline;
   text-decoration-color: white;
+  margin-left: 1rem;
 `
 
 export const CenteredPLeftWithMarginForPrivacy = styled.p`
