@@ -191,10 +191,10 @@ export const StyledLiWithOrangeBullet = styled.li`
   margin: 16px;
   color: ${colors.black};
   &:before {
-    content: "•";
-    color: ${colors.orange}
+    content: '•';
+    color: ${colors.orange};
     padding-right: 1rem;
-    }
+  }
 `
 
 export const H4Orange = styled.h4`

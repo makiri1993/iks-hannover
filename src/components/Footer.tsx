@@ -25,18 +25,23 @@ const Footer: React.SFC<FooterProps> = () => (
           <StyledBR />
           <StyledBR />
           Mail:{' '}
-          <LinkEmailOut title="Email Adresse des interkulturellen Pfelgedienst Hannover" href="mailto:iks-hannover@iks-hannover.de">
+          <LinkEmailOut title='Email Adresse des interkulturellen Pfelgedienst Hannover' href='mailto:iks-hannover@iks-hannover.de'>
             iks-hannover@iks-hannover.de
           </LinkEmailOut>
           <StyledBR />
           Impressum:{' '}
-          <LinkEmail to="/impressum" title="Link zu der Seite impressum des Pflegedienstes">
+          <LinkEmail to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
             Impressum
           </LinkEmail>
           <StyledBR />
           Sitemap:{' '}
-          <LinkEmail to="/sitemap" title="Link zu dem Inhaltsverzeichnis des Pflegedienstes">
+          <LinkEmail to='/sitemap' title='Link zu dem Inhaltsverzeichnis des Pflegedienstes'>
             Inhaltsverzeichnis
+          </LinkEmail>
+          <StyledBR />
+          Datenschutzerklärung:{' '}
+          <LinkEmail to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
+            Datenschutzerklärung
           </LinkEmail>
           <StyledBR />
           <StyledBR />
@@ -59,7 +64,7 @@ const Footer: React.SFC<FooterProps> = () => (
         </PFooter>
       </StyledFooterDiv>
     </StyledFooter>
-    <LinkEmailOutWtMargin title="link zu der immajung seite" href="https://www.immajung.com">
+    <LinkEmailOutWtMargin title='link zu der immajung seite' href='https://www.immajung.com'>
       code by immajung
     </LinkEmailOutWtMargin>
   </FooterDiv>
