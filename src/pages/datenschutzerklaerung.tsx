@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { colors } from '../styles/variables'
 import Container from '../components/Container'
-import { BigTextInOrange, H4Orange, CenteredPLeftWithMargin } from './leitbilder'
+import { BigTextInOrange, H4Orange, CenteredPLeftWithMargin, StyledLiWithOrangeBullet } from './leitbilder'
 
 const PrivacyPage = () => (
   <Page>
@@ -14,8 +14,8 @@ const PrivacyPage = () => (
       meta={[
         {
           name: 'description',
-          content: 'Hier finden Sie die Datenschutzerklärung des Interkulturellen Pflegedienst Hannover'
-        }
+          content: 'Hier finden Sie die Datenschutzerklärung des Interkulturellen Pflegedienst Hannover',
+        },
       ]}
     />
     <Container>
@@ -49,10 +49,13 @@ const PrivacyPage = () => (
       <CenteredPLeftWithMargin>
         Jeder Besuch unserer Webseite wird erfasst. Dabei werden folgende Daten automatisch gespeichert:
       </CenteredPLeftWithMargin>
-      <CenteredPLeftWithMargin>
-        Aufgerufene Webseite, Unterseite, oder Datei Datum und Uhrzeit und Dauer des Abrufs IP-Adresse Übertragene Datenmenge Verwendetes
-        Betriebssystem Browser und Browsertyp Die Internetseite, von der weitergeleitet wurde
-      </CenteredPLeftWithMargin>
+      <StyledLiWithOrangeBullet>Aufgerufene Webseite,</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>Unterseite, oder Datei</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>Datum und Uhrzeit und Dauer des Abrufs</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>IP-Adresse</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>Übertragene Datenmenge</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>Verwendetes Betriebssystem</StyledLiWithOrangeBullet>
+      <StyledLiWithOrangeBullet>Browser und Browsertyp Die Internetseite, von der weitergeleitet wurde</StyledLiWithOrangeBullet>
       <CenteredPLeftWithMargin>
         Keine dieser genannten Daten geben Rückschlüsse zu Ihrer Person wider. Wir brauchen sie lediglich, um die Darstellung und Wirkung
         unserer Webseite besser nachvollziehen zu können und im Falle eines Hackerangriffs strafrechtliche Verfolgungen unterstützen zu
@@ -68,8 +71,11 @@ const PrivacyPage = () => (
       <CenteredPLeftWithMargin>
         Sollten Sie bei uns personenbezogene Daten hinterlassen haben, verwenden wir sie entlang der gesetzlichen Bestimmungen für den
         Datenschutz – z.B. um Ihre Fragen zu beantworten, Verträge zu erstellen, abzuwickeln oder zu beenden und für unsere technische
-        Administration. Zum Zweck der Vertragserfüllung werden Ihre Daten gegebenenfalls an Dritte übermittelt, z.B. Weitergabe von Bestell-
-        oder Abrechnungsdaten bei der Einbindung von Dienstleistern und Lieferanten etc. Diese vertragsgebundene Einwilligung können Sie
+        Administration.
+      </CenteredPLeftWithMargin>
+      <CenteredPLeftWithMargin>
+        Zum Zweck der Vertragserfüllung werden Ihre Daten gegebenenfalls an Dritte übermittelt, z.B. Weitergabe von Bestell- oder
+        Abrechnungsdaten bei der Einbindung von Dienstleistern und Lieferanten etc. Diese vertragsgebundene Einwilligung können Sie
         jederzeit einsehen und widerrufen.
       </CenteredPLeftWithMargin>
 
@@ -111,9 +117,13 @@ const PrivacyPage = () => (
       <CenteredPLeftWithMargin>
         Sollten Sie Fragen zu unserer Datenschutzverordnung haben, wenden Sie sich bitte an unseren örtlichen Datenschutzbeauftragten:
       </CenteredPLeftWithMargin>
-      <CenteredPLeftWithMargin>Herrn Wolfgang Sick </CenteredPLeftWithMargin>
-      <CenteredPLeftWithMargin>Adresse</CenteredPLeftWithMargin>
-      <CenteredPLeftWithMargin>E-Mail-Adresse</CenteredPLeftWithMargin>
+      <LinkEmailOut
+        style={{ color: 'blue' }}
+        title='Email Adresse des interkulturellen Pfelgedienst Hannover'
+        href='mailto:iks-hannover@iks-hannover.de'
+      >
+        datenschutz@iks-hannover.de
+      </LinkEmailOut>
     </Container>
   </Page>
 )
