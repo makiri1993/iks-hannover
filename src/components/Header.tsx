@@ -68,6 +68,9 @@ export default class Header extends React.Component<Props, State> {
             <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/pflegedienst'>
               PFLEGEDIENST
             </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/pflegeleistungen'>
+              PFLEGELEISTUNGEN
+            </HomepageLinkAbsolute>
             <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/wohngemeinschaften'>
               WOHNGEMEINSCHAFTEN
             </HomepageLinkAbsolute>
