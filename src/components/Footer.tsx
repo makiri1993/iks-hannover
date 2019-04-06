@@ -15,7 +15,7 @@ const Footer: React.SFC<FooterProps> = () => (
         <H4Footero>Interkultureller Sozialdienst</H4Footero>
         <PFooter>
           <StyledBR />
-          Plaza De Rosalia 1<StyledBR />
+          Plaza de Rosalia 1<StyledBR />
           30449 Hannover
           <StyledBR />
           <StyledBR />
@@ -29,17 +29,14 @@ const Footer: React.SFC<FooterProps> = () => (
             iks-hannover@iks-hannover.de
           </LinkEmailOut>
           <StyledBR />
-          Impressum:{' '}
           <LinkEmail to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
             Impressum
           </LinkEmail>
           <StyledBR />
-          Sitemap:{' '}
           <LinkEmail to='/sitemap' title='Link zu dem Inhaltsverzeichnis des Pflegedienstes'>
-            Inhaltsverzeichnis
+            Sitemap
           </LinkEmail>
           <StyledBR />
-          Datenschutzerklärung:{' '}
           <LinkEmail to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
             Datenschutzerklärung
           </LinkEmail>
@@ -85,7 +82,7 @@ export const StyledFooter = styled.footer`
   background-color: ${colors.orange};
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   @media only screen and (max-width: ${breakpoints.sm}px) {
     flex-direction: column;
   }
