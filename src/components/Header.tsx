@@ -59,23 +59,20 @@ export default class Header extends React.Component<Props, State> {
           title='Navigation zu der Startseite'
           to='/'
         >
-          HOME
+          Home
           <FlexColumn
             display={this.state.showDropdownHome}
             onMouseEnter={() => this.setState({ showDropdownHome: true })}
             onMouseLeave={() => this.setState({ showDropdownHome: false })}
           >
             <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/pflegedienst'>
-              PFLEGEDIENST
+              Unser Pflegedienst
             </HomepageLinkAbsolute>
             <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/pflegeleistungen'>
-              PFLEGELEISTUNGEN
+              Pflegeleistungen
             </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/wohngemeinschaften'>
-              WOHNGEMEINSCHAFTEN
-            </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/intensivpflege'>
-              AUßERKLINISCHE INTENSIVPFLEGE
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/beratungsleistungen'>
+              Beratungsleistungen
             </HomepageLinkAbsolute>
           </FlexColumn>
         </HomepageLink>
@@ -85,28 +82,37 @@ export default class Header extends React.Component<Props, State> {
           title='Navigation zu der Seite Leitbilder'
           to='/leitbilder'
         >
-          LEITBILDER
+          Leistungsbereiche
           <FlexColumnMoreRight
             display={this.state.showDropdownLeitbild}
             onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
             onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
           >
-            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/presse-archiv'>
-              PRESSE | ARCHIV
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/ambulante-pflege'>
+              Ambulante Pflege
+            </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/wohngemeinschaften'>
+              Wohngemeinschaften
+            </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/intensivpflege'>
+              Außerklinische Intensivpflege
             </HomepageLinkAbsolute>
           </FlexColumnMoreRight>
         </HomepageLink>
         <HomepageLink title='Navigation zu der Seite Team und Kontakt' to='/team-kontakt'>
-          TEAM | KONTAKT
+          Team
         </HomepageLink>
         <HomepageLink title='Navigation zu der Seite Jobs' to='/jobs'>
-          JOBS | PARTNER
+          Jobs
         </HomepageLink>
         <HomepageLink title='Navigation zu der Seite Engagement' to='/engagement'>
-          ENGAGEMENT
+          Engagement | Partner
         </HomepageLink>
         <HomepageLink title='Navigation zu der Seite Impressum' to='/impressum'>
           IMPRESSUM | ANFAHRT
+        </HomepageLink>
+        <HomepageLink title='Navigation zu der Startseite' to='/presse-archiv'>
+          Presse
         </HomepageLink>
       </HeaderInner>
     )
@@ -132,31 +138,40 @@ export default class Header extends React.Component<Props, State> {
     return (
       <BurgerMenu menuBar={this.state.toggleBurger}>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/'>
-          HOME
+          Home
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/pflegedienst'>
-          PFLEGEDIENST
+          Unser Pflegedienst
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/pflegeleistungen'>
+          Pflegeleistungen
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/ambulante-pflege'>
+          Ambulante Pflege
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/beratungsleistungen'>
+          Beratungsleistungen
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/wohngemeinschaften'>
-          WOHNGEMEINSCHAFTEN
+          Wohngemeinschaften
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/intensivpflege'>
-          AUßERKLINISCHE INTENSIVPFLEGE
+          Außerklinische Intensivpflege
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Leitbilder' to='/leitbilder'>
-          LEITBILDER
+          Leistungsbereiche
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/presse-archiv'>
-          PRESSE | ARCHIV
+          Presse
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Team und Kontakt' to='/team-kontakt'>
-          TEAM | KONTAKT
+          Team
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Jobs' to='/jobs'>
-          JOBS | PARTNER
+          Jobs
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Engagement' to='/engagement'>
-          ENGAGEMENT
+          Engagement | Partner
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Impressum' to='/impressum'>
           IMPRESSUM | ANFAHRT
