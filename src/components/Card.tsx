@@ -2,12 +2,14 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/variables'
 class Card extends React.Component {
-  private render() {
+  render() {
     return (
       <CardMainDiv>
         <CardImg title={this.props.alt} alt={this.props.alt} src={this.props.img} />
         <CardDiv>
-          <a title={this.props.name} target="blank_" href={this.props.link}><CardH4>{this.props.name}</CardH4> </a>
+          <a title={this.props.name} target='blank_' href={this.props.link}>
+            <CardH4>{this.props.name}</CardH4>{' '}
+          </a>
         </CardDiv>
       </CardMainDiv>
     )
@@ -18,7 +20,7 @@ export default Card
 export const CardMainDiv = styled.div`
   width: 350px;
   height: 250px;
-  background-color: ${colors.orange};;
+  background-color: ${colors.orange};
   position: relative;
   margin-right: 50px;
   margin-left: 50px;

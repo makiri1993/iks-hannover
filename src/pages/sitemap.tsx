@@ -4,7 +4,7 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import styled from 'styled-components'
 import { colors } from '../styles/variables'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 
 const Sitemap = () => (

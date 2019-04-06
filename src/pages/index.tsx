@@ -1,5 +1,5 @@
 import * as React from 'react'
-// import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
 
 import Page from '../components/Page'
 import HeroSlider from '../components/HeroSlider'

@@ -5,7 +5,7 @@ import Responsive from 'react-responsive'
 import { heights, dimensions, colors, widths, breakpoints } from '../styles/variables'
 import { getEmSize, onEvent } from '../styles/mixins'
 import { transparentize } from 'polished'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 interface Props {}
 interface State {
@@ -25,7 +25,7 @@ export default class Header extends React.Component<Props, State> {
       showDropdownHome: false,
       showDropdownLeitbild: false,
       screenSize: false,
-      toggleBurger: false
+      toggleBurger: false,
     }
 
     this.updatePredicate = this.updatePredicate.bind(this)
@@ -47,7 +47,7 @@ export default class Header extends React.Component<Props, State> {
 
   private handleClick() {
     this.setState({
-      toggleBurger: false
+      toggleBurger: false,
     })
   }
   private getDesktopNavbar() {
@@ -56,9 +56,8 @@ export default class Header extends React.Component<Props, State> {
         <HomepageLink
           onMouseEnter={() => this.setState({ showDropdownHome: true })}
           onMouseLeave={() => this.setState({ showDropdownHome: false })}
-          title="Navigation zu der Startseite"
-          to="/"
-          href="/"
+          title='Navigation zu der Startseite'
+          to='/'
         >
           HOME
           <FlexColumn
@@ -66,13 +65,13 @@ export default class Header extends React.Component<Props, State> {
             onMouseEnter={() => this.setState({ showDropdownHome: true })}
             onMouseLeave={() => this.setState({ showDropdownHome: false })}
           >
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/pflegedienst" href="/">
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/pflegedienst'>
               PFLEGEDIENST
             </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/wohngemeinschaften'>
               WOHNGEMEINSCHAFTEN
             </HomepageLinkAbsolute>
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/intensivpflege" href="/">
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/intensivpflege'>
               AUßERKLINISCHE INTENSIVPFLEGE
             </HomepageLinkAbsolute>
           </FlexColumn>
@@ -80,9 +79,8 @@ export default class Header extends React.Component<Props, State> {
         <HomepageLink
           onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
           onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
-          title="Navigation zu der Seite Leitbilder"
-          to="/leitbilder"
-          href="/"
+          title='Navigation zu der Seite Leitbilder'
+          to='/leitbilder'
         >
           LEITBILDER
           <FlexColumnMoreRight
@@ -90,21 +88,21 @@ export default class Header extends React.Component<Props, State> {
             onMouseEnter={() => this.setState({ showDropdownLeitbild: true })}
             onMouseLeave={() => this.setState({ showDropdownLeitbild: false })}
           >
-            <HomepageLinkAbsolute title="Navigation zu der Startseite" to="/presse-archiv" href="/">
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/presse-archiv'>
               PRESSE | ARCHIV
             </HomepageLinkAbsolute>
           </FlexColumnMoreRight>
         </HomepageLink>
-        <HomepageLink title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
+        <HomepageLink title='Navigation zu der Seite Team und Kontakt' to='/team-kontakt'>
           TEAM | KONTAKT
         </HomepageLink>
-        <HomepageLink title="Navigation zu der Seite Jobs" to="/jobs" href="/">
+        <HomepageLink title='Navigation zu der Seite Jobs' to='/jobs'>
           JOBS | PARTNER
         </HomepageLink>
-        <HomepageLink title="Navigation zu der Seite Engagement" to="/engagement" href="/">
+        <HomepageLink title='Navigation zu der Seite Engagement' to='/engagement'>
           ENGAGEMENT
         </HomepageLink>
-        <HomepageLink title="Navigation zu der Seite Impressum" to="/impressum" href="/">
+        <HomepageLink title='Navigation zu der Seite Impressum' to='/impressum'>
           IMPRESSUM | ANFAHRT
         </HomepageLink>
       </HeaderInner>
@@ -130,34 +128,34 @@ export default class Header extends React.Component<Props, State> {
   private getBurgerMenu() {
     return (
       <BurgerMenu menuBar={this.state.toggleBurger}>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/'>
           HOME
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/pflegedienst" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/pflegedienst'>
           PFLEGEDIENST
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/wohngemeinschaften" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/wohngemeinschaften'>
           WOHNGEMEINSCHAFTEN
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/intensivpflege" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/intensivpflege'>
           AUßERKLINISCHE INTENSIVPFLEGE
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Leitbilder" to="/leitbilder" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Leitbilder' to='/leitbilder'>
           LEITBILDER
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Startseite" to="/presse-archiv" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/presse-archiv'>
           PRESSE | ARCHIV
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Team und Kontakt" to="/team-kontakt" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Team und Kontakt' to='/team-kontakt'>
           TEAM | KONTAKT
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Jobs" to="/jobs" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Jobs' to='/jobs'>
           JOBS | PARTNER
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Engagement" to="/engagement" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Engagement' to='/engagement'>
           ENGAGEMENT
         </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title="Navigation zu der Seite Impressum" to="/impressum" href="/">
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Impressum' to='/impressum'>
           IMPRESSUM | ANFAHRT
         </HomepageLink>
       </BurgerMenu>

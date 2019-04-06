@@ -107,7 +107,7 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const DivCenterCol = StyledFooter.extend`
+export const DivCenterCol = styled(StyledFooter)`
   background-color: ${colors.white};
 `
 export const StyledFooterDiv = styled.div`
@@ -128,7 +128,7 @@ export const CenteredH1 = styled.h1`
   }
 `
 
-export const CenteredH1Orange = CenteredH1.extend`
+export const CenteredH1Orange = styled(CenteredH1)`
   color: ${colors.orange};
 `
 
@@ -137,7 +137,7 @@ export const H4Orange = styled.h4`
 `
 
 export const PflegedienstP = styled.p``
-export const POrange = PflegedienstP.extend`
+export const POrange = styled(PflegedienstP)`
   color: ${colors.orange};
 `
 
@@ -153,7 +153,7 @@ export const StyledSpan = styled.span`
   color: ${colors.black};
   font-size: 16px;
 `
-export const DivCenterRow = StyledFooter.extend`
+export const DivCenterRow = styled(StyledFooter)`
   background-color: ${colors.white};
   flex-direction: row;
 `

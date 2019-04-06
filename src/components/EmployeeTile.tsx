@@ -74,7 +74,7 @@ export const LinkEmail = styled.a`
   text-decoration-color: red;
 `
 
-export const LinkEmailOrange = LinkEmail.extend`
+export const LinkEmailOrange = styled(LinkEmail)`
   text-decoration: underline;
   color: ${colors.orange};
 `

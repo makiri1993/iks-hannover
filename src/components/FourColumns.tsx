@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from '../styles/variables'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { onEvent } from '../styles/mixins'
 
 const handIcon: string = require('../images/icons/IKS_icons_hand.png')
@@ -14,7 +14,7 @@ export default class FourColumns extends React.Component<Props> {
     return (
       <FlexDivContentCenter>
         <OneColumn>
-          <HomepageLink to="/pflegedienst" href="/">
+          <HomepageLink to='/pflegedienst' href='/'>
             <IconForButton src={handIcon} />
           </HomepageLink>
           <CenteredH1GreenForColumn>Pflegedienst</CenteredH1GreenForColumn>
@@ -22,26 +22,26 @@ export default class FourColumns extends React.Component<Props> {
             Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung, verankert im elften Sozialgesetzbuch (SGB XI). Sie ist die
             vierte Säule des Gesundheitssystems und finanziert - wenn auch nur zum Teil - diejenigen Kosten, die entstehen, wenn Versicherte
             pflegebedürftig werden.
-            <HomepageLinkGreen to="/pflegedienst" href="/">
+            <HomepageLinkGreen to='/pflegedienst' href='/'>
               ...
             </HomepageLinkGreen>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to="/wohngemeinschaften" href="/">
+          <HomepageLink to='/wohngemeinschaften' href='/'>
             <IconForButton src={hausIcon} />
           </HomepageLink>
           <CenteredH1BlueForColumn>Wohngemeinschaften</CenteredH1BlueForColumn>
           <CenteredPLeft>
             Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, stehen unsere Wohngemeinschaften in den Stadtteilen
             Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
-            <HomepageLinkBlue to="/wohngemeinschaften" href="/">
+            <HomepageLinkBlue to='/wohngemeinschaften' href='/'>
               ...
             </HomepageLinkBlue>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to="/intensivpflege" href="/">
+          <HomepageLink to='/intensivpflege' href='/'>
             <IconForButton src={augeIcon} />
           </HomepageLink>
           <CenteredH1RedForColumn>Außerklinische Pflege</CenteredH1RedForColumn>
@@ -49,7 +49,7 @@ export default class FourColumns extends React.Component<Props> {
             Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
             häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht
             werden.
-            <HomepageLinkRed to="/intensivpflege" href="/">
+            <HomepageLinkRed to='/intensivpflege' href='/'>
               ...
             </HomepageLinkRed>
           </CenteredPLeft>
@@ -121,18 +121,18 @@ export const CenteredH1 = styled.h1`
   margin: 1em;
 `
 
-export const CenteredH1Green = CenteredH1.extend`
+export const CenteredH1Green = styled(CenteredH1)`
   color: ${colors.green};
 `
 
-export const CenteredH1GreenForColumn = CenteredH1Green.extend`
+export const CenteredH1GreenForColumn = styled(CenteredH1Green)`
   font-weight: 250;
   margin: 0;
 `
-export const CenteredH1BlueForColumn = CenteredH1GreenForColumn.extend`
+export const CenteredH1BlueForColumn = styled(CenteredH1GreenForColumn)`
   color: ${colors.blue};
 `
-export const CenteredH1RedForColumn = CenteredH1GreenForColumn.extend`
+export const CenteredH1RedForColumn = styled(CenteredH1GreenForColumn)`
   color: ${colors.red};
 `
 

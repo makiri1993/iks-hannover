@@ -178,16 +178,16 @@ export const CenteredH1 = styled.h1`
 
 export const StyledBR = styled.br``
 
-export const CenteredH1Green = CenteredH1.extend`
+export const CenteredH1Green = styled(CenteredH1)`
   color: ${colors.green};
 `
 
-export const CenteredH4Green = CenteredH4.extend`
+export const CenteredH4Green = styled(CenteredH4)`
   color: ${colors.green};
 `
 export const PflegedienstP = styled.p``
 
-export const PflegedienstPGreen = PflegedienstP.extend`
+export const PflegedienstPGreen = styled(PflegedienstP)`
   color: ${colors.green};
 `
 
@@ -218,7 +218,7 @@ export const StyledFooter = styled.footer`
   }
 `
 
-export const DivCenterRow = StyledFooter.extend`
+export const DivCenterRow = styled(StyledFooter)`
   background-color: ${colors.white};
   flex-direction: row;
   @media only screen and (max-width: 500px) {

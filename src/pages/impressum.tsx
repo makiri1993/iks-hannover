@@ -108,7 +108,7 @@ export const CenteredH1 = styled.h1`
   margin-bottom: 50px;
 `
 
-export const CenteredH1Orange = CenteredH1.extend`
+export const CenteredH1Orange = styled(CenteredH1)`
   color: ${colors.orange};
 `
 
@@ -116,21 +116,21 @@ export const H4Orange = styled.h4`
   color: ${colors.orange};
 `
 
-export const H4OrangeCenter = H4Orange.extend`
+export const H4OrangeCenter = styled(H4Orange)`
   text-align: center;
 `
 
 export const PflegedienstP = styled.p``
 
-export const POrange = PflegedienstP.extend`
+export const POrange = styled(PflegedienstP)`
   color: ${colors.orange};
 `
 
-export const POrangeCenter = POrange.extend`
+export const POrangeCenter = styled(POrange)`
   text-align: center;
 `
 
-export const PflegedienstPCenter = PflegedienstP.extend`
+export const PflegedienstPCenter = styled(PflegedienstP)`
   text-align: center;
 `
 
@@ -143,7 +143,7 @@ export const LinkEmail = styled.a`
   text-decoration-color: red;
 `
 
-export const LinkEmailOrange = LinkEmail.extend`
+export const LinkEmailOrange = styled(LinkEmail)`
   text-decoration: underline;
   color: ${colors.orange};
 `

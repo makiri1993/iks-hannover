@@ -158,7 +158,7 @@ export const CenteredH1 = styled.h1`
   margin: 1em;
 `
 
-export const CenteredH1Orange = CenteredH1.extend`
+export const CenteredH1Orange = styled(CenteredH1)`
   color: ${colors.orange};
 `
 
