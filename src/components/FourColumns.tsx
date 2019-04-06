@@ -14,44 +14,38 @@ export default class FourColumns extends React.Component<Props> {
     return (
       <FlexDivContentCenter>
         <OneColumn>
-          <HomepageLink to='/pflegedienst' href='/'>
+          <HomepageLink to='/pflegedienst'>
             <IconForButton src={handIcon} />
           </HomepageLink>
           <CenteredH1GreenForColumn>Pflegedienst</CenteredH1GreenForColumn>
           <CenteredPLeft>
-            Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung, verankert im elften Sozialgesetzbuch (SGB XI). Sie ist die
-            vierte Säule des Gesundheitssystems und finanziert - wenn auch nur zum Teil - diejenigen Kosten, die entstehen, wenn Versicherte
-            pflegebedürftig werden.
-            <HomepageLinkGreen to='/pflegedienst' href='/'>
-              ...
-            </HomepageLinkGreen>
+            Mit unserem multinationalen Team leisten wir bereits seit 1996 einen Beitrag zur interkulturellen Pflege für Menschen mit
+            verschiedensten kulturellen, sprachlichen oder religiösen Wurzeln. Unsere Patienten sowie ihre Wünsche, Bedürfnisse und
+            Lebenssituationen stehen dabei für uns im Vordergrund und sind uns sehr wichtig.
+            <HomepageLinkGreen to='/pflegedienst'>...</HomepageLinkGreen>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to='/wohngemeinschaften' href='/'>
+          <HomepageLink to='/wohngemeinschaften'>
             <IconForButton src={hausIcon} />
           </HomepageLink>
           <CenteredH1BlueForColumn>Wohngemeinschaften</CenteredH1BlueForColumn>
           <CenteredPLeft>
             Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, stehen unsere Wohngemeinschaften in den Stadtteilen
             Roderbruch, List, Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
-            <HomepageLinkBlue to='/wohngemeinschaften' href='/'>
-              ...
-            </HomepageLinkBlue>
+            <HomepageLinkBlue to='/wohngemeinschaften'>...</HomepageLinkBlue>
           </CenteredPLeft>
         </OneColumn>
         <OneColumn>
-          <HomepageLink to='/intensivpflege' href='/'>
+          <HomepageLink to='/intensivpflege'>
             <IconForButton src={augeIcon} />
           </HomepageLink>
           <CenteredH1RedForColumn>Außerklinische Pflege</CenteredH1RedForColumn>
           <CenteredPLeft>
-            Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
-            häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht
-            werden.
-            <HomepageLinkRed to='/intensivpflege' href='/'>
-              ...
-            </HomepageLinkRed>
+            Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung zu Hause oder in einer unserer ambulant betreuten
+            Intensiv-Wohngemeinschaften. Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen
+            Fachpersonal auf Ihre Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+            <HomepageLinkRed to='/intensivpflege'>...</HomepageLinkRed>
           </CenteredPLeft>
         </OneColumn>
       </FlexDivContentCenter>

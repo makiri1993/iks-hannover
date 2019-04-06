@@ -25,8 +25,7 @@ export default () => (
         <CenteredP>
           unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu
           ambulanten und medizinischen Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und
-          durch die wir uns von anderen Pflegediensten unterscheiden. Hier können Sie unsere Informationsbroschüre auf Deutsch, Türkisch,
-          Farsi oder Russisch herunter laden.
+          durch die wir uns von anderen Pflegediensten unterscheiden.
         </CenteredP>
         <CenteredP>Herzlichst, Ihre</CenteredP>
       </CenteredText>
