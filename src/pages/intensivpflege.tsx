@@ -24,14 +24,10 @@ export default () => (
         ]}
       />
       <CenteredText>
-        <CenteredH1Red>AUßERKLINISCHE INTENSIVPFLEGE</CenteredH1Red>
+        <CenteredH1Red>Außerklinische Intensivpflege</CenteredH1Red>
         <PflegedienstP>
-          Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihren Ärzten auf Ihre Wünsche und die Bedürfnisse
-          Ihrer zu pflegenden Angehörigen ab.
-          <StyledBR />
-          <StyledBR />
-          Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten
-          Wohngemeinschaft.
+          Wir bieten zwei Versorgungsalternativen: Eine<strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer
+          ambulant betreuten <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
           <StyledBR />
           <StyledBR />
           <LinkRed target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
@@ -39,7 +35,37 @@ export default () => (
           </LinkRed>
           <StyledBR />
           <StyledBR />
+          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
+          häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden.
+          Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und
+          die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+          <StyledBR />
+          <StyledBR />
+          Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.
         </PflegedienstP>
+        <StyledUL>
+          <StyledLI>
+            <StyledSpan>ein Leben in Ihrer vertrauten Umgebung</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>eine Versorgung rund um die Uhr</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>einfühlsame und rücksichtsvolle Begleitung</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Unterstützung im Alltag</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Vermeidung von Infektionen</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Vermeidung von Krankenhausaufenthalten</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</StyledSpan>
+          </StyledLI>
+        </StyledUL>
         <CenteredH4Red>PFLEGERISCHE LEISTUNG</CenteredH4Red>
         <StyledBR />
         <StyledUL>
@@ -109,36 +135,6 @@ export default () => (
           </StyledLI>
         </StyledUL>
         <StyledBR />
-        <PRed>
-          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
-          häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden.
-          Wir stimmen Therapie und ambulante Versorgung in kleinen, spezialisierten Teams und gemeinsam mit Ihren Ärzten auf Ihre
-          individuellen Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
-        </PRed>
-        <PflegedienstP>Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.</PflegedienstP>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>ein Leben in Ihrer vertrauten Umgebung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>eine Versorgung rund um die Uhr</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>einfühlsame und rücksichtsvolle Begleitung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Unterstützung im Alltag</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermeidung von Infektionen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermeidung von Krankenhausaufenthalten</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</StyledSpan>
-          </StyledLI>
-        </StyledUL>
         <PflegedienstP>
           Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.
         </PflegedienstP>
@@ -148,9 +144,9 @@ export default () => (
         <LinkEmail title='Email Adresse' href='mailto:hartmann@iks-hannover.de'>
           hartmann@iks-hannover.de
         </LinkEmail>
-        <CenteredH4Red>Agnieszka Spouncer | Fachliche Leitung</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:spouncer@iks-hannover.de'>
-          spouncer@iks-hannover.de
+        <CenteredH4Red>Marco Schillaci | Fachliche Leitung</CenteredH4Red>
+        <LinkEmail title='Email Adresse' href='mailto:schillaci@iks-hannover.de'>
+          schillaci@iks-hannover.de
         </LinkEmail>
       </CenteredText>
       <StyledBR />
