@@ -4,78 +4,81 @@ import Helmet from 'react-helmet'
 import Page from '../components/Page'
 import styled from 'styled-components'
 import { dimensions, colors } from '../styles/variables'
+import Layout from '../components/Layout'
 const map: string = require('../images/maps.png')
 
 export default () => (
-  <Page>
-    <Helmet
-      title={'Impressum - Interkultureller Pflegedienst Hannover'}
-      meta={[
-        {
-          name: 'description',
-          content:
-            'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.'
-        }
-      ]}
-    />
-    <DivCenter>
-      <DivColCenter>
-        <CenteredH1Orange>ANFAHRT</CenteredH1Orange>
-        <StyledIMGBig src={map} alt="Bilder der Karte zum Büro" title="Bild zur Anfahrt zu unserem Büro" />
-        <CenteredH1Orange>IMPRESSUM</CenteredH1Orange>
-        <POrangeCenter>Interkultureller Sozialdienst GmbH Ambulante Alten- und Krankenpflege</POrangeCenter>
-        <PflegedienstPCenter>
-          Plaza De Rosalia 1<StyledBR />
-          30449 Hannover
+  <Layout>
+    <Page>
+      <Helmet
+        title={'Impressum - Interkultureller Pflegedienst Hannover'}
+        meta={[
+          {
+            name: 'description',
+            content:
+              'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.',
+          },
+        ]}
+      />
+      <DivCenter>
+        <DivColCenter>
+          <CenteredH1Orange>ANFAHRT</CenteredH1Orange>
+          <StyledIMGBig src={map} alt='Bilder der Karte zum Büro' title='Bild zur Anfahrt zu unserem Büro' />
+          <CenteredH1Orange>IMPRESSUM</CenteredH1Orange>
+          <POrangeCenter>Interkultureller Sozialdienst GmbH Ambulante Alten- und Krankenpflege</POrangeCenter>
+          <PflegedienstPCenter>
+            Plaza De Rosalia 1<StyledBR />
+            30449 Hannover
+            <StyledBR />
+            TEL: 0511 / 210 10 44
+            <StyledBR />
+            FAX: 0511 / 210 10 66
+          </PflegedienstPCenter>
+          <POrangeCenter>
+            MAIL:{' '}
+            <LinkEmailOrange titel='Email' href='mailto:iks-hannover@iks-hannover.de'>
+              iks-hannover@iks-hannover.de
+            </LinkEmailOrange>
+          </POrangeCenter>
+          <PflegedienstPCenter>
+            Registergericht: Amtsgericht Hannover
+            <StyledBR />
+            Registernummer: HRB 204736
+            <StyledBR />
+            Persönlich haftende Gesellschafterin: Jasmin Arbabian-Vogel
+            <StyledBR />
+            Vertretungsberechtigter Geschäftsführer: Jasmin Arbabian-Vogel
+            <StyledBR />
+            Steuernummer Finanzamt Nord: 25/210/19598
+            <StyledBR />
+          </PflegedienstPCenter>
+          <H4OrangeCenter>HAFTUNGSHINWEIS</H4OrangeCenter>
+          <PflegedienstPCenter>
+            Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der
+            verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+          </PflegedienstPCenter>
           <StyledBR />
-          TEL: 0511 / 210 10 44
-          <StyledBR />
-          FAX: 0511 / 210 10 66
-        </PflegedienstPCenter>
-        <POrangeCenter>
-          MAIL:{' '}
-          <LinkEmailOrange titel="Email" href="mailto:iks-hannover@iks-hannover.de">
-            iks-hannover@iks-hannover.de
-          </LinkEmailOrange>
-        </POrangeCenter>
-        <PflegedienstPCenter>
-          Registergericht: Amtsgericht Hannover
-          <StyledBR />
-          Registernummer: HRB 204736
-          <StyledBR />
-          Persönlich haftende Gesellschafterin: Jasmin Arbabian-Vogel
-          <StyledBR />
-          Vertretungsberechtigter Geschäftsführer: Jasmin Arbabian-Vogel
-          <StyledBR />
-          Steuernummer Finanzamt Nord: 25/210/19598
-          <StyledBR />
-        </PflegedienstPCenter>
-        <H4OrangeCenter>HAFTUNGSHINWEIS</H4OrangeCenter>
-        <PflegedienstPCenter>
-          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der
-          verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-        </PflegedienstPCenter>
-        <StyledBR />
-        <POrangeCenter>Gestaltung</POrangeCenter>
-        <PflegedienstPCenter>
-          s.artisfaction
-          <StyledBR />
-          Hannover
-          <StyledBR />
-          0177 648 554 0<StyledBR />
-        </PflegedienstPCenter>
-        <POrangeCenter>
-          <LinkEmailOrange target="_blank" rel="noopener noreferrer" href="www.s-artifaction.com">
-            www.s-artifaction.com
-          </LinkEmailOrange>
-          <StyledBR />
-          <LinkEmailOrange titel="Email" href="mailto:s.artisfaction@googlemail.com">
-            s.artisfaction@googlemail.com
-          </LinkEmailOrange>
-        </POrangeCenter>
-      </DivColCenter>
-    </DivCenter>
-  </Page>
+          <POrangeCenter>Gestaltung</POrangeCenter>
+          <PflegedienstPCenter>
+            s.artisfaction
+            <StyledBR />
+            Hannover
+            <StyledBR />
+            0177 648 554 0<StyledBR />
+          </PflegedienstPCenter>
+          <POrangeCenter>
+            <LinkEmailOrange target='_blank' rel='noopener noreferrer' href='www.s-artifaction.com'>
+              www.s-artifaction.com
+            </LinkEmailOrange>
+            <StyledBR />
+            <LinkEmailOrange titel='Email' href='mailto:s.artisfaction@googlemail.com'>
+              s.artisfaction@googlemail.com
+            </LinkEmailOrange>
+          </POrangeCenter>
+        </DivColCenter>
+      </DivCenter>
+    </Page>
+  </Layout>
 )
 
 export const StyledIMGBig = styled.img`
@@ -105,7 +108,7 @@ export const CenteredH1 = styled.h1`
   margin-bottom: 50px;
 `
 
-export const CenteredH1Orange = CenteredH1.extend`
+export const CenteredH1Orange = styled(CenteredH1)`
   color: ${colors.orange};
 `
 
@@ -113,21 +116,21 @@ export const H4Orange = styled.h4`
   color: ${colors.orange};
 `
 
-export const H4OrangeCenter = H4Orange.extend`
+export const H4OrangeCenter = styled(H4Orange)`
   text-align: center;
 `
 
 export const PflegedienstP = styled.p``
 
-export const POrange = PflegedienstP.extend`
+export const POrange = styled(PflegedienstP)`
   color: ${colors.orange};
 `
 
-export const POrangeCenter = POrange.extend`
+export const POrangeCenter = styled(POrange)`
   text-align: center;
 `
 
-export const PflegedienstPCenter = PflegedienstP.extend`
+export const PflegedienstPCenter = styled(PflegedienstP)`
   text-align: center;
 `
 
@@ -140,7 +143,7 @@ export const LinkEmail = styled.a`
   text-decoration-color: red;
 `
 
-export const LinkEmailOrange = LinkEmail.extend`
+export const LinkEmailOrange = styled(LinkEmail)`
   text-decoration: underline;
   color: ${colors.orange};
 `

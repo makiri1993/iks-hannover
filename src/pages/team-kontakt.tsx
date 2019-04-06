@@ -5,6 +5,7 @@ import Container from '../components/Container'
 import EmployeeTile from '../components/EmployeeTile'
 import styled from 'styled-components'
 import { colors, dimensions } from '../styles/variables'
+import Layout from '../components/Layout'
 
 const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
 const marionImage: string = require('../images/mitarbeiter/Marion.jpg')
@@ -104,23 +105,25 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     simoneImage
   ),
   new Mitarbeiter('Ardi Rezaie', 'Bild von Ardi Rezaie', 'Ardi Rezaie', 'Fuhrparkmanagement', 'rezaie@iks-hannover.de', ardiImage),
-  new Mitarbeiter('Michael Krowas', 'Bild von Michael Krowas', 'Michael Krowas', 'Facility Manager', '', michaImage)
+  new Mitarbeiter('Michael Krowas', 'Bild von Michael Krowas', 'Michael Krowas', 'Facility Manager', '', michaImage),
 ]
 
 export default () => (
-  <Page>
-    <Container>
-      <BigTextInOrange>UNSER TEAM</BigTextInOrange>
-      <FlexDivContentCenter>
-        {mitarbeiterTeam.map(el => (
-          <MarginForTile>
-            <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email} />
-          </MarginForTile>
-        ))}
-        <TeamImage src={teamImage} alt="Bild vom Team" />
-      </FlexDivContentCenter>
-    </Container>
-  </Page>
+  <Layout>
+    <Page>
+      <Container>
+        <BigTextInOrange>UNSER TEAM</BigTextInOrange>
+        <FlexDivContentCenter>
+          {mitarbeiterTeam.map(el => (
+            <MarginForTile>
+              <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email} />
+            </MarginForTile>
+          ))}
+          <TeamImage src={teamImage} alt='Bild vom Team' />
+        </FlexDivContentCenter>
+      </Container>
+    </Page>
+  </Layout>
 )
 
 export const BigTextInOrange = styled.div`

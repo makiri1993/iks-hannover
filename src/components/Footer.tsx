@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { dimensions, colors, breakpoints } from '../styles/variables'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
 const logo_2: string = require('../images/icons/logo_baum.png')

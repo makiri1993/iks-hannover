@@ -7,6 +7,15 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "allowJs": false,
+    "baseUrl": ".",
+    "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -14,5 +23,6 @@
     "preserveConstEnums": true,
     "types": ["react-responsive"]
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }

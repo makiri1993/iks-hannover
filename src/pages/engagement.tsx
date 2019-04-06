@@ -4,6 +4,7 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import styled from 'styled-components'
 import { colors, breakpoints, dimensions } from '../styles/variables'
+import Layout from '../components/Layout'
 
 const fubaImage: string = require('../images/partner/96-2.jpg')
 const alzImage: string = require('../images/partner/alzheimer.jpg')
@@ -28,29 +29,31 @@ const images: { src: string; alt: string }[] = [
   { src: gesundImage, alt: 'Bild von Gesundheitswirtschaft Hannover e.V.' },
   { src: msfImage, alt: 'Bild von Medecins Sans Frontieres' },
   { src: naviImage, alt: 'Bild von NaVi' },
-  { src: phrImage, alt: 'Bild von Pro Hannover Region' }
+  { src: phrImage, alt: 'Bild von Pro Hannover Region' },
 ]
 
 export default () => (
-  <Page>
-    <Container>
-      <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
-      <PinOrange>
-        {' '}
-        Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns in verschiedenen Arbeitskreisen, Vereinen und
-        Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
-      </PinOrange>
-      <PWithMargin>
-        Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
-        Stadt-Hannover-Preis ausgezeichnet worden.
-      </PWithMargin>
-      <FlexDivContentCenter>
-        {images.map(el => (
-          <EngagementImage src={el.src} alt={el.alt} />
-        ))}
-      </FlexDivContentCenter>
-    </Container>
-  </Page>
+  <Layout>
+    <Page>
+      <Container>
+        <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
+        <PinOrange>
+          {' '}
+          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns in verschiedenen Arbeitskreisen, Vereinen und
+          Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
+        </PinOrange>
+        <PWithMargin>
+          Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
+          Stadt-Hannover-Preis ausgezeichnet worden.
+        </PWithMargin>
+        <FlexDivContentCenter>
+          {images.map(el => (
+            <EngagementImage src={el.src} alt={el.alt} />
+          ))}
+        </FlexDivContentCenter>
+      </Container>
+    </Page>
+  </Layout>
 )
 
 export const BigTextInOrange = styled.div`
