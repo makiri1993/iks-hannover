@@ -3,13 +3,13 @@ import Helmet from 'react-helmet'
 
 import '../styles/normalize'
 
-import Header from '../components/Header'
-import LayoutRoot from '../components/LayoutRoot'
-import LayoutMain from '../components/LayoutMain'
-import Footer from '../components/Footer'
+import Header from './Header'
+import LayoutRoot from './LayoutRoot'
+import LayoutMain from './LayoutMain'
+import Footer from './Footer'
 
 interface WrapperProps {
-  children: () => any
+  children: React.ReactNode[]
   data: {
     site: {
       siteMetadata: {
@@ -21,22 +21,22 @@ interface WrapperProps {
   }
 }
 
-const IndexLayout: React.SFC<WrapperProps> = ({ children, data }) => (
+const Layout: React.SFC<WrapperProps> = ({ children }) => (
   <LayoutRoot>
-    <Helmet
+    {/* <Helmet
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: data.site.siteMetadata.keywords }
+        { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
-    />
+    /> */}
     <Header />
-    <LayoutMain>{children()}</LayoutMain>
+    <LayoutMain>{children}</LayoutMain>
     <Footer />
   </LayoutRoot>
 )
 
-export default IndexLayout
+export default Layout
 
 export const query = graphql`
   query IndexLayoutQuery {

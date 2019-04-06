@@ -4,6 +4,7 @@ import Page from '../components/Page'
 import styled from 'styled-components'
 import { breakpoints, colors } from '../styles/variables'
 import Card from '../components/Card'
+import Layout from '../components/Layout'
 
 // Path to images
 const a1: string = require('../images/presse-archiv/a1.jpg')
@@ -64,87 +65,90 @@ const link26: string = require('../images/presse-archiv/Artikel/26_Presse_1998_P
 const link27: string = require('../images/presse-archiv/Artikel/27_Presse_1998_Pflege_Aktuell_2.jpg')
 
 export default () => (
-  <Page>
-    <Helmet
-      title={'Presse - Interkultureller Pflegedienst Hannover'}
-      meta={[
-        {
-          name: 'description',
-          content: 'Schauen Sie sich alle unsere Erwähnungen in der Presse an. Hier finden Sie alle Artikel von 1998 bis heute aus z.B Zeitungen in Hannover.'
-        }
-      ]}
-    />
-    <CenteredH1Orange>PRESSE 2017</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link1} alt="Zeitungsartikel von 2017" img={a1} name="NP | 30.09.2017 96 & Flüchtlinge" />
-      <Card link={link2} alt="Zeitungsartikel von 2017" img={a2} name="NP | 11.09.2017 Wirtschaft & Flüchtlinge" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link3} alt="Zeitungsartikel von 2017" img={a3} name="NP | 03.06.2017 Gründungsklima" />
-      <Card link={link4} link={link1} alt="Zeitungsartikel von 2017" img={a4} name="NP | 19.06.2017 Pflege & Leiharbeit" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link5} alt="Zeitungsartikel von 2017" img={a5} name="Häusliche Pflege | 2017 Unternehmerinnenportrait I" />
-      <Card link={link6} alt="Zeitungsartikel von 2017" img={a6} name="Häusliche Pflege | 2017 Unternehmerinnenportrait II" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link7} alt="Zeitungsartikel von 2017" img={a7} name="Care Konkret | 19.05.2017 Intensiv WG" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2016</CenteredH1Orange>
-    <CenteredH1Orange>PRESSE 2015</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link8} alt="Zeitungsartikel von 2017" img={a8} name="Hallo Wochenende | 24.01.2015 bunt statt braun" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2014</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link9} alt="Zeitungsartikel von 2014" img={a9} name="2014 | Großer Preis des Mittelstandes" />
-      <Card link={link10} alt="Zeitungsartikel von 2014" img={a10} name="Tagesspiegel | 29.10.2014 Frauen & Männer" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link11} alt="Zeitungsartikel von 2014" img={a11} name="Nobilis | 06.2016 16 Fragen" />
-      <Card link={link12} alt="Zeitungsartikel von 2014" img={a12} name="Niedersächsische Wirtschaft | 06.2014 Ramadan" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2013</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link13} alt="Zeitungsartikel von 2013" img={a13} name="Regions Journal | 27.02.2013 IKS" />
-      <Card link={link14} alt="Zeitungsartikel von 2013" img={a14} name="FES | 01.2013 Frauen & Führung" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2012</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link15} alt="Zeitungsartikel von 2012" img={a15} name="CDU | 13.11.2012 Pflege" />
-      <Card link={link16} alt="Zeitungsartikel von 2012" img={a16} name="Basar | 09.2012 IKS" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2011</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link17} alt="Zeitungsartikel von 2011" img={a17} name="Niedersächsische Wirtschaft | 2011 IKS" />
-      <Card link={link18} alt="Zeitungsartikel von 2011" img={a18} name="Hannover-entdecken.de | 11.10.2011 GFA" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link19} alt="Zeitungsartikel von 2011" img={a19} name="BAD | 05.11.2017 Wohngemeinschaften" />
-      <Card link={link20} alt="Zeitungsartikel von 2011" img={a20} name="Basar | 10.2011 kulturelle Vielfalt" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2010</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link21} alt="Zeitungsartikel von 2010" img={a21} name="Medifox | Herbst 2010 Teil I" />
-      <Card link={link22} alt="Zeitungsartikel von 2010" img={a22} name="Medifox | Herbst 2010 Teil II" />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link23} alt="Zeitungsartikel von 2010" img={a23} name="Vorwärts | 10.2010 Altenpflegerin" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2008</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link24} alt="Zeitungsartikel von 2008" img={a24} name="2008 | Stadt Hannover Preis" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2006</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link25} alt="Zeitungsartikel von 2006" img={a25} name="HAZ | 11.2006 WG" />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 1998</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link26} alt="Zeitungsartikel von 1998" img={a26} name="Pflege Aktuell | 1998 Teil I" />
-      <Card link={link27} alt="Zeitungsartikel von 1998" img={a27} name="Pflege Aktuell | 1998 Teil II" />
-    </FlexDivCards>
-  </Page>
+  <Layout>
+    <Page>
+      <Helmet
+        title={'Presse - Interkultureller Pflegedienst Hannover'}
+        meta={[
+          {
+            name: 'description',
+            content:
+              'Schauen Sie sich alle unsere Erwähnungen in der Presse an. Hier finden Sie alle Artikel von 1998 bis heute aus z.B Zeitungen in Hannover.',
+          },
+        ]}
+      />
+      <CenteredH1Orange>PRESSE 2017</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link1} alt='Zeitungsartikel von 2017' img={a1} name='NP | 30.09.2017 96 & Flüchtlinge' />
+        <Card link={link2} alt='Zeitungsartikel von 2017' img={a2} name='NP | 11.09.2017 Wirtschaft & Flüchtlinge' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link3} alt='Zeitungsartikel von 2017' img={a3} name='NP | 03.06.2017 Gründungsklima' />
+        <Card link={link4} link={link1} alt='Zeitungsartikel von 2017' img={a4} name='NP | 19.06.2017 Pflege & Leiharbeit' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link5} alt='Zeitungsartikel von 2017' img={a5} name='Häusliche Pflege | 2017 Unternehmerinnenportrait I' />
+        <Card link={link6} alt='Zeitungsartikel von 2017' img={a6} name='Häusliche Pflege | 2017 Unternehmerinnenportrait II' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link7} alt='Zeitungsartikel von 2017' img={a7} name='Care Konkret | 19.05.2017 Intensiv WG' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2016</CenteredH1Orange>
+      <CenteredH1Orange>PRESSE 2015</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link8} alt='Zeitungsartikel von 2017' img={a8} name='Hallo Wochenende | 24.01.2015 bunt statt braun' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2014</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link9} alt='Zeitungsartikel von 2014' img={a9} name='2014 | Großer Preis des Mittelstandes' />
+        <Card link={link10} alt='Zeitungsartikel von 2014' img={a10} name='Tagesspiegel | 29.10.2014 Frauen & Männer' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link11} alt='Zeitungsartikel von 2014' img={a11} name='Nobilis | 06.2016 16 Fragen' />
+        <Card link={link12} alt='Zeitungsartikel von 2014' img={a12} name='Niedersächsische Wirtschaft | 06.2014 Ramadan' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2013</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link13} alt='Zeitungsartikel von 2013' img={a13} name='Regions Journal | 27.02.2013 IKS' />
+        <Card link={link14} alt='Zeitungsartikel von 2013' img={a14} name='FES | 01.2013 Frauen & Führung' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2012</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link15} alt='Zeitungsartikel von 2012' img={a15} name='CDU | 13.11.2012 Pflege' />
+        <Card link={link16} alt='Zeitungsartikel von 2012' img={a16} name='Basar | 09.2012 IKS' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2011</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link17} alt='Zeitungsartikel von 2011' img={a17} name='Niedersächsische Wirtschaft | 2011 IKS' />
+        <Card link={link18} alt='Zeitungsartikel von 2011' img={a18} name='Hannover-entdecken.de | 11.10.2011 GFA' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link19} alt='Zeitungsartikel von 2011' img={a19} name='BAD | 05.11.2017 Wohngemeinschaften' />
+        <Card link={link20} alt='Zeitungsartikel von 2011' img={a20} name='Basar | 10.2011 kulturelle Vielfalt' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2010</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link21} alt='Zeitungsartikel von 2010' img={a21} name='Medifox | Herbst 2010 Teil I' />
+        <Card link={link22} alt='Zeitungsartikel von 2010' img={a22} name='Medifox | Herbst 2010 Teil II' />
+      </FlexDivCards>
+      <FlexDivCards>
+        <Card link={link23} alt='Zeitungsartikel von 2010' img={a23} name='Vorwärts | 10.2010 Altenpflegerin' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2008</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link24} alt='Zeitungsartikel von 2008' img={a24} name='2008 | Stadt Hannover Preis' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 2006</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link25} alt='Zeitungsartikel von 2006' img={a25} name='HAZ | 11.2006 WG' />
+      </FlexDivCards>
+      <CenteredH1Orange>PRESSE 1998</CenteredH1Orange>
+      <FlexDivCards>
+        <Card link={link26} alt='Zeitungsartikel von 1998' img={a26} name='Pflege Aktuell | 1998 Teil I' />
+        <Card link={link27} alt='Zeitungsartikel von 1998' img={a27} name='Pflege Aktuell | 1998 Teil II' />
+      </FlexDivCards>
+    </Page>
+  </Layout>
 )
 
 export const CenteredH1 = styled.h1`
