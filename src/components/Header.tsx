@@ -15,8 +15,8 @@ interface State {
   toggleBurger: boolean
 }
 
-const Desktop = props => <Responsive {...props} minWidth={breakpoints.sm} />
-const Mobile = props => <Responsive {...props} maxWidth={breakpoints.sm} />
+const Desktop = (props: any) => <Responsive {...props} minWidth={breakpoints.sm} />
+const Mobile = (props: any) => <Responsive {...props} maxWidth={breakpoints.sm} />
 
 export default class Header extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -97,6 +97,9 @@ export default class Header extends React.Component<Props, State> {
             <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/intensivpflege'>
               Außerklinische Intensivpflege
             </HomepageLinkAbsolute>
+            <HomepageLinkAbsolute title='Navigation zu der Startseite' to='/tagespflege'>
+              Tagespflege
+            </HomepageLinkAbsolute>
           </FlexColumnMoreRight>
         </HomepageLink>
         <HomepageLink title='Navigation zu der Seite Team und Kontakt' to='/team-kontakt'>
@@ -148,6 +151,9 @@ export default class Header extends React.Component<Props, State> {
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/ambulante-pflege'>
           Ambulante Pflege
+        </HomepageLink>
+        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/tagespflege'>
+          Tagespflege
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Startseite' to='/beratungsleistungen'>
           Beratungsleistungen
