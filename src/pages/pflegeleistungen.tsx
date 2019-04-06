@@ -20,7 +20,7 @@ export default () => (
         ]}
       />
       <CenteredText>
-        <CenteredH1Green>UNSER PFLEGEDIENST</CenteredH1Green>
+        <CenteredH1Green>UNSERE PFLEGELEISTUNGEN</CenteredH1Green>
         <PflegedienstP>
           Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung. Sie finanziert - wenn auch nur zum Teil - diejenigen Kosten,
           die entstehen, wenn Versicherte pflegebedürftig werden. Voraussetzung dafür ist jedoch, dass der Pflegebedürftige in einen der
