@@ -9,12 +9,12 @@ import Layout from '../components/Layout'
 
 const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
 const marionImage: string = require('../images/mitarbeiter/Marion.jpg')
-const agniImage: string = require('../images/mitarbeiter/Agnieszka.jpg')
+const marcoImage: string = require('../images/mitarbeiter/Marco.jpg')
 const ardiImage: string = require('../images/mitarbeiter/Ardi.jpg')
 const birgitImage: string = require('../images/mitarbeiter/Birgit.jpg')
 const jasminImage: string = require('../images/mitarbeiter/Jasmin.jpg')
 const michaImage: string = require('../images/mitarbeiter/Michael.jpg')
-const simoneImage: string = require('../images/mitarbeiter/Simone.jpg')
+const joannaImage: string = require('../images/mitarbeiter/Joanna.jpg')
 const tabeaImage: string = require('../images/mitarbeiter/Tabea.jpg')
 const uteImage: string = require('../images/mitarbeiter/Ute.jpg')
 const yurekImage: string = require('../images/mitarbeiter/Yurek.jpg')
@@ -43,7 +43,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Galina Fiksman',
     'Bild von Galina Fiksman',
     'Galina Fiksman',
-    'Geschäftsführerung',
+    'Geschäftsführung',
     'fiksmann@iks-hannover.de',
     galinaImage
   ),
@@ -51,15 +51,15 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Jasmin Arbabian-Vogel',
     'Bild von Jasmin Arbabian-Vogel',
     'Jasmin Arbabian-Vogel',
-    'Geschäftsführerung',
-    'arabian-vogel@iks-hannover.de',
+    'Geschäftsführung',
+    'arbabian-vogel@iks-hannover.de',
     jasminImage
   ),
   new Mitarbeiter(
     'Tabea Emrich',
     'Bild von Tabea Emrich',
     'Tabea Emrich',
-    'Assistenz der Geschäftsführerung',
+    'Assistenz der Geschäftsführung',
     'emrich@iks-hannover.de',
     tabeaImage
   ),
@@ -73,12 +73,12 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     marionImage
   ),
   new Mitarbeiter(
-    'Agnieszka Spouncer',
-    'Bild von Agnieszka Spouncer',
-    'Agnieszka Spouncer',
+    'Marco Schillaci',
+    'Bild von Marco Schillaci',
+    'Marco Schillaci',
     'Fachliche Leitung Intensivpflege',
-    'spouncer@iks-hannover.de',
-    agniImage
+    'schillaci@iks-hannover.de',
+    marcoImage
   ),
   new Mitarbeiter(
     'Jurek Jablonski',
@@ -96,16 +96,8 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'anspach@iks-hannover.de',
     birgitImage
   ),
-  new Mitarbeiter(
-    'Simone Wiesner',
-    'Bild von Simone Wiesner',
-    'Simone Wiesner',
-    'Verwaltung und Rechnungswesen',
-    'wiesner@iks-hannover.de',
-    simoneImage
-  ),
+  new Mitarbeiter('Joanna Russ', 'Bild von Joanna Russ', 'Joanna Russ', 'Teamassistenz', 'iks-hannover@iks-hannover.de', joannaImage),
   new Mitarbeiter('Ardi Rezaie', 'Bild von Ardi Rezaie', 'Ardi Rezaie', 'Fuhrparkmanagement', 'rezaie@iks-hannover.de', ardiImage),
-  new Mitarbeiter('Michael Krowas', 'Bild von Michael Krowas', 'Michael Krowas', 'Facility Manager', '', michaImage),
 ]
 
 export default () => (

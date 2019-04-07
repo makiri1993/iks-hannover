@@ -14,7 +14,7 @@ export default () => (
   <Layout>
     <Page>
       <Helmet
-        title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
+        title={'Tagespflege - Interkultureller Pflegedienst Hannover'}
         meta={[
           {
             name: 'description',
@@ -24,136 +24,83 @@ export default () => (
         ]}
       />
       <CenteredText>
-        <CenteredH1Red>Außerklinische Intensivpflege</CenteredH1Red>
+        <CenteredH1Red>Tagespflege</CenteredH1Red>
         <PflegedienstP>
-          Wir bieten zwei Versorgungsalternativen: Eine<strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer
-          ambulant betreuten <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
+          GANZ NEU IN LINDEN: Unsere Tagespflege
           <StyledBR />
           <StyledBR />
-          <LinkRed target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
-            Unseren Flyer finden Sie hier.
-          </LinkRed>
+          Bei der Tagespflege wird älteren Menschen die Möglichkeit geboten, weiter in ihrer privaten Umgebung zu wohnen und somit den
+          Kontakt zu Familie und Freunden aufrechtzuerhalten. Zu festgelegten Tageszeiten wird die Pflege und Betreuung von
+          pflegebedürftigen Menschen, welche sonst durch die Angehörigen oder einen ambulanten Pflegedienst versorgt werden, übernommen.
           <StyledBR />
           <StyledBR />
-          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
-          häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden.
-          Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und
-          die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+          Dabei ist es besonders wichtig, die selbständige Lebensführung der Tagespflegegäste so weit wie möglich zu erhalten und zu
+          fördern. Auf diese Weise wird auch die Situation der Angehörigen erleichtert.
           <StyledBR />
           <StyledBR />
-          Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.
+          <CenteredH4Red>FINANZIERUNG</CenteredH4Red>
+          Die Kosten für die Tagespflege werden in Sätzen pro Belegungstag berechnet und bestehen aus den Beträgen für Unterkunft und
+          Verpflegung, Betreuungs- und Pflegeleistung, Beförderung sowie Investitionskosten.
+          <StyledBR />
+          <StyledBR />
+          Der Interkulturelle Sozialdienst ist Partner aller Pflegekassen, eine Kostenübernahme für Pflege und Betreuung in der Tagespflege
+          ist im Rahmen einer festgestellten Pflegebedürftigkeit daher problemlos möglich. Wir bieten zwei Versorgungsalternativen: Eine
+          <StyledBR />
+          <StyledBR />
+          Unsere Tagespflege befindet sich im Ahrberg-Viertel in Hannover Linden und bietet:
         </PflegedienstP>
         <StyledUL>
           <StyledLI>
-            <StyledSpan>ein Leben in Ihrer vertrauten Umgebung</StyledSpan>
+            <StyledSpan>12 Betreuungsplätze</StyledSpan>
           </StyledLI>
           <StyledLI>
-            <StyledSpan>eine Versorgung rund um die Uhr</StyledSpan>
+            <StyledSpan>Spezielle Angebote für gerontopsychiatrisch und geriatrisch erkrankte Menschen</StyledSpan>
           </StyledLI>
           <StyledLI>
-            <StyledSpan>einfühlsame und rücksichtsvolle Begleitung</StyledSpan>
+            <StyledSpan>Individuelle Betreuung durch qualifiziertes Personal</StyledSpan>
           </StyledLI>
           <StyledLI>
-            <StyledSpan>Unterstützung im Alltag</StyledSpan>
+            <StyledSpan>Tage- oder wochenweise Belegung</StyledSpan>
           </StyledLI>
           <StyledLI>
-            <StyledSpan>Vermeidung von Infektionen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermeidung von Krankenhausaufenthalten</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</StyledSpan>
+            <StyledSpan>Fahrdienst inklusive, auch für Rollstuhlfahrer</StyledSpan>
           </StyledLI>
         </StyledUL>
-        <CenteredH4Red>PFLEGERISCHE LEISTUNG</CenteredH4Red>
-        <StyledBR />
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>Überwachung der invasiven und nicht-invasiven Beatmung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Erhebung von Vitalwerten und Beatmungsparametern</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Sauerstofftherapie</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>EKG und CO² Überwachung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Ernährungstherapie mit PEG, PEJ Versorgung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Infusionstherapie mit Portversorgung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Wund- und Schmerzmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Fachliche Anleitung von Patienten und Angehörigen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Individuelles Notfallmanagement</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <StyledBR />
-        <PRed>
-          „Ich kann mir keinen Zustand denken, der mir unerträglicher und schauerlicher wäre, als mit schmerzerfüllter Seele der Fähigkeit
-          beraubt zu sein, ihr Ausdruck zu verleihen.“{' '}
-        </PRed>
-        <PItalicAndSmall>Michel de Montaigne (1533 - 1592), französischer Philosoph </PItalicAndSmall>
-        <StyledBR />
-        <CenteredH4Red>WEITERE LEISTUNG</CenteredH4Red>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>Pflegefachberatung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Entlassungsmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermittlung von Pflegehilfsmitteln und Medizintechnik</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>fachpflegerische und sozialkompetente Versorgung und Betreuung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Entwicklung individueller Therapiekonzepte</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Kooperation mit weiteren Dienstleistern</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Fort- und Weiterbildung unseres Fachpersonals</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <StyledBR />
         <PflegedienstP>
-          Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.
+          <CenteredH4Red>RÄUMLICHKEITEN</CenteredH4Red>
+          Alle Räume sind hell, modern und behindertengerecht ausgestattet.
+          {/* <StyledBR /> */}
+          {/* <StyledBR /> */}
         </PflegedienstP>
+        <StyledUL>
+          <StyledLI>
+            <StyledSpan>offene Wohnküche</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Wohn- und Aufenthaltsbereich mit TV und gemütlicher Sofaecke</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Ruheraum mit bequemen Liegesesseln</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Ruheraum mit Ruhebetten</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>behindertengerechte Toiletten und Bad</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Außenanlagen und ruhiger Garten</StyledSpan>
+          </StyledLI>
+        </StyledUL>
         <StyledBR />
-        <StyledBR />
-        <CenteredH4Red>Marion Hartmann | Leitung der Intensivpflege</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:hartmann@iks-hannover.de'>
-          hartmann@iks-hannover.de
+        Ihre persönliche Ansprechpartnerin:
+        <CenteredH4Red>Galina Fiksmann | Pflegedienstleitung</CenteredH4Red>
+        <LinkEmail title='Email Adresse' href='mailto:fiksmann@iks-hannover.de'>
+          fiksmann@iks-hannover.de
         </LinkEmail>
-        <CenteredH4Red>Marco Schillaci | Fachliche Leitung</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:schillaci@iks-hannover.de'>
-          schillaci@iks-hannover.de
-        </LinkEmail>
+        <PflegedienstP>0511 210 10 44</PflegedienstP>
       </CenteredText>
       <StyledBR />
-      <DivCenter>
-        <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_1} />
-        <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_2} />
-      </DivCenter>
       <StyledBR />
     </Page>
   </Layout>

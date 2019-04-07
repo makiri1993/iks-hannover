@@ -5,6 +5,8 @@ import Container from '../components/Container'
 import styled from 'styled-components'
 import { colors, breakpoints, dimensions } from '../styles/variables'
 import Layout from '../components/Layout'
+import { PflegedienstP, DivCenterRow } from './jobs'
+import ImgWithLink from '../components/ImgWithLink'
 
 const fubaImage: string = require('../images/partner/96-2.jpg')
 const alzImage: string = require('../images/partner/alzheimer.jpg')
@@ -17,6 +19,10 @@ const gesundImage: string = require('../images/partner/gesundheitswirtschaft.jpg
 const msfImage: string = require('../images/partner/msf.jpg')
 const naviImage: string = require('../images/partner/NaVi.jpg')
 const phrImage: string = require('../images/partner/phr-1.jpg')
+
+const p1: string = require('../images/partner/p1.jpg')
+const p2: string = require('../images/partner/p2.jpg')
+const p3: string = require('../images/partner/p3.jpg')
 
 const images: { src: string; alt: string }[] = [
   { src: fubaImage, alt: 'Bild von Hannover96' },
@@ -37,20 +43,40 @@ export default () => (
     <Page>
       <Container>
         <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
-        <PinOrange>
-          {' '}
-          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns in verschiedenen Arbeitskreisen, Vereinen und
+        <PflegedienstP>
+          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und
           Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
-        </PinOrange>
-        <PWithMargin>
+        </PflegedienstP>
+        <PflegedienstP>
           Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
           Stadt-Hannover-Preis ausgezeichnet worden.
-        </PWithMargin>
+        </PflegedienstP>
         <FlexDivContentCenter>
           {images.map(el => (
             <EngagementImage src={el.src} alt={el.alt} />
           ))}
         </FlexDivContentCenter>
+        <BigTextInOrange>PARTNER</BigTextInOrange>
+        <PflegedienstP>
+          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen
+          für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio
+          VitaList in Hannover-List.“
+        </PflegedienstP>
+        <DivCenterRow>
+          <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
+          <ImgWithLink
+            link='http://www.zuhause-alles-klar.de/'
+            title='ZAK zu hause alles klar'
+            img={p2}
+            alt='Logo von der ZAK zu hause alles klar'
+          />
+          <ImgWithLink
+            link='http://www.vita-list.de/'
+            title='Vita List Hannover - Joga - Pilates- Balance'
+            img={p3}
+            alt='Logo von der Vita List Hannover'
+          />
+        </DivCenterRow>
       </Container>
     </Page>
   </Layout>

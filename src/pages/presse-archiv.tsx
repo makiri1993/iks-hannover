@@ -84,7 +84,7 @@ export default () => (
       </FlexDivCards>
       <FlexDivCards>
         <Card link={link3} alt='Zeitungsartikel von 2017' img={a3} name='NP | 03.06.2017 Gründungsklima' />
-        <Card link={link4} link={link1} alt='Zeitungsartikel von 2017' img={a4} name='NP | 19.06.2017 Pflege & Leiharbeit' />
+        <Card link={link4} alt='Zeitungsartikel von 2017' img={a4} name='NP | 19.06.2017 Pflege & Leiharbeit' />
       </FlexDivCards>
       <FlexDivCards>
         <Card link={link5} alt='Zeitungsartikel von 2017' img={a5} name='Häusliche Pflege | 2017 Unternehmerinnenportrait I' />
@@ -93,7 +93,6 @@ export default () => (
       <FlexDivCards>
         <Card link={link7} alt='Zeitungsartikel von 2017' img={a7} name='Care Konkret | 19.05.2017 Intensiv WG' />
       </FlexDivCards>
-      <CenteredH1Orange>PRESSE 2016</CenteredH1Orange>
       <CenteredH1Orange>PRESSE 2015</CenteredH1Orange>
       <FlexDivCards>
         <Card link={link8} alt='Zeitungsartikel von 2017' img={a8} name='Hallo Wochenende | 24.01.2015 bunt statt braun' />

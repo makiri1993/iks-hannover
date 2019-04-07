@@ -1,15 +1,10 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-
-import Page from '../components/Page'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
-import ImgWithLink from '../components/ImgWithLink'
 import Layout from '../components/Layout'
-
-const p1: string = require('../images/partner/p1.jpg')
-const p2: string = require('../images/partner/p2.jpg')
-const p3: string = require('../images/partner/p3.jpg')
+import Page from '../components/Page'
+import { colors } from '../styles/variables'
+import { CenteredText, StyledLI } from './intensivpflege'
 
 export default () => (
   <Layout>
@@ -23,74 +18,99 @@ export default () => (
           },
         ]}
       />
-      <DivCenterCol>
-        <StyledFooterDiv>
-          <CenteredH1Orange>JOBS</CenteredH1Orange>
-          <PflegedienstP>
-            Wir suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes Pflegepersonal und freuen uns auf Ihre Bewerbung.
-            <StyledBR />
-            Es ist jederzeit sinnvoll, uns Ihre Bewerbungsunterlagen zukommen zu lassen, da wir im Rahmen der Betriebserweiterung regelmäßig
-            Personal mit unterschiedlichen Qualifikationen einstellen.
-            <StyledBR />
-          </PflegedienstP>
-          <br />
-
-          <H4Orange>WISSENSWERTES</H4Orange>
+      <CenteredH1Orange>JOBS</CenteredH1Orange>
+      <CenteredText>
+        <PflegedienstP>
+          Wir wachsen weiter und freuen uns immer über Ihre Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit
+          Zusatzausbildung „Intensiv“) sowie Pflegehelfer*innen und Hauswirtschaftskräfte.
           <StyledBR />
-          <POrange>Bundesfreiwilligendienst</POrange>
-          <PflegedienstP>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</PflegedienstP>
-          <POrange>Krankenpflege</POrange>
-          <PflegedienstP>Wir kooperieren mit den folgenden Krankenpflegeschulen:</PflegedienstP>
-          <StyledUL>
-            <StyledLIOrange>
-              <StyledSpan>Landeskrankenhaus Wunstorf</StyledSpan>
-            </StyledLIOrange>
-            <StyledLIOrange>
-              <StyledSpan>Deutsche Angestellten-Akademie</StyledSpan>
-            </StyledLIOrange>
-          </StyledUL>
-          <PflegedienstP>Die Krankenpflegeschüler dieser Schulen absolvieren bei uns ihr 6-wöchiges Praktikum.</PflegedienstP>
-          <POrange>Altenpflege</POrange>
-          <PflegedienstP>
-            Ebenso besteht eine Kooperation mit der Anna-Siemsen-Schule im Bereich der Altenpflegeausbildung. Auch hier können die
-            Altenpflegeschüler ihr Praktikum in unserem Betrieb absolvieren.
-          </PflegedienstP>
-          <POrange>PDL-Ausbildung</POrange>
-          <PflegedienstP>
-            Mit der DAA (Deutsche Angestellten-Akademie) besteht eine Zusammenarbeit bei der Ausbildung von Fachkräften zur
-            Pflegedienstleitung (PDL). Diese können ebenfalls bei uns ihre Praktika absolvieren.
-          </PflegedienstP>
-          <CenteredH1Orange>PARTNER</CenteredH1Orange>
-          <PflegedienstP>
-            Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein
-            Unternehmen für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und
-            Pilatesstudio VitaList in Hannover-List.“
-          </PflegedienstP>
-          <DivCenterRow>
-            <ImgWithLink
-              link='https://zak-pflege-hannover.de/'
-              title='ZAK Pflege Hannover'
-              img={p1}
-              alt='Logo von der ZAK Pflege hannover'
-            />
-            <ImgWithLink
-              link='http://www.zuhause-alles-klar.de/'
-              title='ZAK zu hause alles klar'
-              img={p2}
-              alt='Logo von der ZAK zu hause alles klar'
-            />
-            <ImgWithLink
-              link='http://www.vita-list.de/'
-              title='Vita List Hannover - Joga - Pilates- Balance'
-              img={p3}
-              alt='Logo von der Vita List Hannover'
-            />
-          </DivCenterRow>
-        </StyledFooterDiv>
-        <StyledFooterDiv>
-          <CenteredH1Orange>AKTUELLE STELLENANGEBOTE</CenteredH1Orange>
-        </StyledFooterDiv>
-      </DivCenterCol>
+          <StyledBR />
+          Die Einsatzbereiche sind dabei extrem vielfältig –Sie möchten gerne unser ambulantes Team unterstützen? Oder Sie gehen in der
+          Betreuung unserer Demenzpatienten in den Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht
+          Ihr Organisationstalent an? Sie wünschen die Herausforderung im Intensivbereich?
+          <StyledBR />
+          <StyledBR />
+          Ob Vollzeit oder Teilzeit, Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter entsprechend ihrer Fähigkeiten und
+          Wünsche einzusetzen. So legen wir gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten. Wir
+          suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes Pflegepersonal und freuen uns auf Ihre Bewerbung.
+        </PflegedienstP>
+        <div style={{ textDecoration: 'underline' }}>Wir bieten Ihnen:</div>
+        <StyledUL>
+          <StyledLI>
+            <StyledSpan>familiäres Arbeitsklima in einem motivierten Team</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>wertschätzende Führungskultur</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>einen sicheren Arbeitsplatz in einem etablierten Unternehmen</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>umfangreiche Fort- und Weiterbildungsmöglichkeiten</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>pünktliche und leistungsgerechte Lohnzahlungen</StyledSpan>
+          </StyledLI>
+        </StyledUL>
+        <div style={{ textDecoration: 'underline' }}>Sie bringen mit:</div>
+        <StyledUL>
+          <StyledLI>
+            <StyledSpan>Freude am Umgang mit Menschen</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Empathievermögen und Sensibilität</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Verantwortungsbewusstsein</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Zuverlässigkeit</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Teamfähigkeit</StyledSpan>
+          </StyledLI>
+        </StyledUL>
+        <PflegedienstP>
+          Bitte lassen Sie uns Ihre vollständigen Bewerbungsunterlagen gerne per Email an
+          <a href='mailto:iks-hannover@iks-hannover.de'> iks-hannover@iks-hannover.de</a> zukommen.
+        </PflegedienstP>
+        <H4Orange>Aktuelle Angebote</H4Orange>
+        <StyledBR />
+        <POrange style={{ textDecoration: 'underline' }}>Ausbildung Pflegefachmann/-frau</POrange>
+        <PflegedienstP>
+          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns können Sie Ihre Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen
+          der schulischen Ausbildung kooperieren wir mit den folgenden Pflegefachschulen:
+        </PflegedienstP>
+        <StyledUL>
+          <StyledLI>
+            <StyledSpan>Pflegecampus Hannover</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>KRH Akademie</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Fresenius Schule</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Diakovere Schule</StyledSpan>
+          </StyledLI>
+          <StyledLI>
+            <StyledSpan>Pflegefachschule Hannover in Garbsen</StyledSpan>
+          </StyledLI>
+        </StyledUL>
+        <PflegedienstP>
+          Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag
+          mit uns geschlossen werden.
+        </PflegedienstP>
+        <POrange style={{ textDecoration: 'underline' }}>Praktikum</POrange>
+        <PflegedienstP>
+          Sie suchen im Rahmen Ihrer Ausbildung einen Praktikumsplatz? Fragen Sie gerne bei uns an. Wir kooperieren unter anderem mit den
+          Ausbildungsbereichen der MHH und der Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und
+          können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der Pflege bekommen.
+        </PflegedienstP>
+        <POrange>Bundesfreiwilligendienst</POrange>
+        <PflegedienstP>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</PflegedienstP>
+      </CenteredText>
     </Page>
   </Layout>
 )

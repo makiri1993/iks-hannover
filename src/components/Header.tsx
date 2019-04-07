@@ -111,9 +111,6 @@ export default class Header extends React.Component<Props, State> {
         <HomepageLink title='Navigation zu der Seite Engagement' to='/engagement'>
           Engagement | Partner
         </HomepageLink>
-        <HomepageLink title='Navigation zu der Seite Impressum' to='/impressum'>
-          IMPRESSUM | ANFAHRT
-        </HomepageLink>
         <HomepageLink title='Navigation zu der Startseite' to='/presse-archiv'>
           Presse
         </HomepageLink>
@@ -178,9 +175,6 @@ export default class Header extends React.Component<Props, State> {
         </HomepageLink>
         <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Engagement' to='/engagement'>
           Engagement | Partner
-        </HomepageLink>
-        <HomepageLink onClick={() => this.handleClick()} title='Navigation zu der Seite Impressum' to='/impressum'>
-          IMPRESSUM | ANFAHRT
         </HomepageLink>
       </BurgerMenu>
     )
