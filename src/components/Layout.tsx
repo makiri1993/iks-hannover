@@ -1,13 +1,12 @@
 import * as React from 'react'
-// import Helmet from 'react-helmet'
-
-// import '../styles/normalize'
-
-import Header from './Header'
-import LayoutRoot from './LayoutRoot'
-import LayoutMain from './LayoutMain'
+import '../styles/app.scss'
 import Footer from './Footer'
-import GlobalStyles from '../styles/normalize'
+// import Helmet from 'react-helmet'
+// import '../styles/normalize'
+import Header from './Header'
+import LayoutMain from './LayoutMain'
+import LayoutRoot from './LayoutRoot'
+
 // import { graphql } from 'gatsby'
 interface WrapperProps {
   children: React.ReactNode
@@ -23,21 +22,18 @@ interface WrapperProps {
 }
 
 const Layout: React.SFC<WrapperProps> = ({ children }) => (
-  <>
-    <GlobalStyles />
-    <LayoutRoot>
-      {/* <Helmet
+  <LayoutRoot>
+    {/* <Helmet
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: data.site.siteMetadata.description },
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     /> */}
-      <Header />
-      <LayoutMain>{children}</LayoutMain>
-      <Footer />
-    </LayoutRoot>
-  </>
+    <Header />
+    <LayoutMain>{children}</LayoutMain>
+    <Footer />
+  </LayoutRoot>
 )
 
 export default Layout
