@@ -7,7 +7,6 @@
   "keywords": [
     "gatsby",
     "react",
-    "styled-components",
     "typescript",
     "netflify"
   ],
@@ -36,7 +35,6 @@
     "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sharp": "^2.0.33",
     "gatsby-plugin-sitemap": "^2.0.12",
-    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^3.0.10",
@@ -55,9 +53,6 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-responsive": "^6.1.1",
-    "styled-components": "^4.2.0",
-    "styled-components-ts": "^0.0.15",
-    "styled-normalize": "^8.0.6",
     "typescript": "^3.4.3"
   },
   "devDependencies": {
