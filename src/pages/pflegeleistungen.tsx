@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
-import Page from '../components/Page'
+
 import styled from 'styled-components'
 import { dimensions, colors, breakpoints } from '../styles/variables'
 import Layout from '../components/Layout'
@@ -8,58 +8,56 @@ import { StyledUL, StyledLIOrange, StyledSpan } from './jobs'
 
 export default () => (
   <Layout>
-    <Page>
-      <Helmet
-        title={'Pflegedienst - Interkultureller Pflegedienst Hannover'}
-        meta={[
-          {
-            name: 'description',
-            content:
-              'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Pfelgedienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.',
-          },
-        ]}
-      />
-      <CenteredText>
-        <CenteredH1Green>UNSERE PFLEGELEISTUNGEN</CenteredH1Green>
-        <PflegedienstP>
-          Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung. Sie finanziert - wenn auch nur zum Teil - diejenigen Kosten,
-          die entstehen, wenn Versicherte pflegebedürftig werden. Voraussetzung dafür ist jedoch, dass der Pflegebedürftige in einen der
-          fünf Pflegegrade (Grad 1-5) eingestuft ist.
-          <StyledBR />
-          <StyledBR />
-          Für alle Patienten, die sich für einen Pflegedienst entscheiden, gilt, dass sie aus dem Niedersächsischen Leistungskomplexkatalog
-          individuell die für sie notwendigen pflegerischen Leistungen – Leistungskomplexe genannt – wählen können.
-          <StyledBR />
-          <StyledBR />
-          Übersteigt die Summe der gewählten Leistungskomplexe den Zuschussbetrag der Pflegekasse, muss der so genannte „Eigenanteil“
-          entweder privat oder über den Träger der Sozialsicherung (Stadt oder Region) finanziert werden.
-          <StyledBR />
-          <StyledBR />
-          Über die genauen Kosten informieren wir unsere Patienten und Interessenten grundsätzlich vorab durch schriftliche und
-          unverbindliche Angebote, denn Kostentransparenz ist eine Grundvoraussetzung für eine vertrauensvolle Zusammenarbeit.
-          <StyledBR />
-          <StyledBR />
-          Unser Pflegedienst bietet seine Pflegeleistungen am Patienten in fünf verschiedenen Formaten an:
-          <StyledUL>
-            <StyledLIOrange>
-              <StyledSpan>In der ambulanten Pflege beim Patienten zu Hause</StyledSpan>
-            </StyledLIOrange>
-            <StyledLIOrange>
-              <StyledSpan>In unseren Wohngemeinschaften für Senioren</StyledSpan>
-            </StyledLIOrange>
-            <StyledLIOrange>
-              <StyledSpan>Bei einer intensivpflegerischen 1:1-Versorgung beim Patienten zu Hause </StyledSpan>
-            </StyledLIOrange>
-            <StyledLIOrange>
-              <StyledSpan>In unseren Intensiv-Wohngemeinschaften</StyledSpan>
-            </StyledLIOrange>
-            <StyledLIOrange>
-              <StyledSpan>In unserer Tagespflege im Ahrberg-Viertel in Hannover-Linden</StyledSpan>
-            </StyledLIOrange>
-          </StyledUL>
-        </PflegedienstP>
-      </CenteredText>
-    </Page>
+    <Helmet
+      title={'Pflegedienst - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content:
+            'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Pfelgedienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.',
+        },
+      ]}
+    />
+    <CenteredText>
+      <CenteredH1Green>UNSERE PFLEGELEISTUNGEN</CenteredH1Green>
+      <PflegedienstP>
+        Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung. Sie finanziert - wenn auch nur zum Teil - diejenigen Kosten,
+        die entstehen, wenn Versicherte pflegebedürftig werden. Voraussetzung dafür ist jedoch, dass der Pflegebedürftige in einen der fünf
+        Pflegegrade (Grad 1-5) eingestuft ist.
+        <StyledBR />
+        <StyledBR />
+        Für alle Patienten, die sich für einen Pflegedienst entscheiden, gilt, dass sie aus dem Niedersächsischen Leistungskomplexkatalog
+        individuell die für sie notwendigen pflegerischen Leistungen – Leistungskomplexe genannt – wählen können.
+        <StyledBR />
+        <StyledBR />
+        Übersteigt die Summe der gewählten Leistungskomplexe den Zuschussbetrag der Pflegekasse, muss der so genannte „Eigenanteil“ entweder
+        privat oder über den Träger der Sozialsicherung (Stadt oder Region) finanziert werden.
+        <StyledBR />
+        <StyledBR />
+        Über die genauen Kosten informieren wir unsere Patienten und Interessenten grundsätzlich vorab durch schriftliche und unverbindliche
+        Angebote, denn Kostentransparenz ist eine Grundvoraussetzung für eine vertrauensvolle Zusammenarbeit.
+        <StyledBR />
+        <StyledBR />
+        Unser Pflegedienst bietet seine Pflegeleistungen am Patienten in fünf verschiedenen Formaten an:
+        <StyledUL>
+          <StyledLIOrange>
+            <StyledSpan>In der ambulanten Pflege beim Patienten zu Hause</StyledSpan>
+          </StyledLIOrange>
+          <StyledLIOrange>
+            <StyledSpan>In unseren Wohngemeinschaften für Senioren</StyledSpan>
+          </StyledLIOrange>
+          <StyledLIOrange>
+            <StyledSpan>Bei einer intensivpflegerischen 1:1-Versorgung beim Patienten zu Hause </StyledSpan>
+          </StyledLIOrange>
+          <StyledLIOrange>
+            <StyledSpan>In unseren Intensiv-Wohngemeinschaften</StyledSpan>
+          </StyledLIOrange>
+          <StyledLIOrange>
+            <StyledSpan>In unserer Tagespflege im Ahrberg-Viertel in Hannover-Linden</StyledSpan>
+          </StyledLIOrange>
+        </StyledUL>
+      </PflegedienstP>
+    </CenteredText>
   </Layout>
 )
 

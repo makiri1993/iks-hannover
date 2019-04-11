@@ -1,11 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import '../styles/app.scss'
 import Footer from './Footer'
 // import Helmet from 'react-helmet'
 // import '../styles/normalize'
-import Header from './Header'
-import LayoutMain from './LayoutMain'
-import LayoutRoot from './LayoutRoot'
+import Nav from './Nav'
 
 // import { graphql } from 'gatsby'
 interface WrapperProps {
@@ -22,7 +20,7 @@ interface WrapperProps {
 }
 
 const Layout: React.SFC<WrapperProps> = ({ children }) => (
-  <LayoutRoot>
+  <div className='StyledLayoutRoot'>
     {/* <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -30,10 +28,12 @@ const Layout: React.SFC<WrapperProps> = ({ children }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     /> */}
-    <Header />
-    <LayoutMain>{children}</LayoutMain>
+    <Nav />
+    <main className='StyledLayoutMain'>
+      <div className='StyledPage'>{children}</div>
+    </main>
     <Footer />
-  </LayoutRoot>
+  </div>
 )
 
 export default Layout

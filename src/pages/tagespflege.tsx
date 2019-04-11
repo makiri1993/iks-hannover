@@ -1,9 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { dimensions, colors, breakpoints } from '../styles/variables'
 
-import Page from '../components/Page'
 import Layout from '../components/Layout'
 
 const logo_1: string = require('../images/icons/Schriftzug_Wohngemeinschaft.png')
@@ -12,97 +11,95 @@ const flylerLink: string = require('../images/intensivpflege/IKS-AIWG-Flyer_ku_w
 
 export default () => (
   <Layout>
-    <Page>
-      <Helmet
-        title={'Tagespflege - Interkultureller Pflegedienst Hannover'}
-        meta={[
-          {
-            name: 'description',
-            content:
-              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
-          },
-        ]}
-      />
-      <CenteredText>
-        <CenteredH1Red>Tagespflege</CenteredH1Red>
-        <PflegedienstP>
-          GANZ NEU IN LINDEN: Unsere Tagespflege
-          <StyledBR />
-          <StyledBR />
-          Bei der Tagespflege wird älteren Menschen die Möglichkeit geboten, weiter in ihrer privaten Umgebung zu wohnen und somit den
-          Kontakt zu Familie und Freunden aufrechtzuerhalten. Zu festgelegten Tageszeiten wird die Pflege und Betreuung von
-          pflegebedürftigen Menschen, welche sonst durch die Angehörigen oder einen ambulanten Pflegedienst versorgt werden, übernommen.
-          <StyledBR />
-          <StyledBR />
-          Dabei ist es besonders wichtig, die selbständige Lebensführung der Tagespflegegäste so weit wie möglich zu erhalten und zu
-          fördern. Auf diese Weise wird auch die Situation der Angehörigen erleichtert.
-          <StyledBR />
-          <StyledBR />
-          <CenteredH4Red>FINANZIERUNG</CenteredH4Red>
-          Die Kosten für die Tagespflege werden in Sätzen pro Belegungstag berechnet und bestehen aus den Beträgen für Unterkunft und
-          Verpflegung, Betreuungs- und Pflegeleistung, Beförderung sowie Investitionskosten.
-          <StyledBR />
-          <StyledBR />
-          Der Interkulturelle Sozialdienst ist Partner aller Pflegekassen, eine Kostenübernahme für Pflege und Betreuung in der Tagespflege
-          ist im Rahmen einer festgestellten Pflegebedürftigkeit daher problemlos möglich. Wir bieten zwei Versorgungsalternativen: Eine
-          <StyledBR />
-          <StyledBR />
-          Unsere Tagespflege befindet sich im Ahrberg-Viertel in Hannover Linden und bietet:
-        </PflegedienstP>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>12 Betreuungsplätze</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Spezielle Angebote für gerontopsychiatrisch und geriatrisch erkrankte Menschen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Individuelle Betreuung durch qualifiziertes Personal</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Tage- oder wochenweise Belegung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Fahrdienst inklusive, auch für Rollstuhlfahrer</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <PflegedienstP>
-          <CenteredH4Red>RÄUMLICHKEITEN</CenteredH4Red>
-          Alle Räume sind hell, modern und behindertengerecht ausgestattet.
-          {/* <StyledBR /> */}
-          {/* <StyledBR /> */}
-        </PflegedienstP>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>offene Wohnküche</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Wohn- und Aufenthaltsbereich mit TV und gemütlicher Sofaecke</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Ruheraum mit bequemen Liegesesseln</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Ruheraum mit Ruhebetten</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>behindertengerechte Toiletten und Bad</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Außenanlagen und ruhiger Garten</StyledSpan>
-          </StyledLI>
-        </StyledUL>
+    <Helmet
+      title={'Tagespflege - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content:
+            'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
+        },
+      ]}
+    />
+    <CenteredText>
+      <CenteredH1Red>Tagespflege</CenteredH1Red>
+      <PflegedienstP>
+        GANZ NEU IN LINDEN: Unsere Tagespflege
         <StyledBR />
-        Ihre persönliche Ansprechpartnerin:
-        <CenteredH4Red>Galina Fiksmann | Pflegedienstleitung</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:fiksmann@iks-hannover.de'>
-          fiksmann@iks-hannover.de
-        </LinkEmail>
-        <PflegedienstP>0511 210 10 44</PflegedienstP>
-      </CenteredText>
+        <StyledBR />
+        Bei der Tagespflege wird älteren Menschen die Möglichkeit geboten, weiter in ihrer privaten Umgebung zu wohnen und somit den Kontakt
+        zu Familie und Freunden aufrechtzuerhalten. Zu festgelegten Tageszeiten wird die Pflege und Betreuung von pflegebedürftigen
+        Menschen, welche sonst durch die Angehörigen oder einen ambulanten Pflegedienst versorgt werden, übernommen.
+        <StyledBR />
+        <StyledBR />
+        Dabei ist es besonders wichtig, die selbständige Lebensführung der Tagespflegegäste so weit wie möglich zu erhalten und zu fördern.
+        Auf diese Weise wird auch die Situation der Angehörigen erleichtert.
+        <StyledBR />
+        <StyledBR />
+        <CenteredH4Red>FINANZIERUNG</CenteredH4Red>
+        Die Kosten für die Tagespflege werden in Sätzen pro Belegungstag berechnet und bestehen aus den Beträgen für Unterkunft und
+        Verpflegung, Betreuungs- und Pflegeleistung, Beförderung sowie Investitionskosten.
+        <StyledBR />
+        <StyledBR />
+        Der Interkulturelle Sozialdienst ist Partner aller Pflegekassen, eine Kostenübernahme für Pflege und Betreuung in der Tagespflege
+        ist im Rahmen einer festgestellten Pflegebedürftigkeit daher problemlos möglich. Wir bieten zwei Versorgungsalternativen: Eine
+        <StyledBR />
+        <StyledBR />
+        Unsere Tagespflege befindet sich im Ahrberg-Viertel in Hannover Linden und bietet:
+      </PflegedienstP>
+      <StyledUL>
+        <StyledLI>
+          <StyledSpan>12 Betreuungsplätze</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Spezielle Angebote für gerontopsychiatrisch und geriatrisch erkrankte Menschen</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Individuelle Betreuung durch qualifiziertes Personal</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Tage- oder wochenweise Belegung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Fahrdienst inklusive, auch für Rollstuhlfahrer</StyledSpan>
+        </StyledLI>
+      </StyledUL>
+      <PflegedienstP>
+        <CenteredH4Red>RÄUMLICHKEITEN</CenteredH4Red>
+        Alle Räume sind hell, modern und behindertengerecht ausgestattet.
+        {/* <StyledBR /> */}
+        {/* <StyledBR /> */}
+      </PflegedienstP>
+      <StyledUL>
+        <StyledLI>
+          <StyledSpan>offene Wohnküche</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Wohn- und Aufenthaltsbereich mit TV und gemütlicher Sofaecke</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Ruheraum mit bequemen Liegesesseln</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Ruheraum mit Ruhebetten</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>behindertengerechte Toiletten und Bad</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Außenanlagen und ruhiger Garten</StyledSpan>
+        </StyledLI>
+      </StyledUL>
       <StyledBR />
-      <StyledBR />
-    </Page>
+      Ihre persönliche Ansprechpartnerin:
+      <CenteredH4Red>Galina Fiksmann | Pflegedienstleitung</CenteredH4Red>
+      <LinkEmail title='Email Adresse' href='mailto:fiksmann@iks-hannover.de'>
+        fiksmann@iks-hannover.de
+      </LinkEmail>
+      <PflegedienstP>0511 210 10 44</PflegedienstP>
+    </CenteredText>
+    <StyledBR />
+    <StyledBR />
   </Layout>
 )
 

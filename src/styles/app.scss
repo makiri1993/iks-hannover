@@ -306,3 +306,219 @@ blockquote {
     opacity: 1;
   }
 }
+
+// Footer
+
+.FooterDiv {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: $color-orange;
+}
+
+.StyledFooter {
+  height: auto;
+  width: 100%;
+  padding: 0 $containerPadding;
+  background-color: $color-orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.StyledFooterDiv {
+  text-align: left;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.H4Footero {
+  color: $color-white;
+  font-weight: 500;
+  /* padding: 1.4rem; */
+}
+
+.PFooter {
+  color: $color-white;
+}
+
+.StyledIMG {
+  width: auto;
+  height: 100px;
+}
+
+.LinkEmail {
+  cursor: pointer;
+  color: $color-white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.LinkEmailOut {
+  cursor: pointer;
+  color: $color-white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.LinkEmailOutWtMargin {
+  display: block;
+  cursor: pointer;
+  color: $color-white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.LinkWhite {
+  color: $color-white;
+}
+
+// Four Columns
+
+.FlexDivContentCenter {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: 799px) {
+    flex-direction: column;
+  }
+}
+.OneColumn {
+  width: 24vw;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 799px) {
+    flex-direction: column;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.CenteredPLeft {
+  text-align: left;
+}
+
+.HomepageLink {
+  /* position: absolute; */
+  color: $color-white;
+  top: 35%;
+  /* left: 50; */
+  text-align: center;
+  font-weight: 600;
+  // ${onEvent}
+  //   text-decoration: none;
+  // }};
+}
+
+.HomepageLinkGreen {
+  /* position: absolute; */
+  color: $color-green;
+  margin-left: 3px;
+}
+
+.HomepageLinkRed {
+  /* position: absolute; */
+  color: $color-red;
+  margin-left: 3px;
+}
+
+.IconForButton {
+  width: 120px;
+  height: 120px;
+}
+.CenteredH1 {
+  text-align: center;
+  font-weight: 500;
+  padding: 2.4rem;
+  margin: 1em;
+}
+
+.CenteredH1Green {
+  color: $color-green;
+}
+
+.CenteredH1GreenForColumn {
+  font-weight: 250;
+  margin: 0;
+}
+.CenteredH1BlueForColumn {
+  color: $color-blue;
+}
+.CenteredH1RedForColumn {
+  color: $color-red;
+}
+
+.HomepageLinkBlue {
+  /* position: absolute; */
+  color: $color-blue;
+  margin-left: 3px;
+}
+
+// HeroSlider
+
+.Hero {
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  text-align: center;
+  width: 100vw;
+  height: 50vh;
+  @media only screen and (max-width: 550px) {
+    height: 25vh;
+  }
+}
+.HeroImage {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  animation: fade;
+  animation-duration: 1.3s;
+  @media only screen and (max-width: 550px) {
+    object-fit: fill;
+  }
+}
+
+// Image with Link
+
+.CardImg {
+  width: 100%;
+  height: auto;
+}
+
+// LayoutMain
+
+.StyledLayoutMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// LayoutRoot
+
+.StyledLayoutRoot {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+}
+
+// Page
+
+.StyledPage {
+  display: block;
+  flex: 1;
+  position: relative;
+  margin-bottom: 3rem;
+}

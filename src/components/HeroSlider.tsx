@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { colors, breakpoints } from '../styles/variables'
 import { fade } from '../styles/mixins'
@@ -23,7 +23,7 @@ export default class HeroSlider extends React.Component<Props, State> {
       activeImage: slider_1,
       indexOfActiveImage: 0,
       image: [slider_1, slider_2, slider_3, slider_4, slider_5],
-      newImage: []
+      newImage: [],
     }
   }
 
@@ -57,46 +57,20 @@ export default class HeroSlider extends React.Component<Props, State> {
     if (this.state.indexOfActiveImage === this.state.image.length - 1) {
       this.setState({
         activeImage: this.state.image[0],
-        indexOfActiveImage: 0
+        indexOfActiveImage: 0,
       })
     } else {
       this.setState({
         activeImage: this.state.image[newIndex],
-        indexOfActiveImage: newIndex
+        indexOfActiveImage: newIndex,
       })
     }
   }
   render() {
     return (
-      <Hero>
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
-      </Hero>
+      <div className='Hero'>
+        <img className='HeroImage' key={this.state.activeImage} src={this.state.activeImage} alt='' />
+      </div>
     )
   }
 }
-
-export const Hero = styled.div`
-  display: block;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.white};
-  text-align: center;
-  width: 100vw;
-  height: 50vh;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    height: 25vh;
-  }
-`
-export const HeroImage = styled.img`
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-  animation: ${fade};
-  animation-duration: 1.3s;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    object-fit: fill;
-  }
-`

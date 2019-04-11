@@ -1,9 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { dimensions, colors, breakpoints } from '../styles/variables'
 
-import Page from '../components/Page'
 import Layout from '../components/Layout'
 
 const logo_1: string = require('../images/icons/Schriftzug_Wohngemeinschaft.png')
@@ -12,150 +11,148 @@ const flylerLink: string = require('../images/intensivpflege/IKS-AIWG-Flyer_ku_w
 
 export default () => (
   <Layout>
-    <Page>
-      <Helmet
-        title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
-        meta={[
-          {
-            name: 'description',
-            content:
-              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
-          },
-        ]}
-      />
-      <CenteredText>
-        <CenteredH1Red>Außerklinische Intensivpflege</CenteredH1Red>
-        <PflegedienstP>
-          Wir bieten zwei Versorgungsalternativen: Eine<strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer
-          ambulant betreuten <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
-          <StyledBR />
-          <StyledBR />
-          <LinkRed target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
-            Unseren Flyer finden Sie hier.
-          </LinkRed>
-          <StyledBR />
-          <StyledBR />
-          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
-          häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden.
-          Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und
-          die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
-          <StyledBR />
-          <StyledBR />
-          Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.
-        </PflegedienstP>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>ein Leben in Ihrer vertrauten Umgebung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>eine Versorgung rund um die Uhr</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>einfühlsame und rücksichtsvolle Begleitung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Unterstützung im Alltag</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermeidung von Infektionen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermeidung von Krankenhausaufenthalten</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <CenteredH4Red>PFLEGERISCHE LEISTUNG</CenteredH4Red>
-        <StyledBR />
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>Überwachung der invasiven und nicht-invasiven Beatmung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Erhebung von Vitalwerten und Beatmungsparametern</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Sauerstofftherapie</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>EKG und CO² Überwachung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Ernährungstherapie mit PEG, PEJ Versorgung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Infusionstherapie mit Portversorgung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Wund- und Schmerzmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Fachliche Anleitung von Patienten und Angehörigen</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Individuelles Notfallmanagement</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <StyledBR />
-        <PRed>
-          „Ich kann mir keinen Zustand denken, der mir unerträglicher und schauerlicher wäre, als mit schmerzerfüllter Seele der Fähigkeit
-          beraubt zu sein, ihr Ausdruck zu verleihen.“{' '}
-        </PRed>
-        <PItalicAndSmall>Michel de Montaigne (1533 - 1592), französischer Philosoph </PItalicAndSmall>
-        <StyledBR />
-        <CenteredH4Red>WEITERE LEISTUNG</CenteredH4Red>
-        <StyledUL>
-          <StyledLI>
-            <StyledSpan>Pflegefachberatung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Entlassungsmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Vermittlung von Pflegehilfsmitteln und Medizintechnik</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>fachpflegerische und sozialkompetente Versorgung und Betreuung</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Entwicklung individueller Therapiekonzepte</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Kooperation mit weiteren Dienstleistern</StyledSpan>
-          </StyledLI>
-          <StyledLI>
-            <StyledSpan>Fort- und Weiterbildung unseres Fachpersonals</StyledSpan>
-          </StyledLI>
-        </StyledUL>
-        <StyledBR />
-        <PflegedienstP>
-          Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.
-        </PflegedienstP>
+    <Helmet
+      title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
+      meta={[
+        {
+          name: 'description',
+          content:
+            'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
+        },
+      ]}
+    />
+    <CenteredText>
+      <CenteredH1Red>Außerklinische Intensivpflege</CenteredH1Red>
+      <PflegedienstP>
+        Wir bieten zwei Versorgungsalternativen: Eine<strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer
+        ambulant betreuten <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
         <StyledBR />
         <StyledBR />
-        <CenteredH4Red>Marion Hartmann | Leitung der Intensivpflege</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:hartmann@iks-hannover.de'>
-          hartmann@iks-hannover.de
-        </LinkEmail>
-        <CenteredH4Red>Marco Schillaci | Fachliche Leitung</CenteredH4Red>
-        <LinkEmail title='Email Adresse' href='mailto:schillaci@iks-hannover.de'>
-          schillaci@iks-hannover.de
-        </LinkEmail>
-      </CenteredText>
+        <LinkRed target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
+          Unseren Flyer finden Sie hier.
+        </LinkRed>
+        <StyledBR />
+        <StyledBR />
+        Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
+        häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden.
+        Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und
+        die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+        <StyledBR />
+        <StyledBR />
+        Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.
+      </PflegedienstP>
+      <StyledUL>
+        <StyledLI>
+          <StyledSpan>ein Leben in Ihrer vertrauten Umgebung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>eine Versorgung rund um die Uhr</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>einfühlsame und rücksichtsvolle Begleitung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Unterstützung im Alltag</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Vermeidung von Infektionen</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Vermeidung von Krankenhausaufenthalten</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</StyledSpan>
+        </StyledLI>
+      </StyledUL>
+      <CenteredH4Red>PFLEGERISCHE LEISTUNG</CenteredH4Red>
       <StyledBR />
-      <DivCenter>
-        <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_1} />
-        <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_2} />
-      </DivCenter>
+      <StyledUL>
+        <StyledLI>
+          <StyledSpan>Überwachung der invasiven und nicht-invasiven Beatmung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Erhebung von Vitalwerten und Beatmungsparametern</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Sauerstofftherapie</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>EKG und CO² Überwachung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Ernährungstherapie mit PEG, PEJ Versorgung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Infusionstherapie mit Portversorgung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Wund- und Schmerzmanagement</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Fachliche Anleitung von Patienten und Angehörigen</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Individuelles Notfallmanagement</StyledSpan>
+        </StyledLI>
+      </StyledUL>
       <StyledBR />
-    </Page>
+      <PRed>
+        „Ich kann mir keinen Zustand denken, der mir unerträglicher und schauerlicher wäre, als mit schmerzerfüllter Seele der Fähigkeit
+        beraubt zu sein, ihr Ausdruck zu verleihen.“{' '}
+      </PRed>
+      <PItalicAndSmall>Michel de Montaigne (1533 - 1592), französischer Philosoph </PItalicAndSmall>
+      <StyledBR />
+      <CenteredH4Red>WEITERE LEISTUNG</CenteredH4Red>
+      <StyledUL>
+        <StyledLI>
+          <StyledSpan>Pflegefachberatung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Entlassungsmanagement</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Vermittlung von Pflegehilfsmitteln und Medizintechnik</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>fachpflegerische und sozialkompetente Versorgung und Betreuung</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Beatmungspflege mit Trachealkanülenmanagement</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Entwicklung individueller Therapiekonzepte</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Kooperation mit weiteren Dienstleistern</StyledSpan>
+        </StyledLI>
+        <StyledLI>
+          <StyledSpan>Fort- und Weiterbildung unseres Fachpersonals</StyledSpan>
+        </StyledLI>
+      </StyledUL>
+      <StyledBR />
+      <PflegedienstP>
+        Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.
+      </PflegedienstP>
+      <StyledBR />
+      <StyledBR />
+      <CenteredH4Red>Marion Hartmann | Leitung der Intensivpflege</CenteredH4Red>
+      <LinkEmail title='Email Adresse' href='mailto:hartmann@iks-hannover.de'>
+        hartmann@iks-hannover.de
+      </LinkEmail>
+      <CenteredH4Red>Marco Schillaci | Fachliche Leitung</CenteredH4Red>
+      <LinkEmail title='Email Adresse' href='mailto:schillaci@iks-hannover.de'>
+        schillaci@iks-hannover.de
+      </LinkEmail>
+    </CenteredText>
+    <StyledBR />
+    <DivCenter>
+      <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_1} />
+      <StyledIMG alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_2} />
+    </DivCenter>
+    <StyledBR />
   </Layout>
 )
 

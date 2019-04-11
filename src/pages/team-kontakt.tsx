@@ -1,6 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 
-import Page from '../components/Page'
 import Container from '../components/Container'
 import EmployeeTile from '../components/EmployeeTile'
 import styled from 'styled-components'
@@ -102,19 +101,17 @@ const mitarbeiterTeam: Mitarbeiter[] = [
 
 export default () => (
   <Layout>
-    <Page>
-      <Container>
-        <BigTextInOrange>UNSER TEAM</BigTextInOrange>
-        <FlexDivContentCenter>
-          {mitarbeiterTeam.map(el => (
-            <MarginForTile>
-              <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email} />
-            </MarginForTile>
-          ))}
-          <TeamImage src={teamImage} alt='Bild vom Team' />
-        </FlexDivContentCenter>
-      </Container>
-    </Page>
+    <Container>
+      <BigTextInOrange>UNSER TEAM</BigTextInOrange>
+      <FlexDivContentCenter>
+        {mitarbeiterTeam.map(el => (
+          <MarginForTile>
+            <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email} />
+          </MarginForTile>
+        ))}
+        <TeamImage src={teamImage} alt='Bild vom Team' />
+      </FlexDivContentCenter>
+    </Container>
   </Layout>
 )
 

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import styledTS from 'styled-components-ts'
 import Responsive from 'react-responsive'
@@ -18,7 +18,7 @@ interface State {
 const Desktop = (props: any) => <Responsive {...props} minWidth={breakpoints.sm} />
 const Mobile = (props: any) => <Responsive {...props} maxWidth={breakpoints.sm} />
 
-export default class Header extends React.Component<Props, State> {
+export default class Nav extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {

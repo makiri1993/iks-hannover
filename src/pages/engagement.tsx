@@ -1,6 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 
-import Page from '../components/Page'
 import Container from '../components/Container'
 import styled from 'styled-components'
 import { colors, breakpoints, dimensions } from '../styles/variables'
@@ -40,45 +39,43 @@ const images: { src: string; alt: string }[] = [
 
 export default () => (
   <Layout>
-    <Page>
-      <Container>
-        <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
-        <PflegedienstP>
-          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und
-          Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
-        </PflegedienstP>
-        <PflegedienstP>
-          Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
-          Stadt-Hannover-Preis ausgezeichnet worden.
-        </PflegedienstP>
-        <FlexDivContentCenter>
-          {images.map(el => (
-            <EngagementImage src={el.src} alt={el.alt} />
-          ))}
-        </FlexDivContentCenter>
-        <BigTextInOrange>PARTNER</BigTextInOrange>
-        <PflegedienstP>
-          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen
-          für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio
-          VitaList in Hannover-List.“
-        </PflegedienstP>
-        <DivCenterRow>
-          <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
-          <ImgWithLink
-            link='http://www.zuhause-alles-klar.de/'
-            title='ZAK zu hause alles klar'
-            img={p2}
-            alt='Logo von der ZAK zu hause alles klar'
-          />
-          <ImgWithLink
-            link='http://www.vita-list.de/'
-            title='Vita List Hannover - Joga - Pilates- Balance'
-            img={p3}
-            alt='Logo von der Vita List Hannover'
-          />
-        </DivCenterRow>
-      </Container>
-    </Page>
+    <Container>
+      <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
+      <PflegedienstP>
+        Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und
+        Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
+      </PflegedienstP>
+      <PflegedienstP>
+        Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
+        Stadt-Hannover-Preis ausgezeichnet worden.
+      </PflegedienstP>
+      <FlexDivContentCenter>
+        {images.map(el => (
+          <EngagementImage src={el.src} alt={el.alt} />
+        ))}
+      </FlexDivContentCenter>
+      <BigTextInOrange>PARTNER</BigTextInOrange>
+      <PflegedienstP>
+        Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen
+        für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio
+        VitaList in Hannover-List.“
+      </PflegedienstP>
+      <DivCenterRow>
+        <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
+        <ImgWithLink
+          link='http://www.zuhause-alles-klar.de/'
+          title='ZAK zu hause alles klar'
+          img={p2}
+          alt='Logo von der ZAK zu hause alles klar'
+        />
+        <ImgWithLink
+          link='http://www.vita-list.de/'
+          title='Vita List Hannover - Joga - Pilates- Balance'
+          img={p3}
+          alt='Logo von der Vita List Hannover'
+        />
+      </DivCenterRow>
+    </Container>
   </Layout>
 )
 
