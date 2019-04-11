@@ -1,12 +1,10 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-
-import HeroSlider from '../components/HeroSlider'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
-import styled from 'styled-components'
-import { breakpoints } from '../styles/variables'
+import Heading from '../components/heading/Heading'
+import HeroSlider from '../components/HeroSlider'
 import Layout from '../components/Layout'
+import Text from '../components/text/Text'
 
 const signatureJasmin: string = require('../images/mitarbeiter/unterschrift_Jasmin.png')
 const jasminImage: string = require('../images/mitarbeiter//Mitarbeiter_Jasmin_2.jpg')
@@ -16,77 +14,43 @@ const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
 export default () => (
   <Layout>
     <HeroSlider />
-    <CenteredText>
-      <CenteredH1>HERZLICH WILLKOMMEN</CenteredH1>
-      <CenteredH4>auf der Homepage des Interkulturellen Sozialdienstes in Hannover</CenteredH4>
-      <CenteredP>Liebe BesucherInnen,</CenteredP>
-      <CenteredP>
-        unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu
-        ambulanten und medizinischen Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und
-        durch die wir uns von anderen Pflegediensten unterscheiden.
-      </CenteredP>
-      <CenteredP>Herzlichst, Ihre</CenteredP>
-    </CenteredText>
-    <FlexDivContentCenter>
-      <EmployeeTile
-        title='Jasmin Arbabian-Vogel'
-        alt='Bild von Jasmin Arbabian-Vogel'
-        name={'Jasmin Arbabian-Vogel'}
-        job={'Geschäftsführerin'}
-        image={jasminImage}
-        signature={signatureJasmin}
-      />
-      <EmployeeTile
-        title='Jasmin Galina Fiksman'
-        alt='Bild von Jasmin Galina Fiksman'
-        name={'Galina Fiksman'}
-        job={'Geschäftsführerin'}
-        image={galinaImage}
-        signature={signatureGalina}
-      />
-    </FlexDivContentCenter>
-    <FourColumns />
+    <div className='max-container'>
+      <div className='text-container' style={{ paddingTop: '2.4rem' }}>
+        <Heading size={1} uppercase center orange fontWeight={500}>
+          Herzlich Willkommen
+        </Heading>
+        <div style={{ margin: '0.824rem' }}>
+          <Heading size={4} center orange fontWeight={500}>
+            auf der Homepage des Interkulturellen Sozialdienstes in Hannover
+          </Heading>
+        </div>
+        <Text center>Liebe BesucherInnen,</Text>
+        <Text center>
+          unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu
+          ambulanten und medizinischen Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und
+          durch die wir uns von anderen Pflegediensten unterscheiden.
+        </Text>
+        <Text center>Herzlichst, Ihre</Text>
+      </div>
+      <div className='employeee-tile-container'>
+        <EmployeeTile
+          title='Jasmin Arbabian-Vogel'
+          alt='Bild von Jasmin Arbabian-Vogel'
+          name={'Jasmin Arbabian-Vogel'}
+          job={'Geschäftsführerin'}
+          image={jasminImage}
+          signature={signatureJasmin}
+        />
+        <EmployeeTile
+          title='Jasmin Galina Fiksman'
+          alt='Bild von Jasmin Galina Fiksman'
+          name={'Galina Fiksman'}
+          job={'Geschäftsführerin'}
+          image={galinaImage}
+          signature={signatureGalina}
+        />
+      </div>
+      <FourColumns />
+    </div>
   </Layout>
 )
-
-export const FlexDivContentCenter = styled.div`
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-  }
-`
-
-export const CenteredText = styled.div`
-  width: 46vw;
-  margin-left: auto;
-  margin-right: auto;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const CenteredH1 = styled.h1`
-  text-align: center;
-  font-weight: 500;
-  padding: 2.4rem;
-`
-
-export const CenteredH4 = styled.h4`
-  text-align: center;
-  font-weight: 500;
-  /* padding: 1.4rem; */
-  margin: 0.824em;
-`
-
-export const CenteredP = styled.p`
-  text-align: center;
-`

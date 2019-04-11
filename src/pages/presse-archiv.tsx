@@ -1,10 +1,9 @@
+/* tslint:disable:no-var-requires */
 import React from 'react'
 import Helmet from 'react-helmet'
-
-import styled from 'styled-components'
-import { breakpoints, colors } from '../styles/variables'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
+import Heading from '../components/heading/Heading'
 
 // Path to images
 const a1: string = require('../images/presse-archiv/a1.jpg')
@@ -76,97 +75,115 @@ export default () => (
         },
       ]}
     />
-    <CenteredH1Orange>PRESSE 2017</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link1} alt='Zeitungsartikel von 2017' img={a1} name='NP | 30.09.2017 96 & Flüchtlinge' />
-      <Card link={link2} alt='Zeitungsartikel von 2017' img={a2} name='NP | 11.09.2017 Wirtschaft & Flüchtlinge' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link3} alt='Zeitungsartikel von 2017' img={a3} name='NP | 03.06.2017 Gründungsklima' />
-      <Card link={link4} alt='Zeitungsartikel von 2017' img={a4} name='NP | 19.06.2017 Pflege & Leiharbeit' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link5} alt='Zeitungsartikel von 2017' img={a5} name='Häusliche Pflege | 2017 Unternehmerinnenportrait I' />
-      <Card link={link6} alt='Zeitungsartikel von 2017' img={a6} name='Häusliche Pflege | 2017 Unternehmerinnenportrait II' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link7} alt='Zeitungsartikel von 2017' img={a7} name='Care Konkret | 19.05.2017 Intensiv WG' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2015</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link8} alt='Zeitungsartikel von 2017' img={a8} name='Hallo Wochenende | 24.01.2015 bunt statt braun' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2014</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link9} alt='Zeitungsartikel von 2014' img={a9} name='2014 | Großer Preis des Mittelstandes' />
-      <Card link={link10} alt='Zeitungsartikel von 2014' img={a10} name='Tagesspiegel | 29.10.2014 Frauen & Männer' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link11} alt='Zeitungsartikel von 2014' img={a11} name='Nobilis | 06.2016 16 Fragen' />
-      <Card link={link12} alt='Zeitungsartikel von 2014' img={a12} name='Niedersächsische Wirtschaft | 06.2014 Ramadan' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2013</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link13} alt='Zeitungsartikel von 2013' img={a13} name='Regions Journal | 27.02.2013 IKS' />
-      <Card link={link14} alt='Zeitungsartikel von 2013' img={a14} name='FES | 01.2013 Frauen & Führung' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2012</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link15} alt='Zeitungsartikel von 2012' img={a15} name='CDU | 13.11.2012 Pflege' />
-      <Card link={link16} alt='Zeitungsartikel von 2012' img={a16} name='Basar | 09.2012 IKS' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2011</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link17} alt='Zeitungsartikel von 2011' img={a17} name='Niedersächsische Wirtschaft | 2011 IKS' />
-      <Card link={link18} alt='Zeitungsartikel von 2011' img={a18} name='Hannover-entdecken.de | 11.10.2011 GFA' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link19} alt='Zeitungsartikel von 2011' img={a19} name='BAD | 05.11.2017 Wohngemeinschaften' />
-      <Card link={link20} alt='Zeitungsartikel von 2011' img={a20} name='Basar | 10.2011 kulturelle Vielfalt' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2010</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link21} alt='Zeitungsartikel von 2010' img={a21} name='Medifox | Herbst 2010 Teil I' />
-      <Card link={link22} alt='Zeitungsartikel von 2010' img={a22} name='Medifox | Herbst 2010 Teil II' />
-    </FlexDivCards>
-    <FlexDivCards>
-      <Card link={link23} alt='Zeitungsartikel von 2010' img={a23} name='Vorwärts | 10.2010 Altenpflegerin' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2008</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link24} alt='Zeitungsartikel von 2008' img={a24} name='2008 | Stadt Hannover Preis' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 2006</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link25} alt='Zeitungsartikel von 2006' img={a25} name='HAZ | 11.2006 WG' />
-    </FlexDivCards>
-    <CenteredH1Orange>PRESSE 1998</CenteredH1Orange>
-    <FlexDivCards>
-      <Card link={link26} alt='Zeitungsartikel von 1998' img={a26} name='Pflege Aktuell | 1998 Teil I' />
-      <Card link={link27} alt='Zeitungsartikel von 1998' img={a27} name='Pflege Aktuell | 1998 Teil II' />
-    </FlexDivCards>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2017
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link1} alt='Zeitungsartikel von 2017' img={a1} name='NP | 30.09.2017 96 & Flüchtlinge'/>
+      <Card link={link2} alt='Zeitungsartikel von 2017' img={a2} name='NP | 11.09.2017 Wirtschaft & Flüchtlinge'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link3} alt='Zeitungsartikel von 2017' img={a3} name='NP | 03.06.2017 Gründungsklima'/>
+      <Card link={link4} alt='Zeitungsartikel von 2017' img={a4} name='NP | 19.06.2017 Pflege & Leiharbeit'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link5} alt='Zeitungsartikel von 2017' img={a5} name='Häusliche Pflege | 2017 Unternehmerinnenportrait I'/>
+      <Card link={link6} alt='Zeitungsartikel von 2017' img={a6} name='Häusliche Pflege | 2017 Unternehmerinnenportrait II'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link7} alt='Zeitungsartikel von 2017' img={a7} name='Care Konkret | 19.05.2017 Intensiv WG'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2015
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link8} alt='Zeitungsartikel von 2017' img={a8} name='Hallo Wochenende | 24.01.2015 bunt statt braun'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2014
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link9} alt='Zeitungsartikel von 2014' img={a9} name='2014 | Großer Preis des Mittelstandes'/>
+      <Card link={link10} alt='Zeitungsartikel von 2014' img={a10} name='Tagesspiegel | 29.10.2014 Frauen & Männer'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link11} alt='Zeitungsartikel von 2014' img={a11} name='Nobilis | 06.2016 16 Fragen'/>
+      <Card link={link12} alt='Zeitungsartikel von 2014' img={a12} name='Niedersächsische Wirtschaft | 06.2014 Ramadan'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2013
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link13} alt='Zeitungsartikel von 2013' img={a13} name='Regions Journal | 27.02.2013 IKS'/>
+      <Card link={link14} alt='Zeitungsartikel von 2013' img={a14} name='FES | 01.2013 Frauen & Führung'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2012
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link15} alt='Zeitungsartikel von 2012' img={a15} name='CDU | 13.11.2012 Pflege'/>
+      <Card link={link16} alt='Zeitungsartikel von 2012' img={a16} name='Basar | 09.2012 IKS'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2011
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link17} alt='Zeitungsartikel von 2011' img={a17} name='Niedersächsische Wirtschaft | 2011 IKS'/>
+      <Card link={link18} alt='Zeitungsartikel von 2011' img={a18} name='Hannover-entdecken.de | 11.10.2011 GFA'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link19} alt='Zeitungsartikel von 2011' img={a19} name='BAD | 05.11.2017 Wohngemeinschaften'/>
+      <Card link={link20} alt='Zeitungsartikel von 2011' img={a20} name='Basar | 10.2011 kulturelle Vielfalt'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2010
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link21} alt='Zeitungsartikel von 2010' img={a21} name='Medifox | Herbst 2010 Teil I'/>
+      <Card link={link22} alt='Zeitungsartikel von 2010' img={a22} name='Medifox | Herbst 2010 Teil II'/>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link23} alt='Zeitungsartikel von 2010' img={a23} name='Vorwärts | 10.2010 Altenpflegerin'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2008
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link24} alt='Zeitungsartikel von 2008' img={a24} name='2008 | Stadt Hannover Preis'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 2006
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link25} alt='Zeitungsartikel von 2006' img={a25} name='HAZ | 11.2006 WG'/>
+    </div>
+    <div style={{ padding: '2.4rem' }}>
+      <Heading size={1} uppercase center orange fontWeight={500}>
+        PRESSE 1998
+      </Heading>
+    </div>
+    <div className='FlexDivCard'>
+      <Card link={link26} alt='Zeitungsartikel von 1998' img={a26} name='Pflege Aktuell | 1998 Teil I'/>
+      <Card link={link27} alt='Zeitungsartikel von 1998' img={a27} name='Pflege Aktuell | 1998 Teil II'/>
+    </div>
   </Layout>
 )
 
-export const CenteredH1 = styled.h1`
-  text-align: center;
-  font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
-`
-
-export const CenteredH1Orange = styled(CenteredH1)`
-  color: ${colors.orange};
-`
-
-export const FlexDivCards = styled.div`
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media only screen and (max-width: 890px) {
-    flex-direction: column;
-  }
-`

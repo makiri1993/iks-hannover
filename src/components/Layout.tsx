@@ -20,7 +20,7 @@ interface WrapperProps {
 }
 
 const Layout: React.SFC<WrapperProps> = ({ children }) => (
-  <div className='StyledLayoutRoot'>
+  <main>
     {/* <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -29,11 +29,10 @@ const Layout: React.SFC<WrapperProps> = ({ children }) => (
       ]}
     /> */}
     <Nav />
-    <main className='StyledLayoutMain'>
-      <div className='StyledPage'>{children}</div>
-    </main>
+
+    <div>{children}</div>
     <Footer />
-  </div>
+  </main>
 )
 
 export default Layout

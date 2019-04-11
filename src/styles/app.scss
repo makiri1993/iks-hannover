@@ -1,14 +1,14 @@
 $sansSerif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-  'Helvetica Neue', Arial, sans-serif;
+'Helvetica Neue', Arial, sans-serif;
 
-$font-regular: 15px;
+$font-regular: 0.84vmax;
 $font-large: 18px;
 $size-siteHeader: 2.6rem;
-$size-h1: 2.441rem;
-$size-h2: 1.953rem;
-$size-h3: 1.7rem;
-$size-h4: 1.6rem;
-$size-p: 1rem;
+$size-h1: 2.641rem;
+$size-h2: 2.153rem;
+$size-h3: 1.9rem;
+$size-h4: 1.8rem;
+$size-p: 1.2rem;
 $line-height-regular: 1.45;
 $line-height-heading: 1;
 $containerPadding: 1.5rem;
@@ -109,6 +109,7 @@ tbody {
       td {
         background-color: $color-ui-whisper;
       }
+
       tr {
         background-color: $color-ui-whisper;
       }
@@ -124,7 +125,7 @@ h5,
 h6 {
   margin-top: 1.414rem;
   margin-bottom: 0.5rem;
-  color: $color-orange;
+  color: $color-black;
   font-weight: 600;
   line-height: $line-height-heading;
   text-rendering: optimizeLegibility;
@@ -144,9 +145,11 @@ h3 {
 }
 
 h4,
-h5,
-h6 {
+h5 {
   font-size: $size-h4;
+}
+
+h6 {
 }
 
 p {
@@ -226,6 +229,7 @@ blockquote {
   width: 100%;
   height: auto;
 }
+
 .card-link {
   width: 100%;
   height: auto;
@@ -233,6 +237,7 @@ blockquote {
   position: absolute;
   background-color: $color-orange;
 }
+
 .card-heading {
   text-align: center;
   color: $color-white;
@@ -243,9 +248,9 @@ blockquote {
 // Employee Tile
 .employee-container {
   width: 250px;
-  margin: 2rem;
   display: flex;
   flex-direction: row;
+  align-content: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   /* height: auto;
@@ -257,8 +262,6 @@ blockquote {
 
 .EmployeeImage {
   width: 250px;
-  top: 0px;
-  left: 0px;
   object-fit: cover;
   animation: fade;
   animation-duration: 1.3s;
@@ -267,6 +270,7 @@ blockquote {
 .CenteredH4 {
   text-align: center;
   font-weight: 500;
+  white-space: nowrap;
   /* padding: 1.4rem; */
   margin: 0.824em;
 }
@@ -357,12 +361,14 @@ blockquote {
   text-decoration: underline;
   text-decoration-color: white;
 }
+
 .LinkEmailOut {
   cursor: pointer;
   color: $color-white;
   text-decoration: underline;
   text-decoration-color: white;
 }
+
 .LinkEmailOutWtMargin {
   display: block;
   cursor: pointer;
@@ -390,6 +396,7 @@ blockquote {
     flex-direction: column;
   }
 }
+
 .OneColumn {
   width: 24vw;
   margin: 3rem;
@@ -435,6 +442,7 @@ blockquote {
   width: 120px;
   height: 120px;
 }
+
 .CenteredH1 {
   text-align: center;
   font-weight: 500;
@@ -447,12 +455,14 @@ blockquote {
 }
 
 .CenteredH1GreenForColumn {
-  font-weight: 250;
+  font-weight: 500;
   margin: 0;
 }
+
 .CenteredH1BlueForColumn {
   color: $color-blue;
 }
+
 .CenteredH1RedForColumn {
   color: $color-red;
 }
@@ -478,6 +488,7 @@ blockquote {
     height: 25vh;
   }
 }
+
 .HeroImage {
   width: 100%;
   height: 100%;
@@ -521,4 +532,176 @@ blockquote {
   flex: 1;
   position: relative;
   margin-bottom: 3rem;
+}
+
+.max-container {
+  width: 80vw;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+// index
+.text-container {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (max-width: 550px) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.employeee-tile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+
+// Intensivpflege
+
+.StyledIMGIntensiv {
+  width: auto;
+  height: 100px;
+}
+
+.DivCenter {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+// team
+
+.team-container {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  justify-content: space-evenly;
+}
+
+// engagement
+
+.FlexDivContentCenterEngagement {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.EngagementImage {
+  width: 189px;
+  height: 143px;
+  margin: 0 auto;
+}
+
+// presse
+
+.FlexDivCard {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media only screen and (max-width: 890px) {
+    flex-direction: column;
+  }
+}
+
+// impressum
+
+.StyledIMGBig {
+  width: 550px;
+  height: auto;
+}
+
+// new Styles
+
+.text-center {
+  text-align: center;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-bolder {
+  font-weight: bolder;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.color-green {
+  color: $color-green;
+}
+
+.color-orange {
+  color: $color-orange;
+}
+
+.color-blue {
+  color: $color-blue;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-content: center;
+  align-items: center;
+}
+
+.color-black {
+  color: $color-black;
+}
+
+.color-red {
+  color: $color-red;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.justify-center {
+  justify-items: center;
+  justify-content: center;
 }

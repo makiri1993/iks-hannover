@@ -21,8 +21,8 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "types": ["react-responsive"]
+    "types": ["node","react-responsive"]
   },
-  "include": ["./src/**/*"],
+  // "include": ["./src/**/*"],
   "exclude": ["node_modules"]
 }

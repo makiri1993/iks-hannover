@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Heading from './heading/Heading'
 
 interface Props {
   team?: boolean
@@ -13,17 +14,18 @@ interface Props {
 
 export default class EmployeeTile extends Component<Props> {
   render() {
+    const { image, title, job, name, team, email, alt, signature } = this.props
     return (
       <div className='employee-container'>
-        <img className='EmployeeImage' title={this.props.title} alt={this.props.alt} src={this.props.image} />
-        <h4 className='CenteredH'>{this.props.name}</h4>
-        <p className='CenteredPWithWidth'>{this.props.job}</p>
-        {this.props.team ? (
-          <a className='LinkEmailOrange' title={this.props.title} href={'mailto:' + this.props.email}>
-            {this.props.email}
+        <img className='EmployeeImage' title={title} alt={alt} src={image}/>
+        <Heading size={4} orange>{name}</Heading>
+        <p className='CenteredPWithWidth'>{job}</p>
+        {team ? (
+          <a className='LinkEmailOrange' title={title} href={'mailto:' + email}>
+            {email}
           </a>
         ) : (
-          <img className='SignatureImage' title={this.props.title} alt={this.props.alt} src={this.props.signature} />
+          <img className='SignatureImage' title={title} alt={alt} src={signature}/>
         )}
       </div>
     )

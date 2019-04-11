@@ -1,22 +1,29 @@
 import React from 'react'
-
-import Container from '../components/Container'
 import EmployeeTile from '../components/EmployeeTile'
-import styled from 'styled-components'
-import { colors, dimensions } from '../styles/variables'
 import Layout from '../components/Layout'
+import Heading from '../components/heading/Heading'
 
+// tslint:disable-next-line:no-var-requires
 const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
+// tslint:disable-next-line:no-var-requires
 const marionImage: string = require('../images/mitarbeiter/Marion.jpg')
+// tslint:disable-next-line:no-var-requires
 const marcoImage: string = require('../images/mitarbeiter/Marco.jpg')
+// tslint:disable-next-line:no-var-requires
 const ardiImage: string = require('../images/mitarbeiter/Ardi.jpg')
+// tslint:disable-next-line:no-var-requires
 const birgitImage: string = require('../images/mitarbeiter/Birgit.jpg')
+// tslint:disable-next-line:no-var-requires
 const jasminImage: string = require('../images/mitarbeiter/Jasmin.jpg')
-const michaImage: string = require('../images/mitarbeiter/Michael.jpg')
+// tslint:disable-next-line:no-var-requires
 const joannaImage: string = require('../images/mitarbeiter/Joanna.jpg')
+// tslint:disable-next-line:no-var-requires
 const tabeaImage: string = require('../images/mitarbeiter/Tabea.jpg')
+// tslint:disable-next-line:no-var-requires
 const uteImage: string = require('../images/mitarbeiter/Ute.jpg')
+// tslint:disable-next-line:no-var-requires
 const yurekImage: string = require('../images/mitarbeiter/Yurek.jpg')
+// tslint:disable-next-line:no-var-requires
 const teamImage: string = require('../images/mitarbeiter/TEAM-1.jpg')
 
 class Mitarbeiter {
@@ -44,7 +51,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Galina Fiksman',
     'Geschäftsführung',
     'fiksmann@iks-hannover.de',
-    galinaImage
+    galinaImage,
   ),
   new Mitarbeiter(
     'Jasmin Arbabian-Vogel',
@@ -52,7 +59,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Jasmin Arbabian-Vogel',
     'Geschäftsführung',
     'arbabian-vogel@iks-hannover.de',
-    jasminImage
+    jasminImage,
   ),
   new Mitarbeiter(
     'Tabea Emrich',
@@ -60,7 +67,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Tabea Emrich',
     'Assistenz der Geschäftsführung',
     'emrich@iks-hannover.de',
-    tabeaImage
+    tabeaImage,
   ),
   new Mitarbeiter('Ute Rhein', 'Bild von Ute Rhein', 'Ute Rhein', 'Pflegedienstleitung', 'rhein@iks-hannover.de', uteImage),
   new Mitarbeiter(
@@ -69,7 +76,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Marion Hartmann',
     'Leitungs Intensivpflege + Intensivwohngemeinschaft',
     'spouncer@iks-hannover.de',
-    marionImage
+    marionImage,
   ),
   new Mitarbeiter(
     'Marco Schillaci',
@@ -77,7 +84,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Marco Schillaci',
     'Fachliche Leitung Intensivpflege',
     'schillaci@iks-hannover.de',
-    marcoImage
+    marcoImage,
   ),
   new Mitarbeiter(
     'Jurek Jablonski',
@@ -85,7 +92,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Jurek Jablonski',
     'Praxisanleiter und Mentor',
     'jablonski@iks-hannover.de',
-    yurekImage
+    yurekImage,
   ),
   new Mitarbeiter(
     'Birgit Anspach',
@@ -93,7 +100,7 @@ const mitarbeiterTeam: Mitarbeiter[] = [
     'Birgit Anspach',
     'Planung und Personal',
     'anspach@iks-hannover.de',
-    birgitImage
+    birgitImage,
   ),
   new Mitarbeiter('Joanna Russ', 'Bild von Joanna Russ', 'Joanna Russ', 'Teamassistenz', 'iks-hannover@iks-hannover.de', joannaImage),
   new Mitarbeiter('Ardi Rezaie', 'Bild von Ardi Rezaie', 'Ardi Rezaie', 'Fuhrparkmanagement', 'rezaie@iks-hannover.de', ardiImage),
@@ -101,41 +108,18 @@ const mitarbeiterTeam: Mitarbeiter[] = [
 
 export default () => (
   <Layout>
-    <Container>
-      <BigTextInOrange>UNSER TEAM</BigTextInOrange>
-      <FlexDivContentCenter>
+      <Heading size={4} center orange uppercase>UNSER TEAM</Heading>
+    <div className='max-container'>
+
+      <div className='team-container'>
         {mitarbeiterTeam.map(el => (
-          <MarginForTile>
-            <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email} />
-          </MarginForTile>
+          <div style={{marginLeft: '5rem'}}>
+
+            <EmployeeTile team title={el.title} alt={el.alt} name={el.name} job={el.job} image={el.image} email={el.email}/>
+          </div>
         ))}
-        <TeamImage src={teamImage} alt='Bild vom Team' />
-      </FlexDivContentCenter>
-    </Container>
+        <img style={{marginBottom: '3rem'}} src={teamImage} alt='Bild vom Team'/>
+      </div>
+    </div>
   </Layout>
 )
-
-export const BigTextInOrange = styled.div`
-  font-size: ${dimensions.headingSizes.siteHeader}rem;
-  text-align: center;
-  margin: 1.5rem;
-  color: ${colors.orange};
-`
-
-export const FlexDivContentCenter = styled.div`
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-`
-
-export const MarginForTile = styled.div`
-  margin: 0.1rem;
-`
-
-export const TeamImage = styled.img`
-  margin-top: 6rem;
-`
