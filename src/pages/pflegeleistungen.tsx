@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
-import Layout from '../components/Layout'
+
 import Text from '../components/text/Text'
 
 export default () => (
-  <Layout>
+  <>
     <Helmet
       title={'Pflegedienst - Interkultureller Pflegedienst Hannover'}
       meta={[
@@ -24,21 +24,20 @@ export default () => (
           </Heading>
         </div>
         <Text>
-          Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung. Sie finanziert - wenn auch nur zum Teil - diejenigen Kosten,
-          die entstehen, wenn Versicherte pflegebedürftig werden. Voraussetzung dafür ist jedoch, dass der Pflegebedürftige in einen der
-          fünf Pflegegrade (Grad 1-5) eingestuft ist.
+          Seit 1995 gibt es sie nun schon: die gesetzliche Pflegeversicherung. Sie finanziert - wenn auch nur zum Teil - diejenigen Kosten, die entstehen, wenn Versicherte
+          pflegebedürftig werden. Voraussetzung dafür ist jedoch, dass der Pflegebedürftige in einen der fünf Pflegegrade (Grad 1-5) eingestuft ist.
         </Text>
         <Text>
-          Für alle Patienten, die sich für einen Pflegedienst entscheiden, gilt, dass sie aus dem Niedersächsischen Leistungskomplexkatalog
-          individuell die für sie notwendigen pflegerischen Leistungen – Leistungskomplexe genannt – wählen können.
+          Für alle Patienten, die sich für einen Pflegedienst entscheiden, gilt, dass sie aus dem Niedersächsischen Leistungskomplexkatalog individuell die für sie notwendigen
+          pflegerischen Leistungen – Leistungskomplexe genannt – wählen können.
         </Text>
         <Text>
-          Übersteigt die Summe der gewählten Leistungskomplexe den Zuschussbetrag der Pflegekasse, muss der so genannte „Eigenanteil“
-          entweder privat oder über den Träger der Sozialsicherung (Stadt oder Region) finanziert werden.
+          Übersteigt die Summe der gewählten Leistungskomplexe den Zuschussbetrag der Pflegekasse, muss der so genannte „Eigenanteil“ entweder privat oder über den Träger der
+          Sozialsicherung (Stadt oder Region) finanziert werden.
         </Text>
         <Text>
-          Über die genauen Kosten informieren wir unsere Patienten und Interessenten grundsätzlich vorab durch schriftliche und
-          unverbindliche Angebote, denn Kostentransparenz ist eine Grundvoraussetzung für eine vertrauensvolle Zusammenarbeit.
+          Über die genauen Kosten informieren wir unsere Patienten und Interessenten grundsätzlich vorab durch schriftliche und unverbindliche Angebote, denn Kostentransparenz ist
+          eine Grundvoraussetzung für eine vertrauensvolle Zusammenarbeit.
         </Text>
         <Text>Unser Pflegedienst bietet seine Pflegeleistungen am Patienten in fünf verschiedenen Formaten an:</Text>
 
@@ -61,5 +60,5 @@ export default () => (
         </ul>
       </div>
     </div>
-  </Layout>
+  </>
 )

@@ -1,6 +1,6 @@
 $sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 
-$font-regular: 0.84vmax;
+$font-regular: 15px;
 $font-large: 18px;
 $size-siteHeader: 2.6rem;
 $size-h1: 2.641rem;
@@ -43,8 +43,12 @@ $color-black: #545456;
 
 html {
   box-sizing: border-box;
-  font-size: $font-regular !important;
+  font-size: 0.84vmax !important;
   line-height: $line-height-regular !important;
+
+  @media only screen and (min-width: 1441px) {
+    font-size: 15px !important;
+  }
 }
 
 body {

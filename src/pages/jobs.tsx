@@ -1,11 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/Layout'
+
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 
 export default () => (
-  <Layout>
+  <>
     <Helmet
       title={'Jobs, Kooperationen und Partner - Interkultureller Pflegedienst Hannover'}
       meta={[
@@ -18,20 +18,23 @@ export default () => (
     <div className='max-container'>
       <div className='text-container'>
         <div style={{ padding: '2.4rem' }}>
-          <Heading size={1} uppercase center orange fontWeight={500}>Jobs</Heading>
+          <Heading size={1} uppercase center orange fontWeight={500}>
+            Jobs
+          </Heading>
         </div>
         <Text>
-          Wir wachsen weiter und freuen uns immer über Ihre Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit
-          Zusatzausbildung „Intensiv“) sowie Pflegehelfer*innen und Hauswirtschaftskräfte.
+          Wir wachsen weiter und freuen uns immer über Ihre Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit Zusatzausbildung „Intensiv“) sowie
+          Pflegehelfer*innen und Hauswirtschaftskräfte.
         </Text>
         <Text>
-          Die Einsatzbereiche sind dabei extrem vielfältig –Sie möchten gerne unser ambulantes Team unterstützen? Oder Sie gehen in der
-          Betreuung unserer Demenzpatienten in den Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht
-          Ihr Organisationstalent an? Sie wünschen die Herausforderung im Intensivbereich?
+          Die Einsatzbereiche sind dabei extrem vielfältig –Sie möchten gerne unser ambulantes Team unterstützen? Oder Sie gehen in der Betreuung unserer Demenzpatienten in den
+          Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht Ihr Organisationstalent an? Sie wünschen die Herausforderung im Intensivbereich?
         </Text>
-        <Text>Ob Vollzeit oder Teilzeit, Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter entsprechend ihrer Fähigkeiten und
-          Wünsche einzusetzen. So legen wir gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten. Wir
-          suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes Pflegepersonal und freuen uns auf Ihre Bewerbung.</Text>
+        <Text>
+          Ob Vollzeit oder Teilzeit, Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter entsprechend ihrer Fähigkeiten und Wünsche einzusetzen. So legen wir
+          gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten. Wir suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes
+          Pflegepersonal und freuen uns auf Ihre Bewerbung.
+        </Text>
         <Text underline>Wir bieten Ihnen:</Text>
         <ul>
           <li className='color-orange'>
@@ -70,13 +73,21 @@ export default () => (
         </ul>
         <Text>
           Bitte lassen Sie uns Ihre vollständigen Bewerbungsunterlagen gerne per Email an
-          <a className='color-orange' href='mailto:iks-hannover@iks-hannover.de'> iks-hannover@iks-hannover.de</a> zukommen.
+          <a className='color-orange' href='mailto:iks-hannover@iks-hannover.de'>
+            {' '}
+            iks-hannover@iks-hannover.de
+          </a>{' '}
+          zukommen.
         </Text>
-        <Heading size={4} orange>Aktuelle Angebote</Heading>
-        <Text orange underline>Ausbildung Pflegefachmann/-frau</Text>
+        <Heading size={4} orange>
+          Aktuelle Angebote
+        </Heading>
+        <Text orange underline>
+          Ausbildung Pflegefachmann/-frau
+        </Text>
         <Text>
-          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns können Sie Ihre Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen der
-          schulischen Ausbildung kooperieren wir mit den folgenden Pflegefachschulen:
+          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns können Sie Ihre Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen der schulischen Ausbildung kooperieren wir
+          mit den folgenden Pflegefachschulen:
         </Text>
         <ul>
           <li className='color-orange'>
@@ -95,19 +106,20 @@ export default () => (
             <Text>Pflegefachschule Hannover in Garbsen</Text>
           </li>
         </ul>
-        <Text>
-          Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit
-          uns geschlossen werden.
+        <Text>Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit uns geschlossen werden.</Text>
+        <Text orange underline>
+          Praktikum
         </Text>
-        <Text orange underline>Praktikum</Text>
         <Text>
-          Sie suchen im Rahmen Ihrer Ausbildung einen Praktikumsplatz? Fragen Sie gerne bei uns an. Wir kooperieren unter anderem mit den
-          Ausbildungsbereichen der MHH und der Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und
-          können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der Pflege bekommen.
+          Sie suchen im Rahmen Ihrer Ausbildung einen Praktikumsplatz? Fragen Sie gerne bei uns an. Wir kooperieren unter anderem mit den Ausbildungsbereichen der MHH und der
+          Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der
+          Pflege bekommen.
         </Text>
-        <Text orange underline>Bundesfreiwilligendienst</Text>
+        <Text orange underline>
+          Bundesfreiwilligendienst
+        </Text>
         <Text>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</Text>
       </div>
     </div>
-  </Layout>
+  </>
 )

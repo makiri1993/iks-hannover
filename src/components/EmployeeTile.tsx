@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Heading from './heading/Heading'
+import Img, { FluidObject } from 'gatsby-image'
 
 interface Props {
   team?: boolean
-  image: string
-  signature?: string
+  image: FluidObject
+  signature?: FluidObject
   name: string
   job: string
   alt: string
@@ -17,15 +18,17 @@ export default class EmployeeTile extends Component<Props> {
     const { image, title, job, name, team, email, alt, signature } = this.props
     return (
       <div className='employee-container'>
-        <img className='EmployeeImage' title={title} alt={alt} src={image}/>
-        <Heading size={4} orange>{name}</Heading>
+        <Img className='EmployeeImage' title={title} alt={alt} fluid={image} />
+        <Heading size={4} orange>
+          {name}
+        </Heading>
         <p className='CenteredPWithWidth'>{job}</p>
         {team ? (
           <a className='LinkEmailOrange' title={title} href={'mailto:' + email}>
             {email}
           </a>
         ) : (
-          <img className='SignatureImage' title={title} alt={alt} src={signature}/>
+          <Img className='SignatureImage' title={title} alt={alt} fluid={signature} />
         )}
       </div>
     )

@@ -3,10 +3,9 @@ import Helmet from 'react-helmet'
 
 import Container from '../components/Container'
 import { Link } from 'gatsby'
-import Layout from '../components/Layout'
 
 const sitemap = () => (
-  <Layout>
+  <>
     <Helmet
       title={'Verzeichnis - Interkultureller Pflegedienst Hannover'}
       meta={[
@@ -79,7 +78,7 @@ const sitemap = () => (
         </Link>
       </p>
     </Container>
-  </Layout>
+  </>
 )
 
 export default sitemap

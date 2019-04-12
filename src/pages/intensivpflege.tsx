@@ -2,25 +2,24 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
-import Layout from '../components/Layout'
 
 // tslint:disable-next-line:variable-name no-var-requires
-const logo_1: string = require('../images/icons/Schriftzug_Wohngemeinschaft.png')
+const logo_1: string = require('../content/images/icons/Schriftzug_Wohngemeinschaft.png')
 // tslint:disable-next-line:variable-name no-var-requires
-const logo_2: string = require('../images/icons/logo_baum.png')
+const logo_2: string = require('../content/images/icons/logo_baum.png')
 // tslint:disable-next-line:variable-name no-var-requires
-const flylerLink: string = require('../images/intensivpflege/IKS-AIWG-Flyer_ku_web.pdf')
+const flylerLink: string = require('../content/images/intensivpflege/IKS-AIWG-Flyer_ku_web.pdf')
 
 export default () => (
-  <Layout>
+  <>
     <Helmet
       title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
       meta={[
         {
           name: 'description',
           content:
-            'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in '
-            + 'einer ambulant betreuten Wohngemeinschaft.',
+            'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in ' +
+            'einer ambulant betreuten Wohngemeinschaft.',
         },
       ]}
     />
@@ -33,34 +32,20 @@ export default () => (
         </div>
         <Text>
           Wir bieten zwei Versorgungsalternativen: Eine
-          <strong> intensivpflegerische Versorgung zu Hause</strong> oder in
-          einer unserer ambulant betreuten
-          <strong>Wohngemeinschaften</strong> für Menschen mit
-          intensivpflegerischem Bedarf.
+          <strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer ambulant betreuten
+          <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
         </Text>
         <Text>
-          <a
-            className='color-red'
-            target='_blank'
-            title='link zu Flyer Intensivpflege'
-            href={flylerLink}
-          >
+          <a className='color-red' target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
             Unseren Flyer finden Sie hier.
           </a>
         </Text>
         <Text>
-          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den
-          rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der
-          häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in
-          den eigenen vier Wänden leben zu wollen, verwirklicht werden. Wir
-          stimmen Therapie und ambulante Versorgung mit unseren kompetenten
-          Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und die
-          Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+          Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der häuslichen Krankenpflege. So kann der Wunsch
+          vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden. Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem
+          ärztlichen Fachpersonal auf Ihre Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
         </Text>
-        <Text>
-          Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben
-          zu wollen, zu verwirklichen.
-        </Text>
+        <Text>Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.</Text>
         <ul>
           <li className='color-red'>
             <Text>ein Leben in Ihrer vertrauten Umgebung</Text>
@@ -81,10 +66,7 @@ export default () => (
             <Text>Vermeidung von Krankenhausaufenthalten</Text>
           </li>
           <li className='color-red'>
-            <Text>
-              bedarfsgerechte Versorgung unter Berücksichtigung Ihrer
-              individuellen Lebensgewohnheiten
-            </Text>
+            <Text>bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten</Text>
           </li>
         </ul>
         <Heading size={4} red uppercase>
@@ -124,12 +106,9 @@ export default () => (
         </ul>
         <Text>
           <blockquote className='color-red'>
-            „Ich kann mir keinen Zustand denken, der mir unerträglicher und
-            schauerlicher wäre, als mit schmerzerfüllter Seele der Fähigkeit
-            beraubt zu sein, ihr Ausdruck zu verleihen.“
-            <Text>
-              Michel de Montaigne (1533 - 1592), französischer Philosoph{' '}
-            </Text>
+            „Ich kann mir keinen Zustand denken, der mir unerträglicher und schauerlicher wäre, als mit schmerzerfüllter Seele der Fähigkeit beraubt zu sein, ihr Ausdruck zu
+            verleihen.“
+            <Text>Michel de Montaigne (1533 - 1592), französischer Philosoph </Text>
           </blockquote>
         </Text>
         <Heading size={4} red uppercase>
@@ -146,9 +125,7 @@ export default () => (
             <Text>Vermittlung von Pflegehilfsmitteln und Medizintechnik</Text>
           </li>
           <li className='color-red'>
-            <Text>
-              fachpflegerische und sozialkompetente Versorgung und Betreuung
-            </Text>
+            <Text>fachpflegerische und sozialkompetente Versorgung und Betreuung</Text>
           </li>
           <li className='color-red'>
             <Text>Beatmungspflege mit Trachealkanülenmanagement</Text>
@@ -163,10 +140,7 @@ export default () => (
             <Text>Fort- und Weiterbildung unseres Fachpersonals</Text>
           </li>
         </ul>
-        <Text>
-          Für eine umfassende Beratung sowie zu allen Fragen rund um die
-          Finanzierung stehen wir Ihnen gerne zur Verfügung.
-        </Text>
+        <Text>Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.</Text>
         <div className='d-flex align-center'>
           <div style={{ marginRight: '1rem' }}>
             <Heading size={4} red>
@@ -190,20 +164,10 @@ export default () => (
           schillaci@iks-hannover.de
         </a>
         <div className='DivCenter'>
-          <img
-            className='StyledIMGIntensiv'
-            alt='Logo der Wohngemeinschaft List'
-            title='Wohngemeinschaft List'
-            src={logo_1}
-          />
-          <img
-            className='StyledIMGIntensiv'
-            alt='Logo der Wohngemeinschaft List'
-            title='Wohngemeinschaft List'
-            src={logo_2}
-          />
+          <img className='StyledIMGIntensiv' alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_1} />
+          <img className='StyledIMGIntensiv' alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_2} />
         </div>
       </div>
     </div>
-  </Layout>
+  </>
 )

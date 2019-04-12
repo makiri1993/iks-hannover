@@ -1,40 +1,40 @@
 import React from 'react'
-import Layout from '../components/Layout'
+
 import ImgWithLink from '../components/ImgWithLink'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 
 // tslint:disable-next-line:no-var-requires
-const fubaImage: string = require('../images/partner/96-2.jpg')
+const fubaImage: string = require('../content/images/partner/96-2.jpg')
 // tslint:disable-next-line:no-var-requires
-const alzImage: string = require('../images/partner/alzheimer.jpg')
+const alzImage: string = require('../content/images/partner/alzheimer.jpg')
 // tslint:disable-next-line:no-var-requires
-const badImage: string = require('../images/partner/bad.jpg')
+const badImage: string = require('../content/images/partner/bad.jpg')
 // tslint:disable-next-line:no-var-requires
-const chartaImage: string = require('../images/partner/charta.jpg')
+const chartaImage: string = require('../content/images/partner/charta.jpg')
 // tslint:disable-next-line:no-var-requires
-const fairImage: string = require('../images/partner/fairKAUF.jpg')
+const fairImage: string = require('../content/images/partner/fairKAUF.jpg')
 // tslint:disable-next-line:no-var-requires
-const freiImage: string = require('../images/partner/Freiwilligenzentrum_Hannover.png')
+const freiImage: string = require('../content/images/partner/Freiwilligenzentrum_Hannover.png')
 // tslint:disable-next-line:no-var-requires
-const freundImage: string = require('../images/partner/freundeskreis.jpg')
+const freundImage: string = require('../content/images/partner/freundeskreis.jpg')
 // tslint:disable-next-line:no-var-requires
-const gesundImage: string = require('../images/partner/gesundheitswirtschaft.jpg')
+const gesundImage: string = require('../content/images/partner/gesundheitswirtschaft.jpg')
 // tslint:disable-next-line:no-var-requires
-const msfImage: string = require('../images/partner/msf.jpg')
+const msfImage: string = require('../content/images/partner/msf.jpg')
 // tslint:disable-next-line:no-var-requires
-const naviImage: string = require('../images/partner/NaVi.jpg')
+const naviImage: string = require('../content/images/partner/NaVi.jpg')
 // tslint:disable-next-line:no-var-requires
-const phrImage: string = require('../images/partner/phr-1.jpg')
+const phrImage: string = require('../content/images/partner/phr-1.jpg')
 
 // tslint:disable-next-line:no-var-requires
-const p1: string = require('../images/partner/p1.jpg')
+const p1: string = require('../content/images/partner/p1.jpg')
 // tslint:disable-next-line:no-var-requires
-const p2: string = require('../images/partner/p2.jpg')
+const p2: string = require('../content/images/partner/p2.jpg')
 // tslint:disable-next-line:no-var-requires
-const p3: string = require('../images/partner/p3.jpg')
+const p3: string = require('../content/images/partner/p3.jpg')
 
-const images: { src: string; alt: string }[] = [
+const images: Array<{ src: string; alt: string }> = [
   { src: fubaImage, alt: 'Bild von Hannover96' },
   { src: alzImage, alt: 'Bild von Alzheimer Gesellschaft' },
   { src: badImage, alt: 'Bild von bad e.V.' },
@@ -49,7 +49,7 @@ const images: { src: string; alt: string }[] = [
 ]
 
 export default () => (
-  <Layout>
+  <>
     <div className='max-container'>
       <div className='text-container'>
         <div style={{ padding: '2.4rem' }}>
@@ -58,41 +58,30 @@ export default () => (
           </Heading>
         </div>
         <Text>
-          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und
-          Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
+          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und Interessengemeinschaften, die sich ebenfalls mit dem
+          Thema häusliche Pflege beschäftigen.
         </Text>
         <Text>
-          Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
-          Stadt-Hannover-Preis ausgezeichnet worden.
+          Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem Stadt-Hannover-Preis ausgezeichnet worden.
         </Text>
         <div className='FlexDivContentCenterEngagement'>
           {images.map(el => (
-            <img className='EngagementImage' src={el.src} alt={el.alt}/>
+            <img className='EngagementImage' src={el.src} alt={el.alt} />
           ))}
         </div>
-        <Heading size={4} center orange fontWeight={500}>PARTNER</Heading>
+        <Heading size={4} center orange fontWeight={500}>
+          PARTNER
+        </Heading>
         <Text>
-          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen
-          für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio
-          VitaList in Hannover-List.“
+          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen für haushaltsnahe Dienstleistungen,
+          sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio VitaList in Hannover-List.“
         </Text>
         <div className='d-flex justify-center'>
-          <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover'/>
-          <ImgWithLink
-            link='http://www.zuhause-alles-klar.de/'
-            title='ZAK zu hause alles klar'
-            img={p2}
-            alt='Logo von der ZAK zu hause alles klar'
-          />
-          <ImgWithLink
-            link='http://www.vita-list.de/'
-            title='Vita List Hannover - Joga - Pilates- Balance'
-            img={p3}
-            alt='Logo von der Vita List Hannover'
-          />
+          <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
+          <ImgWithLink link='http://www.zuhause-alles-klar.de/' title='ZAK zu hause alles klar' img={p2} alt='Logo von der ZAK zu hause alles klar' />
+          <ImgWithLink link='http://www.vita-list.de/' title='Vita List Hannover - Joga - Pilates- Balance' img={p3} alt='Logo von der Vita List Hannover' />
         </div>
       </div>
     </div>
-  </Layout>
+  </>
 )
-

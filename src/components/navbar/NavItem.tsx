@@ -19,28 +19,13 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   }
 
   componentDidMount(): void {
-    // setTimeout(() => {
     const { subItems } = this.props
     if (subItems) {
       const { offsetHeight } = this.ref.current
-      const { marginTop, marginBottom, height, paddingTop, paddingBottom } = window.getComputedStyle(this.ref.current)
-      console.log(marginBottom, marginTop, height, paddingTop, paddingBottom)
-      console.log(this.ref.current)
-      console.log(this.ref.current.offsetHeight)
-      //   if (height) {
-      //     this.height += parseFloat(height)
-      //   }
-      // if (paddingTop) {
-      //     this.height += parseFloat(paddingTop)
-      //   }
-      // if (paddingBottom) {
-      //     this.height += parseFloat(paddingBottom)
-      //   }
+      // const { marginTop, marginBottom, height, paddingTop, paddingBottom } = window.getComputedStyle(this.ref.current)
       this.height = offsetHeight
-      // this.height = height + paddingTop + paddingBottom
       this.setState({ height: `${offsetHeight}px` })
     }
-    // }, 1000)
   }
 
   render() {
@@ -58,7 +43,6 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     const { subItems } = this.props
     if (subItems) {
       const { length } = subItems
-      console.log(length)
       this.setState({ height: `${this.height * (length + 1)}px` })
     }
   }

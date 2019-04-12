@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const logo_1: string = require('../images/icons/IKS_LOGO_weiss-300x104.png')
-const logo_2: string = require('../images/icons/logo_baum.png')
+const logo_1: string = require('../content/images/icons/IKS_LOGO_weiss-300x104.png')
+const logo_2: string = require('../content/images/icons/logo_baum.png')
 
 interface FooterProps {}
 
@@ -23,11 +23,7 @@ const Footer: React.SFC<FooterProps> = () => (
           <br />
           <br />
           Mail:{' '}
-          <a
-            className='LinkEmailOut'
-            title='Email Adresse des interkulturellen Pfelgedienst Hannover'
-            href='mailto:iks-hannover@iks-hannover.de'
-          >
+          <a className='LinkEmailOut' title='Email Adresse des interkulturellen Pfelgedienst Hannover' href='mailto:iks-hannover@iks-hannover.de'>
             iks-hannover@iks-hannover.de
           </a>
           <br />

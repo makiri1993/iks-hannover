@@ -3,10 +3,9 @@ import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Container from '../components/Container'
-import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
-  <Layout>
+  <>
     <Helmet
       title={'Seite nicht gefunden - Interkultureller Pflegedienst Hannover'}
       meta={[
@@ -22,7 +21,7 @@ const NotFoundPage = () => (
         Die Seite wurde nicht gefunden. <Link to='/'>Hier kommen sie zurück.</Link>
       </p>
     </Container>
-  </Layout>
+  </>
 )
 
 export default NotFoundPage
