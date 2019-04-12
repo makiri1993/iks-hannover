@@ -27,7 +27,6 @@ export default class Nav extends Component<Props, State> {
       mobile: false,
       transform: 0,
       scrollHeight: 0,
-      // toggleBurger: false,
     }
   }
 
@@ -37,9 +36,6 @@ export default class Nav extends Component<Props, State> {
       const { current } = this.ref
       if (current) {
         const { scrollHeight } = current
-        console.log(this.ref)
-        console.log(scrollHeight)
-
         this.setState({ scrollHeight })
       }
     }, 180)
@@ -82,8 +78,6 @@ export default class Nav extends Component<Props, State> {
   private get renderMobile(): ReactNode {
     const { transform, scrollHeight } = this.state
     const { navData } = this.props
-    console.log(scrollHeight)
-
     return (
       <>
         <div className='mobile-navbar' style={{ top: scrollHeight, transform: `translateX(${transform}%)` }}>
