@@ -1,23 +1,40 @@
-import * as React from 'react'
+import React from 'react'
 
-import Page from '../components/Page'
-import Container from '../components/Container'
-import styled from 'styled-components'
-import { colors, breakpoints, dimensions } from '../styles/variables'
+import ImgWithLink from '../components/ImgWithLink'
+import Heading from '../components/heading/Heading'
+import Text from '../components/text/Text'
 
-const fubaImage: string = require('../images/partner/96-2.jpg')
-const alzImage: string = require('../images/partner/alzheimer.jpg')
-const badImage: string = require('../images/partner/bad.jpg')
-const chartaImage: string = require('../images/partner/charta.jpg')
-const fairImage: string = require('../images/partner/fairKAUF.jpg')
-const freiImage: string = require('../images/partner/Freiwilligenzentrum_Hannover.png')
-const freundImage: string = require('../images/partner/freundeskreis.jpg')
-const gesundImage: string = require('../images/partner/gesundheitswirtschaft.jpg')
-const msfImage: string = require('../images/partner/msf.jpg')
-const naviImage: string = require('../images/partner/NaVi.jpg')
-const phrImage: string = require('../images/partner/phr-1.jpg')
+// tslint:disable-next-line:no-var-requires
+const fubaImage: string = require('../content/images/partner/96-2.jpg')
+// tslint:disable-next-line:no-var-requires
+const alzImage: string = require('../content/images/partner/alzheimer.jpg')
+// tslint:disable-next-line:no-var-requires
+const badImage: string = require('../content/images/partner/bad.jpg')
+// tslint:disable-next-line:no-var-requires
+const chartaImage: string = require('../content/images/partner/charta.jpg')
+// tslint:disable-next-line:no-var-requires
+const fairImage: string = require('../content/images/partner/fairKAUF.jpg')
+// tslint:disable-next-line:no-var-requires
+const freiImage: string = require('../content/images/partner/Freiwilligenzentrum_Hannover.png')
+// tslint:disable-next-line:no-var-requires
+const freundImage: string = require('../content/images/partner/freundeskreis.jpg')
+// tslint:disable-next-line:no-var-requires
+const gesundImage: string = require('../content/images/partner/gesundheitswirtschaft.jpg')
+// tslint:disable-next-line:no-var-requires
+const msfImage: string = require('../content/images/partner/msf.jpg')
+// tslint:disable-next-line:no-var-requires
+const naviImage: string = require('../content/images/partner/NaVi.jpg')
+// tslint:disable-next-line:no-var-requires
+const phrImage: string = require('../content/images/partner/phr-1.jpg')
 
-const images: { src: string; alt: string }[] = [
+// tslint:disable-next-line:no-var-requires
+const p1: string = require('../content/images/partner/p1.jpg')
+// tslint:disable-next-line:no-var-requires
+const p2: string = require('../content/images/partner/p2.jpg')
+// tslint:disable-next-line:no-var-requires
+const p3: string = require('../content/images/partner/p3.jpg')
+
+const images: Array<{ src: string; alt: string }> = [
   { src: fubaImage, alt: 'Bild von Hannover96' },
   { src: alzImage, alt: 'Bild von Alzheimer Gesellschaft' },
   { src: badImage, alt: 'Bild von bad e.V.' },
@@ -28,72 +45,43 @@ const images: { src: string; alt: string }[] = [
   { src: gesundImage, alt: 'Bild von Gesundheitswirtschaft Hannover e.V.' },
   { src: msfImage, alt: 'Bild von Medecins Sans Frontieres' },
   { src: naviImage, alt: 'Bild von NaVi' },
-  { src: phrImage, alt: 'Bild von Pro Hannover Region' }
+  { src: phrImage, alt: 'Bild von Pro Hannover Region' },
 ]
 
 export default () => (
-  <Page>
-    <Container>
-      <BigTextInOrange>ENGAGEMENT</BigTextInOrange>
-      <PinOrange>
-        {' '}
-        Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns in verschiedenen Arbeitskreisen, Vereinen und
-        Interessengemeinschaften, die sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
-      </PinOrange>
-      <PWithMargin>
-        Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem
-        Stadt-Hannover-Preis ausgezeichnet worden.
-      </PWithMargin>
-      <FlexDivContentCenter>
-        {images.map(el => (
-          <EngagementImage src={el.src} alt={el.alt} />
-        ))}
-      </FlexDivContentCenter>
-    </Container>
-  </Page>
+  <>
+    <div className='max-container'>
+      <div className='text-container'>
+        <div style={{ padding: '2.4rem' }}>
+          <Heading size={1} uppercase center orange fontWeight={500}>
+            Engagement
+          </Heading>
+        </div>
+        <Text>
+          Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in verschiedenen Arbeitskreisen, Vereinen und Interessengemeinschaften, die sich ebenfalls mit dem
+          Thema häusliche Pflege beschäftigen.
+        </Text>
+        <Text>
+          Für unsere tägliche Arbeit und unser stetes Bemühen um eine qualitativ hochwertige Pflege sind wir im Jahr 2008 mit dem Stadt-Hannover-Preis ausgezeichnet worden.
+        </Text>
+        <div className='FlexDivContentCenterEngagement'>
+          {images.map(el => (
+            <img className='EngagementImage' src={el.src} alt={el.alt} />
+          ))}
+        </div>
+        <Heading size={4} center orange fontWeight={500}>
+          PARTNER
+        </Heading>
+        <Text>
+          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen für haushaltsnahe Dienstleistungen,
+          sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio VitaList in Hannover-List.“
+        </Text>
+        <div className='d-flex justify-center'>
+          <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
+          <ImgWithLink link='http://www.zuhause-alles-klar.de/' title='ZAK zu hause alles klar' img={p2} alt='Logo von der ZAK zu hause alles klar' />
+          <ImgWithLink link='http://www.vita-list.de/' title='Vita List Hannover - Joga - Pilates- Balance' img={p3} alt='Logo von der Vita List Hannover' />
+        </div>
+      </div>
+    </div>
+  </>
 )
-
-export const BigTextInOrange = styled.div`
-  font-size: ${dimensions.headingSizes.siteHeader}rem;
-  text-align: center;
-  margin: 1.5rem;
-  color: ${colors.orange};
-
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    font-size: 2rem;
-  }
-`
-export const FlexDivContentCenter = styled.div`
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const EngagementImage = styled.img`
-  width: 189px;
-  height: 143px;
-  margin: 0 auto;
-`
-
-export const MarginForTile = styled.div`
-  margin: 0.4rem;
-`
-
-export const PWithMargin = styled.p`
-  margin-left: 1rem;
-  margin-right: 1rem;
-  text-align: left;
-`
-
-export const PinOrange = styled(PWithMargin)`
-  color: ${colors.orange};
-`

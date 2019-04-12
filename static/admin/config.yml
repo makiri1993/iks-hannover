@@ -1,0 +1,355 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+################################ Mitarbeite ##########################################
+  - name: "employee"
+    label: "Mitarbeiter App"
+    folder: "src/pages/employee"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Bild", name: "image", widget: "image"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Rolle", name: "role", widget: "string"}
+      - {label: "E-Mail", name: "email", widget: "string"}
+  ################################ Jobs ##########################################
+  - name: "jobs"
+    label: "Jobs App"
+    folder: "src/pages/employee"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "titel", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Liste"
+        name: "list"
+        widget: "object"
+        fields:
+          - label: "Punkte"
+            name: "list-items"
+            widget: "list"
+            fields:
+              - { label: "Punkt", name: "item", widget: "string" }
+      - {label: "Text", name: "text", widget: "markdown"}
+##########################################################################
+################################ PAGES ##########################################
+  - name: "Seiten"
+    label: "Pages"
+    files:
+      - label: "Startseite"
+        name: "home"
+        file: "src/pages/home/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_home",
+            }
+          - label: "Bilder Karussell"
+            name: "slider"
+            widget: "object"
+            fields:
+              - label: "Bilder"
+                name: "slides"
+                widget: "list"
+                fields:
+                  - { label: "Bild", name: "image", widget: "image" }
+          - label: "Einführender Text"
+            name: "intro_text"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Unterzeile", name: "title", widget: "string" }
+              - { label: "Text", name: "body", widget: "markdown" }
+          - label: "Geschäftsführung"
+            name: "management"
+            widget: "object"
+            fields:
+              - label: "Bilder"
+                name: "slides"
+                widget: "list"
+                fields:
+                  - { label: "Bild", name: "image", widget: "image" }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Bezeichnung, name: role, widget: string }
+                  - { label: "Unterschrift", name: "signature", widget: "image" }
+          - label: "Pflegedienst Infos"
+            name: "nursing"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Pflegedienst Infos"
+            name: "care"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+      - label: "Pflegedienst"
+        name: "pflegedienst"
+        file: "src/pages/pflegedienst/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_pflegedienst",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text_top", widget: "markdown"}
+          - {label: "Motto", name: "slogan", widget: "markdown"}
+          - {label: "Text", name: "text_bot", widget: "markdown"}
+      - label: "Pflegeleistungen"
+        name: "pflegeleistungen"
+        file: "src/pages/pflegeleistungen/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_pflegeleistungen",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Beratungsleistungen"
+        name: "Beratungsleistungen"
+        file: "src/pages/beratungsleistungen/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_beratungsleistungen",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Ambulante-Pflege"
+        name: "ambulante-pflege"
+        file: "src/pages/ambulante-pflege/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_ambulante-pflege",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Wohngemeinschaften"
+        name: "wohngemeinschaften"
+        file: "src/pages/wohngemeinschaften/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_wohngemeinschaften",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Intensivpflege"
+        name: "intensivpflege"
+        file: "src/pages/intensivpflege/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_intensivpflege",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text_one", widget: "markdown"}
+          - {label: "Text", name: "text_two", widget: "markdown"}
+          - label: "Liste"
+            name: "list_one"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+          - label: "Liste"
+            name: "list_two"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+          - label: "Zitat"
+            name: "quote"
+            widget: "object"
+            fields:
+              - {label: "Zitat", name: "text", widget: "text"}
+              - {label: "Autor", name: "author", widget: "string"}
+          - label: "Liste"
+            name: "list_three"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+      - label: "Tagespflege"
+        name: "tagespflege"
+        file: "src/pages/tagespflege/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_tagespflege",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text_one", widget: "markdown"}
+          - label: "Liste"
+            name: "list_one"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+          - label: "Liste"
+            name: "list_two"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+      - label: "Team"
+        name: "team"
+        file: "src/pages/team/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_team",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text", widget: "markdown"}
+          - {label: "Team Bild", name: "image", widget: "image"}
+      - label: "Jobs"
+        name: "jobs"
+        file: "src/pages/jobs/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_jobs",
+            }
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "text_one", widget: "markdown"}
+          - {label: "Team Bild", name: "image", widget: "image"}
+          - label: "Liste"
+            name: "list_one"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+          - label: "Liste"
+            name: "list_two"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
+          - {label: "Text", name: "text_two", widget: "markdown"}
+      - label: "Engagement"
+        name: "engagement"
+        file: "src/pages/engagement/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_engagement",
+            }
+          - label: "Engagement"
+            name: "engagement"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Bilder"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Link Engagement", name: "link", widget: "string"}
+                  - {label: "Bild Engagement", name: "image", widget: "image"}
+          - label: "Partner"
+            name: "partner"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Bilder"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Link Partner", name: "link", widget: "string"}
+                  - {label: "Bild Partner", name: "image", widget: "image"}
+      - label: "Presse"
+        name: "presse"
+        file: "src/pages/presse/index.md"
+        fields:
+          - {
+              label: "Page Key",
+              name: "pageKey",
+              widget: "hidden",
+              default: "page_press",
+            }
+          - label: "Presse"
+            name: "press"
+            widget: "object"
+            fields:
+              - label: "Bilder"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Link Engagement", name: "link", widget: "string"}
+                  - {label: "Bild Engagement", name: "image", widget: "image"}
+          - label: "Partner"
+            name: "partner"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - label: "Bilder"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Link Partner", name: "link", widget: "string"}
+                  - {label: "Bild Partner", name: "image", widget: "image"}
+    ############
+

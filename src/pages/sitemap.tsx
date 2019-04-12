@@ -1,90 +1,84 @@
-import * as React from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
-import Page from '../components/Page'
-import Container from '../components/Container'
-import styled from 'styled-components'
-import { colors } from '../styles/variables'
-import Link from 'gatsby-link'
 
-const Sitemap = () => (
-  <Page>
+import Container from '../components/Container'
+import { Link } from 'gatsby'
+
+const sitemap = () => (
+  <>
     <Helmet
       title={'Verzeichnis - Interkultureller Pflegedienst Hannover'}
       meta={[
         {
           name: 'description',
-          content: 'Auf dieser Seite finden Sie eine Übersicht zu allen Seiten des interkulturellen Pflegedienst Hannover . '
-        }
+          content: 'Auf dieser Seite finden Sie eine Übersicht zu allen Seiten des interkulturellen Pflegedienst Hannover . ',
+        },
       ]}
     />
     <Container>
       <h1>Inhaltsverzeichnis</h1>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Startseite' to='/'>
+        >
+        <Link className='color-red' title='Link zu der Startseite' to='/'>
           Home
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Pflegedienst' to='/pflegedienst'>
+        >
+        <Link className='color-red' title='Link zu der Pflegedienst' to='/pflegedienst'>
           Pflegedienst
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Wohngemeinschaft' to='/wohngemeinschaften'>
+        >
+        <Link className='color-red' title='Link zu der Wohngemeinschaft' to='/wohngemeinschaften'>
           Wohngemeinschaften
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Außerklinische Intensivpflege' to='/intensivpflege'>
+        >
+        <Link className='color-red' title='Link zu der Außerklinische Intensivpflege' to='/intensivpflege'>
           Außerklinische Intensivpflege
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Leitbilder' to='/leitbilder'>
+        >
+        <Link className='color-red' title='Link zu der Leitbilder' to='/leitbilder'>
           Leitbilder
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Presse | Archiv' to='/presse-archiv'>
+        >
+        <Link className='color-red' title='Link zu der Presse | Archiv' to='/presse-archiv'>
           Presse | Archiv
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Team | Kontakt' to='/team-kontakt'>
+        >
+        <Link className='color-red' title='Link zu der Team | Kontakt' to='/team-kontakt'>
           Team | Kontakt
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Jobs | Partner' to='/jobs'>
+        >
+        <Link className='color-red' title='Link zu der Jobs | Partner' to='/jobs'>
           Jobs | Partner
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Engagement' to='/engagement'>
+        >
+        <Link className='color-red' title='Link zu der Engagement' to='/engagement'>
           Engagement
-        </LinkRed>
+        </Link>
       </p>
       <p>
-        >{' '}
-        <LinkRed title='Link zu der Impressum | Anfahrt' to='/impressum'>
+        >
+        <Link className='color-red' title='Link zu der Impressum | Anfahrt' to='/impressum'>
           Impressum | Anfahrt
-        </LinkRed>
+        </Link>
       </p>
     </Container>
-  </Page>
+  </>
 )
 
-export default Sitemap
-
-export const LinkRed = styled(Link)`
-  color: ${colors.red};
-`
+export default sitemap

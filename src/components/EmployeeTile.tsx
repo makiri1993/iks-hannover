@@ -1,12 +1,11 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import { fade } from '../styles/mixins'
-import { colors, breakpoints } from '../styles/variables'
+import React, { Component } from 'react'
+import Heading from './heading/Heading'
+import Img, { FluidObject } from 'gatsby-image'
 
 interface Props {
   team?: boolean
-  image: string
-  signature?: string
+  image: FluidObject
+  signature?: FluidObject
   name: string
   job: string
   alt: string
@@ -14,77 +13,24 @@ interface Props {
   email?: string
 }
 
-export default class EmployeeTile extends React.Component<Props> {
+export default class EmployeeTile extends Component<Props> {
   render() {
+    const { image, title, job, name, team, email, alt, signature } = this.props
     return (
-      <EmployeeDiv>
-        <EmployeeImage title={this.props.title} alt={this.props.alt} src={this.props.image} />
-        <CenteredH4>{this.props.name}</CenteredH4>
-        <CenteredPWithWidth>{this.props.job}</CenteredPWithWidth>
-        {this.props.team ? (
-          <LinkEmailOrange title={this.props.title} href={'mailto:' + this.props.email}>
-            {this.props.email}
-          </LinkEmailOrange>
+      <div className='employee-container'>
+        <Img className='EmployeeImage' title={title} alt={alt} fluid={image} />
+        <Heading center size={4} orange>
+          {name}
+        </Heading>
+        <p className='CenteredPWithWidth'>{job}</p>
+        {team ? (
+          <a className='LinkEmailOrange' title={title} href={'mailto:' + email}>
+            {email}
+          </a>
         ) : (
-          <SignatureImage title={this.props.title} alt={this.props.alt} src={this.props.signature} />
+          <Img className='SignatureImage' title={title} alt={alt} fluid={signature} />
         )}
-      </EmployeeDiv>
+      </div>
     )
   }
 }
-export const EmployeeDiv = styled.div`
-  width: 250px;
-  margin: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  /* height: auto;
-  padding: 10px; */
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    margin: 0 auto;
-  }
-`
-
-export const EmployeeImage = styled.img`
-  width: 250px;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-  animation: ${fade};
-  animation-duration: 1.3s;
-`
-
-export const CenteredH4 = styled.h4`
-  text-align: center;
-  font-weight: 500;
-  /* padding: 1.4rem; */
-  margin: 0.824em;
-`
-
-export const CenteredPWithWidth = styled.p`
-  text-align: center;
-  width: 250px;
-`
-
-export const LinkEmail = styled.a`
-  cursor: pointer;
-  color: ${colors.black};
-  text-decoration: underline;
-  text-decoration-color: red;
-`
-
-export const LinkEmailOrange = LinkEmail.extend`
-  text-decoration: underline;
-  color: ${colors.orange};
-`
-
-export const SignatureImage = styled.img`
-  width: 166px;
-  object-fit: contain;
-  animation: ${fade};
-  animation-duration: 1.3s;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    left: 0%;
-  }
-`

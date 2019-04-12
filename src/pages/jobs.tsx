@@ -1,151 +1,125 @@
-import * as React from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 
-import Page from '../components/Page'
-import styled from 'styled-components'
-import { colors } from '../styles/variables'
-import ImgWithLink from '../components/ImgWithLink'
-
-const p1: string = require('../images/partner/p1.jpg')
-const p2: string = require('../images/partner/p2.jpg')
-const p3: string = require('../images/partner/p3.jpg')
+import Heading from '../components/heading/Heading'
+import Text from '../components/text/Text'
 
 export default () => (
-  <Page>
+  <>
     <Helmet
       title={'Jobs, Kooperationen und Partner - Interkultureller Pflegedienst Hannover'}
       meta={[
         {
           name: 'description',
-          content: 'Die Seite unserer Stellenangebote und Informationen über den Bundesfreiwilligendienst, Kooperationen und Partner.'
-        }
+          content: 'Die Seite unserer Stellenangebote und Informationen über den Bundesfreiwilligendienst, Kooperationen und Partner.',
+        },
       ]}
     />
-    <DivCenterCol>
-      <StyledFooterDiv>
-        <CenteredH1Orange>JOBS</CenteredH1Orange>
-        <PflegedienstP>
-          Wir suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes Pflegepersonal und freuen uns auf Ihre Bewerbung.
-          <StyledBR />
-          Es ist jederzeit sinnvoll, uns Ihre Bewerbungsunterlagen zukommen zu lassen, da wir im Rahmen der Betriebserweiterung regelmäßig
-          Personal mit unterschiedlichen Qualifikationen einstellen.
-          <StyledBR />
-        </PflegedienstP>
-        <br />
-
-        <H4Orange>WISSENSWERTES</H4Orange>
-        <StyledBR />
-        <POrange>Bundesfreiwilligendienst</POrange>
-        <PflegedienstP>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</PflegedienstP>
-        <POrange>Krankenpflege</POrange>
-        <PflegedienstP>Wir kooperieren mit den folgenden Krankenpflegeschulen:</PflegedienstP>
-        <StyledUL>
-          <StyledLIOrange>
-            <StyledSpan>Landeskrankenhaus Wunstorf</StyledSpan>
-          </StyledLIOrange>
-          <StyledLIOrange>
-            <StyledSpan>Deutsche Angestellten-Akademie</StyledSpan>
-          </StyledLIOrange>
-        </StyledUL>
-        <PflegedienstP>Die Krankenpflegeschüler dieser Schulen absolvieren bei uns ihr 6-wöchiges Praktikum.</PflegedienstP>
-        <POrange>Altenpflege</POrange>
-        <PflegedienstP>
-          Ebenso besteht eine Kooperation mit der Anna-Siemsen-Schule im Bereich der Altenpflegeausbildung. Auch hier können die
-          Altenpflegeschüler ihr Praktikum in unserem Betrieb absolvieren.
-        </PflegedienstP>
-        <POrange>PDL-Ausbildung</POrange>
-        <PflegedienstP>
-          Mit der DAA (Deutsche Angestellten-Akademie) besteht eine Zusammenarbeit bei der Ausbildung von Fachkräften zur
-          Pflegedienstleitung (PDL). Diese können ebenfalls bei uns ihre Praktika absolvieren.
-        </PflegedienstP>
-        <CenteredH1Orange>PARTNER</CenteredH1Orange>
-        <PflegedienstP>
-          Unsere Kooperationspartner in Hannover und Umgebung sind unter anderem die Unternehmen „ZAK – Zuhause alles klar“, ein Unternehmen
-          für haushaltsnahe Dienstleistungen, sowie ZAK – Pflege, ein Pflegedienst im südlichen Hannover, und das Yoga- und Pilatesstudio
-          VitaList in Hannover-List.“
-        </PflegedienstP>
-        <DivCenterRow>
-          <ImgWithLink link="https://zak-pflege-hannover.de/" title="ZAK Pflege Hannover" img={p1} alt="Logo von der ZAK Pflege hannover" />
-          <ImgWithLink
-            link="http://www.zuhause-alles-klar.de/"
-            title="ZAK zu hause alles klar"
-            img={p2}
-            alt="Logo von der ZAK zu hause alles klar"
-          />
-          <ImgWithLink
-            link="http://www.vita-list.de/"
-            title="Vita List Hannover - Joga - Pilates- Balance"
-            img={p3}
-            alt="Logo von der Vita List Hannover"
-          />
-        </DivCenterRow>
-      </StyledFooterDiv>
-      <StyledFooterDiv>
-        <CenteredH1Orange>AKTUELLE STELLENANGEBOTE</CenteredH1Orange>
-      </StyledFooterDiv>
-    </DivCenterCol>
-  </Page>
+    <div className='max-container'>
+      <div className='text-container'>
+        <div style={{ padding: '2.4rem' }}>
+          <Heading size={1} uppercase center orange fontWeight={500}>
+            Jobs
+          </Heading>
+        </div>
+        <Text>
+          Wir wachsen weiter und freuen uns immer über Ihre Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit Zusatzausbildung „Intensiv“) sowie
+          Pflegehelfer*innen und Hauswirtschaftskräfte.
+        </Text>
+        <Text>
+          Die Einsatzbereiche sind dabei extrem vielfältig –Sie möchten gerne unser ambulantes Team unterstützen? Oder Sie gehen in der Betreuung unserer Demenzpatienten in den
+          Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht Ihr Organisationstalent an? Sie wünschen die Herausforderung im Intensivbereich?
+        </Text>
+        <Text>
+          Ob Vollzeit oder Teilzeit, Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter entsprechend ihrer Fähigkeiten und Wünsche einzusetzen. So legen wir
+          gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten. Wir suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes
+          Pflegepersonal und freuen uns auf Ihre Bewerbung.
+        </Text>
+        <Text underline>Wir bieten Ihnen:</Text>
+        <ul>
+          <li className='color-orange'>
+            <Text>familiäres Arbeitsklima in einem motivierten Team</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>wertschätzende Führungskultur</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>einen sicheren Arbeitsplatz in einem etablierten Unternehmen</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>umfangreiche Fort- und Weiterbildungsmöglichkeiten</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>pünktliche und leistungsgerechte Lohnzahlungen</Text>
+          </li>
+        </ul>
+        <Text underline>Sie bringen mit:</Text>
+        <ul>
+          <li className='color-orange'>
+            <Text>Freude am Umgang mit Menschen</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Empathievermögen und Sensibilität</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Verantwortungsbewusstsein</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Zuverlässigkeit</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Teamfähigkeit</Text>
+          </li>
+        </ul>
+        <Text>
+          Bitte lassen Sie uns Ihre vollständigen Bewerbungsunterlagen gerne per Email an
+          <a className='color-orange' href='mailto:iks-hannover@iks-hannover.de'>
+            {' '}
+            iks-hannover@iks-hannover.de
+          </a>{' '}
+          zukommen.
+        </Text>
+        <Heading size={4} orange>
+          Aktuelle Angebote
+        </Heading>
+        <Text orange underline>
+          Ausbildung Pflegefachmann/-frau
+        </Text>
+        <Text>
+          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns können Sie Ihre Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen der schulischen Ausbildung kooperieren wir
+          mit den folgenden Pflegefachschulen:
+        </Text>
+        <ul>
+          <li className='color-orange'>
+            <Text>Pflegecampus Hannover</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>KRH Akademie</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Fresenius Schule</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Diakovere Schule</Text>
+          </li>
+          <li className='color-orange'>
+            <Text>Pflegefachschule Hannover in Garbsen</Text>
+          </li>
+        </ul>
+        <Text>Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit uns geschlossen werden.</Text>
+        <Text orange underline>
+          Praktikum
+        </Text>
+        <Text>
+          Sie suchen im Rahmen Ihrer Ausbildung einen Praktikumsplatz? Fragen Sie gerne bei uns an. Wir kooperieren unter anderem mit den Ausbildungsbereichen der MHH und der
+          Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der
+          Pflege bekommen.
+        </Text>
+        <Text orange underline>
+          Bundesfreiwilligendienst
+        </Text>
+        <Text>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</Text>
+      </div>
+    </div>
+  </>
 )
-
-export const StyledFooter = styled.footer`
-  height: auto;
-  width: 100%;
-  background-color: ${colors.orange};
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media only screen and (max-width: 770px) {
-    flex-direction: column-reverse;
-  }
-`
-
-export const DivCenterCol = StyledFooter.extend`
-  background-color: ${colors.white};
-`
-export const StyledFooterDiv = styled.div`
-  text-align: left;
-  width: 500px;
-  @media only screen and (max-width: 770px) {
-    width: auto;
-  }
-`
-
-export const CenteredH1 = styled.h1`
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  @media only screen and (max-width: 890px) {
-    font-weight: 300px;
-  }
-`
-
-export const CenteredH1Orange = CenteredH1.extend`
-  color: ${colors.orange};
-`
-
-export const H4Orange = styled.h4`
-  color: ${colors.orange};
-`
-
-export const PflegedienstP = styled.p``
-export const POrange = PflegedienstP.extend`
-  color: ${colors.orange};
-`
-
-export const StyledBR = styled.br``
-
-export const StyledUL = styled.ul``
-
-export const StyledLIOrange = styled.li`
-  color: ${colors.orange};
-`
-
-export const StyledSpan = styled.span`
-  color: ${colors.black};
-  font-size: 16px;
-`
-export const DivCenterRow = StyledFooter.extend`
-  background-color: ${colors.white};
-  flex-direction: row;
-`
