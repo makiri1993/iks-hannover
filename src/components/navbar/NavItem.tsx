@@ -32,7 +32,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     const { title, to, subItems } = this.props
     const { height } = this.state
     return (
-      <div className='d-flex-column overflow-hidden height-transition' style={{ height }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+      <div className={`d-flex-column overflow-hidden height-transition`} style={{ height }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         {this.renderLinkOrNot({ title, to, ref: this.ref })}
         {subItems ? this.renderDropdown(subItems) : null}
       </div>
@@ -55,9 +55,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   }
 
   private renderDropdown(items: NavItemProps[]) {
-    return items.map(({ title, to }, index) => {
-      return this.renderLinkOrNot({ title, to, index })
-    })
+    return items.map(({ title, to }, index) => this.renderLinkOrNot({ title, to, index }))
   }
 
   private renderLinkOrNot({ title, to, ref, index }: { title: string; to?: string; ref?: RefObject<any>; index?: number }) {

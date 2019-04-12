@@ -33,7 +33,7 @@ export default () => (
         <Text>
           Wir bieten zwei Versorgungsalternativen: Eine
           <strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer ambulant betreuten
-          <strong>Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
+          <strong> Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf.
         </Text>
         <Text>
           <a className='color-red' target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>

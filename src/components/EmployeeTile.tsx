@@ -19,7 +19,7 @@ export default class EmployeeTile extends Component<Props> {
     return (
       <div className='employee-container'>
         <Img className='EmployeeImage' title={title} alt={alt} fluid={image} />
-        <Heading size={4} orange>
+        <Heading center size={4} orange>
           {name}
         </Heading>
         <p className='CenteredPWithWidth'>{job}</p>

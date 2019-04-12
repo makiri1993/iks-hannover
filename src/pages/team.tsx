@@ -120,14 +120,16 @@ export default class Team extends Component<Props> {
     } = this.props.data
     return (
       <>
-        <Heading size={4} center orange uppercase>
-          Unser Team
-        </Heading>
+        <div style={{ paddingTop: '2.4rem' }}>
+          <Heading size={1} center orange uppercase fontWeight={500}>
+            Unser Team
+          </Heading>
+        </div>
         <div className='max-container'>
           <div className='team-container'>
             {this.mitarbeiter.map(({ getTitle, getAlt, getName, getJob, getImage, getEmail }, index) => (
-              <div style={{ marginLeft: '5rem' }}>
-                <EmployeeTile key={index} team title={getTitle} alt={getAlt} name={getName} job={getJob} image={getImage} email={getEmail} />
+              <div key={index} className='ml-5rem'>
+                <EmployeeTile team title={getTitle} alt={getAlt} name={getName} job={getJob} image={getImage} email={getEmail} />
               </div>
             ))}
           </div>
