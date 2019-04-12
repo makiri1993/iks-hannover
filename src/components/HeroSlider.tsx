@@ -1,102 +1,46 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import { colors, breakpoints } from '../styles/variables'
-import { fade } from '../styles/mixins'
-
-const slider_1: string = require('../images/Slider_1.jpeg')
-const slider_2: string = require('../images/Slider_2.jpeg')
-const slider_3: string = require('../images/Slider_3.jpeg')
-const slider_4: string = require('../images/Slider_4.jpeg')
-const slider_5: string = require('../images/Slider_5.jpeg')
+import React from 'react'
+import Img, { FluidObject } from 'gatsby-image'
 
 interface State {
-  activeImage: string
   indexOfActiveImage: number
-  image: string[]
-  newImage: HTMLImageElement[]
 }
-interface Props {}
+
+interface Props {
+  images: FluidObject[]
+}
 export default class HeroSlider extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      activeImage: slider_1,
       indexOfActiveImage: 0,
-      image: [slider_1, slider_2, slider_3, slider_4, slider_5],
-      newImage: []
     }
   }
 
   componentDidMount() {
-    this.setAllImages()
     setInterval(() => {
       this.nextImage()
     }, 3000)
   }
-  private setAllImages() {
-    const sliderA: HTMLImageElement = new Image()
-    const sliderB: HTMLImageElement = new Image()
-    const sliderC: HTMLImageElement = new Image()
-    const sliderD: HTMLImageElement = new Image()
-    const sliderE: HTMLImageElement = new Image()
 
-    sliderA.src = slider_1
-    sliderB.src = slider_2
-    sliderC.src = slider_3
-    sliderD.src = slider_4
-    sliderE.src = slider_5
-
-    this.state.newImage.push(sliderA)
-    this.state.newImage.push(sliderB)
-    this.state.newImage.push(sliderC)
-    this.state.newImage.push(sliderD)
-    this.state.newImage.push(sliderE)
-  }
   private nextImage() {
     const newIndex = this.state.indexOfActiveImage + 1
-    if (this.state.indexOfActiveImage === this.state.image.length - 1) {
+    if (this.state.indexOfActiveImage === this.props.images.length - 1) {
       this.setState({
-        activeImage: this.state.image[0],
-        indexOfActiveImage: 0
+        indexOfActiveImage: 0,
       })
     } else {
       this.setState({
-        activeImage: this.state.image[newIndex],
-        indexOfActiveImage: newIndex
+        indexOfActiveImage: newIndex,
       })
     }
   }
   render() {
+    const { images } = this.props
+    const { indexOfActiveImage } = this.state
     return (
-      <Hero>
-        <HeroImage key={this.state.activeImage} src={this.state.activeImage} alt="" />
-      </Hero>
+      <div className='Hero'>
+        <Img className='HeroImage' fluid={images[indexOfActiveImage]} alt='' />
+      </div>
     )
   }
 }
-
-export const Hero = styled.div`
-  display: block;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.white};
-  text-align: center;
-  width: 100vw;
-  height: 50vh;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    height: 25vh;
-  }
-`
-export const HeroImage = styled.img`
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-  animation: ${fade};
-  animation-duration: 1.3s;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    object-fit: fill;
-  }
-`

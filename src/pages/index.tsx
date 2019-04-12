@@ -1,95 +1,133 @@
-import * as React from 'react'
-// import { Link } from 'gatsby'
-
-import Page from '../components/Page'
-import HeroSlider from '../components/HeroSlider'
+import { graphql } from 'gatsby'
+import { FluidObject } from 'gatsby-image'
+import React from 'react'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
-import styled from 'styled-components'
-import { breakpoints } from '../styles/variables'
-import Layout from '../components/Layout'
+import Heading from '../components/heading/Heading'
+import HeroSlider from '../components/HeroSlider'
+import Text from '../components/text/Text'
 
-const signatureJasmin: string = require('../images/mitarbeiter/unterschrift_Jasmin.png')
-const jasminImage: string = require('../images/mitarbeiter//Mitarbeiter_Jasmin_2.jpg')
-const signatureGalina: string = require('../images/mitarbeiter/unterschrift_Galina.png')
-const galinaImage: string = require('../images/mitarbeiter/Galina.jpg')
-
-export default () => (
-  <Layout>
-    <Page>
-      <HeroSlider />
-      <CenteredText>
-        <CenteredH1>HERZLICH WILLKOMMEN</CenteredH1>
-        <CenteredH4>auf der Homepage des Interkulturellen Sozialdienstes in Hannover</CenteredH4>
-        <CenteredP>Liebe BesucherInnen,</CenteredP>
-        <CenteredP>
-          unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu
-          ambulanten und medizinischen Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und
-          durch die wir uns von anderen Pflegediensten unterscheiden.
-        </CenteredP>
-        <CenteredP>Herzlichst, Ihre</CenteredP>
-      </CenteredText>
-      <FlexDivContentCenter>
-        <EmployeeTile
-          title='Jasmin Arbabian-Vogel'
-          alt='Bild von Jasmin Arbabian-Vogel'
-          name={'Jasmin Arbabian-Vogel'}
-          job={'Geschäftsführerin'}
-          image={jasminImage}
-          signature={signatureJasmin}
-        />
-        <EmployeeTile
-          title='Jasmin Galina Fiksman'
-          alt='Bild von Jasmin Galina Fiksman'
-          name={'Galina Fiksman'}
-          job={'Geschäftsführerin'}
-          image={galinaImage}
-          signature={signatureGalina}
-        />
-      </FlexDivContentCenter>
-      <FourColumns />
-    </Page>
-  </Layout>
-)
-
-export const FlexDivContentCenter = styled.div`
-  height: auto;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
+export interface Edge {
+  node: {
+    name?: string
+    childImageSharp: { fluid: FluidObject }
   }
-`
+}
 
-export const CenteredText = styled.div`
-  width: 46vw;
-  margin-left: auto;
-  margin-right: auto;
-  @media only screen and (max-width: ${breakpoints.sm}px) {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+export default ({
+  data: {
+    heroImages: { edges: heroEdges },
+    signatureJasmin,
+    signatureGalina,
+    imageJasmin,
+    imageGalina,
+  },
+}: {
+  data: {
+    heroImages: { edges: Edge[] }
+    signatureJasmin: { childImageSharp: { fluid: FluidObject } }
+    imageJasmin: { childImageSharp: { fluid: FluidObject } }
+    signatureGalina: { childImageSharp: { fluid: FluidObject } }
+    imageGalina: { childImageSharp: { fluid: FluidObject } }
   }
-`
+}) => {
+  const transformedHeroImages: FluidObject[] = heroEdges.map(
+    ({
+      node: {
+        childImageSharp: { fluid },
+      },
+    }: Edge) => fluid,
+  )
 
-export const CenteredH1 = styled.h1`
-  text-align: center;
-  font-weight: 500;
-  padding: 2.4rem;
-`
+  return (
+    <>
+      <HeroSlider images={transformedHeroImages} />
+      <div className='max-container'>
+        <div className='text-container' style={{ paddingTop: '2.4rem' }}>
+          <Heading size={1} uppercase center orange fontWeight={500}>
+            Herzlich Willkommen
+          </Heading>
+          <div style={{ margin: '0.824rem' }}>
+            <Heading size={4} center orange fontWeight={500}>
+              auf der Homepage des Interkulturellen Sozialdienstes in Hannover
+            </Heading>
+          </div>
+          <Text center>Liebe BesucherInnen,</Text>
+          <Text center>
+            unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu ambulanten und medizinischen
+            Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und durch die wir uns von anderen Pflegediensten unterscheiden.
+          </Text>
+          <Text center>Herzlichst, Ihre</Text>
+        </div>
+        <div className='employeee-tile-container'>
+          <EmployeeTile
+            title='Jasmin Arbabian-Vogel'
+            alt='Bild von Jasmin Arbabian-Vogel'
+            name='Jasmin Arbabian-Vogel'
+            job='Geschäftsführerin'
+            image={imageJasmin.childImageSharp.fluid}
+            signature={signatureJasmin.childImageSharp.fluid}
+          />
+          <EmployeeTile
+            title='Galina Fiksman'
+            alt='Bild von Jasmin Galina Fiksman'
+            name='Galina Fiksman'
+            job='Geschäftsführerin'
+            image={imageGalina.childImageSharp.fluid}
+            signature={signatureGalina.childImageSharp.fluid}
+          />
+        </div>
+        <FourColumns />
+      </div>
+    </>
+  )
+}
 
-export const CenteredH4 = styled.h4`
-  text-align: center;
-  font-weight: 500;
-  /* padding: 1.4rem; */
-  margin: 0.824em;
-`
+export const query = graphql`
+  {
+    heroImages: allFile(filter: { relativePath: { regex: "/Slider_/" } }) {
+      edges {
+        node {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
 
-export const CenteredP = styled.p`
-  text-align: center;
+    signatureJasmin: file(relativePath: { regex: "/mitarbeiter/unterschrift_Jasmin/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    signatureGalina: file(relativePath: { regex: "/mitarbeiter/unterschrift_Galina/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    imageJasmin: file(relativePath: { regex: "/mitarbeiter/mitarbeiter_Jasmin_2/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    imageGalina: file(relativePath: { regex: "/mitarbeiter/mitarbeiter_Galina/" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
 `

@@ -1,6 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 
-import Page from '../components/Page'
 import Container from '../components/Container'
 
 interface PageTemplateProps {
@@ -26,12 +25,10 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <Page>
-    <Container>
-      {/* <h1>{data.markdownRemark.frontmatter.title}</h1> */}
-      {/* <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /> */}
-    </Container>
-  </Page>
+  <Container>
+    {/* <h1>{data.markdownRemark.frontmatter.title}</h1> */}
+    {/* <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /> */}
+  </Container>
 )
 
 export default PageTemplate
