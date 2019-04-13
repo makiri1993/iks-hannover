@@ -2,6 +2,7 @@ import React, { Component, ReactNode } from 'react'
 
 interface TextProps {
   underline?: boolean
+  preLine?: boolean
   center?: boolean
   orange?: boolean
   green?: boolean
@@ -15,9 +16,13 @@ export default class Text extends Component<TextProps> {
 
   private get getClassNames() {
     const classNames: string[] = []
-    const { underline, center, green, orange } = this.props
+    const { underline, preLine, center, green, orange } = this.props
     if (center) {
       classNames.push('text-center')
+    }
+
+    if (preLine) {
+      classNames.push('text-wrap-pre-line')
     }
 
     if (underline) {
