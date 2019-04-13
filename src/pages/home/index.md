@@ -33,6 +33,7 @@ management:
       role: Geschäftsführerin
       signature: /img/unterschrift_Galina.png
 nursing:
+  image: /img/icon_iks_hand.png
   text: >-
     Mit unserem multinationalen Team leisten wir bereits seit 1996 einen Beitrag
     zur interkulturellen Pflege für Menschen mit verschiedensten kulturellen,
@@ -41,12 +42,14 @@ nursing:
     sind uns sehr wichtig
   title: Pflegedienst
 care:
+  image: /img/icon_iks_haus.png
   text: >-
     Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten,
     stehen unsere Wohngemeinschaften in den Stadtteilen Roderbruch, List,
     Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
   title: Wohngemeinschaften
 special:
+  image: /img/icon_iks_auge.png
   text: >-
     Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische
     Versorgung zu Hause oder in einer unserer ambulant betreuten
