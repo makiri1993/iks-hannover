@@ -84,18 +84,21 @@ collections:
             widget: "object"
             fields:
               - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Icon", name: "image", widget: "image" }
               - { label: "Text", name: "text", widget: "text" }
           - label: "Pflegedienst Infos"
             name: "care"
             widget: "object"
             fields:
               - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Icon", name: "image", widget: "image" }
               - { label: "Text", name: "text", widget: "text" }
           - label: "Pflegedienst Infos"
             name: "special"
             widget: "object"
             fields:
               - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Icon", name: "image", widget: "image" }
               - { label: "Text", name: "text", widget: "text" }
       - label: "Pflegedienst"
         name: "pflegedienst"
