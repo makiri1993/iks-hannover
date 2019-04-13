@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 // tslint:disable-next-line:no-var-requires
-const map: string = require('../content/images/maps.png')
+const map: string = require('../../static/img/maps.png')
 
 export default () => (
   <>
