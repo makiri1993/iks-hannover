@@ -1,9 +1,9 @@
 import { Link } from 'gatsby'
 import React, { Component } from 'react'
 import Text from './text/Text'
-const handIcon: string = require('../content/images/icons/IKS_icons_hand.png')
-const hausIcon: string = require('../content/images/icons/IKS_icons_haus.png')
-const augeIcon: string = require('../content/images/icons/IKS_icons_auge.png')
+const handIcon: string = require('../../static/img/icons/IKS_icons_hand.png')
+const hausIcon: string = require('../../static/img/icons/IKS_icons_haus.png')
+const augeIcon: string = require('../../static/img/icons/IKS_icons_auge.png')
 interface Props {}
 
 export default class FourColumns extends Component<Props> {

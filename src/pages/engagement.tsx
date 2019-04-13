@@ -5,34 +5,34 @@ import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 
 // tslint:disable-next-line:no-var-requires
-const fubaImage: string = require('../content/images/partner/96-2.jpg')
+const fubaImage: string = require('../../static/img/partner/96-2.jpg')
 // tslint:disable-next-line:no-var-requires
-const alzImage: string = require('../content/images/partner/alzheimer.jpg')
+const alzImage: string = require('../../static/img/partner/alzheimer.jpg')
 // tslint:disable-next-line:no-var-requires
-const badImage: string = require('../content/images/partner/bad.jpg')
+const badImage: string = require('../../static/img/partner/bad.jpg')
 // tslint:disable-next-line:no-var-requires
-const chartaImage: string = require('../content/images/partner/charta.jpg')
+const chartaImage: string = require('../../static/img/partner/charta.jpg')
 // tslint:disable-next-line:no-var-requires
-const fairImage: string = require('../content/images/partner/fairKAUF.jpg')
+const fairImage: string = require('../../static/img/partner/fairKAUF.jpg')
 // tslint:disable-next-line:no-var-requires
-const freiImage: string = require('../content/images/partner/Freiwilligenzentrum_Hannover.png')
+const freiImage: string = require('../../static/img/partner/Freiwilligenzentrum_Hannover.png')
 // tslint:disable-next-line:no-var-requires
-const freundImage: string = require('../content/images/partner/freundeskreis.jpg')
+const freundImage: string = require('../../static/img/partner/freundeskreis.jpg')
 // tslint:disable-next-line:no-var-requires
-const gesundImage: string = require('../content/images/partner/gesundheitswirtschaft.jpg')
+const gesundImage: string = require('../../static/img/partner/gesundheitswirtschaft.jpg')
 // tslint:disable-next-line:no-var-requires
-const msfImage: string = require('../content/images/partner/msf.jpg')
+const msfImage: string = require('../../static/img/partner/msf.jpg')
 // tslint:disable-next-line:no-var-requires
-const naviImage: string = require('../content/images/partner/NaVi.jpg')
+const naviImage: string = require('../../static/img/partner/NaVi.jpg')
 // tslint:disable-next-line:no-var-requires
-const phrImage: string = require('../content/images/partner/phr-1.jpg')
+const phrImage: string = require('../../static/img/partner/phr-1.jpg')
 
 // tslint:disable-next-line:no-var-requires
-const p1: string = require('../content/images/partner/p1.jpg')
+const p1: string = require('../../static/img/partner/p1.jpg')
 // tslint:disable-next-line:no-var-requires
-const p2: string = require('../content/images/partner/p2.jpg')
+const p2: string = require('../../static/img/partner/p2.jpg')
 // tslint:disable-next-line:no-var-requires
-const p3: string = require('../content/images/partner/p3.jpg')
+const p3: string = require('../../static/img/partner/p3.jpg')
 
 const images: Array<{ src: string; alt: string }> = [
   { src: fubaImage, alt: 'Bild von Hannover96' },

@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const logo_1: string = require('../content/images/icons/IKS_LOGO_weiss-300x104.png')
-const logo_2: string = require('../content/images/icons/logo_baum.png')
+const logo_1: string = require('../../static/img/icons/IKS_LOGO_weiss-300x104.png')
+const logo_2: string = require('../../static/img/icons/logo_baum.png')
 
 interface FooterProps {}
 
