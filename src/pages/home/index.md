@@ -46,5 +46,13 @@ care:
     stehen unsere Wohngemeinschaften in den Stadtteilen Roderbruch, List,
     Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
   title: Wohngemeinschaften
+special:
+  text: >-
+    Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische
+    Versorgung zu Hause oder in einer unserer ambulant betreuten
+    Intensiv-Wohngemeinschaften. Wir stimmen Therapie und ambulante Versorgung
+    mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre
+    Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+  title: Außerklinische Pflege
 ---
 
