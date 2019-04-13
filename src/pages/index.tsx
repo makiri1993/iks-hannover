@@ -1,11 +1,17 @@
 import { graphql } from 'gatsby'
-import GatsbyImage, { FluidObject } from 'gatsby-image'
+import { FluidObject } from 'gatsby-image'
 import React from 'react'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
 import Heading from '../components/heading/Heading'
 import HeroSlider from '../components/HeroSlider'
 import Text from '../components/text/Text'
+
+export interface Column {
+  title: string
+  image: { childImageSharp: { fluid: FluidObject } }
+  text: string
+}
 
 interface ManagementSlide {
   name: string
@@ -28,6 +34,9 @@ interface IndexData {
       management: {
         slides: ManagementSlide[]
       }
+      nursing: Column
+      care: Column
+      special: Column
     }
   }
 }
@@ -37,6 +46,9 @@ export default ({ data }: { data: IndexData }) => {
     management: { slides: managementData },
     slider: { slides: heroImages },
     intro_text,
+    nursing,
+    care,
+    special,
   } = data.siteData.frontmatter
 
   const transformedHeroImages: FluidObject[] = heroImages.map(
@@ -82,9 +94,8 @@ export default ({ data }: { data: IndexData }) => {
             />
           ))}
         </div>
-        <div className='FlexDivContentCenter'>
-          <FourColumns />
-        </div>
+
+        <FourColumns columns={[nursing, care, special]} />
       </div>
     </>
   )
@@ -136,14 +147,35 @@ export const query = graphql`
         }
         nursing {
           title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           text
         }
         care {
           title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           text
         }
         special {
           title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           text
         }
       }
