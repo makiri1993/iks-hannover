@@ -3,6 +3,10 @@ pageKey: page_home
 slider:
   slides:
     - image: /img/slider_1.jpeg
+    - image: /img/Slider_2.jpeg
+    - image: /img/Slider_3.jpeg
+    - image: /img/Slider_4.jpeg
+    - image: /img/Slider_5.jpeg
 intro_text:
   body: >-
     Liebe BesucherInnen,
