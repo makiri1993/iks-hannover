@@ -11,6 +11,7 @@ collections:
     label: "Mitarbeiter App"
     folder: "src/pages/employee"
     create: true
+    identifier_field: "firstname"
     slug: "{{slug}}"
     fields:
       - {label: "Bild", name: "image", widget: "image"}
