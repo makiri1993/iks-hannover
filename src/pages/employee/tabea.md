@@ -1,4 +1,5 @@
 ---
+position: 3
 image: /img/mitarbeiter_Tabea.jpg
 firstname: Tabea
 lastname: Emrich
