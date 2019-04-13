@@ -14,7 +14,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Bild", name: "image", widget: "image"}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Vorname", name: "firstname", widget: "string"}
+      - {label: "Nachname", name: "lastname", widget: "string"}
       - {label: "Rolle", name: "role", widget: "string"}
       - {label: "E-Mail", name: "email", widget: "string"}
   ################################ Jobs ##########################################

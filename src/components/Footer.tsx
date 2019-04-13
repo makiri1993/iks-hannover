@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-const logo_1: string = require('../../static/img/icons/IKS_LOGO_weiss-300x104.png')
-const logo_2: string = require('../../static/img/icons/logo_baum.png')
+// const logo_1: string = require('../../static/img/icons/IKS_LOGO_weiss-300x104.png')
+// const logo_2: string = require('../../static/img/icons/logo_baum.png')
 
 interface FooterProps {}
 
@@ -40,7 +40,7 @@ const Footer: React.SFC<FooterProps> = () => (
           </Link>
           <br />
           <br />
-          <img className='StyledIMG' src={logo_1} />
+          {/* <img className='StyledIMG' src={logo_1} /> */}
         </p>
       </div>
       <div className='StyledFooterDiv'>
@@ -55,7 +55,7 @@ const Footer: React.SFC<FooterProps> = () => (
           Fax 0511 - 866 43 43 5<br />
           <br />
           <br />
-          <img className='StyledIMG' src={logo_2} />
+          {/* <img className='StyledIMG' src={logo_2} /> */}
         </p>
       </div>
     </footer>

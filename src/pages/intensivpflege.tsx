@@ -4,9 +4,9 @@ import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 
 // tslint:disable-next-line:variable-name no-var-requires
-const logo_1: string = require('../../static/img/icons/Schriftzug_Wohngemeinschaft.png')
+const logo_1: string = require('../../static/img/schriftzug_Wohngemeinschaft.png')
 // tslint:disable-next-line:variable-name no-var-requires
-const logo_2: string = require('../../static/img/icons/logo_baum.png')
+const logo_2: string = require('../../static/img/logo_baum.png')
 // tslint:disable-next-line:variable-name no-var-requires
 const flylerLink: string = require('../../static/img/intensivpflege/IKS-AIWG-Flyer_ku_web.pdf')
 
