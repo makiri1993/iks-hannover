@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import { FluidObject } from 'gatsby-image'
+import GatsbyImage, { FluidObject } from 'gatsby-image'
 import React from 'react'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
@@ -7,37 +7,48 @@ import Heading from '../components/heading/Heading'
 import HeroSlider from '../components/HeroSlider'
 import Text from '../components/text/Text'
 
-export interface Edge {
-  node: {
-    name?: string
-    childImageSharp: { fluid: FluidObject }
+interface ManagementSlide {
+  name: string
+  role: string
+  image: { childImageSharp: { fluid: FluidObject } }
+  signature: { childImageSharp: { fluid: FluidObject } }
+}
+
+interface IndexData {
+  siteData: {
+    frontmatter: {
+      intro_text: {
+        body: string
+        subline: string
+        title: string
+      }
+      slider: {
+        slides: [{ image: { childImageSharp: { fluid: FluidObject } } }]
+      }
+      management: {
+        slides: ManagementSlide[]
+      }
+    }
   }
 }
 
-export default ({
-  data: {
-    heroImages: { edges: heroEdges },
-    signatureJasmin,
-    signatureGalina,
-    imageJasmin,
-    imageGalina,
-  },
-}: {
-  data: {
-    heroImages: { edges: Edge[] }
-    signatureJasmin: { childImageSharp: { fluid: FluidObject } }
-    imageJasmin: { childImageSharp: { fluid: FluidObject } }
-    signatureGalina: { childImageSharp: { fluid: FluidObject } }
-    imageGalina: { childImageSharp: { fluid: FluidObject } }
-  }
-}) => {
-  const transformedHeroImages: FluidObject[] = heroEdges.map(
+export default ({ data }: { data: IndexData }) => {
+  const {
+    management: { slides: managementData },
+    slider: { slides: heroImages },
+    intro_text,
+  } = data.siteData.frontmatter
+
+  const transformedHeroImages: FluidObject[] = heroImages.map(
     ({
-      node: {
+      image: {
         childImageSharp: { fluid },
       },
-    }: Edge) => fluid,
+    }: {
+      image: { childImageSharp: { fluid: FluidObject } }
+    }) => fluid,
   )
+  const { title, subline, body } = intro_text
 
   return (
     <>
@@ -45,39 +56,35 @@ export default ({
       <div className='max-container'>
         <div className='text-container' style={{ paddingTop: '2.4rem' }}>
           <Heading size={1} uppercase center orange fontWeight={500}>
-            Herzlich Willkommen
+            {title}
           </Heading>
-          <div style={{ margin: '0.824rem' }}>
+          <div style={{ marginTop: '0.824rem' }}>
             <Heading size={4} center orange fontWeight={500}>
-              auf der Homepage des Interkulturellen Sozialdienstes in Hannover
+              {subline}
             </Heading>
           </div>
-          <Text center>Liebe BesucherInnen,</Text>
-          <Text center>
-            unsere Internetseite soll Ihnen dabei helfen, sich ein Bild von unserem Pflegedienst zu machen. Hier bekommen Sie Informationen zu ambulanten und medizinischen
-            Leistungen, zu unseren Leitbildern, unserem Team und zu Leistungen, die wir zusätzlich anbieten und durch die wir uns von anderen Pflegediensten unterscheiden.
-          </Text>
-          <Text center>Herzlichst, Ihre</Text>
+          <div style={{ marginTop: '1.4rem' }}>
+            <Text preLine center>
+              {body}
+            </Text>
+          </div>
         </div>
         <div className='employeee-tile-container'>
-          <EmployeeTile
-            title='Jasmin Arbabian-Vogel'
-            alt='Bild von Jasmin Arbabian-Vogel'
-            name='Jasmin Arbabian-Vogel'
-            job='Geschäftsführerin'
-            image={imageJasmin.childImageSharp.fluid}
-            signature={signatureJasmin.childImageSharp.fluid}
-          />
-          <EmployeeTile
-            title='Galina Fiksman'
-            alt='Bild von Jasmin Galina Fiksman'
-            name='Galina Fiksman'
-            job='Geschäftsführerin'
-            image={imageGalina.childImageSharp.fluid}
-            signature={signatureGalina.childImageSharp.fluid}
-          />
+          {managementData.map(({ name, role, image, signature }: ManagementSlide, index) => (
+            <EmployeeTile
+              key={index}
+              title={name}
+              alt='Bild von der Geschäftsführung'
+              name={name}
+              job={role}
+              image={image.childImageSharp.fluid}
+              signature={signature.childImageSharp.fluid}
+            />
+          ))}
         </div>
-        <FourColumns />
+        <div className='FlexDivContentCenter'>
+          <FourColumns />
+        </div>
       </div>
     </>
   )
@@ -85,47 +92,59 @@ export default ({
 
 export const query = graphql`
   {
-    heroImages: allFile(filter: { relativePath: { regex: "/Slider_/" } }) {
-      edges {
-        node {
-          childImageSharp {
-            # Specify the image processing specifications right in the query.
-            fluid {
-              ...GatsbyImageSharpFluid
+    siteData: markdownRemark(frontmatter: { pageKey: { eq: "page_home" } }) {
+      frontmatter {
+        title
+        slider {
+          slides {
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
-      }
-    }
 
-    signatureJasmin: file(relativePath: { regex: "/mitarbeiter/unterschrift_Jasmin/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        intro_text {
+          body
+          subline
+          title
         }
-      }
-    }
 
-    signatureGalina: file(relativePath: { regex: "/mitarbeiter/unterschrift_Galina/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        management {
+          slides {
+            name
+            role
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+
+            signature {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
-      }
-    }
-
-    imageJasmin: file(relativePath: { regex: "/mitarbeiter/mitarbeiter_Jasmin_2/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        nursing {
+          title
+          text
         }
-      }
-    }
-
-    imageGalina: file(relativePath: { regex: "/mitarbeiter/mitarbeiter_Galina/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        care {
+          title
+          text
+        }
+        special {
+          title
+          text
         }
       }
     }

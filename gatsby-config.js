@@ -23,17 +23,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
         path: `${__dirname}/static/img`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: `content`,
       },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `content`,
-        path: `${__dirname}/src/pages`,
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
       },
     },
     {
@@ -46,30 +58,6 @@ module.exports = {
         host: "https://www.interkulturellepflege.de",
         sitemap: "https://www.interkulturellepflege.de/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-responsive-iframe",
-            options: {
-              wrapperStyle: "margin-bottom: 1rem",
-            },
-          },
-          // 'gatsby-remark-prismjs',
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 1140,
-              quality: 90,
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
       },
     },
     "gatsby-transformer-json",

@@ -756,6 +756,10 @@ blockquote {
   text-decoration: underline;
 }
 
+.text-wrap-pre-line {
+  white-space: pre-line;
+}
+
 // layout
 .d-flex {
   display: flex;
