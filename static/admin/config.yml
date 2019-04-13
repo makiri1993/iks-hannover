@@ -65,7 +65,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Titel", name: "title", widget: "string" }
-              - { label: "Unterzeile", name: "title", widget: "string" }
+              - { label: "Unterzeile", name: "subline", widget: "string" }
               - { label: "Text", name: "body", widget: "markdown" }
           - label: "Geschäftsführung"
             name: "management"
