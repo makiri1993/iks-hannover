@@ -14,6 +14,7 @@ collections:
     identifier_field: "firstname"
     slug: "{{slug}}"
     fields:
+      - {label: "Position",name: "position", widget: "number"}
       - {label: "Bild", name: "image", widget: "image"}
       - {label: "Vorname", name: "firstname", widget: "string"}
       - {label: "Nachname", name: "lastname", widget: "string"}
