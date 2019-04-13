@@ -47,13 +47,6 @@ const navData: NavItemProps[] = [
 // tslint:disable-next-line:variable-name
 const Layout: React.SFC<WrapperProps> = ({ children }) => (
   <main>
-    {/* <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: data.site.siteMetadata.keywords },
-      ]}
-    /> */}
     <Nav navData={navData} />
     <div>{children}</div>
     <Footer />
