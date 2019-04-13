@@ -1,8 +1,8 @@
 ---
 image: /img/mitarbeiter_Galina.jpg
-firstname: jiopjpi
-lastname: jip
-role: jiop
-email: jipojipo
+firstname: Galina
+lastname: Fiksman
+role: Geschäftsführung
+email: fiksmann@iks-hannover.de
 ---
 
