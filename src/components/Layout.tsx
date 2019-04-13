@@ -47,9 +47,20 @@ const navData: NavItemProps[] = [
 // tslint:disable-next-line:variable-name
 const Layout: React.SFC<WrapperProps> = ({ children }) => (
   <main>
-    <Nav navData={navData} />
+    {/* <Helmet
+      title={data.site.siteMetadata.title}
+      meta={[
+        { name: 'description', content: data.site.siteMetadata.description },
+        { name: 'keywords', content: data.site.siteMetadata.keywords },
+      ]}
+    /> */}
+    <div style={{ marginBottom: '3rem' }}>Diese Seite befindet sich aktuell im Umbau und wird in Kürze wieder zür Verfügung stehen.</div>
+    <div style={{ fontWeight: 800 }}>Falls Sie mit uns Kontakt aufnehmen wollen, können Sie uns unter dieser Nummer erreichen!</div>
+    <div>TEL: 0511 / 210 10 44</div>
+    {/* <Nav navData={navData}/>
+
     <div>{children}</div>
-    <Footer />
+    <Footer/> */}
   </main>
 )
 
