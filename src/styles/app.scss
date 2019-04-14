@@ -739,12 +739,14 @@ blockquote {
 }
 
 .nav-dropdown-toggle {
-  display: inline-flex;
+  // display: inline-flex;
   color: $color-white;
   font-size: 1.5rem;
+  margin-left: 2rem;
   margin-right: 2rem;
   transition: transform 500ms ease-in-out;
   transform: rotate(90deg);
+  align-self: center;
 }
 
 .dropdown-toggle-animation {
@@ -849,8 +851,11 @@ blockquote {
 }
 
 .height-transition {
-  width: 100%;
   transition: height 450ms ease-in-out;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .hover-orange {
