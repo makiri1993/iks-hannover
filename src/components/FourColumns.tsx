@@ -17,7 +17,7 @@ export default class FourColumns extends Component<Props> {
           const heading: ReactNode = this.getRightHeading(index, title)
 
           return (
-            <div className='OneColumn'>
+            <div key={index} className='OneColumn'>
               <Link className='HomepageLink' to='/pflegedienst'>
                 <Img className='IconForButton' fluid={fluid} />
               </Link>
