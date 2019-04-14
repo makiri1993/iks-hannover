@@ -45,7 +45,8 @@ html {
   box-sizing: border-box;
   font-size: 1.2vmax !important;
   line-height: $line-height-regular !important;
-
+  width: 100%;
+  // overflow: hidden;
   @media only screen and (min-width: 1441px) {
     font-size: 15px !important;
   }
@@ -57,9 +58,10 @@ html {
 
 body {
   margin: 0;
-  width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 100%;
+
   font-family: $sansSerif;
   color: $color-black;
   background-color: $color-white;
@@ -684,24 +686,69 @@ blockquote {
   overflow: visible;
   @media only screen and (max-width: 550px) {
     justify-content: flex-end;
+    // height: 5vh;
   }
 }
 
 .mobile-navbar {
-  position: absolute;
+  // position: absolute;
   background-color: $color-gray-header;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   z-index: 11;
   width: 100%;
-  height: 100%;
-  transition: transform 350ms ease-in-out;
+
+  transition: all 350ms ease-in-out;
 }
 .menu-button {
+  // position: relative;
   justify-self: flex-end;
   width: min-content;
+  background-color: transparent;
+  border: none;
+}
+
+.animation-burger {
+  span {
+    opacity: 0;
+  }
+
+  :first-child {
+    opacity: 1;
+    background-color: $color-orange;
+    transform: translate(0%, 437%) rotate(405deg);
+  }
+
+  :last-child {
+    background-color: $color-orange;
+    opacity: 1;
+    transform: translate(0%, -400%) rotate(-405deg);
+  }
+}
+
+.burger {
+  transition: all 500ms ease-in-out !important;
+  display: block;
+  height: 3px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: $color-orange;
+  width: 25px;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  color: $color-white;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  transition: transform 500ms ease-in-out;
+  transform: rotate(90deg);
+}
+
+.dropdown-toggle-animation {
+  transform: rotate(180deg);
 }
 
 // new Styles

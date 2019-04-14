@@ -1,12 +1,6 @@
 import React, { Component, ReactNode, RefObject, createRef } from 'react'
 import NavItem from './NavItem'
 
-export interface NavItemProps {
-  title: string
-  to?: string
-  subItems?: NavItemProps[]
-}
-
 interface Props {
   navData: NavItemProps[]
 }
@@ -47,13 +41,15 @@ export default class Nav extends Component<Props, State> {
   }
 
   render(): ReactNode {
-    const { mobile } = this.state
+    const { mobile, transform } = this.state
     return (
       <>
         <div className='bg-grey navbar' ref={this.ref}>
           {mobile ? (
-            <button className='menu-button' onClick={this.handleTouch}>
-              Menu
+            <button className={`menu-button ${transform === 0 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
+              <span className='burger' />
+              <span className='burger' />
+              <span className='burger' />
             </button>
           ) : (
             this.renderNavItems
@@ -64,29 +60,31 @@ export default class Nav extends Component<Props, State> {
     )
   }
 
+  private get renderMobile(): ReactNode {
+    const { transform, scrollHeight } = this.state
+    const { navData } = this.props
+    return (
+      <div className='mobile-navbar' style={{ top: scrollHeight, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
+        {navData.map(({ to, title, subItems }, index) => (
+          <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
+        ))}
+      </div>
+    )
+  }
+
   private handleResize = (): void => {
     const { innerWidth } = window
-
-    innerWidth < 550 ? this.setState({ mobile: true, transform: 100 }) : this.setState({ mobile: false, transform: 0 })
+    const { current } = this.ref
+    if (current) {
+      const { scrollHeight } = current
+      // this.setState({ scrollHeight })
+      innerWidth < 550 ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: false, transform: 0, scrollHeight })
+    }
   }
 
   private get renderNavItems(): ReactNode {
     const { navData } = this.props
     return navData.map(({ to, title, subItems }, index) => <NavItem key={index} title={title} to={to} subItems={subItems} />)
-  }
-
-  private get renderMobile(): ReactNode {
-    const { transform, scrollHeight } = this.state
-    const { navData } = this.props
-    return (
-      <>
-        <div className='mobile-navbar' style={{ top: scrollHeight, transform: `translateX(${transform}%)` }}>
-          {navData.map(({ to, title, subItems }, index) => (
-            <NavItem key={index} title={title} to={to} subItems={subItems} />
-          ))}
-        </div>
-      </>
-    )
   }
 
   private handleTouch = (): void => {

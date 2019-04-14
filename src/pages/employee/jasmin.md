@@ -1,4 +1,5 @@
 ---
+position: 2
 image: /img/mitarbeiter_Jasmin.jpg
 firstname: Jasmin
 lastname: Arbabian-Vogel
