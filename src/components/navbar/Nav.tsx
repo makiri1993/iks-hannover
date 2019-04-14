@@ -1,12 +1,6 @@
 import React, { Component, ReactNode, RefObject, createRef } from 'react'
 import NavItem from './NavItem'
 
-export interface NavItemProps {
-  title: string
-  to?: string
-  subItems?: NavItemProps[]
-}
-
 interface Props {
   navData: NavItemProps[]
 }
@@ -72,7 +66,7 @@ export default class Nav extends Component<Props, State> {
     return (
       <div className='mobile-navbar' style={{ top: scrollHeight, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
         {navData.map(({ to, title, subItems }, index) => (
-          <NavItem key={index} title={title} to={to} subItems={subItems} />
+          <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
         ))}
       </div>
     )
