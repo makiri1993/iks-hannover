@@ -47,13 +47,15 @@ export default class Nav extends Component<Props, State> {
   }
 
   render(): ReactNode {
-    const { mobile } = this.state
+    const { mobile, transform } = this.state
     return (
       <>
         <div className='bg-grey navbar' ref={this.ref}>
           {mobile ? (
-            <button className='menu-button' onClick={this.handleTouch}>
-              Menu
+            <button className={`menu-button ${transform === 0 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
+              <span className='burger' />
+              <span className='burger' />
+              <span className='burger' />
             </button>
           ) : (
             this.renderNavItems

@@ -685,6 +685,7 @@ blockquote {
   overflow: visible;
   @media only screen and (max-width: 550px) {
     justify-content: flex-end;
+    // height: 5vh;
   }
 }
 
@@ -697,12 +698,43 @@ blockquote {
   justify-content: flex-start;
   z-index: 11;
   width: 100%;
-  // height: auto;
+
   transition: all 350ms ease-in-out;
 }
 .menu-button {
+  // position: relative;
   justify-self: flex-end;
   width: min-content;
+  background-color: transparent;
+  border: none;
+}
+
+.animation-burger {
+  span {
+    opacity: 0;
+  }
+
+  :first-child {
+    opacity: 1;
+    background-color: $color-orange;
+    transform: translate(0%, 437%) rotate(405deg);
+  }
+
+  :last-child {
+    background-color: $color-orange;
+    opacity: 1;
+    transform: translate(0%, -400%) rotate(-405deg);
+  }
+}
+
+.burger {
+  transition: all 500ms ease-in-out !important;
+  display: block;
+  height: 3px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: $color-orange;
+  width: 25px;
 }
 
 // new Styles
