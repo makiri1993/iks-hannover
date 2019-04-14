@@ -57,8 +57,8 @@ html {
   font-size: 1.2vmax !important;
   line-height: $line-height-regular !important;
   width: 100%;
+  overflow-x: hidden;
 
-  // overflow: hidden;
   @media only screen and (min-width: 1441px) {
     font-size: 15px !important;
   }
@@ -703,6 +703,8 @@ blockquote {
 
 .navbar {
   position: sticky;
+  // width: 100%;
+  background-color: $color-gray-header;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -712,20 +714,22 @@ blockquote {
 
   @media only screen and (max-width: 550px) {
     justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    background-color: $color-white;
+    background-color: transparent;
     // height: 5vh;
   }
 }
 
 .mobile-navbar {
-  // position: absolute;
-  background-color: $color-gray-header;
-
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: 11;
+  z-index: 7;
   width: 100%;
-
+  background-color: $color-orange;
   transition: all 350ms ease-in-out;
 }
 
@@ -744,25 +748,26 @@ blockquote {
 
   :first-child {
     opacity: 1;
-    background-color: $color-orange;
-    transform: translate(0%, 437%) rotate(405deg);
+    background-color: $color-white;
+    transform: translate(0%, 300%) rotate(405deg);
   }
 
   :last-child {
-    background-color: $color-orange;
+    background-color: $color-white;
     opacity: 1;
     transform: translate(0%, -400%) rotate(-405deg);
   }
 }
 
 .burger {
+  z-index: 50;
   transition: all 500ms ease-in-out !important;
   display: block;
-  height: 3px;
+  height: 4px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-color: $color-orange;
-  width: 25px;
+  width: 30px;
 }
 
 .nav-dropdown-toggle {
