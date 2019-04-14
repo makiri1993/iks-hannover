@@ -1,4 +1,15 @@
-$sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+$sansSerif: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+Arial,
+sans-serif;
 
 $font-regular: 15px;
 $font-large: 18px;
@@ -46,6 +57,7 @@ html {
   font-size: 1.2vmax !important;
   line-height: $line-height-regular !important;
   width: 100%;
+
   // overflow: hidden;
   @media only screen and (min-width: 1441px) {
     font-size: 15px !important;
@@ -158,8 +170,7 @@ h5 {
   font-size: $size-h4;
 }
 
-h6 {
-}
+h6 {}
 
 p {
   font-size: $size-p;
@@ -222,11 +233,13 @@ blockquote {
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 25px;
+
   @media only screen and (max-width: 890px) {
     width: 350px;
     margin-left: auto;
     margin-right: auto;
   }
+
   @media only screen and (max-width: 390px) {
     width: 300px;
     margin-left: auto;
@@ -262,6 +275,7 @@ blockquote {
   align-content: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+
   /* height: auto;
   padding: 10px; */
   @media only screen and (max-width: 550px) {
@@ -306,6 +320,7 @@ blockquote {
   object-fit: contain;
   animation: fade;
   animation-duration: 1.3s;
+
   @media only screen and (max-width: 550px) {
     left: 0%;
   }
@@ -315,6 +330,7 @@ blockquote {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -337,6 +353,7 @@ blockquote {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
   @media only screen and (max-width: 550px) {
     flex-direction: column;
   }
@@ -413,6 +430,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media only screen and (max-width: 799px) {
     flex-direction: column;
     width: auto;
@@ -495,6 +513,7 @@ blockquote {
   text-align: center;
   width: 100vw;
   height: 50vh;
+
   @media only screen and (max-width: 550px) {
     height: 25vh;
   }
@@ -508,6 +527,7 @@ blockquote {
   object-fit: cover;
   animation: fade;
   animation-duration: 1.3s;
+
   @media only screen and (max-width: 550px) {
     object-fit: fill;
   }
@@ -560,6 +580,7 @@ blockquote {
   max-width: 56rem;
   margin-left: auto;
   margin-right: auto;
+
   @media only screen and (max-width: 550px) {
     width: 80%;
     margin-left: auto;
@@ -574,6 +595,7 @@ blockquote {
   justify-content: space-evenly;
   margin-top: 5rem;
   margin-bottom: 7rem;
+
   @media only screen and (max-width: 550px) {
     flex-direction: column;
     justify-items: center;
@@ -593,6 +615,7 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media only screen and (max-width: 550px) {
     flex-direction: column;
   }
@@ -621,6 +644,7 @@ blockquote {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
   @media only screen and (max-width: 550px) {
     flex-direction: column;
     margin-left: auto;
@@ -643,6 +667,7 @@ blockquote {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
   @media only screen and (max-width: 890px) {
     flex-direction: column;
   }
@@ -684,6 +709,7 @@ blockquote {
   justify-content: space-evenly;
   z-index: 10;
   overflow: visible;
+
   @media only screen and (max-width: 550px) {
     justify-content: flex-end;
     // height: 5vh;
@@ -702,6 +728,7 @@ blockquote {
 
   transition: all 350ms ease-in-out;
 }
+
 .menu-button {
   // position: relative;
   justify-self: flex-end;
@@ -837,6 +864,11 @@ blockquote {
   justify-content: center;
 }
 
+.justify-space-around {
+  justify-items: center;
+  justify-content: space-around;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -877,4 +909,10 @@ blockquote {
   @media only screen and (max-width: 550px) {
     margin: 0;
   }
+}
+
+.img-link-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
