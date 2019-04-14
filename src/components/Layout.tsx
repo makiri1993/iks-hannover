@@ -54,12 +54,12 @@ const Layout: React.SFC<WrapperProps> = ({ children }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     /> */}
-    <div style={{ marginBottom: '3rem' }}>Diese Seite befindet sich aktuell im Umbau und wird in Kürze wieder zür Verfügung stehen.</div>{' '}
+    {/* <div style={{ marginBottom: '3rem' }}>Diese Seite befindet sich aktuell im Umbau und wird in Kürze wieder zür Verfügung stehen.</div>{' '}
     <div style={{ fontWeight: 800 }}>Falls Sie mit uns Kontakt aufnehmen wollen, können Sie uns unter dieser Nummer erreichen!</div>
-    <div>TEL: 0511 / 210 10 44</div>
-    {/* <Nav navData={navData} /> */}
-    {/* <div>{children}</div> */}
-    {/* <Footer /> */}
+    <div>TEL: 0511 / 210 10 44</div> */}
+    <Nav navData={navData} />
+    <div>{children}</div>
+    <Footer />
   </main>
 )
 
