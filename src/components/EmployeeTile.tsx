@@ -9,26 +9,25 @@ interface Props {
   name: string
   job: string
   alt: string
-  title: string
   email?: string
 }
 
 export default class EmployeeTile extends Component<Props> {
   render() {
-    const { image, title, job, name, team, email, alt, signature } = this.props
+    const { image, job, name, team, email, alt, signature } = this.props
     return (
       <div className='employee-container'>
-        <Img className='EmployeeImage' title={title} alt={alt} fluid={image} />
+        <Img className='EmployeeImage' title={name} alt={alt} fluid={image} />
         <Heading center size={4} orange>
           {name}
         </Heading>
         <p className='CenteredPWithWidth'>{job}</p>
         {team ? (
-          <a className='LinkEmailOrange' title={title} href={'mailto:' + email}>
+          <a className='LinkEmailOrange' title={name} href={'mailto:' + email}>
             {email}
           </a>
         ) : (
-          <Img className='SignatureImage' title={title} alt={alt} fluid={signature} />
+          <Img className='SignatureImage' title={name} alt={alt} fluid={signature} />
         )}
       </div>
     )

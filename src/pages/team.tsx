@@ -4,10 +4,28 @@ import EmployeeTile from '../components/EmployeeTile'
 import Heading from '../components/heading/Heading'
 import Mitarbeiter from '../components/models/Mitarbeiter'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 
 interface Props {
-  data: any
+  data: {
+    employees: {
+      edges: [
+        {
+          node: {
+            frontmatter: {
+              position: number
+              firstname: string
+              lastname: string
+              role: string
+              email: string
+              image: { childImageSharp: { fluid: FluidObject } }
+            }
+          }
+        }
+      ]
+    }
+    imageTeam: { childImageSharp: { fluid: FluidObject } }
+  }
 }
 
 export default class Team extends Component<Props> {
@@ -15,101 +33,24 @@ export default class Team extends Component<Props> {
   constructor(props: Props) {
     super(props)
     const {
-      mitarbeiterImages: { edges },
+      employees: { edges },
     } = this.props.data
-
-    this.mitarbeiter = [
-      new Mitarbeiter({
-        index: 0,
-        title: 'Galina Fiksman',
-        alt: 'Bild von Galina Fiksman',
-        firstName: 'Galina',
-        lastName: 'Fiksman',
-        job: 'Geschäftsführung',
-        email: 'fiksmann@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 1,
-        title: 'Jasmin Arbabian-Vogel',
-        alt: 'Bild von Jasmin Arbabian-Vogel',
-        firstName: 'Jasmin',
-        lastName: 'Arbabian-Vogel',
-        job: 'Geschäftsführung',
-        email: 'arbabian-vogel@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 2,
-        title: 'Tabea Emrich',
-        alt: 'Bild von Tabea Emrich',
-        firstName: 'Tabea',
-        lastName: 'Emrich',
-        job: 'Assistenz der  Geschäftsführung',
-        email: 'emrich@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 3,
-        title: 'Ute Rhein',
-        alt: 'Bild von Ute Rhein',
-        firstName: 'Ute',
-        lastName: 'Rhein',
-        job: 'Pflegedienstleitung',
-        email: 'rhein@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 4,
-        title: 'Marion Hartmann',
-        alt: 'Bild von Marion Hartmann',
-        firstName: 'Marion',
-        lastName: 'Hartmann',
-        job: 'Leitungs Intensivpflege Intensivwohngemeinschaft',
-        email: 'hartmann@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 5,
-        title: 'Marco Schillaci',
-        alt: 'Bild von Marco Schillaci',
-        firstName: 'Marco',
-        lastName: 'Schillaci',
-        job: 'Fachliche Leitung Intensivpflege',
-        email: 'schillaci@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 6,
-        title: 'Jurek Jablonski',
-        alt: 'Bild von Jurek Jablonski',
-        firstName: 'Jurek',
-        lastName: 'Jablonski',
-        job: 'Praxisanleiter  und Mentor',
-        email: 'jablonski@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 7,
-        title: 'Birgit Anspach',
-        alt: 'Bild von Birgit Anspach',
-        firstName: 'Birgit',
-        lastName: 'Anspach',
-        job: 'Planung  und Personal',
-        email: 'anspach@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 8,
-        title: 'Joanna Russ',
-        alt: 'Bild von Joanna Russ',
-        firstName: 'Joanna',
-        lastName: 'Russ',
-        job: 'Teamassistenz',
-        email: 'iks-hannover@iks-hannover.de',
-      }).setImage(edges),
-      new Mitarbeiter({
-        index: 9,
-        title: 'Ardi Rezaie',
-        alt: 'Bild von Ardi Rezaie',
-        firstName: 'Ardi',
-        lastName: 'Rezaie',
-        job: 'Fuhrparkmanagement',
-        email: 'rezaie@iks-hannover.de',
-      }).setImage(edges),
-    ]
+    this.mitarbeiter = edges.map(
+      ({
+        node: {
+          frontmatter: {
+            position: index,
+            firstname: firstName,
+            lastname: lastName,
+            role: job,
+            email,
+            image: {
+              childImageSharp: { fluid: image },
+            },
+          },
+        },
+      }) => new Mitarbeiter({ index, alt: 'Bild von Mitarbeiter', firstName, lastName, job, email, image }),
+    )
   }
 
   render() {
@@ -127,9 +68,9 @@ export default class Team extends Component<Props> {
         </div>
         <div className='max-container'>
           <div className='team-container'>
-            {this.mitarbeiter.map(({ getTitle, getAlt, getName, getJob, getImage, getEmail }, index) => (
+            {this.mitarbeiter.map(({ getAlt, getName, getJob, getImage, getEmail }, index) => (
               <div key={index} className='ml-5rem'>
-                <EmployeeTile team title={getTitle} alt={getAlt} name={getName} job={getJob} image={getImage} email={getEmail} />
+                <EmployeeTile team alt={getAlt} name={getName} job={getJob} image={getImage} email={getEmail} />
               </div>
             ))}
           </div>
@@ -142,21 +83,28 @@ export default class Team extends Component<Props> {
 
 export const query = graphql`
   {
-    mitarbeiterImages: allFile(filter: { relativePath: { regex: "/mitarbeiter/mitarbeiter/" } }) {
+    employees: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/employee/" } }, sort: { order: ASC, fields: [frontmatter___position] }) {
       edges {
         node {
-          name
-          childImageSharp {
-            # Specify the image processing specifications right in the query.
-            fluid {
-              ...GatsbyImageSharpFluid
+          frontmatter {
+            position
+            firstname
+            lastname
+            role
+            email
+            image {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
       }
     }
-
-    imageTeam: file(relativePath: { regex: "/mitarbeiter/team/" }) {
+    imageTeam: file(relativePath: { regex: "/team/" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         fluid {
@@ -166,3 +114,20 @@ export const query = graphql`
     }
   }
 `
+
+// {
+//   mitarbeiterImages: allFile(filter: { relativePath: { regex: "/mitarbeiter/mitarbeiter/" } }) {
+//     edges {
+//       node {
+//         name
+//         childImageSharp {
+//           # Specify the image processing specifications right in the query.
+//           fluid {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+
+// }
