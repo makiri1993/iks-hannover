@@ -2,7 +2,7 @@
 pageKey: page_engagement
 engagement:
   text: >-
-    Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in
+    Das uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in
     verschiedenen Arbeitskreisen, Vereinen und Interessengemeinschaften, die
     sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
 
