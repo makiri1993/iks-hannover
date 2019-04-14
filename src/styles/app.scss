@@ -46,7 +46,7 @@ html {
   font-size: 1.2vmax !important;
   line-height: $line-height-regular !important;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   @media only screen and (min-width: 1441px) {
     font-size: 15px !important;
   }
@@ -58,7 +58,8 @@ html {
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   width: 100%;
 
   font-family: $sansSerif;

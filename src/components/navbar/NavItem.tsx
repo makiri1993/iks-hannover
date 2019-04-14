@@ -59,7 +59,6 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
         </>
       )
     }
-
     return (
       <div className={`d-flex-column overflow-hidden height-transition`} style={{ height }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
