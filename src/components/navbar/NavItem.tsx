@@ -19,12 +19,27 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   }
 
   componentDidMount(): void {
+    if (typeof this.getHeight === 'number') {
+      this.height = this.getHeight
+      this.setState({ height: `${this.height}px` })
+    }
+  }
+
+  private get getHeight(): number | string {
     const { subItems } = this.props
     if (subItems) {
       const { offsetHeight } = this.ref.current
+      return offsetHeight
       // const { marginTop, marginBottom, height, paddingTop, paddingBottom } = window.getComputedStyle(this.ref.current)
-      this.height = offsetHeight
-      this.setState({ height: `${offsetHeight}px` })
+    }
+    return 'auto'
+  }
+
+  componentDidUpdate() {
+    if (typeof this.getHeight === 'number' && this.height !== this.getHeight) {
+      this.height = this.getHeight
+      this.setState({ height: `${this.height}px` })
+      console.log('did update')
     }
   }
 
