@@ -39,7 +39,6 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     if (typeof this.getHeight === 'number' && this.height !== this.getHeight) {
       this.height = this.getHeight
       this.setState({ height: `${this.height}px` })
-      console.log('did update')
     }
   }
 
