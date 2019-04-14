@@ -9,7 +9,7 @@ export interface NavItemProps {
 }
 
 interface NavItemState {
-  height: string
+  height: number
 }
 
 export default class NavItem extends Component<NavItemProps, NavItemState> {
@@ -20,50 +20,63 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     super(props)
     this.ref = createRef()
     this.state = {
-      height: 'auto',
+      height: 0,
     }
   }
 
   componentDidMount(): void {
-    if (typeof this.getHeight === 'number') {
-      this.height = this.getHeight
-      this.setState({ height: `${this.height}px` })
-    }
+    this.height = this.getHeight
+    // this.setState({ height: `${this.height}px` })
   }
 
-  private get getHeight(): number | string {
+  private get getHeight(): number {
     const { subItems } = this.props
     if (subItems) {
       const { offsetHeight } = this.ref.current
       return offsetHeight
       // const { marginTop, marginBottom, height, paddingTop, paddingBottom } = window.getComputedStyle(this.ref.current)
     }
-    return 'auto'
+    return 0
   }
 
   componentDidUpdate() {
-    if (typeof this.getHeight === 'number' && this.height !== this.getHeight) {
-      this.height = this.getHeight
-      this.setState({ height: `${this.height}px` })
-    }
+    // if (this.height !== this.getHeight) {
+    // this.height = this.getHeight
+    //   this.setState({ height: `${this.height}px` })
+    // }
   }
 
   render() {
     const { title, to, subItems, handleTouch } = this.props
     const { height } = this.state
-    let modifiedTitle: string | ReactNode = title
+    const modifiedTitle: string | ReactNode = title
     if (handleTouch && subItems) {
-      modifiedTitle = (
-        <>
-          <div className={`nav-dropdown-toggle ${parseFloat(height) > 100 ? 'dropdown-toggle-animation' : null}`}>|</div> {title}
-        </>
-      )
+      // modifiedTitle = (
+      // <>
+      {
+        /* <div className={`nav-dropdown-toggle ${parseFloat(height) > 100 ? 'dropdown-toggle-animation' : null}`}>|</div> */
+      }
+      // {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
+      // </>
+      // )
     }
     return (
-      <div className={`d-flex-column overflow-hidden height-transition`} style={{ height }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-        {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
-        {subItems ? this.renderDropdown(subItems) : null}
-      </div>
+      <>
+        <div className='d-flex-column w-100' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+          {handleTouch && subItems ? (
+            <div className='d-flex'>
+              <div className={`nav-dropdown-toggle ${height > 100 ? 'dropdown-toggle-animation' : null}`}>|</div>
+              {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
+            </div>
+          ) : (
+            this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })
+          )}
+
+          <div className={`d-flex-column overflow-hidden height-transition`} style={{ height: `${height}px` }}>
+            {subItems ? this.renderDropdown(subItems) : null}
+          </div>
+        </div>
+      </>
     )
   }
 
@@ -71,14 +84,14 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     const { subItems } = this.props
     if (subItems) {
       const { length } = subItems
-      this.setState({ height: `${this.height * (length + 1)}px` })
+      this.setState({ height: this.getHeight * length })
     }
   }
 
   private handleMouseLeave = () => {
     const { subItems } = this.props
     if (subItems) {
-      this.setState({ height: `${this.height}px` })
+      this.setState({ height: 0 })
     }
   }
 
