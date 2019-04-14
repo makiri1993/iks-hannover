@@ -82,10 +82,7 @@ export default class Nav extends Component<Props, State> {
     const { innerWidth } = window
     const { current } = this.ref
     if (current) {
-      console.log('Resize')
-
       const { scrollHeight } = current
-      console.log(scrollHeight)
       // this.setState({ scrollHeight })
       innerWidth < 550 ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: false, transform: 0, scrollHeight })
     }
