@@ -4,7 +4,7 @@ import ImgWithLink from '../components/ImgWithLink'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 
-//test
+//karim
 // tslint:disable-next-line:no-var-requires
 const fubaImage: string = require('../../static/img/partner/96-2.jpg')
 // tslint:disable-next-line:no-var-requires
