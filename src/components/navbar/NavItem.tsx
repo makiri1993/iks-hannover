@@ -1,6 +1,12 @@
-import React, { Component, createRef, RefObject } from 'react'
-import { NavItemProps } from './Nav'
+import React, { Component, createRef, RefObject, ReactNode } from 'react'
 import { Link } from 'gatsby'
+
+export interface NavItemProps {
+  title: string
+  to?: string
+  subItems?: NavItemProps[]
+  handleTouch?: () => void
+}
 
 interface NavItemState {
   height: string
@@ -43,11 +49,20 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   }
 
   render() {
-    const { title, to, subItems } = this.props
+    const { title, to, subItems, handleTouch } = this.props
     const { height } = this.state
+    let modifiedTitle: string | ReactNode = title
+    if (handleTouch && subItems) {
+      modifiedTitle = (
+        <>
+          <div className={`nav-dropdown-toggle ${parseFloat(height) > 100 ? 'dropdown-toggle-animation' : null}`}>|</div> {title}
+        </>
+      )
+    }
+
     return (
       <div className={`d-flex-column overflow-hidden height-transition`} style={{ height }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-        {this.renderLinkOrNot({ title, to, ref: this.ref })}
+        {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
         {subItems ? this.renderDropdown(subItems) : null}
       </div>
     )
@@ -72,9 +87,10 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     return items.map(({ title, to }, index) => this.renderLinkOrNot({ title, to, index }))
   }
 
-  private renderLinkOrNot({ title, to, ref, index }: { title: string; to?: string; ref?: RefObject<any>; index?: number }) {
+  private renderLinkOrNot({ title, to, ref, index }: { title: string | ReactNode; to?: string; ref?: RefObject<any>; index?: number }) {
+    const { handleTouch } = this.props
     return to ? (
-      <Link key={index} ref={ref} className='homepage-link hover-orange' title={title} to={to}>
+      <Link key={index} ref={ref} className='homepage-link hover-orange' to={to} onClick={handleTouch}>
         {title}
       </Link>
     ) : (
