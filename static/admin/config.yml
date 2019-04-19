@@ -23,7 +23,7 @@ collections:
   ################################ Jobs ##########################################
   - name: "jobs"
     label: "Jobs App"
-    folder: "src/pages/employee"
+    folder: "src/pages/stellen"
     create: true
     slug: "{{slug}}"
     fields:
