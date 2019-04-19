@@ -29,7 +29,7 @@ collections:
     fields:
       - {label: "Titel", name: "titel", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
-      - {label: "Darum geht's", name: "text_one, widget: "text"}
+      - {label: "Darum gehts", name: "text_one, widget: "text"}
       - label: "Was du tun wirst"
         name: "list_one"
         widget: "object"
