@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
-
 import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
 import { SimpleData } from './pflegeleistungen'
