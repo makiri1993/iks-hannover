@@ -27,6 +27,12 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "stellenanzeige",
+      }
       - {label: "Titel", name: "titel", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
       - {label: "Darum geht's", name: "text_one", widget: "text"}
@@ -147,6 +153,15 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "markdown"}
+          - label: "Liste"
+            name: "list_two"
+            widget: "object"
+            fields:
+              - label: "Punkte"
+                name: "list-items"
+                widget: "list"
+                fields:
+                  - { label: "Punkt", name: "item", widget: "string" }
           - label: "Liste"
             name: "list_one"
             widget: "object"
@@ -393,4 +408,3 @@ collections:
                   - {label: "Link Partner", name: "link", widget: "string"}
                   - {label: "Bild Partner", name: "image", widget: "image"}
     ############
-
