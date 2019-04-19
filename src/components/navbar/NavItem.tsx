@@ -14,7 +14,6 @@ interface NavItemState {
 
 export default class NavItem extends Component<NavItemProps, NavItemState> {
   private ref: RefObject<any>
-  private height: number = 0
 
   constructor(props: NavItemProps) {
     super(props)

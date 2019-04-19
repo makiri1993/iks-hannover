@@ -6,17 +6,28 @@ import Text from '../components/text/Text'
 import { SimpleData } from './engagement'
 import Img, { FluidObject } from 'gatsby-image'
 
-// tslint:disable-next-line:no-var-requires
-const p1: string = require('../../static/img/engagement/p1.jpg')
-// tslint:disable-next-line:no-var-requires
-const p2: string = require('../../static/img/engagement/p2.jpg')
-// tslint:disable-next-line:no-var-requires
-const p3: string = require('../../static/img/engagement/p3.jpg')
+
 
 export default ({ data }: { data: SimpleData }) => {
   const { title: eTitle, text: eText } = data.siteData.frontmatter.engagement
   const { title: pTitle, text: pText } = data.siteData.frontmatter.partner
   const { edges: eImages } = data.engagementImages
+  const { edges: pImages } = data.partnerImages
+  const partnerData = [{
+    link: "https://zak-pflege-hannover.de/",
+    title: "ZAK Pflege Hannover",
+    alt: "Logo von der ZAK Pflege hannover",
+  },
+  {
+    link: "http://www.vita-list.de/",
+    title: "Vita List Hannover - Joga - Pilates- Balance",
+    alt: "Logo von der Vita List Hannover",
+  },
+  {
+    link: "http://www.zuhause-alles-klar.de/",
+    title: "ZAK zu hause alles klar",
+    alt: "Logo von der ZAK zu hause alles klar",
+  }]
 
   return (
     <>
@@ -41,10 +52,14 @@ export default ({ data }: { data: SimpleData }) => {
           <Text preLine>
             {pText}
           </Text>
-          <div className='d-flex justify-center'>
-            <ImgWithLink link='https://zak-pflege-hannover.de/' title='ZAK Pflege Hannover' img={p1} alt='Logo von der ZAK Pflege hannover' />
-            <ImgWithLink link='http://www.zuhause-alles-klar.de/' title='ZAK zu hause alles klar' img={p2} alt='Logo von der ZAK zu hause alles klar' />
-            <ImgWithLink link='http://www.vita-list.de/' title='Vita List Hannover - Joga - Pilates- Balance' img={p3} alt='Logo von der Vita List Hannover' />
+          <div className='d-flex justify-space-around FlexDivContentCenterEngagement'>
+            {pImages.map((el: { node: { childImageSharp: { fluid: any; }; }; }, index: number) => (
+              <ImgWithLink
+                link={partnerData[index].link}
+                title={partnerData[index].title}
+                img={el.node.childImageSharp.fluid}
+                alt={partnerData[index].alt} />
+            ))}
           </div>
         </div>
       </div>
@@ -74,6 +89,20 @@ export const query = graphql`
           childImageSharp {
             # Specify the image processing specifications right in the query.
             fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    partnerImages: allFile(filter: { relativePath: { regex: "/engagementImg/" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            fluid(maxWidth: 400){
               ...GatsbyImageSharpFluid
             }
           }

@@ -3,7 +3,8 @@ import '../styles/app.scss'
 import Footer from './Footer'
 // import Helmet from 'react-helmet'
 // import '../styles/normalize'
-import Nav, { NavItemProps } from './navbar/Nav'
+import Nav from './navbar/Nav'
+import { NavItemProps } from './navbar/NavItem'
 
 // import { graphql } from 'gatsby'
 interface WrapperProps {

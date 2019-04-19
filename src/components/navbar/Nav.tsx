@@ -1,5 +1,5 @@
 import React, { Component, ReactNode, RefObject, createRef } from 'react'
-import NavItem from './NavItem'
+import NavItem, { NavItemProps } from './NavItem'
 
 interface Props {
   navData: NavItemProps[]
@@ -44,7 +44,7 @@ export default class Nav extends Component<Props, State> {
     const { mobile, transform } = this.state
     return (
       <>
-        <div className='bg-grey navbar' ref={this.ref}>
+        <div className='navbar' ref={this.ref}>
           {mobile ? (
             <button className={`menu-button ${transform === 0 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
               <span className='burger' />
@@ -64,7 +64,7 @@ export default class Nav extends Component<Props, State> {
     const { transform, scrollHeight } = this.state
     const { navData } = this.props
     return (
-      <div className='mobile-navbar' style={{ top: scrollHeight, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
+      <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
         {navData.map(({ to, title, subItems }, index) => (
           <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
         ))}
