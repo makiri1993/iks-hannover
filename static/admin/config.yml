@@ -28,9 +28,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Titel", name: "titel", widget: "string"}
-      - {label: "Text", name: "text", widget: "markdown"}
-      - label: "Liste"
-        name: "list"
+      - {label: "Anzeige Text", name: "text", widget: "text"}
+      - {label: "Darum geht's", name: "text_one, widget: "text"}
+      - label: "Was du tun wirst"
+        name: "list_one"
         widget: "object"
         fields:
           - label: "Punkte"
@@ -38,7 +39,24 @@ collections:
             widget: "list"
             fields:
               - { label: "Punkt", name: "item", widget: "string" }
-      - {label: "Text", name: "text", widget: "markdown"}
+      - label: "Was du mitbringst"
+        name: "list_two"
+        widget: "object"
+        fields:
+          - label: "Punkte"
+            name: "list-items"
+            widget: "list"
+            fields:
+              - { label: "Punkt", name: "item", widget: "string" }
+      - label: "Was wir dir bieten"
+        name: "list_three"
+        widget: "object"
+        fields:
+          - label: "Punkte"
+            name: "list-items"
+            widget: "list"
+            fields:
+              - { label: "Punkt", name: "item", widget: "string" }
 ##########################################################################
 ################################ PAGES ##########################################
   - name: "Seiten"
