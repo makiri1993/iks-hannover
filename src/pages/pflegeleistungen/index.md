@@ -27,17 +27,13 @@ text: >-
 
   Unser Pflegedienst bietet seine Pflegeleistungen am Patienten in fünf
   verschiedenen Formaten an:
-
-
-  * In der ambulanten Pflege beim Patienten zu Hause
-
-  * In unseren Wohngemeinschaften für Senioren
-
-  * Bei einer intensivpflegerischen 1:1-Versorgung beim Patienten zu Hause
-
-  * In unseren Intensiv-Wohngemeinschaften
-
-  * In unserer Tagespflege im Ahrberg-Viertel in Hannover-Linden
+list_two:
+  list-items:
+    - item: In der ambulanten Pflege beim Patienten zu Hause
+    - item: In unseren Wohngemeinschaften für Senioren
+    - item: 'Bei einer intensivpflegerischen 1:1-Versorgung beim Patienten zu Hause'
+    - item: In unseren Intensiv-Wohngemeinschaften
+    - item: In unserer Tagespflege im Ahrberg-Viertel in Hannover-Linden
 list_one:
   list-items:
     - item: In der ambulanten Pflege beim Patienten zu Hause
