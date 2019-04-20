@@ -41,7 +41,7 @@ export default ({ data }: { data: SimpleData }) => {
           <Text preLine>{text}</Text>
           <ul>
             {list_one.list_items.map((el) => (
-              <li className='color-orange'>
+              <li className='color-green'>
                 <Text>{el.item}</Text>
               </li>))}
           </ul>
