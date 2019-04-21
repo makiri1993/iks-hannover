@@ -33,17 +33,18 @@ export default ({ data }: { data: SimpleData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center green fontWeight={500}>
               {title}
             </Heading>
           </div>
           <Text preLine>{text}</Text>
           <ul>
-            {list_one.list_items.map((el) => (
+            {list_one.list_items.map(el => (
               <li className='color-green'>
                 <Text>{el.item}</Text>
-              </li>))}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -20,13 +20,13 @@ export default () => (
     <div className='max-container'>
       <div className='text-container'>
         <div className='d-flex-column align-center'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center orange fontWeight={500}>
               Anfahrt
             </Heading>
           </div>
           <img className='StyledIMGBig' src={map} alt='Bilder der Karte zum Büro' title='Bild zur Anfahrt zu unserem Büro' />
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center orange fontWeight={500}>
               Impressum
             </Heading>

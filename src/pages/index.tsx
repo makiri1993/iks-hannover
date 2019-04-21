@@ -83,15 +83,7 @@ export default ({ data }: { data: IndexData }) => {
         </div>
         <div className='employeee-tile-container'>
           {managementData.map(({ name, role, image, signature }: ManagementSlide, index) => (
-            <EmployeeTile
-              key={index}
-              title={name}
-              alt='Bild von der Geschäftsführung'
-              name={name}
-              job={role}
-              image={image.childImageSharp.fluid}
-              signature={signature.childImageSharp.fluid}
-            />
+            <EmployeeTile key={index} alt='Bild von der Geschäftsführung' name={name} job={role} image={image.childImageSharp.fluid} signature={signature.childImageSharp.fluid} />
           ))}
         </div>
 

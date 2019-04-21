@@ -18,7 +18,7 @@ const PrivacyPage = () => (
     />
     <div className='max-container'>
       <div className='text-container'>
-        <div style={{ padding: '2.4rem' }}>
+        <div className='padding-heading'>
           <Heading size={1} uppercase center orange fontWeight={500}>
             Datenschutzerklärung
           </Heading>

@@ -8,6 +8,8 @@ interface Props {
   columns: Column[]
 }
 
+const links: string[] = ['/pflegedienst', '/wohngemeinschaften', '/intensivpflege']
+
 export default class FourColumns extends Component<Props> {
   render() {
     const { columns } = this.props
@@ -18,13 +20,13 @@ export default class FourColumns extends Component<Props> {
 
           return (
             <div key={index} className='OneColumn'>
-              <Link className='HomepageLink' to='/pflegedienst'>
+              <Link className='HomepageLink' to={links[index]}>
                 <Img className='IconForButton' fluid={fluid} />
               </Link>
               <div style={{ padding: '2.4rem' }}>{heading}</div>
               <Text center>
                 {text}
-                <Link className='' to='/pflegedienst'>
+                <Link className='' to={links[index]}>
                   ...
                 </Link>
               </Text>

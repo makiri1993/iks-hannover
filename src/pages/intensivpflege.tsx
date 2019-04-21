@@ -5,7 +5,6 @@ import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
 import { SimpleData } from './intensivpflege'
 
-
 // tslint:disable-next-line:variable-name no-var-requires
 const logo_1: string = require('../../static/img/schriftzug_Wohngemeinschaft.png')
 // tslint:disable-next-line:variable-name no-var-requires
@@ -30,7 +29,7 @@ export default ({ data }: { data: SimpleData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center red fontWeight={500}>
               {title}
             </Heading>
@@ -44,17 +43,16 @@ export default ({ data }: { data: SimpleData }) => {
           <Text>
             <a className='color-red' target='_blank' title='link zu Flyer Intensivpflege' href={flylerLink}>
               Unseren Flyer finden Sie hier.
-          </a>
+            </a>
           </Text>
-          <Text preLine>
-            {text_two}
-          </Text>
+          <Text preLine>{text_two}</Text>
 
           <ul>
             {list_one.list_items.map((el: any) => (
               <li className='color-red'>
                 <Text>{el.item}</Text>
-              </li>))}
+              </li>
+            ))}
           </ul>
           <Heading size={4} red uppercase>
             {list_two.title}
@@ -64,7 +62,8 @@ export default ({ data }: { data: SimpleData }) => {
             {list_two.list_items.map((el: any) => (
               <li className='color-red'>
                 <Text>{el.item}</Text>
-              </li>))}
+              </li>
+            ))}
           </ul>
           <Text>
             <blockquote className='color-red'>
@@ -79,31 +78,32 @@ export default ({ data }: { data: SimpleData }) => {
             {list_three.list_items.map((el: any) => (
               <li className='color-red'>
                 <Text>{el.item}</Text>
-              </li>))}
+              </li>
+            ))}
           </ul>
           <Text>Für eine umfassende Beratung sowie zu allen Fragen rund um die Finanzierung stehen wir Ihnen gerne zur Verfügung.</Text>
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
               <Heading size={4} red>
                 Marion Hartmann
-            </Heading>
+              </Heading>
             </div>
             <Heading size={6}>| Leitung der Intensivpflege</Heading>
           </div>
           <a className='color-red' href='mailto:hartmann@iks-hannover.de'>
             hartmann@iks-hannover.de
-        </a>
+          </a>
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
               <Heading size={4} red>
                 Marco Schillaci
-            </Heading>
+              </Heading>
             </div>
             <Heading size={6}>| Fachliche Leitung</Heading>
           </div>
           <a className='color-red' href='mailto:schillaci@iks-hannover.de'>
             schillaci@iks-hannover.de
-        </a>
+          </a>
           <div className='DivCenter'>
             <img className='StyledIMGIntensiv' alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_1} />
             <img className='StyledIMGIntensiv' alt='Logo der Wohngemeinschaft List' title='Wohngemeinschaft List' src={logo_2} />
@@ -118,32 +118,32 @@ export const query = graphql`
   {
     siteData: markdownRemark(frontmatter: { pageKey: { eq: "page_intensivpflege" } }) {
       frontmatter {
-            title
-            text_one
-            text_two
-            list_one {
-              title
-              list_items {
-                item
-              }
-            }
-            list_two {
-              title
-              list_items {
-                item
-              }
-            }
-            quote {
-              author
-              text
-            }
-          	list_three {
-              title
-              list_items {
-                item
-              }
-            }
+        title
+        text_one
+        text_two
+        list_one {
+          title
+          list_items {
+            item
           }
+        }
+        list_two {
+          title
+          list_items {
+            item
+          }
+        }
+        quote {
+          author
+          text
+        }
+        list_three {
+          title
+          list_items {
+            item
+          }
+        }
+      }
     }
   }
 `

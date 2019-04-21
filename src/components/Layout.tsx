@@ -23,8 +23,8 @@ interface WrapperProps {
 const navData: NavItemProps[] = [
   {
     title: 'Home',
-    to: '/',
     subItems: [
+      { title: 'Home', to: '/' },
       { title: 'Unser Pflegedienst', to: '/pflegedienst' },
       { title: 'Pflegeleistungen', to: '/pflegeleistungen' },
       { title: 'Beratungsleistungen', to: '/beratungsleistungen' },
