@@ -33,7 +33,7 @@ export default ({ data }: { data: PflegedienstData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} center green uppercase fontWeight={500}>
               {title}
             </Heading>

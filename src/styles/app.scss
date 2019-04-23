@@ -1,15 +1,4 @@
-$sansSerif: -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-"Roboto",
-"Oxygen",
-"Ubuntu",
-"Cantarell",
-"Fira Sans",
-"Droid Sans",
-"Helvetica Neue",
-Arial,
-sans-serif;
+$sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 
 $font-regular: 15px;
 $font-large: 18px;
@@ -60,11 +49,11 @@ html {
   overflow-x: hidden;
 
   @media only screen and (min-width: 1441px) {
-    font-size: 15px !important;
+    font-size: 17.25px !important;
   }
 
-  @media only screen and (max-width: 834px) {
-    font-size: 10px !important;
+  @media only screen and (max-width: 1170px) {
+    font-size: 14px !important;
   }
 }
 
@@ -170,7 +159,8 @@ h5 {
   font-size: $size-h4;
 }
 
-h6 {}
+h6 {
+}
 
 p {
   font-size: $size-p;
@@ -448,15 +438,11 @@ blockquote {
 }
 
 .HomepageLink {
-  /* position: absolute; */
   color: $color-white;
   top: 35%;
-  /* left: 50; */
+  white-space: nowrap;
   text-align: center;
   font-weight: 600;
-  // ${onEvent}
-  //   text-decoration: none;
-  // }};
 }
 
 .HomepageLinkGreen {
@@ -767,13 +753,13 @@ blockquote {
   :first-child {
     opacity: 1;
     background-color: $color-white;
-    transform: translate(0%, 300%) rotate(405deg);
+    transform: translate(0%, 450%) rotate(405deg);
   }
 
   :last-child {
     background-color: $color-white;
     opacity: 1;
-    transform: translate(0%, -400%) rotate(-405deg);
+    transform: translate(0%, -450%) rotate(-405deg);
   }
 }
 
@@ -943,4 +929,9 @@ blockquote {
   position: relative;
   width: 150px;
   height: 150px;
+}
+
+.padding-heading {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
 }
