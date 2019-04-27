@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import React, { Component, ReactNode } from 'react'
 import Text from './text/Text'
-import Heading from './heading/Heading'
+import Heading, { HeadingProps } from './heading/Heading'
 import { Column } from '../pages'
 interface Props {
   columns: Column[]
@@ -16,17 +16,17 @@ export default class FourColumns extends Component<Props> {
     return (
       <div className='FlexDivContentCenter'>
         {columns.map(({ title, text, image: { childImageSharp: { fluid } } }, index) => {
-          const heading: ReactNode = this.getRightHeading(index, title)
-
           return (
             <div key={index} className='OneColumn'>
               <Link className='HomepageLink' to={links[index]}>
                 <Img className='IconForButton' fluid={fluid} />
               </Link>
-              <div style={{ padding: '2.4rem' }}>{heading}</div>
+              <div style={{ padding: '2.4rem' }}>
+                <Heading {...this.getRightHeading(index)}>{title}</Heading>
+              </div>
               <Text center>
                 {text}
-                <Link className='' to={links[index]}>
+                <Link className={this.getColorForDots(index)} to={links[index]}>
                   ...
                 </Link>
               </Text>
@@ -37,29 +37,40 @@ export default class FourColumns extends Component<Props> {
     )
   }
 
-  private getRightHeading(index: number, title: string): ReactNode {
+  private getColorForDots(index: number): string {
     switch (index) {
       case 0:
-        return (
-          <Heading size={1} center green fontWeight={500}>
-            {title}
-          </Heading>
-        )
+        return 'color-green'
       case 1:
-        return (
-          <Heading size={1} center blue fontWeight={500}>
-            {title}
-          </Heading>
-        )
+        return 'color-blue'
       case 2:
-        return (
-          <Heading size={1} center red fontWeight={500}>
-            {title}
-          </Heading>
-        )
+        return 'color-red'
+      default:
+        return ''
+    }
+  }
+
+  private getRightHeading(index: number): HeadingProps {
+    const headingProps: HeadingProps = { size: 1, center: true, fontWeight: 500 }
+    switch (index) {
+      case 0:
+        return {
+          ...headingProps,
+          green: true,
+        }
+      case 1:
+        return {
+          ...headingProps,
+          blue: true,
+        }
+      case 2:
+        return {
+          ...headingProps,
+          red: true,
+        }
 
       default:
-        break
+        return headingProps
     }
   }
 }
