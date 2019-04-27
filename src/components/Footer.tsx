@@ -69,13 +69,6 @@ const Footer: React.SFC<FooterProps> = () => (
         </p>
       </div>
     </footer>
-    <a
-      className="LinkEmailOutWtMargin"
-      title="link zu der immajung seite"
-      href="https://www.immajung.com"
-    >
-      code by immajung
-    </a>
   </div>
 );
 export default Footer;

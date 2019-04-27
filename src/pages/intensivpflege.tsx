@@ -49,18 +49,7 @@ export default ({ data }: { data: SimpleData }) => {
           <strong> Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf. */}
             {text_one}
           </Text>
-          <Text>
-            <a
-              className="color-red"
-              target="_blank"
-              title="link zu Flyer Intensivpflege"
-              href={flylerLink}
-            >
-              Unseren Flyer finden Sie hier.
-            </a>
-          </Text>
           <Text preLine>{text_two}</Text>
-
           <ul>
             {list_one.list_items.map((el: any) => (
               <li className="color-red">
@@ -79,19 +68,19 @@ export default ({ data }: { data: SimpleData }) => {
               </li>
             ))}
           </ul>
-          <Heading size={4} red uppercase>
-            {list_three.title}
-          </Heading>
-          <ul>
-            {list_three.list_items.map((el: any) => (
-              <li className="color-red">
-                <Text>{el.item}</Text>
-              </li>
-            ))}
-          </ul>
           <Text>
             Für eine umfassende Beratung sowie zu allen Fragen rund um die
             Finanzierung stehen wir Ihnen gerne zur Verfügung.
+          </Text>
+          <Text>
+            <a
+              className="color-red"
+              target="_blank"
+              title="link zu Flyer Intensivpflege"
+              href={flylerLink}
+            >
+              Unseren Flyer finden Sie hier.
+            </a>
           </Text>
           <div className="d-flex align-center">
             <div style={{ marginRight: "1rem" }}>
