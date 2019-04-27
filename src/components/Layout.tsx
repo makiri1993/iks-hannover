@@ -5,8 +5,12 @@ import Footer from './Footer'
 // import '../styles/normalize'
 import Nav from './navbar/Nav'
 import { NavItemProps } from './navbar/NavItem'
-
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 // import { graphql } from 'gatsby'
+
+const logo = require('../../static/img/logo_iks.svg')
+
 interface WrapperProps {
   children: React.ReactNode
   data?: {
@@ -23,8 +27,8 @@ interface WrapperProps {
 const navData: NavItemProps[] = [
   {
     title: 'Home',
+    to: '/',
     subItems: [
-      { title: 'Home', to: '/' },
       { title: 'Unser Pflegedienst', to: '/pflegedienst' },
       { title: 'Pflegeleistungen', to: '/pflegeleistungen' },
       { title: 'Beratungsleistungen', to: '/beratungsleistungen' },
@@ -58,22 +62,13 @@ const Layout: React.SFC<WrapperProps> = ({ children }) => (
     {/* <div style={{ marginBottom: '3rem' }}>Diese Seite befindet sich aktuell im Umbau und wird in Kürze wieder zür Verfügung stehen.</div>{' '}
     <div style={{ fontWeight: 800 }}>Falls Sie mit uns Kontakt aufnehmen wollen, können Sie uns unter dieser Nummer erreichen!</div>
     <div>TEL: 0511 / 210 10 44</div> */}
+    <div className='d-flex justify-center'>
+      <img className='navbar-logo' src={logo} alt='logo of iks hannover' />
+    </div>
     <Nav navData={navData} />
-    <div>{children}</div>
+    <div style={{ minHeight: '70vh' }}>{children}</div>
     <Footer />
   </main>
 )
 
 export default Layout
-
-// export const query = graphql`
-//   query IndexLayoutQuery {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//         keywords
-//       }
-//     }
-//   }
-// `

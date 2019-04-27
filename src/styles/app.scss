@@ -46,6 +46,7 @@ html {
   font-size: 1.2vmax !important;
   line-height: $line-height-regular !important;
   width: 100%;
+  // min-height: 100vh;
   overflow-x: hidden;
 
   @media only screen and (min-width: 1441px) {
@@ -301,6 +302,7 @@ blockquote {
 }
 
 .LinkEmailOrange {
+  text-align: center;
   text-decoration: underline;
   color: $color-orange;
 }
@@ -501,9 +503,15 @@ blockquote {
   justify-content: center;
   color: $color-white;
   text-align: center;
-  width: 100vw;
+  // width: 100vw;
   height: 50vh;
 
+  @media only screen and (min-width: 551px) {
+    margin: {
+      left: 8rem;
+      right: 8rem;
+    }
+  }
   @media only screen and (max-width: 550px) {
     height: 25vh;
   }
@@ -590,7 +598,6 @@ blockquote {
     justify-content: space-around;
   }
 
-
   @media only screen and (max-width: 550px) {
     flex-direction: column;
     justify-items: center;
@@ -631,7 +638,6 @@ blockquote {
   @supports (-ms-flow-from: thingy) {
     justify-content: space-around;
   }
-
 }
 
 // engagement
@@ -684,34 +690,62 @@ blockquote {
 
 .homepage-link {
   color: $color-white;
-  width: 100%;
+  // width: 100%;
   text-align: center;
   font-weight: 600;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  color: $color-white;
 
-  &[aria-current="page"] {
-    background-color: $color-orange;
+  @media only screen and (min-width: 551px) {
+    color: $color-orange;
+    padding: {
+      top: 2rem;
+      bottom: 1.5rem;
+      left: 1rem;
+      right: 1rem;
+    }
+    &[aria-current="page"] {
+      border-bottom: solid 2px $color-orange;
+    }
   }
 
   @media only screen and (max-width: 550px) {
-    width: 90%;
+    width: 100%;
     text-align: left;
-    padding: 5%;
+    padding: {
+      top: 1.5rem;
+      bottom: 1.5rem;
+      left: 2rem;
+      right: 1rem;
+    }
+  }
+}
+
+.navbar-logo {
+  margin-top: 2rem;
+  width: 15vw;
+  @media only screen and (max-width: 550px) {
+    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .navbar {
   position: sticky;
   // width: 100%;
-  background-color: $color-gray-header;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   z-index: 10;
   overflow: visible;
-
+  @media only screen and (min-width: 551px) {
+    background-color: $color-white;
+    border-top: solid 2px $color-orange;
+    border-bottom: solid 2px $color-orange;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
   @supports (-ms-flow-from: thingy) {
     justify-content: space-around;
   }
@@ -779,7 +813,7 @@ blockquote {
   color: $color-white;
   font-size: 1.5rem;
   margin-left: 2rem;
-  margin-right: 2rem;
+  // margin-right: 2rem;
   transition: transform 500ms ease-in-out;
   transform: rotate(90deg);
   align-self: center;
@@ -858,6 +892,10 @@ blockquote {
   flex-direction: column;
 }
 
+.d-block {
+  display: block;
+}
+
 .align-center {
   align-content: center;
   align-items: center;
@@ -884,7 +922,6 @@ blockquote {
   @supports (-ms-flow-from: thingy) {
     justify-content: space-around;
   }
-
 }
 
 .z-10 {
@@ -906,8 +943,8 @@ blockquote {
 
 .hover-orange {
   &:hover {
-    background-color: $color-orange;
-    transition: background-color 350ms ease-in-out;
+    border-bottom: solid 2px $color-orange;
+    transition: border-bottom 350ms ease-in-out;
   }
 }
 

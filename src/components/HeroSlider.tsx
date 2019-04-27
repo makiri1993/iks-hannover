@@ -19,7 +19,7 @@ export default class HeroSlider extends React.Component<Props, State> {
   componentDidMount() {
     setInterval(() => {
       this.nextImage()
-    }, 3000)
+    }, 5000)
   }
 
   private nextImage() {
