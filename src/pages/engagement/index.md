@@ -2,7 +2,7 @@
 pageKey: page_engagement
 engagement:
   text: >-
-    Das uns unsere Kunden sehr am Herzen liegen, engagieren wir uns zudem in
+    Da uns unsere Kunden sehr am Herzen liegen, engagieren wir uns in
     verschiedenen Arbeitskreisen, Vereinen und Interessengemeinschaften, die
     sich ebenfalls mit dem Thema häusliche Pflege beschäftigen.
 
@@ -19,4 +19,3 @@ partner:
     Hannover, und das Yoga- und Pilatesstudio VitaList in Hannover-List.“
   title: PARTNER
 ---
-
