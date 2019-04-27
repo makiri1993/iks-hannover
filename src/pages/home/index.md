@@ -29,7 +29,7 @@ management:
       role: Geschäftsführerin
       signature: /img/unterschrift_Jasmin.png
     - image: /img/mitarbeiter_Galina.jpg
-      name: Galina Fiksman
+      name: Galina Fiksmann
       role: Geschäftsführerin
       signature: /img/unterschrift_Galina.png
 nursing:
@@ -58,4 +58,3 @@ special:
     Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
   title: Außerklinische Pflege
 ---
-
