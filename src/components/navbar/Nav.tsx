@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, RefObject, createRef } from 'react'
+import React, { Component, createRef, ReactNode, RefObject } from 'react'
 import NavItem, { NavItemProps } from './NavItem'
 
 interface Props {
@@ -61,7 +61,7 @@ export default class Nav extends Component<Props, State> {
   }
 
   private get renderMobile(): ReactNode {
-    const { transform, scrollHeight } = this.state
+    const { transform } = this.state
     const { navData } = this.props
     return (
       <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
@@ -77,7 +77,6 @@ export default class Nav extends Component<Props, State> {
     const { current } = this.ref
     if (current) {
       const { scrollHeight } = current
-      // this.setState({ scrollHeight })
       innerWidth < 550 ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: false, transform: 0, scrollHeight })
     }
   }
