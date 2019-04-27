@@ -179,18 +179,6 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Punkt", name: "item", widget: "string" }
-      - label: "Beratungsleistungen"
-        name: "Beratungsleistungen"
-        file: "src/pages/beratungsleistungen/index.md"
-        fields:
-          - {
-              label: "Page Key",
-              name: "pageKey",
-              widget: "hidden",
-              default: "page_beratungsleistungen",
-            }
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "markdown"}
       - label: "Ambulante-Pflege"
         name: "ambulante-pflege"
         file: "src/pages/ambulante-pflege/index.md"
@@ -248,12 +236,6 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Punkt", name: "item", widget: "string" }
-          - label: "Zitat"
-            name: "quote"
-            widget: "object"
-            fields:
-              - {label: "Zitat", name: "text", widget: "text"}
-              - {label: "Autor", name: "author", widget: "string"}
           - label: "Liste"
             name: "list_three"
             widget: "object"
