@@ -723,10 +723,11 @@ blockquote {
 .navbar-logo {
   margin-top: 2rem;
   width: 15vw;
+  height: 100%;
   @media only screen and (max-width: 550px) {
     margin: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
   }
 }
 
