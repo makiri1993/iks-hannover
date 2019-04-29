@@ -27,13 +27,13 @@ export default class EmployeeTile extends Component<Props> {
             E-Mail
           </a>
         ) : (
-          <Img
-            className="SignatureImage"
-            title={name}
-            alt={alt}
-            fluid={signature}
-          />
-        )}
+            <Img
+              className="SignatureImage"
+              title={name}
+              alt={alt}
+              fluid={signature}
+            />
+          )}
       </div>
     );
   }

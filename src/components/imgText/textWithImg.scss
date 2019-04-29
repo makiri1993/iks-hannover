@@ -4,25 +4,29 @@
 
   img {
     margin-top: 25px;
-    height: 350px;
+    height: 400px;
   }
 }
 
 .textLeft {
   flex-direction: row-reverse;
-  @media only screen and (max-width: 550px) {
+
+  @media only screen and (max-width: 770px) {
     flex-direction: column-reverse;
   }
 }
+
 .textRight {
   flex-direction: row;
-  @media only screen and (max-width: 550px) {
+
+  @media only screen and (max-width: 770px) {
     flex-direction: column;
   }
 
   p {
     margin-left: 25px;
-    @media only screen and (max-width: 550px) {
+
+    @media only screen and (max-width: 770px) {
       margin-left: 0;
     }
   }
