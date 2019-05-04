@@ -13,6 +13,11 @@ export default ({ data }: { data: SimpleData }) => {
   const { edges: pImages } = data.partnerImages
   const partnerData = [
     {
+      link: 'http://www.zuhause-alles-klar.de/',
+      title: 'ZAK zu hause alles klar',
+      alt: 'Logo von der ZAK zu hause alles klar',
+    },
+    {
       link: 'https://zak-pflege-hannover.de/',
       title: 'ZAK Pflege Hannover',
       alt: 'Logo von der ZAK Pflege hannover',
@@ -21,11 +26,6 @@ export default ({ data }: { data: SimpleData }) => {
       link: 'http://www.vita-list.de/',
       title: 'Vita List Hannover - Joga - Pilates- Balance',
       alt: 'Logo von der Vita List Hannover',
-    },
-    {
-      link: 'http://www.zuhause-alles-klar.de/',
-      title: 'ZAK zu hause alles klar',
-      alt: 'Logo von der ZAK zu hause alles klar',
     },
   ]
 

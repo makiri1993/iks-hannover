@@ -6,6 +6,8 @@ import FourColumns from '../components/FourColumns'
 import Heading from '../components/heading/Heading'
 import HeroSlider from '../components/HeroSlider'
 import Text from '../components/text/Text'
+import Helmet from "react-helmet";
+
 
 export interface Column {
   title: string
@@ -64,6 +66,16 @@ export default ({ data }: { data: IndexData }) => {
 
   return (
     <>
+      <Helmet
+        title={"Interkultureller Pflegedienst und Sozialdienst Hannover - Informieren Sie sich zu ambulanten und medizinischen Leistungen"}
+        meta={[
+          {
+            name: "description",
+            content:
+              "Interkultureller Pflegedienst und Sozialdienst Hannover"
+          }
+        ]}
+      />
       <HeroSlider images={transformedHeroImages} />
       <div className='max-container'>
         <div className='text-container' style={{ paddingTop: '2.4rem' }}>

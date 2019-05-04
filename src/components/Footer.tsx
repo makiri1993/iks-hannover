@@ -10,7 +10,7 @@ const Footer: React.SFC<FooterProps> = () => (
   <div className="FooterDiv">
     <footer className="StyledFooter">
       <div className="StyledFooterDiv">
-        <h4 className="H4Footero">Interkultureller Sozialdienst</h4>
+        <h4 className="H4Footero">Interkultureller Sozialdienst GmbH</h4>
         <p className="PFooter">
           <br />
           Plaza de Rosalia 1<br />

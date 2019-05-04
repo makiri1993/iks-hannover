@@ -133,6 +133,13 @@ collections:
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Icon", name: "image", widget: "image" }
               - { label: "Text", name: "text", widget: "text" }
+          - label: "Pflegedienst Infos"
+            name: "daylie"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Icon", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
       - label: "Pflegedienst"
         name: "pflegedienst"
         file: "src/pages/pflegedienst/index.md"

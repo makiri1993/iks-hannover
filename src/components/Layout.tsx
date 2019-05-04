@@ -5,7 +5,7 @@ import Nav from "./navbar/Nav";
 import { NavItemProps } from "./navbar/NavItem";
 
 // tslint:disable-next-line: no-var-requires
-const logo = require("../../static/img/logo_iks.svg");
+const logo = require("../../static/img/logo_iks.png");
 
 interface WrapperProps {
   children: React.ReactNode;
