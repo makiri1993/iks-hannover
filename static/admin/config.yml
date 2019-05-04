@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-################################ Mitarbeite ##########################################
+################################ Mitarbeiter ##########################################
   - name: "employee"
     label: "Mitarbeiter App"
     folder: "src/pages/employee"
@@ -23,6 +23,12 @@ collections:
   ################################ Jobs ##########################################
   - name: "jobs"
     label: "Jobs App"
+    - {
+    label: "Template Key",
+    name: "templateKey",
+    widget: "hidden",
+    default: "stellenanzeige",
+    }
     folder: "src/pages/stellen"
     create: true
     slug: "{{slug}}"
@@ -127,6 +133,13 @@ collections:
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Icon", name: "image", widget: "image" }
               - { label: "Text", name: "text", widget: "text" }
+          - label: "Pflegedienst Infos"
+            name: "daylie"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Icon", name: "image", widget: "image" }
+              - { label: "Text", name: "text", widget: "text" }
       - label: "Pflegedienst"
         name: "pflegedienst"
         file: "src/pages/pflegedienst/index.md"
@@ -173,18 +186,6 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Punkt", name: "item", widget: "string" }
-      - label: "Beratungsleistungen"
-        name: "Beratungsleistungen"
-        file: "src/pages/beratungsleistungen/index.md"
-        fields:
-          - {
-              label: "Page Key",
-              name: "pageKey",
-              widget: "hidden",
-              default: "page_beratungsleistungen",
-            }
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Text", name: "text", widget: "markdown"}
       - label: "Ambulante-Pflege"
         name: "ambulante-pflege"
         file: "src/pages/ambulante-pflege/index.md"
@@ -242,12 +243,6 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Punkt", name: "item", widget: "string" }
-          - label: "Zitat"
-            name: "quote"
-            widget: "object"
-            fields:
-              - {label: "Zitat", name: "text", widget: "text"}
-              - {label: "Autor", name: "author", widget: "string"}
           - label: "Liste"
             name: "list_three"
             widget: "object"
