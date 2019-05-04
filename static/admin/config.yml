@@ -25,6 +25,7 @@ collections:
     label: "Jobs App"
     folder: "src/pages/stellen"
     create: true
+    identifier_field: "title"
     slug: "{{slug}}"
     fields:
       - {
@@ -35,7 +36,7 @@ collections:
       }
       - {label: "SEO Title", name: "title_seo", widget: "text"}
       - {label: "SEO Description", name: "description_seo", widget: "text"}
-      - {label: "Titel", name: "titel", widget: "string"}
+      - {label: "Titel", name: "title", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
       - {label: "Darum geht's", name: "text_one", widget: "text"}
       - label: "Was du tun wirst"
