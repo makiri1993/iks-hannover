@@ -1,6 +1,6 @@
 ---
 position: 3
-image: /img/mitarbeiter_Tabea.jpg
+image: /img/Tabea_Emrich.jpg
 firstname: Tabea
 lastname: Emrich
 role: Assistenz der  Geschäftsführung
