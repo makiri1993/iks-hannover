@@ -24,11 +24,11 @@ intro_text:
   title: Herzlich Willkommen
 management:
   slides:
-    - image: /img/mitarbeiter_Jasmin_2.jpg
+    - image: /img/Jasmin_Arbabian-Vogel.jpg
       name: Jasmin Arbabian-Vogel
       role: Geschäftsführerin
       signature: /img/unterschrift_Jasmin.png
-    - image: /img/mitarbeiter_Galina.jpg
+    - image: /img/Galina_Fiksmann.jpg
       name: Galina Fiksmann
       role: Geschäftsführerin
       signature: /img/unterschrift_Galina.png
