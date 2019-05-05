@@ -1,6 +1,6 @@
 ---
 position: 8
-image: /img/mitarbeiter_Birgit.jpg
+image: /img/Birgit_Anspach.jpg
 firstname: Birgit
 lastname: Anspach
 role: Planung  und Personal
