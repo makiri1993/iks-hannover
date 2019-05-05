@@ -1,6 +1,6 @@
 ---
 position: 2
-image: /img/mitarbeiter_Jasmin.jpg
+image: /img/Jasmin_Arbabian-Vogel.jpg
 firstname: Jasmin
 lastname: Arbabian-Vogel
 role: Geschäftsführung
