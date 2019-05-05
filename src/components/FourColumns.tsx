@@ -45,6 +45,8 @@ export default class FourColumns extends Component<Props> {
         return 'color-blue'
       case 2:
         return 'color-red'
+      case 3:
+        return 'color-orange'
       default:
         return ''
     }
@@ -67,6 +69,11 @@ export default class FourColumns extends Component<Props> {
         return {
           ...headingProps,
           red: true,
+        }
+      case 3:
+        return {
+          ...headingProps,
+          orange: true,
         }
 
       default:

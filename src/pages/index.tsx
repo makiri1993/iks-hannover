@@ -39,6 +39,7 @@ interface IndexData {
       nursing: Column
       care: Column
       special: Column
+      daylie: Column
     }
   }
 }
@@ -50,6 +51,7 @@ export default ({ data }: { data: IndexData }) => {
     intro_text,
     nursing,
     care,
+    daylie,
     special,
   } = data.siteData.frontmatter
 
@@ -99,7 +101,7 @@ export default ({ data }: { data: IndexData }) => {
           ))}
         </div>
 
-        <FourColumns columns={[nursing, care, special]} />
+        <FourColumns columns={[nursing, care, special, daylie]} />
       </div>
     </>
   )
@@ -172,6 +174,17 @@ export const query = graphql`
           text
         }
         special {
+          title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          text
+        }
+        daylie {
           title
           image {
             childImageSharp {
