@@ -1,6 +1,6 @@
 ---
 position: 6
-image: /img/mitarbeiter_Marco.jpg
+image: /img/Marco_Schillaci.jpg
 firstname: Marco
 lastname: Schillaci
 role: Fachliche Leitung Intensivpflege
