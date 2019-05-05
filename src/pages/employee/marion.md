@@ -1,6 +1,6 @@
 ---
 position: 5
-image: /img/mitarbeiter_Marion.jpg
+image: /img/Marion_Hartmann.jpg
 firstname: Marion
 lastname: Hartmann
 role: Leitung der Intensivpflege & Intensivwohngemeinschaft
