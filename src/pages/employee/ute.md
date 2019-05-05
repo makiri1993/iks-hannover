@@ -1,6 +1,6 @@
 ---
 position: 4
-image: /img/mitarbeiter_Ute.jpg
+image: /img/Ute_Rhein.jpg
 firstname: Ute
 lastname: Rhein
 role: Pflegedienstleitung
