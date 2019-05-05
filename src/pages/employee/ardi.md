@@ -1,6 +1,6 @@
 ---
 position: 10
-image: /img/mitarbeiter_Ardi.jpg
+image: /img/Ardi_Rezaie.jpg
 firstname: Ardi
 lastname: Rezaie
 role: Fuhrparkmanagement
