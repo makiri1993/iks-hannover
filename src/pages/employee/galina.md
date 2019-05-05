@@ -1,8 +1,9 @@
 ---
 position: 1
-image: /img/mitarbeiter_Galina.jpg
+image: /img/Galina_Fiksmann.jpg
 firstname: Galina
 lastname: Fiksmann
 role: Geschäftsführung
 email: fiksmann@iks-hannover.de
 ---
+
