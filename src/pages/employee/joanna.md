@@ -1,6 +1,6 @@
 ---
 position: 9
-image: /img/mitarbeiter_Joanna.jpg
+image: /img/Joana_Russ.jpg
 firstname: Joanna
 lastname: Russ
 role: Teamassistenz
