@@ -40,21 +40,31 @@ nursing:
     sprachlichen oder religiösen Wurzeln. Unsere Patienten sowie ihre Wünsche,
     Bedürfnisse und Lebenssituationen stehen dabei für uns im Vordergrund und
     sind uns sehr wichtig
-  title: Pflegedienst
+  title: Ambulanter Pflegedienst
 care:
   image: /img/icon_iks_haus.png
   text: >-
     Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten,
     stehen unsere Wohngemeinschaften in den Stadtteilen Roderbruch, List,
     Davenstedt, Stöcken und Burg als Alternative zur Verfügung.
-  title: Wohngemeinschaften
+  title: Wohngemeinschaften für Demenzkranke
 special:
-  image: /img/icon_iks_auge.png
+  image: /img/mund.png
   text: >-
     Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische
     Versorgung zu Hause oder in einer unserer ambulant betreuten
     Intensiv-Wohngemeinschaften. Wir stimmen Therapie und ambulante Versorgung
     mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre
     Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
-  title: Außerklinische Pflege
+  title: Außerklinische Intensivpflege
+daylie:
+  image: /img/auge.png
+  text: >-
+    Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische
+    Versorgung zu Hause oder in einer unserer ambulant betreuten
+    Intensiv-Wohngemeinschaften. Wir stimmen Therapie und ambulante Versorgung
+    mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre
+    Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+  title: Tagespflege Leuchtturm
 ---
+
