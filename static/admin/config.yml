@@ -66,6 +66,8 @@ collections:
             widget: "list"
             fields:
               - { label: "Punkt", name: "item", widget: "string" }
+      - {label: "Beginn der Tätigkeit", name: "start", widget: "text"}
+      - {label: "Verfügbare Stellen", name: "number", widget: "number"}
 ##########################################################################
 ################################ PAGES ##########################################
   - name: "Seiten"
