@@ -7,7 +7,6 @@ import { SimpleData } from './pflegeleistungen'
 import { graphql } from 'gatsby'
 
 export default ({ data }: { data: SimpleData }) => {
-  const { title, text } = data.siteData.frontmatter
   return (
     <>
       <Helmet
