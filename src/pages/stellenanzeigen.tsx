@@ -1,12 +1,35 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Heading from '../components/heading/Heading'
-
-import Text from '../components/text/Text'
-import { SimpleData } from './pflegeleistungen'
 import { graphql } from 'gatsby'
+import JobTile from '../components/jobTile/JobTile';
 
-export default ({ data }: { data: SimpleData }) => {
+interface Props {
+  jobs: { edges: any; };
+  data: {
+    jobs: {
+      edges: [
+        {
+          node: {
+            fields: {
+              slug: string
+            }
+            frontmatter: {
+              title: number
+              text: string
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+export default ({ data }: { data: Props }) => {
+  const { edges: jobs } = data.jobs
+  console.log("#############")
+  console.log(data)
+  console.log("#############")
   return (
     <>
       <Helmet
@@ -15,7 +38,7 @@ export default ({ data }: { data: SimpleData }) => {
           {
             name: 'description',
             content:
-              'Sie sind auf Job suche ? Hier finden Sie die aktuellen Stellenausschreibungen des Interkulturellen Sozialdienstes Hannover. Bewerben Sie sich!',
+              'Sie sind auf Job suche ? Hier finden Sie die aktuellen Stellenausschreibungen des Interkulturellen Sozialdienstes für Hannover und die Region. Bewerben Sie sich!',
           },
         ]}
       />
@@ -25,7 +48,11 @@ export default ({ data }: { data: SimpleData }) => {
             <Heading size={1} uppercase center orange fontWeight={500}>
               Stellenangebote
             </Heading>
-
+          </div>
+          <div className="flex">
+            {jobs.map((job: { node: { frontmatter: { title: String | undefined; text: String | undefined; }; fields: { slug: String | undefined; }; }; }) => (
+              <JobTile title={job.node.frontmatter.title} text={job.node.frontmatter.text} link={job.node.fields.slug} />
+            ))}
           </div>
         </div>
       </div>
@@ -38,6 +65,9 @@ export const query = graphql`
     jobs: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/stellen/" } }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             text

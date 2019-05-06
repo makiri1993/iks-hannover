@@ -39,7 +39,11 @@ const navData: NavItemProps[] = [
     ]
   },
   { title: "Team", to: "/team" },
-  { title: "Jobs", to: "/jobs" },
+  {
+    title: "Jobs", to: "/jobs", subItems: [
+      { title: "Stellenangebote", to: "/stellenanzeigen" }
+    ]
+  },
   { title: "Engagement | Partner", to: "/engagement" },
   { title: "Presse", to: "/presse" }
 ];
