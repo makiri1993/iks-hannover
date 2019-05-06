@@ -27,9 +27,6 @@ interface Props {
 
 export default ({ data }: { data: Props }) => {
   const { edges: jobs } = data.jobs
-  console.log("#############")
-  console.log(data)
-  console.log("#############")
   return (
     <>
       <Helmet

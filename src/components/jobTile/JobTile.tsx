@@ -15,7 +15,7 @@ export default class JobTile extends Component<JobTileProps> {
     return (
       <div className="job-tile-container">
         <div className="job-tile-title">
-          <Heading size={1} uppercase left orange fontWeight={500}>
+          <Heading size={1} left orange fontWeight={500}>
             {this.props.title}
           </Heading>
         </div>
