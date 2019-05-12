@@ -42,17 +42,17 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   render() {
     const { title, to, subItems, handleTouch } = this.props
     const { height } = this.state
-    const modifiedTitle: string | ReactNode = title
+
     return (
       <>
         <div className='d-flex-column w-100' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           {handleTouch && subItems ? (
             <div className='d-flex'>
               <div className={`nav-dropdown-toggle ${height > 100 ? 'dropdown-toggle-animation' : null}`}>|</div>
-              {this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })}
+              {this.renderLinkOrNot({ title, to, ref: this.ref })}
             </div>
           ) : (
-            this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })
+            this.renderLinkOrNot({ title, to, ref: this.ref })
           )}
           {subItems ? (
             <div className={`d-flex-column overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
@@ -83,7 +83,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     return items.map(({ title, to }, index) => this.renderLinkOrNot({ title, to, index }))
   }
 
-  private renderLinkOrNot({ title, to, ref, index }: { title: string | ReactNode; to?: string; ref?: RefObject<any>; index?: number }) {
+  private renderLinkOrNot({ title, to, ref, index }: { title: string; to?: string; ref?: RefObject<any>; index?: number }) {
     const { handleTouch } = this.props
     return (
       <div className='d-flex justify-center' ref={ref} key={index}>
