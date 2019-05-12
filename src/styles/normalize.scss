@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  color: $color-black;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1.2vmax !important;
+  line-height: $line-height-regular !important;
+  width: 100%;
+  // min-height: 100vh;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: 1441px) {
+    font-size: 17.25px !important;
+  }
+
+  @media only screen and (max-width: 1170px) {
+    font-size: 14px !important;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+
+  font-family: $sansSerif;
+  color: $color-black;
+  background-color: $color-white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+// Set defaults for links
+a {
+  color: $color-brand;
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain;
+  position: relative;
+}
+
+// Figure elements
+figure {
+  margin: 2rem 0;
+}
+
+figcaption {
+  font-size: 80%;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid $color-ui-light;
+  font-size: 85%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid $color-ui-light;
+}
+
+th {
+  text-align: left;
+}
+
+tbody {
+  tr {
+    &:nth-child(odd) {
+      td {
+        background-color: $color-ui-whisper;
+      }
+
+      tr {
+        background-color: $color-ui-whisper;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.414rem;
+  margin-bottom: 0.5rem;
+  color: $color-black;
+  font-weight: 600;
+  line-height: $line-height-heading;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: $size-h1;
+}
+
+h2 {
+  font-size: $size-h2;
+}
+
+h3 {
+  font-size: $size-h3;
+}
+
+h4,
+h5 {
+  font-size: $size-h4;
+}
+
+h6 {
+}
+
+p {
+  font-size: $size-p;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.8em;
+  color: $color-black;
+}
+
+strong {
+  color: $color-black;
+}
+
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid $color-ui-light;
+}
+
+blockquote {
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 0.25rem solid $color-ui-light;
+  color: $color-gray-calm;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

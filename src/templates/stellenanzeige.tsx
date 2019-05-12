@@ -1,11 +1,10 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import Container from '../components/Container'
+import React from 'react'
 import Heading from '../components/heading/Heading'
-import Text from "../components/text/Text"
+import Text from '../components/text/Text'
 
 interface Props {
-  markdownRemark: { frontmatter: any; };
+  markdownRemark: { frontmatter: any }
   data: {
     jobs: {
       edges: [
@@ -29,9 +28,9 @@ interface Props {
 const Stellenanzeige = ({ data }: { data: Props }) => {
   const { frontmatter: job } = data.markdownRemark
   return (
-    <div className="max-container">
-      <div className="text-container">
-        <div className="padding-heading">
+    <div className='max-container'>
+      <div className='text-container'>
+        <div className='padding-heading'>
           <Heading size={1} center orange fontWeight={500}>
             {job.title}
           </Heading>
@@ -39,16 +38,14 @@ const Stellenanzeige = ({ data }: { data: Props }) => {
         <Heading size={4} orange fontWeight={500}>
           Darum geht´s:
         </Heading>
-        <Text preLine>
-          {job.text_one}
-        </Text>
+        <Text preLine>{job.text_one}</Text>
         <br />
         <Heading size={4} orange fontWeight={500}>
           Was du tun wirst:
         </Heading>
         <ul>
           {job.list_one.list_items.map((el: any) => (
-            <li className="color-orange">
+            <li className='color-orange'>
               <Text>{el.item}</Text>
             </li>
           ))}
@@ -59,7 +56,7 @@ const Stellenanzeige = ({ data }: { data: Props }) => {
         </Heading>
         <ul>
           {job.list_two.list_items.map((el: any) => (
-            <li className="color-orange">
+            <li className='color-orange'>
               <Text>{el.item}</Text>
             </li>
           ))}
@@ -70,7 +67,7 @@ const Stellenanzeige = ({ data }: { data: Props }) => {
         </Heading>
         <ul>
           {job.list_three.list_items.map((el: any) => (
-            <li className="color-orange">
+            <li className='color-orange'>
               <Text>{el.item}</Text>
             </li>
           ))}
@@ -79,20 +76,16 @@ const Stellenanzeige = ({ data }: { data: Props }) => {
         <Heading size={4} orange fontWeight={500}>
           Beginn der Tätigkeit:
         </Heading>
-        <Text preLine>
-          {job.start}
-        </Text>
+        <Text preLine>{job.start}</Text>
         <br />
         <Heading size={4} orange fontWeight={500}>
           Anzahl offener Stellen:
         </Heading>
-        <Text preLine>
-          {job.number}
-        </Text>
+        <Text preLine>{job.number}</Text>
         <Text preLine>
           Haben wir dein Intresse geweckt und hast du Lust auf die Herausforderung ? Dann sende uns deine unterlagen an
           <br />
-          <a href="mailto:iks@iks.de">email@iks.de</a>
+          <a href='mailto:iks@iks.de'>email@iks.de</a>
           <br />
           Wir freuen uns, dich kennenzulernen.
         </Text>

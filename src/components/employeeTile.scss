@@ -1,0 +1,59 @@
+.employee-container {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 550px) {
+    margin: 0 auto;
+  }
+}
+
+.EmployeeImage {
+  width: 250px;
+  object-fit: cover;
+  animation: fade;
+  animation-duration: 1.3s;
+}
+
+.CenteredPWithWidth {
+  text-align: center;
+  width: 250px;
+}
+
+.LinkEmail {
+  cursor: pointer;
+  color: $color-black;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.LinkEmailOrange {
+  text-align: center;
+  text-decoration: underline;
+  color: $color-orange;
+  margin-top: -20px;
+}
+
+.SignatureImage {
+  width: 166px;
+  object-fit: contain;
+  animation: fade;
+  animation-duration: 1.3s;
+
+  @media only screen and (max-width: 550px) {
+    left: 0%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
