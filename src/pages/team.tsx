@@ -61,7 +61,7 @@ export default class Team extends Component<Props> {
     } = this.props.data
     return (
       <>
-        <div style={{ paddingTop: '2.4rem' }}>
+        <div className='padding-heading'>
           <Heading size={1} center orange uppercase fontWeight={500}>
             Unser Team
           </Heading>

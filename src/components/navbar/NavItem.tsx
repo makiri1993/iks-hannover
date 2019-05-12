@@ -55,7 +55,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
             this.renderLinkOrNot({ title: modifiedTitle, to, ref: this.ref })
           )}
           {subItems ? (
-            <div className={`d-flex-column overflow-hidden height-transition`} style={{ height: `${height}px` }}>
+            <div className={`d-flex-column overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
               {subItems ? this.renderDropdown(subItems) : null}
             </div>
           ) : null}
@@ -86,15 +86,13 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   private renderLinkOrNot({ title, to, ref, index }: { title: string | ReactNode; to?: string; ref?: RefObject<any>; index?: number }) {
     const { handleTouch } = this.props
     return (
-      <div className='d-flex justify-center' ref={ref}>
+      <div className='d-flex justify-center' ref={ref} key={index}>
         {to ? (
-          <Link key={index} className='homepage-link hover-orange' to={to} onClick={handleTouch}>
+          <Link className='homepage-link hover-orange' to={to} onClick={handleTouch}>
             {title}
           </Link>
         ) : (
-          <div key={index} className='homepage-link hover-orange'>
-            {title}
-          </div>
+          <div className='homepage-link hover-orange'>{title}</div>
         )}
       </div>
     )

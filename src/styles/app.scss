@@ -1,15 +1,4 @@
-$sansSerif: -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-"Roboto",
-"Oxygen",
-"Ubuntu",
-"Cantarell",
-"Fira Sans",
-"Droid Sans",
-"Helvetica Neue",
-Arial,
-sans-serif;
+$sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 
 $font-regular: 15px;
 $font-large: 18px;
@@ -39,6 +28,7 @@ $color-gray-dark: hsla(270, 17.119554496%, 0%, 0.92);
 $color-gray-copy: hsla(270, 15.797828016000002%, 0%, 0.88);
 $color-gray-calm: rgba(0, 0, 0, 0.54);
 $color-white: #fcfcfc;
+$color-black-transparent: rgba(0, 0, 0, 0.3);
 $color-orange: #ee7917;
 $color-green: #00933f;
 $color-red: #e53129;
@@ -86,14 +76,9 @@ body {
 a {
   color: $color-brand;
   text-decoration: none;
-
-  // ${onEvent`
-  //   text-decoration: underline;
-  // `}
 }
 
 img {
-  // max-width: 100%;
   object-fit: contain;
   position: relative;
 }
@@ -171,7 +156,8 @@ h5 {
   font-size: $size-h4;
 }
 
-h6 {}
+h6 {
+}
 
 p {
   font-size: $size-p;
@@ -218,17 +204,11 @@ blockquote {
       margin-bottom: 0;
     }
   }
-
-  // ${media.md`
-  //   padding-right: 5rem;
-  //   padding-left: 1.25rem;
-  // `}
 }
 
 // From Card Component
 .card-container {
   width: 350px;
-  // height: 250px;
   background-color: $color-orange;
   position: relative;
   margin-right: 50px;
@@ -277,8 +257,6 @@ blockquote {
   justify-content: center;
   flex-wrap: wrap;
 
-  /* height: auto;
-  padding: 10px; */
   @media only screen and (max-width: 550px) {
     margin: 0 auto;
   }
@@ -295,7 +273,6 @@ blockquote {
   text-align: center;
   font-weight: 500;
   white-space: nowrap;
-  /* padding: 1.4rem; */
   margin: 0.824em;
 }
 
@@ -379,10 +356,6 @@ blockquote {
   /* padding: 1.4rem; */
 }
 
-.PFooter {
-  color: $color-white;
-}
-
 .StyledIMG {
   width: auto;
   height: 100px;
@@ -400,16 +373,6 @@ blockquote {
   color: $color-white;
   text-decoration: underline;
   text-decoration-color: white;
-}
-
-.LinkEmailOutWtMargin {
-  display: block;
-  cursor: pointer;
-  color: $color-white;
-  text-decoration: underline;
-  text-decoration-color: white;
-  margin-top: 30px;
-  padding-bottom: 30px;
 }
 
 .LinkWhite {
@@ -446,10 +409,6 @@ blockquote {
   }
 }
 
-.CenteredPLeft {
-  text-align: left;
-}
-
 .HomepageLink {
   color: $color-white;
   top: 35%;
@@ -458,51 +417,9 @@ blockquote {
   font-weight: 600;
 }
 
-.HomepageLinkGreen {
-  /* position: absolute; */
-  color: $color-green;
-  margin-left: 3px;
-}
-
-.HomepageLinkRed {
-  /* position: absolute; */
-  color: $color-red;
-  margin-left: 3px;
-}
-
 .IconForButton {
   width: 120px;
   height: 120px;
-}
-
-.CenteredH1 {
-  text-align: center;
-  font-weight: 500;
-  padding: 2.4rem;
-  margin: 1em;
-}
-
-.CenteredH1Green {
-  color: $color-green;
-}
-
-.CenteredH1GreenForColumn {
-  font-weight: 500;
-  margin: 0;
-}
-
-.CenteredH1BlueForColumn {
-  color: $color-blue;
-}
-
-.CenteredH1RedForColumn {
-  color: $color-red;
-}
-
-.HomepageLinkBlue {
-  /* position: absolute; */
-  color: $color-blue;
-  margin-left: 3px;
 }
 
 // HeroSlider
@@ -515,7 +432,7 @@ blockquote {
   color: $color-white;
   text-align: center;
   // width: 100vw;
-  height: 50vh;
+  height: 70vh;
 
   @media only screen and (max-width: 550px) {
     height: 25vh;
@@ -530,7 +447,6 @@ blockquote {
   object-fit: cover;
   animation: fade;
   animation-duration: 1.3s;
-  border-radius: 6px;
 
   @media only screen and (max-width: 550px) {
     border-radius: 0px;
@@ -697,17 +613,15 @@ blockquote {
 
 .homepage-link {
   color: $color-white;
-  // width: 100%;
   text-align: center;
   font-weight: 600;
-  color: $color-white;
 
   @media only screen and (min-width: 551px) {
-    color: $color-orange;
+    color: $color-white;
 
     padding: {
-      top: 2rem;
-      bottom: 1.5rem;
+      top: 1rem;
+      bottom: 0.8rem;
       left: 1rem;
       right: 1rem;
     }
@@ -743,8 +657,8 @@ blockquote {
 }
 
 .navbar {
-  position: sticky;
-  // width: 100%;
+  position: fixed;
+  width: 100%;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -753,9 +667,8 @@ blockquote {
   overflow: visible;
 
   @media only screen and (min-width: 551px) {
-    background-color: $color-white;
-    border-top: solid 2px $color-orange;
-    border-bottom: solid 2px $color-orange;
+    background-color: $color-black-transparent;
+    box-shadow: 3px 6px 26px $color-black-transparent;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
@@ -833,6 +746,13 @@ blockquote {
   align-self: center;
 }
 
+.ml-dropdown {
+  margin-left: 0rem;
+  @media only screen and (max-width: 550px) {
+    margin-left: 3.5rem;
+  }
+}
+
 .dropdown-toggle-animation {
   transform: rotate(180deg);
 }
@@ -856,6 +776,10 @@ blockquote {
 // colors
 .color-green {
   color: $color-green;
+}
+
+.color-white {
+  color: $color-white;
 }
 
 .color-orange {
@@ -983,6 +907,6 @@ blockquote {
 }
 
 .padding-heading {
-  padding-top: 2.4rem;
+  padding-top: 6.4rem;
   padding-bottom: 2.4rem;
 }

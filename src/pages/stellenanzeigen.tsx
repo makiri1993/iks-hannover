@@ -2,10 +2,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import { graphql } from 'gatsby'
-import JobTile from '../components/jobTile/JobTile';
+import JobTile from '../components/jobTile/JobTile'
 
 interface Props {
-  jobs: { edges: any; };
+  jobs: { edges: any }
   data: {
     jobs: {
       edges: [
@@ -46,9 +46,9 @@ export default ({ data }: { data: Props }) => {
               Stellenangebote
             </Heading>
           </div>
-          <div className="flex">
-            {jobs.map((job: { node: { frontmatter: { title: String | undefined; text: String | undefined; }; fields: { slug: String | undefined; }; }; }) => (
-              <JobTile title={job.node.frontmatter.title} text={job.node.frontmatter.text} link={job.node.fields.slug} />
+          <div className='flex'>
+            {jobs.map((job: { node: { frontmatter: { title: string | undefined; text: string | undefined }; fields: { slug: string | undefined } } }, index: number) => (
+              <JobTile key={index} title={job.node.frontmatter.title} text={job.node.frontmatter.text} link={job.node.fields.slug} />
             ))}
           </div>
         </div>

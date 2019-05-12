@@ -16,9 +16,11 @@ export default class FourColumns extends Component<Props> {
     return (
       <div className='FlexDivContentCenter'>
         {columns.map(({ title, text, image: { childImageSharp: { fluid } } }, index) => {
+          const linkForColumn = links[index] ? links[index] : '/'
+
           return (
             <div key={index} className='OneColumn'>
-              <Link className='HomepageLink' to={links[index]}>
+              <Link className='HomepageLink' to={linkForColumn}>
                 <Img className='IconForButton' fluid={fluid} />
               </Link>
               <div style={{ padding: '2.4rem' }}>
@@ -26,7 +28,7 @@ export default class FourColumns extends Component<Props> {
               </div>
               <Text center>
                 {text}
-                <Link className={this.getColorForDots(index)} to={links[index]}>
+                <Link className={this.getColorForDots(index)} to={linkForColumn}>
                   ...
                 </Link>
               </Text>
