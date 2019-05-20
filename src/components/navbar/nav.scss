@@ -44,21 +44,28 @@
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  // position: fixed;
+  // top: 0;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-evenly;
   z-index: 10;
-  overflow: visible;
-
-  @media only screen and (min-width: 551px) {
-    width: 100%;
-    background-color: $color-black-transparent;
-    box-shadow: 3px 6px 26px $color-black-transparent;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  // overflow: visible;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  background-color: $color-white;
+  padding: {
+    left: 1rem;
+    right: 1rem;
   }
+  // @media only screen and (min-width: 551px) {
+  //   width: 100%;
+  //   background-color: $color-black-transparent;
+  //   box-shadow: 3px 6px 26px $color-black-transparent;
+  //   padding-bottom: 1rem;
+  //   margin-bottom: 1rem;
+  // }
 
   @supports (-ms-flow-from: thingy) {
     justify-content: space-around;
@@ -91,6 +98,7 @@
   width: min-content;
   background-color: transparent;
   border: none;
+  z-index: 20;
 }
 
 .animation-burger {
@@ -142,4 +150,11 @@
 
 .dropdown-toggle-animation {
   transform: rotate(180deg);
+}
+
+.nav-item-centering {
+  justify-self: flex-start;
+  @media only screen and (max-width: 550px) {
+    justify-self: center;
+  }
 }

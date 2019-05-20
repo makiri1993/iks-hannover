@@ -46,7 +46,7 @@ export default class Nav extends Component<Props, State> {
       <>
         <div className='navbar' ref={this.ref}>
           {mobile ? (
-            <button className={`menu-button ${transform === 0 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
+            <button className={`menu-button ${transform <= 50 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
               <span className='burger' />
               <span className='burger' />
               <span className='burger' />
@@ -61,10 +61,10 @@ export default class Nav extends Component<Props, State> {
   }
 
   private get renderMobile(): ReactNode {
-    const { transform } = this.state
+    const { transform, mobile } = this.state
     const { navData } = this.props
     return (
-      <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform === 0 ? '100vh' : '0vh'}` }}>
+      <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform <= 50 ? '100vh' : '0vh'}` }}>
         {navData.map(({ to, title, subItems }, index) => (
           <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
         ))}
@@ -77,7 +77,8 @@ export default class Nav extends Component<Props, State> {
     const { current } = this.ref
     if (current) {
       const { scrollHeight } = current
-      innerWidth < 550 ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: false, transform: 0, scrollHeight })
+      innerWidth < 550 ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: true, transform: 100, scrollHeight })
+      // true ? this.setState({ mobile: true, transform: 100, scrollHeight }) : this.setState({ mobile: false, transform: 0, scrollHeight })
     }
   }
 
@@ -88,6 +89,7 @@ export default class Nav extends Component<Props, State> {
 
   private handleTouch = (): void => {
     const { transform } = this.state
-    transform !== 0 ? this.setState({ transform: 0 }) : this.setState({ transform: 100 })
+    const { innerWidth } = window
+    transform > 50 ? this.setState({ transform: innerWidth < 550 ? 0 : 50 }) : this.setState({ transform: 100 })
   }
 }

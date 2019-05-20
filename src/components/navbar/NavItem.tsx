@@ -86,7 +86,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   private renderLinkOrNot({ title, to, ref, index }: { title: string; to?: string; ref?: RefObject<any>; index?: number }) {
     const { handleTouch } = this.props
     return (
-      <div className='d-flex justify-center' ref={ref} key={index}>
+      <div className='d-flex nav-item-centering' ref={ref} key={index}>
         {to ? (
           <Link className='homepage-link hover-orange' to={to} onClick={handleTouch}>
             {title}
