@@ -145,38 +145,6 @@ $color-black: #545456;
   height: 120px;
 }
 
-// HeroSlider
-
-.Hero {
-  display: block;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  color: $color-white;
-  text-align: center;
-  // width: 100vw;
-  height: 70vh;
-
-  @media only screen and (max-width: 550px) {
-    height: 25vh;
-  }
-}
-
-.HeroImage {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-  animation: fade;
-  animation-duration: 1.3s;
-
-  @media only screen and (max-width: 550px) {
-    border-radius: 0px;
-    object-fit: fill;
-  }
-}
-
 // Image with Link
 
 .CardImg {
@@ -289,5 +257,6 @@ $color-black: #545456;
 @import "./normalize.scss";
 @import "../components/navbar/nav.scss";
 @import "../components/card.scss";
+@import "../components/bubble-image/bubble-image.scss";
 @import "../components/employeeTile.scss";
 @import "./pages.scss";
