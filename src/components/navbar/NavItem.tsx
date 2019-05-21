@@ -37,7 +37,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
       fullheight += parseFloat(paddingTop)
     }
 
-    return fullheight
+    return fullheight + 10
   }
 
   render() {
