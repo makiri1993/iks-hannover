@@ -4,8 +4,10 @@ import Footer from './Footer'
 import Nav from './navbar/Nav'
 import { NavItemProps } from './navbar/NavItem'
 
-// tslint:disable-next-line: no-var-requires
-// const logo = require('../../static/img/logo_iks.png')
+const hand = require('../../static/img/icon_iks_hand.png')
+const house = require('../../static/img/icon_iks_haus.png')
+const mouth = require('../../static/img/icon_iks_mund.png')
+const eye = require('../../static/img/icon_iks_auge.png')
 
 interface WrapperProps {
   children: React.ReactNode
@@ -29,10 +31,10 @@ const navData: NavItemProps[] = [
   {
     title: 'Leistungsbereiche',
     subItems: [
-      { title: 'Ambulante Pflege', to: '/ambulante-pflege' },
-      { title: 'Wohngemeinschaften', to: '/wohngemeinschaften' },
-      { title: 'Außerklinische Intensivpflege', to: '/intensivpflege' },
-      // { title: 'Tagespflege', to: '/tagespflege' },
+      { title: 'Ambulante Pflege', to: '/ambulante-pflege', img: hand },
+      { title: 'Wohngemeinschaften', to: '/wohngemeinschaften', img: house },
+      { title: 'Außerklinische Intensivpflege', to: '/intensivpflege', img: eye },
+      // { title: 'Tagespflege', to: '/tagespflege', img: mouth },
     ],
   },
   { title: 'Team', to: '/team' },

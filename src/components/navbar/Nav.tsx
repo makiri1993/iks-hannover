@@ -1,5 +1,8 @@
 import React, { Component, createRef, ReactNode, RefObject } from 'react'
 import NavItem, { NavItemProps } from './NavItem'
+import { Link } from 'gatsby'
+
+const logo = require('../../../static/img/logo_iks.png')
 
 interface Props {
   navData: NavItemProps[]
@@ -45,6 +48,11 @@ export default class Nav extends Component<Props, State> {
     return (
       <>
         <div className='navbar' ref={this.ref}>
+          <div className='navbar-logo'>
+            <Link to='/'>
+              <img src={logo} alt='Logo des IKS Hannover' />
+            </Link>
+          </div>
           {mobile ? (
             <button className={`menu-button ${transform <= 50 ? 'animation-burger' : null}`} onClick={this.handleTouch}>
               <span className='burger' />
@@ -52,8 +60,8 @@ export default class Nav extends Component<Props, State> {
               <span className='burger' />
             </button>
           ) : (
-            this.renderNavItems
-          )}
+              this.renderNavItems
+            )}
         </div>
         {mobile ? this.renderMobile : null}
       </>
@@ -65,9 +73,11 @@ export default class Nav extends Component<Props, State> {
     const { navData } = this.props
     return (
       <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform <= 50 ? '100vh' : '0vh'}` }}>
-        {navData.map(({ to, title, subItems }, index) => (
-          <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
-        ))}
+        <div className='navbar-item-container'>
+          {navData.map(({ to, title, subItems }, index) => (
+            <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
+          ))}
+        </div>
       </div>
     )
   }

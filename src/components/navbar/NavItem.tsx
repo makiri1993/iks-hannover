@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 export interface NavItemProps {
   title: string
   to?: string
+  img?: string
   subItems?: NavItemProps[]
   handleTouch?: () => void
 }
@@ -52,10 +53,10 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
               {this.renderLinkOrNot({ title, to, ref: this.ref })}
             </div>
           ) : (
-            this.renderLinkOrNot({ title, to, ref: this.ref })
-          )}
+              this.renderLinkOrNot({ title, to, ref: this.ref })
+            )}
           {subItems ? (
-            <div className={`d-flex-column overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
+            <div className={`d-flex-column nav-sub-item overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
               {subItems ? this.renderDropdown(subItems) : null}
             </div>
           ) : null}
@@ -80,20 +81,22 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
   }
 
   private renderDropdown(items: NavItemProps[]) {
-    return items.map(({ title, to }, index) => this.renderLinkOrNot({ title, to, index }))
+    return items.map(({ title, to, img }, index) => this.renderLinkOrNot({ title, to, img, index }))
   }
 
-  private renderLinkOrNot({ title, to, ref, index }: { title: string; to?: string; ref?: RefObject<any>; index?: number }) {
+  private renderLinkOrNot({ title, to, img, ref, index }: { title: string; to?: string; img?: string; ref?: RefObject<any>; index?: number }) {
     const { handleTouch } = this.props
     return (
       <div className='d-flex nav-item-centering' ref={ref} key={index}>
         {to ? (
           <Link className='homepage-link hover-orange' to={to} onClick={handleTouch}>
+            {img ? <img className='nav-image' src={img} alt='Logo des Bereiches' />
+              : null}
             {title}
           </Link>
         ) : (
-          <div className='homepage-link hover-orange'>{title}</div>
-        )}
+            <div className='homepage-link hover-orange'>{title}</div>
+          )}
       </div>
     )
   }
