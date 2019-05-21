@@ -30,6 +30,14 @@
   text-decoration-color: red;
 }
 
+.LinkEmailWhite {
+  cursor: pointer;
+  color: $color-black;
+  text-decoration: underline;
+  text-decoration-color: white;
+  color: white;
+}
+
 .LinkEmailOrange {
   text-align: center;
   text-decoration: underline;

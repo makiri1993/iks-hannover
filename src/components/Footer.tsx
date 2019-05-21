@@ -4,7 +4,7 @@ import React from 'react'
 // const logo_1: string = require('../../static/img/icons/IKS_LOGO_weiss-300x104.png')
 // const logo_2: string = require('../../static/img/icons/logo_baum.png')
 
-interface FooterProps {}
+interface FooterProps { }
 
 const Footer: React.SFC<FooterProps> = () => (
   <div className='FooterDiv'>
@@ -27,11 +27,11 @@ const Footer: React.SFC<FooterProps> = () => (
             iks-hannover@iks-hannover.de
           </a>
           <br />
-          <Link className='LinkEmail' to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
+          <Link className='LinkEmailWhite' to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
             Impressum
           </Link>
           <br />
-          <Link className='LinkEmail' to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
+          <Link className='LinkEmailWhite' to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
             Datenschutzerklärung
           </Link>
           <br />
