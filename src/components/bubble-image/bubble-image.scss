@@ -14,26 +14,26 @@
   @media only screen and (max-width: 550px) {
     height: 25vh;
   }
-}
 
-.bubble {
-  width: 40vh;
-  height: 40vh;
-  border-radius: 50%;
-  border: 0.5vh solid $color-white;
-  // margin : {
-  // left: 3rem;
-  // right: 3rem;
-  // }
+  .bubble {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    border: 0.5vh solid $color-white;
+    // margin : {
+    // left: 3rem;
+    // right: 3rem;
+    // }
 
-  // top: 0px;
-  // left: 0px;
-  // object-fit: contain;
-  animation: fade;
-  animation-duration: 1.3s;
+    // top: 0px;
+    // left: 0px;
+    // object-fit: contain;
+    animation: fade;
+    animation-duration: 1.3s;
 
-  @media only screen and (max-width: 550px) {
-    border-radius: 0px;
-    object-fit: fill;
+    @media only screen and (max-width: 550px) {
+      border-radius: 0px;
+      object-fit: fill;
+    }
   }
 }

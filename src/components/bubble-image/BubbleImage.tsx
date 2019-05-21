@@ -49,7 +49,7 @@ export default class BubbleImage extends Component<Props, State> {
           return (
             <Img
               key={index}
-              className='bubble'
+              className={`bubble bubble-` + index}
               style={{ transform: 'translateX(20%)', height: `${(index + 1) * 8}vh`, width: `${(index + 1) * 8}vh` }}
               fluid={image}
               alt='image in bubble form in container'
