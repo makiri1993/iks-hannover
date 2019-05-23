@@ -2,6 +2,8 @@
 pageKey: page_intensivpflege
 title: Außerklinische Intensivpflege
 text_one: >-
+
+
   Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung
   zu Hause oder in einer unserer ambulant betreuten Wohngemeinschaften für
   Menschen mit intensivpflegerischem Bedarf.
@@ -16,8 +18,6 @@ text_two: >-
   helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu
   verwirklichen.
 
-
-  Wir bieten Ihnen:
 list_one:
   list-items:
     - item: >-

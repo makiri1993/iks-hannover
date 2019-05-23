@@ -10,6 +10,7 @@ export interface SimpleData {
     frontmatter: {
       title: string
       text: string
+      image?: object
       list_one: {
         list_items: [{ item: String }]
       }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import EmployeeTile from '../components/EmployeeTile'
-
 import Heading from '../components/heading/Heading'
 import Mitarbeiter from '../components/models/Mitarbeiter'
 import { graphql } from 'gatsby'

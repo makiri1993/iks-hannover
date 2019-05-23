@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Heading from "../components/heading/Heading";
-
 import Text from "../components/text/Text";
 import { graphql } from "gatsby";
 import TextWithImg from "../components/imgText/TextWithImg";
@@ -13,13 +12,13 @@ interface PflegedienstData {
       text_top: string;
       slogan: string;
       text_bot: string;
+      image?: object;
     };
   };
 }
 
 export default ({ data }: { data: PflegedienstData }) => {
-  const { title, text_top, slogan, text_bot } = data.siteData.frontmatter;
-
+  const { title, text_top, slogan, text_bot, image } = data.siteData.frontmatter;
   return (
     <>
       <Helmet
@@ -39,13 +38,12 @@ export default ({ data }: { data: PflegedienstData }) => {
               {title}
             </Heading>
           </div>
-          <TextWithImg textRight>{text_top}</TextWithImg>
-          <TextWithImg textLeft>{text_top}</TextWithImg>
-          <Text preLine>{text_top}</Text>
+          <TextWithImg image={image} textRight>{text_top}</TextWithImg>
+          <Text>Vertrauen Sie unserem Motto:</Text>
           <Text preLine green>
             {slogan}
           </Text>
-          <Text preLine>{text_bot}</Text>
+          <TextWithImg textLeft>{text_bot}</TextWithImg>
         </div>
       </div>
     </>
@@ -60,6 +58,13 @@ export const query = graphql`
       frontmatter {
         title
         text_top
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         slogan
         text_bot
       }

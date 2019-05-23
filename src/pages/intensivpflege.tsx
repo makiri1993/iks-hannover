@@ -3,7 +3,23 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
+import TextWithImg from '../components/imgText/TextWithImg';
 
+
+interface Data {
+  siteData: {
+    frontmatter: {
+      title: string
+      text_one: string
+      image?: object
+      text_two: string
+      text_three: string
+      list_one: Array<string>
+      list_two: Array<string>
+      list_three: Array<string>
+    }
+  }
+}
 // tslint:disable-next-line:variable-name no-var-requires
 const logo_1: string = require('../../static/img/schriftzug_Wohngemeinschaft.png')
 // tslint:disable-next-line:variable-name no-var-requires
@@ -11,8 +27,9 @@ const logo_2: string = require('../../static/img/logo_baum.png')
 // tslint:disable-next-line:variable-name no-var-requires
 const flylerLink: string = require('../../static/img/intensivpflege/IKS-AIWG-Flyer_ku_web.pdf')
 
-export default ({ data }: { data: any }) => {
-  const { title, text_one, text_two, text_three, list_one, list_two, list_three, quote } = data.siteData.frontmatter
+export default ({ data }: { data: Data }) => {
+  const { title, text_one, text_two, image, text_three, list_one, list_two, list_three } = data.siteData.frontmatter
+  const completeText = text_one + text_two;
   return (
     <>
       <Helmet
@@ -33,13 +50,8 @@ export default ({ data }: { data: any }) => {
               {title}
             </Heading>
           </div>
-          <Text>
-            {/* Wir bieten zwei Versorgungsalternativen: Eine
-          <strong> intensivpflegerische Versorgung zu Hause</strong> oder in einer unserer ambulant betreuten
-          <strong> Wohngemeinschaften</strong> für Menschen mit intensivpflegerischem Bedarf. */}
-            {text_one}
-          </Text>
-          <Text preLine>{text_two}</Text>
+          <TextWithImg image={image} textRight>{completeText}</TextWithImg>
+          <Text>Wir bieten Ihnen:</Text>
           <ul>
             {list_one.list_items.map((el: any) => (
               <li className='color-red'>
@@ -102,6 +114,13 @@ export const query = graphql`
       frontmatter {
         title
         text_one
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         text_two
         list_one {
           title
@@ -114,10 +133,6 @@ export const query = graphql`
           list_items {
             item
           }
-        }
-        quote {
-          author
-          text
         }
         list_three {
           title

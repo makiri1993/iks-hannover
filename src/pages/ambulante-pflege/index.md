@@ -1,6 +1,7 @@
 ---
 pageKey: page_ambulante-pflege
 title: ' Ambulante Pflege'
+image: /img/ambulant_1.png
 text: >-
   Unsere Mitarbeitenden versorgen die Patienten im Rahmen der ärztlichen
   Verordnungen zu Hause. Die medizinischen Leistungen werden von unserem
@@ -31,6 +32,5 @@ text: >-
   Wundversorgung bei unseren Patienten übernehmen, sich stets weiterbilden, um
   auf dem aktuellen Wissenstand zu sein und zudem eng mit dem entsprechenden
   ärztlichen Fachpersonal zusammenarbeiten.
-image: /img/ambulant_1.png
 ---
 
