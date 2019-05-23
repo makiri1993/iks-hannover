@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-################################ Mitarbeiter ##########################################
+################################ Mitarbeite ##########################################
   - name: "employee"
     label: "Mitarbeiter App"
     folder: "src/pages/employee"
@@ -23,9 +23,14 @@ collections:
   ################################ Jobs ##########################################
   - name: "jobs"
     label: "Jobs App"
+  - {
+  label: "Template Key",
+  name: "templateKey",
+  widget: "hidden",
+  default: "stellenanzeige",
+}
     folder: "src/pages/stellen"
     create: true
-    identifier_field: "title"
     slug: "{{slug}}"
     fields:
       - {
@@ -34,9 +39,7 @@ collections:
           widget: "hidden",
           default: "stellenanzeige",
       }
-      - {label: "SEO Title", name: "title_seo", widget: "text"}
-      - {label: "SEO Description", name: "description_seo", widget: "text"}
-      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Titel", name: "titel", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
       - {label: "Darum geht's", name: "text_one", widget: "text"}
       - label: "Was du tun wirst"
@@ -66,8 +69,6 @@ collections:
             widget: "list"
             fields:
               - { label: "Punkt", name: "item", widget: "string" }
-      - {label: "Beginn der Tätigkeit", name: "start", widget: "text"}
-      - {label: "Verfügbare Stellen", name: "number", widget: "number"}
 ##########################################################################
 ################################ PAGES ##########################################
   - name: "Seiten"
@@ -151,6 +152,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text_top", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
           - {label: "Motto", name: "slogan", widget: "markdown"}
           - {label: "Text", name: "text_bot", widget: "markdown"}
       - label: "Pflegeleistungen"
@@ -197,6 +199,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
       - label: "Wohngemeinschaften"
         name: "wohngemeinschaften"
         file: "src/pages/wohngemeinschaften/index.md"
@@ -209,6 +212,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
       - label: "Intensivpflege"
         name: "intensivpflege"
         file: "src/pages/intensivpflege/index.md"
@@ -221,6 +225,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text_one", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
           - {label: "Text", name: "text_two", widget: "markdown"}
           - label: "Liste"
             name: "list_one"
