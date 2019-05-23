@@ -2,22 +2,34 @@
 pageKey: page_intensivpflege
 title: Außerklinische Intensivpflege
 text_one: >-
-  Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung zu Hause oder in einer unserer ambulant betreuten Wohngemeinschaften für Menschen mit intensivpflegerischem Bedarf.
+  Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische Versorgung
+  zu Hause oder in einer unserer ambulant betreuten Wohngemeinschaften für
+  Menschen mit intensivpflegerischem Bedarf.
+image: /img/intensiv_3.png
 text_two: >-
-  Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen Anspruch auf eine adäquate Versorgung im Rahmen der häuslichen Krankenpflege. So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu wollen, verwirklicht werden. Wir stimmen Therapie und ambulante Versorgung mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab. Wir können Ihnen helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu verwirklichen.
+  Jeder Mensch hat nicht nur die Möglichkeit, sondern auch den rechtlichen
+  Anspruch auf eine adäquate Versorgung im Rahmen der häuslichen Krankenpflege.
+  So kann der Wunsch vieler Betroffener, in den eigenen vier Wänden leben zu
+  wollen, verwirklicht werden. Wir stimmen Therapie und ambulante Versorgung mit
+  unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre Wünsche
+  und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab. Wir können Ihnen
+  helfen, den Wunsch, in den eigenen vier Wänden leben zu wollen, zu
+  verwirklichen.
 
 
   Wir bieten Ihnen:
 list_one:
   list-items:
-    - item: bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen Lebensgewohnheiten rund um die Uhr
+    - item: >-
+        bedarfsgerechte Versorgung unter Berücksichtigung Ihrer individuellen
+        Lebensgewohnheiten rund um die Uhr
     - item: ein Leben in Ihrer vertrauten Umgebung
     - item: einfühlsame und rücksichtsvolle Begleitung
     - item: sozial kompetente Betreuung
     - item: Pflegefachberatung
     - item: Kooperation mit weiteren Dienstleistern
     - item: Vermittlung von Pflegehilfsmitteln und Medizintechnik
-  title: " "
+  title: ' '
 list_two:
   list-items:
     - item: Überwachung der invasiven und nicht-invasiven Beatmung
@@ -25,17 +37,11 @@ list_two:
     - item: Sauerstofftherapie
     - item: EKG und CO² Überwachung
     - item: Beatmungspflege mit Trachealkanülenmanagement
-    - item: Ernährungstherapie mit PEG, PEJ Versorgung
+    - item: 'Ernährungstherapie mit PEG, PEJ Versorgung'
     - item: Infusionstherapie mit Portversorgung
     - item: Wund- und Schmerzmanagement
     - item: Individuelles Notfallmanagement
   title: Pflegerische Leistung
-quote:
-  author: "Michel de Montaigne (1533 - 1592), französischer Philosoph "
-  text: >-
-    Ich kann mir keinen Zustand denken, der mir unerträglicher und schauerlicher
-    wäre, als mit schmerzerfüllter Seele der Fähigkeit beraubt zu sein, ihr
-    Ausdruck zu verleihen.
 list_three:
   list-items:
     - item: Pflegefachberatung
@@ -48,3 +54,4 @@ list_three:
     - item: Fort- und Weiterbildung unseres Fachpersonals
   title: Weitere Leistungen
 ---
+
