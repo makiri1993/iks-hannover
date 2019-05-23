@@ -31,5 +31,6 @@ text: >-
   Wundversorgung bei unseren Patienten übernehmen, sich stets weiterbilden, um
   auf dem aktuellen Wissenstand zu sein und zudem eng mit dem entsprechenden
   ärztlichen Fachpersonal zusammenarbeiten.
+image: /img/ambulant_1.png
 ---
 
