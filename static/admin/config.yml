@@ -152,6 +152,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text_top", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
           - {label: "Motto", name: "slogan", widget: "markdown"}
           - {label: "Text", name: "text_bot", widget: "markdown"}
       - label: "Pflegeleistungen"
@@ -198,6 +199,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
       - label: "Wohngemeinschaften"
         name: "wohngemeinschaften"
         file: "src/pages/wohngemeinschaften/index.md"
@@ -210,6 +212,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
       - label: "Intensivpflege"
         name: "intensivpflege"
         file: "src/pages/intensivpflege/index.md"
@@ -222,6 +225,7 @@ collections:
             }
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Text", name: "text_one", widget: "markdown"}
+          - {label: "Bild", name: "image", widget: "image", optional: true}
           - {label: "Text", name: "text_two", widget: "markdown"}
           - label: "Liste"
             name: "list_one"
