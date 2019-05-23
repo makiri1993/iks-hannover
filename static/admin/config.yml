@@ -24,11 +24,11 @@ collections:
   - name: "jobs"
     label: "Jobs App"
   - {
-  label: "Template Key",
-  name: "templateKey",
-  widget: "hidden",
-  default: "stellenanzeige",
-}
+      label: "Template Key",
+      name: "templateKey",
+      widget: "hidden",
+      default: "stellenanzeige",
+    }
     folder: "src/pages/stellen"
     create: true
     slug: "{{slug}}"
@@ -38,7 +38,7 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "stellenanzeige",
-      }
+        }
       - {label: "Titel", name: "titel", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
       - {label: "Darum geht's", name: "text_one", widget: "text"}
