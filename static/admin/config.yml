@@ -26,7 +26,6 @@ collections:
     folder: "src/pages/stellen"
     create: true
     slug: "{{slug}}"
-    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "stellenanzeige"}
     fields:
       - {
           label: "Template Key",
