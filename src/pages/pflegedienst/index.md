@@ -25,6 +25,7 @@ text_top: >-
 
 
   Vertrauen Sie unserem Motto:
+image: /img/pflegeleistungen_1.png
 slogan: |-
   Wir pflegen Menschen...
 
