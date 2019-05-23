@@ -23,15 +23,10 @@ collections:
   ################################ Jobs ##########################################
   - name: "jobs"
     label: "Jobs App"
-  - {
-      label: "Template Key",
-      name: "templateKey",
-      widget: "hidden",
-      default: "stellenanzeige",
-    }
     folder: "src/pages/stellen"
     create: true
     slug: "{{slug}}"
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "stellenanzeige"}
     fields:
       - {
           label: "Template Key",
