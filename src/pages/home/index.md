@@ -7,6 +7,9 @@ slider:
     - image: /img/Slider_3.jpeg
     - image: /img/Slider_4.jpeg
     - image: /img/Slider_5.jpeg
+    - image: /img/ambulant_1.png
+    - image: /img/intensiv_3.png
+    - image: /img/wgs_1.png
 intro_text:
   body: >-
     Liebe BesucherInnen,
