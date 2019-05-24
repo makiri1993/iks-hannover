@@ -1,23 +1,17 @@
 // HeroSlider
 
 .bubble-container {
+  position: relative;
   display: flex;
-  // position: relative;
   align-items: center;
   justify-content: center;
   // color: $color-white;
   text-align: center;
   background-color: $color-orange;
   // width: 100vw;
-  height: 90vh;
-
-  @media only screen and (max-width: 550px) {
-    height: 25vh;
-  }
+  height: 76vh;
 
   .bubble {
-    width: 40vh;
-    height: 40vh;
     border-radius: 50%;
     border: 0.5vh solid $color-white;
     // margin : {
@@ -35,5 +29,70 @@
       border-radius: 0px;
       object-fit: fill;
     }
+  }
+
+  .bubble-0 {
+    z-index: 1;
+    // transform: translate(-47em, 12em);
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 30vh;
+  }
+
+  .bubble-1 {
+    top: 5em;
+    left: 5em;
+    height: 45vh;
+    width: 45vh;
+  }
+
+  .bubble-2 {
+    top: 10em;
+    left: 25em;
+    height: 55vh;
+    width: 55vh;
+  }
+
+  .bubble-3 {
+    top: 5em;
+    left: 50em;
+    height: 35vh;
+    width: 35vh;
+  }
+
+  .bubble-4 {
+    bottom: 0;
+    left: 58em;
+    height: 35vh;
+    width: 35vh;
+  }
+
+  .bubble-5 {
+    top: 6em;
+    left: 72em;
+    height: 25vh;
+    width: 25vh;
+  }
+
+  .bubble-6 {
+    top: 17em;
+    left: 76em;
+    height: 35vh;
+    width: 35vh;
+  }
+
+  .bubble-7 {
+    top: 5em;
+    left: 92em;
+    height: 40vh;
+    width: 40vh;
+  }
+
+  .bubble-8 {
+    bottom: 0;
+    right: 0;
+    height: 30vh;
+    width: 30vh;
   }
 }
