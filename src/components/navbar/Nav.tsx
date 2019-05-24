@@ -1,6 +1,7 @@
 import React, { Component, createRef, ReactNode, RefObject } from 'react'
 import NavItem, { NavItemProps } from './NavItem'
 import { Link } from 'gatsby'
+import MetaNav from './MetaNav';
 
 const logo = require('../../../static/img/logo_iks.png')
 
@@ -77,6 +78,7 @@ export default class Nav extends Component<Props, State> {
           {navData.map(({ to, title, subItems }, index) => (
             <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
           ))}
+          <MetaNav socialmedia />
         </div>
       </div>
     )

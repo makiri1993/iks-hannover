@@ -24,11 +24,6 @@
     // object-fit: contain;
     animation: fade;
     animation-duration: 1.3s;
-
-    @media only screen and (max-width: 550px) {
-      border-radius: 0px;
-      object-fit: fill;
-    }
   }
 
   .bubble-0 {
