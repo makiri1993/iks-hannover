@@ -140,7 +140,6 @@
       }
     }
   }
-
 }
 
 .menu-button {
@@ -150,6 +149,9 @@
   background-color: transparent;
   border: none;
   z-index: 20;
+  &:focus {
+    outline: none;
+  }
 }
 
 .animation-burger {

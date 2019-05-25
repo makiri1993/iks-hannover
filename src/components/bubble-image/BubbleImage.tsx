@@ -22,7 +22,7 @@ export default class BubbleImage extends Component<Props, State> {
   componentDidMount() {
     setInterval(() => {
       this.nextImage()
-    }, 3000)
+    }, 8000)
   }
 
   private nextImage() {
