@@ -11,9 +11,12 @@
   // width: 100vw;
   height: 76vh;
 
-  .bubble {
+  .bubble-image-container {
     border-radius: 50%;
     border: 0.5vh solid $color-white;
+  }
+
+  .bubble {
     // margin : {
     // left: 3rem;
     // right: 3rem;

@@ -22,7 +22,7 @@ export default class BubbleImage extends Component<Props, State> {
   componentDidMount() {
     setInterval(() => {
       this.nextImage()
-    }, 8000)
+    }, 500)
   }
 
   private nextImage() {
@@ -34,26 +34,17 @@ export default class BubbleImage extends Component<Props, State> {
     this.setState({ images })
   }
 
-  private getTranslateX(multiplikator: number) {
-    return
-  }
-
   render() {
     const { images } = this.props
-    const { indexOfActiveImage } = this.state
     return (
       <div className='bubble-container'>
         {images.map((image, index) => {
           // const translateX: number = this.getTranslateX(index)
 
           return (
-            <Img
-              key={index}
-              className={`bubble bubble-` + index}
-              style={{ position: 'absolute' }}
-              fluid={image}
-              alt='image in bubble form in container'
-            />
+            <div className={`bubble-image-container bubble-${index}`} style={{ position: 'absolute' }}>
+              <Img key={index} className={`bubble`} fluid={image} alt='image in bubble form in container' />
+            </div>
           )
         })}
       </div>
