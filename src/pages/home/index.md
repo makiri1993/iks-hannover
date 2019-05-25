@@ -10,7 +10,6 @@ slider:
     - image: /img/wgs_1.png
     - image: /img/intensiv_3.png
     - image: /img/wgs_1.png
-    - image: /img/ambulant_1.png
 intro_text:
   body: >-
     Liebe BesucherInnen,
@@ -71,4 +70,3 @@ daylie:
     Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
   title: Tagespflege Leuchtturm
 ---
-

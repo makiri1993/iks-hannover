@@ -1,96 +1,106 @@
 // HeroSlider
 
 .bubble-container {
-  position: relative;
   display: flex;
+
   align-items: center;
   justify-content: center;
-  // color: $color-white;
   text-align: center;
   background-color: $color-orange;
-  // width: 100vw;
   height: 76vh;
+  overflow: hidden;
 
   .bubble-image-container {
     border-radius: 50%;
     border: 0.5vh solid $color-white;
   }
 
-  .bubble {
-    // margin : {
-    // left: 3rem;
-    // right: 3rem;
-    // }
+  .bubble-zoom-in {
+    animation: zoomIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 250ms;
+  }
+  .bubble-zoom-out {
+    animation: zoomOut ease-in-out;
+    animation-duration: 250ms;
+  }
 
-    // top: 0px;
-    // left: 0px;
-    // object-fit: contain;
-    animation: fade;
-    animation-duration: 1.3s;
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomOut {
+    from {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    to {
+      opacity: 0;
+    }
   }
 
   .bubble-0 {
+    flex-shrink: 0;
     z-index: 1;
-    // transform: translate(-47em, 12em);
-    bottom: 0;
-    left: 0;
-    height: 30vh;
-    width: 30vh;
+    transform: translate(0%, -10%);
+    width: 800px;
   }
 
   .bubble-1 {
-    top: 5em;
-    left: 5em;
-    height: 45vh;
-    width: 45vh;
+    flex-shrink: 0;
+    transform: translate(0%, 80%);
+
+    width: 450px;
   }
 
   .bubble-2 {
-    top: 10em;
-    left: 25em;
-    height: 55vh;
-    width: 55vh;
+    flex-shrink: 0;
+    // transform: translate(0%, 80%);
+    width: 550px;
   }
 
   .bubble-3 {
-    top: 5em;
-    left: 50em;
-    height: 35vh;
-    width: 35vh;
+    flex-shrink: 0;
+    transform: translate(0%, 40%);
+    width: 350px;
   }
 
   .bubble-4 {
-    bottom: 0;
-    left: 58em;
-    height: 35vh;
-    width: 35vh;
+    flex-shrink: 0;
+    transform: translate(0%, -40%);
+    width: 350px;
   }
 
   .bubble-5 {
-    top: 6em;
-    left: 72em;
-    height: 25vh;
-    width: 25vh;
+    flex-shrink: 0;
+    transform: translate(0%, 30%);
+    width: 250px;
   }
 
   .bubble-6 {
-    top: 17em;
-    left: 76em;
-    height: 35vh;
-    width: 35vh;
+    flex-shrink: 0;
+    transform: translate(0%, -70%);
+    width: 450px;
+    z-index: 3;
   }
 
   .bubble-7 {
-    top: 5em;
-    left: 92em;
-    height: 40vh;
-    width: 40vh;
-  }
-
-  .bubble-8 {
-    bottom: 0;
-    right: 0;
-    height: 30vh;
-    width: 30vh;
+    flex-shrink: 0;
+    transform: translate(0%, 40%);
+    width: 400px;
   }
 }
