@@ -56,51 +56,51 @@
   .bubble-0 {
     flex-shrink: 0;
     z-index: 1;
-    transform: translate(0%, -10%);
-    width: 800px;
+    transform: translate(180%, -10%);
+    width: 400px;
   }
 
   .bubble-1 {
     flex-shrink: 0;
-    transform: translate(0%, 80%);
+    transform: translate(90%, 80%);
 
     width: 450px;
   }
 
   .bubble-2 {
     flex-shrink: 0;
-    // transform: translate(0%, 80%);
+    transform: translate(35%, -10%);
     width: 550px;
   }
 
   .bubble-3 {
     flex-shrink: 0;
-    transform: translate(0%, 40%);
+    transform: translate(0%, 80%);
     width: 350px;
   }
 
   .bubble-4 {
     flex-shrink: 0;
-    transform: translate(0%, -40%);
-    width: 350px;
+    transform: translate(-30%, -40%);
+    width: 380px;
   }
 
   .bubble-5 {
     flex-shrink: 0;
-    transform: translate(0%, 30%);
+    transform: translate(-160%, 80%);
     width: 250px;
   }
 
   .bubble-6 {
     flex-shrink: 0;
-    transform: translate(0%, -70%);
+    transform: translate(-100%, -30%);
     width: 450px;
     z-index: 3;
   }
 
   .bubble-7 {
     flex-shrink: 0;
-    transform: translate(0%, 40%);
+    transform: translate(-220%, 60%);
     width: 400px;
   }
 }
