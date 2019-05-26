@@ -26,23 +26,22 @@ const navData: NavItemProps[] = [
   {
     title: 'Home',
     to: '/',
-    subItems: [{ title: 'Unser Pflegedienst', to: '/pflegedienst' }, { title: 'Pflegeleistungen', to: '/pflegeleistungen' }],
   },
+  { title: 'Unser Pflegedienst', to: '/pflegedienst' },
+  { title: 'Pflegeleistungen', to: '/pflegeleistungen' },
   {
     title: 'Leistungsbereiche',
-    subItems: [
-      { title: 'Ambulante Pflege', to: '/ambulante-pflege', img: hand },
-      { title: 'Wohngemeinschaften', to: '/wohngemeinschaften', img: house },
-      { title: 'Außerklinische Intensivpflege', to: '/intensivpflege', img: eye },
-      // { title: 'Tagespflege', to: '/tagespflege', img: mouth },
-    ],
   },
+  // { title: 'Tagespflege', to: '/tagespflege', img: mouth },
+  { title: 'Ambulante Pflege', to: '/ambulante-pflege', img: hand },
+  { title: 'Wohngemeinschaften', to: '/wohngemeinschaften', img: house },
+  { title: 'Außerklinische Intensivpflege', to: '/intensivpflege', img: eye },
   { title: 'Team', to: '/team' },
   {
     title: 'Jobs',
     to: '/jobs',
-    subItems: [{ title: 'Stellenangebote', to: '/stellenanzeigen' }],
   },
+  { title: 'Stellenangebote', to: '/stellenanzeigen' },
   { title: 'Engagement | Partner', to: '/engagement' },
   { title: 'Presse', to: '/presse' },
 ]
