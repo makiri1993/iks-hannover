@@ -56,9 +56,8 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
             this.renderLinkOrNot({ title, to, ref: this.ref })
           )}
           {subItems ? (
-            <div className={`d-flex-column nav-sub-item overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
-              {subItems ? this.renderDropdown(subItems) : null}
-            </div>
+            // <div className={`d-flex-column nav-sub-item overflow-hidden height-transition ml-dropdown`} style={{ height: `${height}px` }}>
+            <div className={`d-flex-column nav-sub-item overflow-hidden height-transition ml-dropdown`}>{subItems ? this.renderDropdown(subItems) : null}</div>
           ) : null}
         </div>
       </>
