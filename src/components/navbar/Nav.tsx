@@ -1,7 +1,7 @@
 import React, { Component, createRef, ReactNode, RefObject } from 'react'
 import NavItem, { NavItemProps } from './NavItem'
 import { Link } from 'gatsby'
-import MetaNav from './MetaNav';
+import MetaNav from './MetaNav'
 
 const logo = require('../../../static/img/logo_iks.png')
 
@@ -13,6 +13,7 @@ interface State {
   mobile: boolean
   transform: number
   scrollHeight: number
+  innerHeight: number
 }
 
 export default class Nav extends Component<Props, State> {
@@ -25,6 +26,7 @@ export default class Nav extends Component<Props, State> {
       mobile: false,
       transform: 0,
       scrollHeight: 0,
+      innerHeight: 0,
     }
   }
 
@@ -61,8 +63,8 @@ export default class Nav extends Component<Props, State> {
               <span className='burger' />
             </button>
           ) : (
-              this.renderNavItems
-            )}
+            this.renderNavItems
+          )}
         </div>
         {mobile ? this.renderMobile : null}
       </>
@@ -70,22 +72,24 @@ export default class Nav extends Component<Props, State> {
   }
 
   private get renderMobile(): ReactNode {
-    const { transform, mobile } = this.state
+    const { transform, scrollHeight, innerHeight } = this.state
     const { navData } = this.props
     return (
-      <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: `${transform <= 50 ? '100vh' : '0vh'}` }}>
+      <div className='mobile-navbar' style={{ top: 0, transform: `translateX(${transform}%)`, height: transform <= 50 ? innerHeight : 0, marginTop: scrollHeight }}>
         <div className='navbar-item-container'>
           {navData.map(({ to, title, subItems }, index) => (
             <NavItem key={index} title={title} to={to} subItems={subItems} handleTouch={this.handleTouch} />
           ))}
-          <MetaNav socialmedia />
         </div>
+        <MetaNav socialmedia />
       </div>
     )
   }
 
   private handleResize = (): void => {
-    const { innerWidth } = window
+    const { innerWidth, innerHeight } = window
+
+    this.setState({ innerHeight })
     const { current } = this.ref
     if (current) {
       const { scrollHeight } = current
@@ -100,8 +104,10 @@ export default class Nav extends Component<Props, State> {
   }
 
   private handleTouch = (): void => {
-    const { transform } = this.state
-    const { innerWidth } = window
+    const { innerWidth, innerHeight } = window
+    const { transform, scrollHeight } = this.state
+    this.setState({ innerHeight: innerHeight - scrollHeight })
+
     transform > 50 ? this.setState({ transform: innerWidth < 550 ? 0 : 50 }) : this.setState({ transform: 100 })
   }
 }
