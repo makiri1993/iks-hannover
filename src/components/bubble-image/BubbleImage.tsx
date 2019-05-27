@@ -26,10 +26,8 @@ export default class BubbleImage extends Component<Props, State> {
   componentDidMount() {
     setInterval(() => {
       this.nextImage()
-    }, 5000)
+    }, 10000)
   }
-
-  componentWillUpdate() {}
 
   private nextImage() {
     const { images } = this.state
@@ -48,9 +46,9 @@ export default class BubbleImage extends Component<Props, State> {
         {images.map((image, index) => {
           return (
             <div key={index} onAnimationEnd={() => this.handleAnimationEnd()} className={`bubble-image-container bubble-${index}`}>
-              <Img className={`bubble-zoom-in`} fluid={image} alt='image in bubble form in container' />
-            </div>
-          )
+                      <Img className={`bubble-zoom-in`} fluid={image} alt='image in bubble form in container' />
+                    </div>
+                  )
         })}
       </div>
     )

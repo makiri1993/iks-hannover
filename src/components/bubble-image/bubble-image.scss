@@ -18,11 +18,12 @@
   .bubble-zoom-in {
     animation: zoomIn;
     animation-timing-function: ease-in-out;
-    animation-duration: 250ms;
+    animation-duration: 350ms;
   }
+
   .bubble-zoom-out {
     animation: zoomOut ease-in-out;
-    animation-duration: 250ms;
+    animation-duration: 350ms;
   }
 
   @keyframes zoomIn {
@@ -57,50 +58,49 @@
     flex-shrink: 0;
     z-index: 1;
     transform: translate(180%, -10%);
-    width: 400px;
+    width: 450px;
   }
 
   .bubble-1 {
     flex-shrink: 0;
     transform: translate(90%, 80%);
-
-    width: 450px;
+    width: 500px;
   }
 
   .bubble-2 {
     flex-shrink: 0;
     transform: translate(35%, -10%);
-    width: 550px;
+    width: 600px;
   }
 
   .bubble-3 {
     flex-shrink: 0;
     transform: translate(0%, 80%);
-    width: 350px;
+    width: 400px;
   }
 
   .bubble-4 {
     flex-shrink: 0;
-    transform: translate(-30%, -40%);
-    width: 380px;
+    transform: translate(-35%, -20%);
+    width: 450px;
   }
 
   .bubble-5 {
     flex-shrink: 0;
-    transform: translate(-160%, 80%);
-    width: 250px;
+    transform: translate(-100%, 50%);
+    width: 400px;
   }
 
   .bubble-6 {
     flex-shrink: 0;
     transform: translate(-100%, -30%);
-    width: 450px;
+    width: 500px;
     z-index: 3;
   }
 
   .bubble-7 {
     flex-shrink: 0;
-    transform: translate(-220%, 60%);
-    width: 400px;
+    transform: translate(-190%, 60%);
+    width: 450px;
   }
 }

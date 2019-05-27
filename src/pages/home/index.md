@@ -63,10 +63,6 @@ special:
 daylie:
   image: /img/auge.png
   text: >-
-    Wir bieten zwei Versorgungsalternativen: Eine intensivpflegerische
-    Versorgung zu Hause oder in einer unserer ambulant betreuten
-    Intensiv-Wohngemeinschaften. Wir stimmen Therapie und ambulante Versorgung
-    mit unseren kompetenten Teams und Ihrem ärztlichen Fachpersonal auf Ihre
-    Wünsche und die Bedürfnisse Ihrer zu pflegenden Angehörigen ab.
+    Derzeit entsteht unsere Tagespflege im Ahrberg-Viertel in Hannover-Linden mit Platz für 12 Tagesgäste
   title: Tagespflege Leuchtturm
 ---
