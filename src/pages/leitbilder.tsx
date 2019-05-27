@@ -12,7 +12,7 @@ export default () => {
           {
             name: 'description',
             content:
-              'Leitbilder',
+              'Lernen Sie uns näher kennen. Hier erfahren Sie alles zu der Philosophie, der Vision und dem Leitbild des Interkultureller Pflegedienst Hannover',
           },
         ]}
       />
