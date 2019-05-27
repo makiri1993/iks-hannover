@@ -24,7 +24,7 @@ export default () => {
             </Heading>
           </div>
           <Heading size={3} orange fontWeight={500}>
-            Pflegebild
+            Pflegeleitbild
             </Heading>
           <Heading size={5} orange fontWeight={500}>
             Der Mensch
