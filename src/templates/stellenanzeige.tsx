@@ -84,7 +84,7 @@ const Stellenanzeige = ({ data }: { data: Props }) => {
         <Text preLine>{job.number}</Text>
         <Text preLine>
           Haben wir dein Interesse geweckt und hast du Lust auf die Herausforderung? Dann sende uns deine Unterlagen an<br />
-          <a href='mailto:iks-hannover@iks-hannover.de'>iks-hannover@iks-hannover.de</a>
+          <a className='ext-link-orange' href='mailto:iks-hannover@iks-hannover.de'>iks-hannover@iks-hannover.de</a>
           <br />
           Wir freuen uns, dich kennenzulernen.
         </Text>

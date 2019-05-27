@@ -3,13 +3,16 @@ pageKey: page_home
 slider:
   slides:
     - image: /img/intensiv_3.png
-    - image: /img/ambulant_1.png
-    - image: /img/intensiv_3.png
+    - image: /img/pflegeleistungen_2.png
+    - image: /img/wgs_2.png
     - image: /img/wgs_1.png
     - image: /img/ambulant_1.png
-    - image: /img/wgs_1.png
-    - image: /img/intensiv_3.png
-    - image: /img/wgs_1.png
+    - image: /img/intensiv_2.png
+    - image: /img/pflegeleistungen_1.png
+    - image: /img/ambulant_2.png
+    - image: /img/intensiv_1.png
+    - image: /img/intensiv_2.png
+    - image: /img/ambulant_2.png
 intro_text:
   body: >-
     Liebe BesucherInnen,

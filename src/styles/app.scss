@@ -265,6 +265,11 @@ $color-black: #545456;
   padding-bottom: 2.4rem;
 }
 
+.ext-link-orange {
+  color: $color-orange;
+  text-decoration: underline;
+}
+
 @import "./text.scss";
 @import "./colors.scss";
 @import "./normalize.scss";

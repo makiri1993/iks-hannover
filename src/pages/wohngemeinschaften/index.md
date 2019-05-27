@@ -56,6 +56,6 @@ text_two: >-
 
   Für eine umfassende Beratung und Besichtigung sowie zu allen Fragen rund um
   die Finanzierung stehen wir Ihnen gern zur Verfügung.
-image_two: /img/wgs_1.png
+image_two: /img/wgs_2.png
 ---
 
