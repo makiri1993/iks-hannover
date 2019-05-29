@@ -6,13 +6,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: $color-orange;
-  height: 76vh;
+  background-color: rgb(233, 233, 233);
+  height: 85vh;
   overflow: hidden;
 
   .bubble-image-container {
     border-radius: 50%;
-    border: 0.5vh solid $color-white;
+    border: 0.5vh solid $color-orange;
   }
 
   .bubble-zoom-in {

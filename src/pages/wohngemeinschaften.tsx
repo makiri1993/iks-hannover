@@ -22,7 +22,7 @@ export default ({ data }: { data: Data }) => {
   return (
     <>
       <Helmet
-        title={'Wohngemeinschaften - Interkultureller Pflegedienst Hannover'}
+        title={'Wohngemeinschaften - Interkultureller Socialdienst Hannover'}
         meta={[
           {
             name: 'description',
@@ -43,7 +43,7 @@ export default ({ data }: { data: Data }) => {
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
               <Heading size={4} blue>
-                Galina Fiksman
+                Galina Fiksmann
               </Heading>
             </div>
             <Heading size={6}>| Pflegedienstleitung</Heading>

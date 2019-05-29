@@ -8,7 +8,7 @@ import Text from "../components/text/Text";
 const PrivacyPage = () => (
   <>
     <Helmet
-      title="Datenschutzerklärung - Interkultureller Pflegedienst Hannover"
+      title="Datenschutzerklärung - Interkultureller Socialdienst Hannover"
       meta={[
         {
           name: "description",

@@ -30,7 +30,7 @@ export default ({ data }: { data: Props }) => {
   return (
     <>
       <Helmet
-        title={'Stellenanzeigen - Interkultureller Pflegedienst Hannover'}
+        title={'Stellenanzeigen - Interkultureller Socialdienst Hannover'}
         meta={[
           {
             name: 'description',

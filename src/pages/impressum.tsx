@@ -9,11 +9,11 @@ const map: string = require('../../static/img/maps.png')
 export default () => (
   <>
     <Helmet
-      title={'Impressum - Interkultureller Pflegedienst Hannover'}
+      title={'Impressum - Interkultureller Socialdienst Hannover'}
       meta={[
         {
           name: 'description',
-          content: 'Das Impressum des Interkultureller Pflegedienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.',
+          content: 'Das Impressum des Interkultureller Socialdienst Hannover. Hier finden Sie die Adresse, unsere Telefon und Faxnummer und weitere Kontaktdaten.',
         },
       ]}
     />

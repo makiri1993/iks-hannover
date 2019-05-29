@@ -7,7 +7,7 @@ import Text from '../components/text/Text'
 export default () => (
   <>
     <Helmet
-      title={'Jobs, Kooperationen und Partner - Interkultureller Pflegedienst Hannover'}
+      title={'Jobs, Kooperationen und Partner - Interkultureller Socialdienst Hannover'}
       meta={[
         {
           name: 'description',

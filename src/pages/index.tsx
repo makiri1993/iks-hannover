@@ -68,11 +68,11 @@ export default ({ data }: { data: IndexData }) => {
   return (
     <>
       <Helmet
-        title={'Interkultureller Pflegedienst und Sozialdienst Hannover - Informieren Sie sich zu ambulanten und medizinischen Leistungen'}
+        title={'Interkultureller Socialdienst und Sozialdienst Hannover - Informieren Sie sich zu ambulanten und medizinischen Leistungen'}
         meta={[
           {
             name: 'description',
-            content: 'Interkultureller Pflegedienst und Sozialdienst Hannover',
+            content: 'Interkultureller Socialdienst und Sozialdienst Hannover',
           },
         ]}
       />
