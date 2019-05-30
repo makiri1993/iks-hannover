@@ -39,7 +39,8 @@
   // height: 20px;
   align-self: flex-start;
   justify-content: space-between;
-  background-color: rgba($color: $color-white, $alpha: 1);
+  background-color: rgba($color: $color-white, $alpha: 0.9);
+  // filter: blur(6px);
 
   padding: {
     left: 1rem;
