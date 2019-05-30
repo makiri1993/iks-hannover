@@ -47,9 +47,9 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
     return (
       <>
         <div className='d-flex-column w-100' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-          {handleTouch && subItems ? (
+          {true ? (
             <div className='d-flex'>
-              <div className={`nav-dropdown-toggle ${height > 100 ? 'dropdown-toggle-animation' : null}`}>|</div>
+              <div className={`nav-dropdown-toggle ${height > 20 ? 'dropdown-toggle-animation' : null}`}>|</div>
               {this.renderLinkOrNot({ title, to, ref: this.ref })}
             </div>
           ) : (
