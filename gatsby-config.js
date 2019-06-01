@@ -83,5 +83,11 @@ module.exports = {
       },
     },
     "gatsby-plugin-netlify",
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'de'
+      }
+    }
   ],
 }
