@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 const sitemap = () => (
   <>
     <Helmet
-      title={'Verzeichnis - Interkultureller Pflegedienst Hannover'}
+      title={'Verzeichnis - Interkultureller Socialdienst Hannover'}
       meta={[
         {
           name: 'description',

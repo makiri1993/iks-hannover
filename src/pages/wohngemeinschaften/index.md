@@ -1,7 +1,7 @@
 ---
 pageKey: page_wohngemeinschaften
 title: Wohngemeinschaften
-text: >-
+text_one: >-
   Für alle Senioren, die im Alter nicht in ein Altersheim ziehen möchten, bieten
   sich unsere Wohngemeinschaften in den Stadtteilen Roderbruch, List,
   Davenstedt, Stöcken und Burg als Alternative an.
@@ -25,8 +25,8 @@ text: >-
 
 
   Unsere Wohnobjekte sind zum größten Teil barrierefrei.
-
-
+image_one: /img/wgs_1.png
+text_two: >-
   Diese Wohngemeinschaften richten sich an Senioren, die aus den
   unterschiedlichsten Gründen nicht mehr allein zuhause leben können, etwa
   aufgrund einer demenziellen Erkrankung.
@@ -56,5 +56,6 @@ text: >-
 
   Für eine umfassende Beratung und Besichtigung sowie zu allen Fragen rund um
   die Finanzierung stehen wir Ihnen gern zur Verfügung.
+image_two: /img/wgs_2.png
 ---
 

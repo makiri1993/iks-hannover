@@ -1,17 +1,28 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Heading from '../components/heading/Heading'
-
-import Text from '../components/text/Text'
-import { SimpleData } from './pflegeleistungen'
+import TextWithImg from '../components/imgText/TextWithImg';
 import { graphql } from 'gatsby'
 
-export default ({ data }: { data: SimpleData }) => {
-  const { title, text } = data.siteData.frontmatter
+interface Data {
+  siteData: {
+    frontmatter: {
+      title: string
+      text_one: string
+      image_one?: object
+      text_two: string
+      image_two?: object
+    }
+  }
+}
+
+export default ({ data }: { data: Data }) => {
+  const { title, text_one, text_two, image_one, image_two } = data.siteData.frontmatter
+
   return (
     <>
       <Helmet
-        title={'Wohngemeinschaften - Interkultureller Pflegedienst Hannover'}
+        title={'Wohngemeinschaften - Interkultureller Socialdienst Hannover'}
         meta={[
           {
             name: 'description',
@@ -22,17 +33,17 @@ export default ({ data }: { data: SimpleData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center blue fontWeight={500}>
               {title}
             </Heading>
           </div>
-
-          <Text preLine>{text}</Text>
+          <TextWithImg image={image_one} textRight>{text_one}</TextWithImg>
+          <TextWithImg image={image_two} textLeft>{text_two}</TextWithImg>
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
               <Heading size={4} blue>
-                Galina Fiksman
+                Galina Fiksmann
               </Heading>
             </div>
             <Heading size={6}>| Pflegedienstleitung</Heading>
@@ -51,7 +62,22 @@ export const query = graphql`
     siteData: markdownRemark(frontmatter: { pageKey: { eq: "page_wohngemeinschaften" } }) {
       frontmatter {
         title
-        text
+        text_one
+        text_two
+        image_one {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image_two {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

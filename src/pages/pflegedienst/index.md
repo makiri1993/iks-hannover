@@ -6,7 +6,7 @@ text_top: >-
   zur interkulturellen Pflege für Menschen mit verschiedensten kulturellen,
   sprachlichen oder religiösen Wurzeln. Unsere Patienten sowie ihre Wünsche,
   Bedürfnisse und Lebenssituationen stehen dabei für uns im Vordergrund und sind
-  uns sehr wichtig. 
+  uns sehr wichtig.
 
 
   Denn schließlich geht es um den Menschen – unabhängig davon, in welcher Lage
@@ -14,7 +14,7 @@ text_top: >-
   Einfühlungsvermögen und fundierten Fachkenntnissen Menschen jeden Alters in
   der gesamten Region Hannover. Unsere Pflege unterstützt, aktiviert und
   motiviert; unsere Mitarbeitenden setzen Eigeninitiativen frei und stärken die
-  Selbstkompetenzen der ihnen anvertrauten Menschen. 
+  Selbstkompetenzen der ihnen anvertrauten Menschen.
 
 
   Unser Handeln definiert sich als „interkulturell“. Für uns ist das „Andere“
@@ -24,7 +24,7 @@ text_top: >-
   unseren sein mögen.
 
 
-  Vertrauen Sie unserem Motto:
+image: /img/pflegeleistungen_1.png
 slogan: |-
   Wir pflegen Menschen...
 

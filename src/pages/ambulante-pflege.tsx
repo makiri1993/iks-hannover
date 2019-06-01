@@ -1,16 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
-import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
 import { SimpleData } from './pflegeleistungen'
+import TextWithImg from '../components/imgText/TextWithImg';
 
 export default ({ data }: { data: SimpleData }) => {
-  const { title, text } = data.siteData.frontmatter
+  const { title, text, image } = data.siteData.frontmatter
   return (
     <>
       <Helmet
-        title={'Intensivpflege - Interkultureller Pflegedienst Hannover'}
+        title={'Intensivpflege - Interkultureller Socialdienst Hannover'}
         meta={[
           {
             name: 'description',
@@ -21,12 +21,12 @@ export default ({ data }: { data: SimpleData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
-            <Heading size={1} uppercase center blue fontWeight={500}>
+          <div className='padding-heading'>
+            <Heading size={1} uppercase center green fontWeight={500}>
               {title}
             </Heading>
           </div>
-          <Text preLine>{text}</Text>
+          <TextWithImg image={image} textRight>{text}</TextWithImg>
         </div>
       </div>
     </>
@@ -39,6 +39,13 @@ export const query = graphql`
       frontmatter {
         title
         text
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

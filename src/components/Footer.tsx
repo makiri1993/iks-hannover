@@ -1,8 +1,10 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-// const logo_1: string = require('../../static/img/icons/IKS_LOGO_weiss-300x104.png')
-// const logo_2: string = require('../../static/img/icons/logo_baum.png')
+// tslint:disable-next-line: no-var-requires
+const logo_1: string = require('../../static/img/logo_iks.png')
+// tslint:disable-next-line: no-var-requires
+const logo_2: string = require('../../static/img/logo_baum.png')
 
 interface FooterProps {}
 
@@ -10,8 +12,8 @@ const Footer: React.SFC<FooterProps> = () => (
   <div className='FooterDiv'>
     <footer className='StyledFooter'>
       <div className='StyledFooterDiv'>
-        <h4 className='H4Footero'>Interkultureller Sozialdienst</h4>
-        <p className='PFooter'>
+        <h4 className='H4Footero'>Interkultureller Sozialdienst GmbH</h4>
+        <p className='color-white'>
           <br />
           Plaza de Rosalia 1<br />
           30449 Hannover
@@ -27,25 +29,21 @@ const Footer: React.SFC<FooterProps> = () => (
             iks-hannover@iks-hannover.de
           </a>
           <br />
-          <Link className='LinkEmail' to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
+          <Link className='LinkEmailWhite' to='/impressum' title='Link zu der Seite impressum des Pflegedienstes'>
             Impressum
           </Link>
           <br />
-          <Link className='LinkEmail' to='/sitemap' title='Link zu dem Inhaltsverzeichnis des Pflegedienstes'>
-            Sitemap
-          </Link>
-          <br />
-          <Link className='LinkEmail' to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
+          <Link className='LinkEmailWhite' to='/datenschutzerklaerung' title='Link zu der Datenschutzerklärung des Pflegedienstes'>
             Datenschutzerklärung
           </Link>
           <br />
           <br />
-          {/* <img className='StyledIMG' src={logo_1} /> */}
+          <img alt='Logo des Interkultureller Sozialdienstes GmbH' className='StyledIMG' src={logo_1} />
         </p>
       </div>
       <div className='StyledFooterDiv'>
         <h4 className='H4Footero'>Außerklinische Intensiv- und Beatmungspflege</h4>
-        <p className='PFooter'>
+        <p className='color-white'>
           <br />
           Voßstraße 1<br />
           30161 Hannover
@@ -55,13 +53,10 @@ const Footer: React.SFC<FooterProps> = () => (
           Fax 0511 - 866 43 43 5<br />
           <br />
           <br />
-          {/* <img className='StyledIMG' src={logo_2} /> */}
+          <img alt='Logo des Außerklinische Intensiv- und Beatmungspflege' className='StyledIMG' src={logo_2} />
         </p>
       </div>
     </footer>
-    <a className='LinkEmailOutWtMargin' title='link zu der immajung seite' href='https://www.immajung.com'>
-      code by immajung
-    </a>
   </div>
 )
 export default Footer

@@ -66,7 +66,7 @@ const link27: string = require('../../static/img/presse-archiv/Artikel/27_Presse
 export default () => (
   <>
     <Helmet
-      title={'Presse - Interkultureller Pflegedienst Hannover'}
+      title={'Presse - Interkultureller Socialdienst Hannover'}
       meta={[
         {
           name: 'description',
@@ -74,7 +74,7 @@ export default () => (
         },
       ]}
     />
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2017
       </Heading>
@@ -94,7 +94,7 @@ export default () => (
     <div className='FlexDivCard'>
       <Card link={link7} alt='Zeitungsartikel von 2017' img={a7} name='Care Konkret | 19.05.2017 Intensiv WG' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2015
       </Heading>
@@ -102,7 +102,7 @@ export default () => (
     <div className='FlexDivCard'>
       <Card link={link8} alt='Zeitungsartikel von 2017' img={a8} name='Hallo Wochenende | 24.01.2015 bunt statt braun' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2014
       </Heading>
@@ -115,7 +115,7 @@ export default () => (
       <Card link={link11} alt='Zeitungsartikel von 2014' img={a11} name='Nobilis | 06.2016 16 Fragen' />
       <Card link={link12} alt='Zeitungsartikel von 2014' img={a12} name='Niedersächsische Wirtschaft | 06.2014 Ramadan' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2013
       </Heading>
@@ -124,7 +124,7 @@ export default () => (
       <Card link={link13} alt='Zeitungsartikel von 2013' img={a13} name='Regions Journal | 27.02.2013 IKS' />
       <Card link={link14} alt='Zeitungsartikel von 2013' img={a14} name='FES | 01.2013 Frauen & Führung' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2012
       </Heading>
@@ -133,7 +133,7 @@ export default () => (
       <Card link={link15} alt='Zeitungsartikel von 2012' img={a15} name='CDU | 13.11.2012 Pflege' />
       <Card link={link16} alt='Zeitungsartikel von 2012' img={a16} name='Basar | 09.2012 IKS' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2011
       </Heading>
@@ -146,7 +146,7 @@ export default () => (
       <Card link={link19} alt='Zeitungsartikel von 2011' img={a19} name='BAD | 05.11.2017 Wohngemeinschaften' />
       <Card link={link20} alt='Zeitungsartikel von 2011' img={a20} name='Basar | 10.2011 kulturelle Vielfalt' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2010
       </Heading>
@@ -158,7 +158,7 @@ export default () => (
     <div className='FlexDivCard'>
       <Card link={link23} alt='Zeitungsartikel von 2010' img={a23} name='Vorwärts | 10.2010 Altenpflegerin' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2008
       </Heading>
@@ -166,7 +166,7 @@ export default () => (
     <div className='FlexDivCard'>
       <Card link={link24} alt='Zeitungsartikel von 2008' img={a24} name='2008 | Stadt Hannover Preis' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 2006
       </Heading>
@@ -174,7 +174,7 @@ export default () => (
     <div className='FlexDivCard'>
       <Card link={link25} alt='Zeitungsartikel von 2006' img={a25} name='HAZ | 11.2006 WG' />
     </div>
-    <div style={{ padding: '2.4rem' }}>
+    <div className='padding-heading'>
       <Heading size={1} uppercase center orange fontWeight={500}>
         PRESSE 1998
       </Heading>

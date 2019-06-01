@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Interkultureller Pflegedienst Hannover",
+    title: "Interkultureller Socialdienst Hannover",
     description:
-      "Interkultureller Pflegedienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.",
+      "Interkultureller Socialdienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.",
     title: "Interkultureller Sozialdienst Hannover",
     description:
       "Interkultureller Sozialdienst Hannover - ist seit 1998 der ambulante Pflegedienst im Raum Hannover in den Bereichen Altenpflege und Krankenpflege. Unsere hoch kompetenten und qualifizierten Pflegekräfte kümmern sich sehr gerne um Sie und Ihre Familienangehörigen.",
@@ -83,5 +83,11 @@ module.exports = {
       },
     },
     "gatsby-plugin-netlify",
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'de'
+      }
+    }
   ],
 }

@@ -1,7 +1,9 @@
 import React from 'react'
+import Img, { FluidObject } from 'gatsby-image'
+
 
 interface Props {
-  img: string
+  img: any
   alt: string
   link: string
   title: string
@@ -9,11 +11,10 @@ interface Props {
 class ImgWithLink extends React.Component<Props> {
   render() {
     return (
-      <div>
-        <a target='_blank' rel='noopener noreferrer' href={this.props.link} title={this.props.title}>
-          <img className='CardImg' src={this.props.img} alt={this.props.alt} title={this.props.title} />
-        </a>
-      </div>
+      <a className="img-link-container" target='_blank' rel='noopener noreferrer' href={this.props.link} title={this.props.title}>
+        <Img className='CardImg' fluid={this.props.img} alt={this.props.alt} title={this.props.title} />
+      </a>
+
     )
   }
 }

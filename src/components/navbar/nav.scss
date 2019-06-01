@@ -1,0 +1,232 @@
+.homepage-link {
+  color: $color-white;
+  text-align: center;
+  font-weight: 600;
+
+  @media only screen and (min-width: 551px) {
+    color: $color-white;
+
+    padding: {
+      top: 0.5rem;
+      bottom: 0.8rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    &[aria-current="page"] {
+      border-right: solid 2px $color-white;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    text-align: left;
+
+    padding: {
+      top: 0.5rem;
+      bottom: 0.5rem;
+      left: 1rem;
+      right: 0.5rem;
+    }
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  z-index: 7;
+  // height: 20px;
+  align-self: flex-start;
+  justify-content: space-between;
+  background-color: rgba($color: $color-white, $alpha: 0.9);
+  // filter: blur(6px);
+
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  // @media only screen and (min-width: 551px) {
+  //   width: 100%;
+  //   background-color: $color-black-transparent;
+  //   box-shadow: 3px 6px 26px $color-black-transparent;
+  //   padding-bottom: 1rem;
+  //   margin-bottom: 1rem;
+  // }
+
+  // @supports (-ms-flow-from: thingy) {
+  //   justify-content: space-around;
+  // }
+
+  // @media only screen and (max-width: 550px) {
+  //   justify-content: flex-end;
+  //   position: fixed;
+  //   right: 0;
+  //   background-color: $color-white;
+  //   background-color: transparent;
+  //   // height: 5vh;
+  // }
+
+  .navbar-logo {
+    margin: {
+      // top: 0.5rem;
+    }
+
+    img {
+      width: 21vw;
+      max-width: 100px;
+    }
+  }
+}
+
+.mobile-navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+  overflow: scroll;
+  background-color: $color-orange;
+  transition: all 350ms ease-in-out;
+
+  .navbar-item-container {
+    width: 90%;
+
+    margin: {
+      top: 1rem;
+
+      left: auto;
+      right: auto;
+    }
+
+    @media only screen and (max-width: 550px) {
+      margin: {
+        top: 0rem;
+      }
+    }
+
+    .nav-sub-item {
+      padding-left: 3rem;
+
+      @media only screen and (max-width: 550px) {
+        padding-left: 0rem;
+      }
+    }
+
+    .nav-image {
+      width: 25px;
+      height: 25px;
+
+      margin: {
+        right: 1rem;
+      }
+    }
+  }
+
+  .metaNav-container {
+    // position: absolute;
+    // bottom: 150px;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    margin: {
+      left: 1rem;
+      bottom: 1rem;
+      // right: auto;
+    }
+
+    a {
+      color: white;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.menu-button {
+  // position: relative;
+  justify-self: flex-end;
+  width: min-content;
+  background-color: transparent;
+  border: none;
+  z-index: 70;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.animation-burger {
+  span {
+    opacity: 0;
+  }
+
+  :first-child {
+    opacity: 1;
+    background-color: $color-orange;
+    transform: translate(0%, 450%) rotate(405deg);
+
+    @media only screen and (max-width: 550px) {
+      transform: translate(0%, 450%) rotate(405deg);
+    }
+  }
+
+  :last-child {
+    background-color: $color-orange;
+    opacity: 1;
+    transform: translate(0%, -630%) rotate(-405deg);
+
+    @media only screen and (max-width: 550px) {
+      transform: translate(0%, -450%) rotate(-405deg);
+    }
+  }
+}
+
+.burger {
+  z-index: 50;
+  transition: all 500ms ease-in-out !important;
+  display: block;
+  height: 4px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: $color-orange;
+  width: 30px;
+}
+
+.nav-dropdown-toggle {
+  // display: inline-flex;
+  color: $color-white;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  // margin-right: 2rem;
+  transition: transform 500ms ease-in-out;
+  transform: rotate(90deg);
+  align-self: center;
+}
+
+.ml-dropdown {
+  margin-left: 0rem;
+
+  @media only screen and (max-width: 550px) {
+    margin-left: 3.5rem;
+  }
+}
+
+.dropdown-toggle-animation {
+  transform: rotate(180deg);
+}
+
+.nav-item-centering {
+  justify-self: flex-start;
+
+  @media only screen and (max-width: 550px) {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,22 @@
+.job-tile-container {
+  margin-bottom: 150px;
+
+  .job-tile-title {
+    margin-bottom: 30px;
+  }
+
+  .job-tile-text {
+    margin-bottom: 30px;
+  }
+
+  .job-tile-link {
+    float: right;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f58f30;
+
+    a {
+      font-weight: 700;
+      color: #f58f30;
+    }
+  }
+}

@@ -4,8 +4,9 @@ import React from 'react'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
 import Heading from '../components/heading/Heading'
-import HeroSlider from '../components/HeroSlider'
+import BubbleImage from '../components/bubble-image/BubbleImage'
 import Text from '../components/text/Text'
+import Helmet from 'react-helmet'
 
 export interface Column {
   title: string
@@ -37,6 +38,7 @@ interface IndexData {
       nursing: Column
       care: Column
       special: Column
+      daylie: Column
     }
   }
 }
@@ -48,6 +50,7 @@ export default ({ data }: { data: IndexData }) => {
     intro_text,
     nursing,
     care,
+    daylie,
     special,
   } = data.siteData.frontmatter
 
@@ -64,7 +67,16 @@ export default ({ data }: { data: IndexData }) => {
 
   return (
     <>
-      <HeroSlider images={transformedHeroImages} />
+      <Helmet
+        title={'Interkultureller Socialdienst und Sozialdienst Hannover - Informieren Sie sich zu ambulanten und medizinischen Leistungen'}
+        meta={[
+          {
+            name: 'description',
+            content: 'Interkultureller Socialdienst und Sozialdienst Hannover',
+          },
+        ]}
+      />
+      <BubbleImage images={transformedHeroImages} />
       <div className='max-container'>
         <div className='text-container' style={{ paddingTop: '2.4rem' }}>
           <Heading size={1} uppercase center orange fontWeight={500}>
@@ -83,19 +95,11 @@ export default ({ data }: { data: IndexData }) => {
         </div>
         <div className='employeee-tile-container'>
           {managementData.map(({ name, role, image, signature }: ManagementSlide, index) => (
-            <EmployeeTile
-              key={index}
-              title={name}
-              alt='Bild von der Geschäftsführung'
-              name={name}
-              job={role}
-              image={image.childImageSharp.fluid}
-              signature={signature.childImageSharp.fluid}
-            />
+            <EmployeeTile key={index} alt='Bild von der Geschäftsführung' name={name} job={role} image={image.childImageSharp.fluid} signature={signature.childImageSharp.fluid} />
           ))}
         </div>
 
-        <FourColumns columns={[nursing, care, special]} />
+        <FourColumns columns={[nursing, care, special, daylie]} />
       </div>
     </>
   )
@@ -168,6 +172,17 @@ export const query = graphql`
           text
         }
         special {
+          title
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          text
+        }
+        daylie {
           title
           image {
             childImageSharp {

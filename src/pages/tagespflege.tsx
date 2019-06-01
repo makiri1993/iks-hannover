@@ -41,7 +41,7 @@ export default ({ data }: { data: TagespflegeData }) => {
   return (
     <>
       <Helmet
-        title={'Tagespflege - Interkultureller Pflegedienst Hannover'}
+        title={'Tagespflege - Interkultureller Socialdienst Hannover'}
         meta={[
           {
             name: 'description',
@@ -53,7 +53,7 @@ export default ({ data }: { data: TagespflegeData }) => {
       />
       <div className='max-container'>
         <div className='text-container'>
-          <div style={{ padding: '2.4rem' }}>
+          <div className='padding-heading'>
             <Heading size={1} uppercase center red fontWeight={500}>
               {title}
             </Heading>
@@ -85,13 +85,13 @@ export default ({ data }: { data: TagespflegeData }) => {
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
               <Heading size={4} red>
-                Galina Fiksman
+                Galina Fiksmann
               </Heading>
             </div>
             <Heading size={6}>| Pflegedienstleitung</Heading>
           </div>
           <a className='color-red' href='mailto:fiksman@iks-hannover.de'>
-            fiksman@iks-hannover.de
+            fiksmann@iks-hannover.de
           </a>
           <Text>0511 210 10 44</Text>
         </div>
