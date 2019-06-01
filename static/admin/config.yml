@@ -38,7 +38,7 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "stellenanzeige",
-      }
+        }
       - {label: "Titel", name: "titel", widget: "string"}
       - {label: "Anzeige Text", name: "text", widget: "text"}
       - {label: "Darum geht's", name: "text_one", widget: "text"}
