@@ -89,7 +89,7 @@ export default class NavItem extends Component<NavItemProps, NavItemState> {
       <div className='d-flex nav-item-centering' ref={ref} key={index}>
         {to ? (
           <Link className='homepage-link' to={to} onClick={handleTouch} aria-label={`Weiter Infos zu ${to}`}>
-            >{img ? <img className='nav-image' src={img} alt='Logo des Bereiches' /> : null}
+            {img ? <img className='nav-image' src={img} alt='Logo des Bereiches' /> : null}
             {title}
           </Link>
         ) : (
