@@ -57,7 +57,7 @@ export default class Nav extends Component<Props, State> {
             </Link>
           </div>
           {mobile ? (
-            <button className={`menu-button ${transform <= 50 ? 'animation-burger' : null}`} onClick={this.handleTouch} aria-label='button to open and close navbar'>
+            <button className={`menu-button ${transform <= 50 ? 'animation-burger' : null}`} onClick={this.handleTouch} aria-label='Button zum Öffnen und Schließen der Navigation'>
               <span className='burger' />
               <span className='burger' />
               <span className='burger' />
