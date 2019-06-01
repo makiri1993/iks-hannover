@@ -20,7 +20,7 @@ export default class FourColumns extends Component<Props> {
 
           return (
             <div key={index} className='OneColumn'>
-              <Link className='HomepageLink' to={linkForColumn}>
+              <Link aria-label={'zu den Informationen zu ' + title} className='HomepageLink'  title={'zu den Informationen zu ' + title} to={linkForColumn}>
                 <Img className='IconForButton' fluid={fluid} />
               </Link>
               <div style={{ padding: '2.4rem' }}>

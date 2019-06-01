@@ -38,7 +38,7 @@ const Footer: React.SFC<FooterProps> = () => (
           </Link>
           <br />
           <br />
-          <img className='StyledIMG' src={logo_1} />
+          <img alt='Logo des Interkultureller Sozialdienstes GmbH' className='StyledIMG' src={logo_1} />
         </p>
       </div>
       <div className='StyledFooterDiv'>
@@ -53,7 +53,7 @@ const Footer: React.SFC<FooterProps> = () => (
           Fax 0511 - 866 43 43 5<br />
           <br />
           <br />
-          <img className='StyledIMG' src={logo_2} />
+          <img alt='Logo des Außerklinische Intensiv- und Beatmungspflege' className='StyledIMG' src={logo_2} />
         </p>
       </div>
     </footer>
