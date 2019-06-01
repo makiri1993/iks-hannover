@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: "https://gatsby-starter-typescript-plus.netlify.com",
+        siteUrl: "https://www.iks-hannover.de",
       },
     },
     {
@@ -84,10 +84,10 @@ module.exports = {
     },
     "gatsby-plugin-netlify",
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        lang: 'de'
-      }
-    }
+        lang: "de",
+      },
+    },
   ],
 }
