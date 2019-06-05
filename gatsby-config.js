@@ -55,8 +55,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.interkulturellepflege.de",
-        sitemap: "https://www.interkulturellepflege.de/sitemap.xml",
+        host: "https://www.iks-hannover.de",
+        sitemap: "https://www.iks-hannover.de/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
