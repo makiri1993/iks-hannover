@@ -41,7 +41,7 @@ export default ({ data }: { data: TagespflegeData }) => {
   return (
     <>
       <Helmet
-        title={'Tagespflege - Interkultureller Socialdienst Hannover'}
+        title={'Tagespflege - Interkultureller Sozialdienst Hannover'}
         meta={[
           {
             name: 'description',

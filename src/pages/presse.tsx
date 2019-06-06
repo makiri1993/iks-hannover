@@ -66,7 +66,7 @@ const link27: string = require('../../static/img/presse-archiv/Artikel/27_Presse
 export default () => (
   <>
     <Helmet
-      title={'Presse - Interkultureller Socialdienst Hannover'}
+      title={'Presse - Interkultureller Sozialdienst Hannover'}
       meta={[
         {
           name: 'description',

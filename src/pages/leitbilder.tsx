@@ -7,12 +7,12 @@ export default () => {
   return (
     <>
       <Helmet
-        title={'Leitbilder - Interkultureller Socialdienst Hannover'}
+        title={'Leitbilder - Interkultureller Sozialdienst Hannover'}
         meta={[
           {
             name: 'description',
             content:
-              'Lernen Sie uns näher kennen. Hier erfahren Sie alles zu der Philosophie, der Vision und dem Leitbild des Interkultureller Socialdienst Hannover',
+              'Lernen Sie uns näher kennen. Hier erfahren Sie alles zu der Philosophie, der Vision und dem Leitbild des Interkultureller Sozialdienst Hannover',
           },
         ]}
       />

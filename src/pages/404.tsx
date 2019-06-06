@@ -7,7 +7,7 @@ import Container from '../components/Container'
 const NotFoundPage = () => (
   <>
     <Helmet
-      title={'Seite nicht gefunden - Interkultureller Socialdienst Hannover'}
+      title={'Seite nicht gefunden - Interkultureller Sozialdienst Hannover'}
       meta={[
         {
           name: 'description',

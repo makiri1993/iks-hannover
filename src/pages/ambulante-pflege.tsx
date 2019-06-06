@@ -10,7 +10,7 @@ export default ({ data }: { data: SimpleData }) => {
   return (
     <>
       <Helmet
-        title={'Intensivpflege - Interkultureller Socialdienst Hannover'}
+        title={'Intensivpflege - Interkultureller Sozialdienst Hannover'}
         meta={[
           {
             name: 'description',

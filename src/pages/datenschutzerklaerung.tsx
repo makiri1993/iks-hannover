@@ -1,25 +1,23 @@
-import React from "react";
-
-import Helmet from "react-helmet";
-
-import Heading from "../components/heading/Heading";
-import Text from "../components/text/Text";
+import React from 'react'
+import Helmet from 'react-helmet'
+import Heading from '../components/heading/Heading'
+import Text from '../components/text/Text'
 
 const PrivacyPage = () => (
   <>
     <Helmet
-      title="Datenschutzerklärung - Interkultureller Socialdienst Hannover"
+      title='Datenschutzerklärung - Interkultureller Sozialdienst Hannover'
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "Hier finden Sie die Datenschutzerklärung des Interkulturellen Pflegedienst Hannover"
+            'Hier finden Sie die Datenschutzerklärung des Interkulturellen Pflegedienst Hannover'
         }
       ]}
     />
-    <div className="max-container">
-      <div className="text-container">
-        <div className="padding-heading">
+    <div className='max-container'>
+      <div className='text-container'>
+        <div className='padding-heading'>
           <Heading size={1} uppercase center orange fontWeight={500}>
             Datenschutzerklärung
           </Heading>
@@ -50,9 +48,9 @@ const PrivacyPage = () => (
         <div>Plaza de Rosalia 1 20449 Hannover</div>
         <div>0511 – 2101044</div>
         <a
-          className="color-blue"
-          title="Email Adresse des interkulturellen Pfelgedienst Hannover"
-          href="mailto:iks-hannover@iks-hannover.de"
+          className='color-blue'
+          title='Email Adresse des interkulturellen Pfelgedienst Hannover'
+          href='mailto:iks-hannover@iks-hannover.de'
         >
           iks-hannover@iks-hannover.de
         </a>
@@ -64,25 +62,25 @@ const PrivacyPage = () => (
           Daten automatisch gespeichert:
         </Text>
         <ul>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>Aufgerufene Webseite</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>Unterseite, oder Datei</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>Datum und Uhrzeit und Dauer des Abrufs</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>IP-Adresse</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>Übertragene Datenmenge</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>Verwendetes Betriebssystem</Text>
           </li>
-          <li className="color-orange">
+          <li className='color-orange'>
             <Text>
               Browser und Browsertyp Die Internetseite, von der weitergeleitet
               wurde
@@ -170,15 +168,15 @@ const PrivacyPage = () => (
           sich bitte an unseren örtlichen Datenschutzbeauftragten: Wolfgang Sick
         </Text>
         <a
-          className="color-blue"
-          title="Email Adresse des interkulturellen Pflegedienst Hannover"
-          href="mailto:datenschutz@iks-hannover.de"
+          className='color-blue'
+          title='Email Adresse des interkulturellen Pflegedienst Hannover'
+          href='mailto:datenschutz@iks-hannover.de'
         >
           datenschutz@iks-hannover.de
         </a>
       </div>
     </div>
   </>
-);
+)
 
-export default PrivacyPage;
+export default PrivacyPage

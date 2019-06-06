@@ -22,7 +22,7 @@ export default ({ data }: { data: Data }) => {
   return (
     <>
       <Helmet
-        title={'Wohngemeinschaften - Interkultureller Socialdienst Hannover'}
+        title={'Wohngemeinschaften - Interkultureller Sozialdienst Hannover'}
         meta={[
           {
             name: 'description',
