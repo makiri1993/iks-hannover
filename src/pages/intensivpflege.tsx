@@ -38,7 +38,7 @@ export default ({ data }: { data: Data }) => {
           {
             name: 'description',
             content:
-              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in ' +
+              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Sozialdienst. Wir bieten eine intensivpflegerische Versorgung zu Hause oder in ' +
               'einer ambulant betreuten Wohngemeinschaft.',
           },
         ]}

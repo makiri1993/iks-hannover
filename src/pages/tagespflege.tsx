@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
@@ -46,8 +45,7 @@ export default ({ data }: { data: TagespflegeData }) => {
           {
             name: 'description',
             content:
-              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung' +
-              ' zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
+              'Hier finden Sie alles zur Finanzierung, Leistungen und den Räumlichkeiten für die Tagespflege. Bei der Tagespflege können Sie in ihrer privaten Umgebung wohnen.',
           },
         ]}
       />

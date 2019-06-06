@@ -11,7 +11,7 @@ const PrivacyPage = () => (
         {
           name: 'description',
           content:
-            'Hier finden Sie die Datenschutzerklärung des Interkulturellen Pflegedienst Hannover'
+            'Hier finden Sie die Datenschutzerklärung des Interkulturellen Sozialdienstes Hannover'
         }
       ]}
     />

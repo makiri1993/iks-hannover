@@ -27,7 +27,7 @@ export default ({ data }: { data: PflegedienstData }) => {
           {
             name: 'description',
             content:
-              'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Pfelgedienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.',
+              'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Sozialdienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.',
           },
         ]}
       />

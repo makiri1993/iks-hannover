@@ -27,7 +27,7 @@ export default ({ data }: { data: Data }) => {
           {
             name: 'description',
             content:
-              'Wenn Sie nicht in ein Alterheim ziehen möchten bieten Ihnen unsere Wohngemeinschaften in Hannover eine sehr gute Alternative. Unsere Pflegedienst kümmert sich dort um alle Ihre Anliegen.',
+              'Wenn Sie nicht in ein Alterheim ziehen möchten bieten Ihnen unsere Wohngemeinschaften in Hannover eine sehr gute Alternative. Unsere Pflegedienst kümmert sich dort um Ihre Anliegen.',
           },
         ]}
       />

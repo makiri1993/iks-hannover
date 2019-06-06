@@ -4,6 +4,7 @@ import ImgWithLink from '../components/ImgWithLink'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 import { SimpleData } from './engagement'
+import Helmet from 'react-helmet'
 import Img, { FluidObject } from 'gatsby-image'
 
 export default ({ data }: { data: SimpleData }) => {
@@ -31,6 +32,16 @@ export default ({ data }: { data: SimpleData }) => {
 
   return (
     <>
+    <Helmet
+      title='Engagement und Partner - Interkultureller Sozialdienst Hannover'
+      meta={[
+        {
+          name: 'description',
+          content:
+            'Der interkulturelle Sozialdienst Hannover engagiert sich in der Öffentlichkeitsarbeit und hat verschiedene Partner mit welchen kooperiert wird.'
+        }
+      ]}
+    />
       <div className='max-container'>
         <div className='text-container'>
           <div className='padding-heading'>

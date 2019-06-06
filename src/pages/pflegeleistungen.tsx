@@ -12,7 +12,7 @@ export interface SimpleData {
       text: string
       image?: object
       list_one: {
-        list_items: [{ item: String }]
+        list_items: [{ item: string }]
       }
     }
   }
@@ -23,12 +23,12 @@ export default ({ data }: { data: SimpleData }) => {
   return (
     <>
       <Helmet
-        title={'Pflegedienst - Interkultureller Sozialdienst Hannover'}
+        title={'Pflegeleistungen - Interkultureller Sozialdienst Hannover'}
         meta={[
           {
             name: 'description',
             content:
-              'Informieren Sie sich über unser Angebot und überzeugen Sie sich von unserem Pfelgedienst. Hier finden Sie Informationen zu Pflegegeraden, Pflegedienstleistungen, medizinische Leistungen und Preise.',
+              'Informieren Sie sich über unsere Leistungen und überzeugen Sie sich von unserem Sozialdienst. Hier finden Sie Informationen zu Pflegedienstleistungen, medizinische Leistungen und Preise.',
           },
         ]}
       />

@@ -7,11 +7,11 @@ import Text from '../components/text/Text'
 export default () => (
   <>
     <Helmet
-      title={'Jobs, Kooperationen und Partner - Interkultureller Sozialdienst Hannover'}
+      title={'Jobs - Interkultureller Sozialdienst Hannover'}
       meta={[
         {
           name: 'description',
-          content: 'Die Seite unserer Stellenangebote und Informationen über den Bundesfreiwilligendienst, Kooperationen und Partner.',
+          content: 'Auf dieser Seite finden Sie Informationen zu aktuellen Stellen und Praktikums- und Ausbildungsmöglichkeiten',
         },
       ]}
     />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import EmployeeTile from '../components/EmployeeTile'
 import Heading from '../components/heading/Heading'
 import Mitarbeiter from '../components/models/Mitarbeiter'
@@ -60,6 +61,16 @@ export default class Team extends Component<Props> {
     } = this.props.data
     return (
       <>
+        <Helmet
+        title={'Team - Interkultureller Sozialdienst Hannover'}
+        meta={[
+          {
+            name: 'description',
+            content:
+              'Lernen Sie das Team des Interkultureller Sozialdienst Hannover kennen. Hier finden Sie die Namen und die E-Mail Adressen der Mitarbeiter.',
+          },
+        ]}
+      />
         <div className='padding-heading'>
           <Heading size={1} center orange uppercase fontWeight={500}>
             Unser Team

@@ -72,7 +72,7 @@ export default ({ data }: { data: IndexData }) => {
         meta={[
           {
             name: 'description',
-            content: 'Hier finden Sie alle Informationen des Interkulturellern Pflege- und Sozialdienstes Hannover und Region',
+            content: 'Hier finden Sie alle Informationen des Interkulturellern Pflege- und Sozialdienst für Hannover und die Region.',
           },
         ]}
       />

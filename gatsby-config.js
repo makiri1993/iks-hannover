@@ -57,7 +57,7 @@ module.exports = {
       options: {
         host: "https://www.iks-hannover.de",
         sitemap: "https://www.iks-hannover.de/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        policy: [{ userAgent: "*", allow: "/", disallow: "/404" }],
       },
     },
     "gatsby-transformer-json",

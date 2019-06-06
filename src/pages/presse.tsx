@@ -70,7 +70,7 @@ export default () => (
       meta={[
         {
           name: 'description',
-          content: 'Schauen Sie sich alle unsere Erwähnungen in der Presse an. Hier finden Sie alle Artikel von 1998 bis heute aus z.B Zeitungen in Hannover.',
+          content: 'Schauen Sie sich alle unsere Erwähnungen in der Presse an. Hier finden Sie alle Artikel von 1998 bis heute aus z.B. Zeitungen in Hannover.',
         },
       ]}
     />
