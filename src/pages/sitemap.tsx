@@ -11,7 +11,7 @@ const sitemap = () => (
       meta={[
         {
           name: 'description',
-          content: 'Auf dieser Seite finden Sie eine Übersicht zu allen Seiten des interkulturellen Pflegedienst Hannover . ',
+          content: 'Auf dieser Seite finden Sie eine Übersicht zu allen Seiten des interkulturellen Sozialdienst Hannover . ',
         },
       ]}
     />

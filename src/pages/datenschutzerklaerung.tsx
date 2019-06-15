@@ -22,10 +22,6 @@ const PrivacyPage = () => (
             Datenschutzerklärung
           </Heading>
         </div>
-        <Heading size={4} orange>
-          Herzlich willkommen auf unserer Webseite.
-        </Heading>
-
         <Text>
           Bei einem Besuch auf unserer Webseite werden personenbezogene Daten
           bei uns erhoben, verarbeitet und genutzt. Diese werden jedoch nach den
@@ -44,11 +40,12 @@ const PrivacyPage = () => (
           Daten ist:
         </Text>
 
-        <div>Interkultureller Sozialdienst GmbH</div>
-        <div>Plaza de Rosalia 1 20449 Hannover</div>
-        <div>0511 – 2101044</div>
+        <Text>Interkultureller Sozialdienst GmbH</Text>
+        <Text>Plaza de Rosalia 1</Text>
+        <Text>30449 Hannover</Text>
+        <Text>0511 – 2101044</Text>
         <a
-          className='color-blue'
+          className='color-orange'
           title='Email Adresse des interkulturellen Pfelgedienst Hannover'
           href='mailto:iks-hannover@iks-hannover.de'
         >
@@ -168,8 +165,8 @@ const PrivacyPage = () => (
           sich bitte an unseren örtlichen Datenschutzbeauftragten: Wolfgang Sick
         </Text>
         <a
-          className='color-blue'
-          title='Email Adresse des interkulturellen Pflegedienst Hannover'
+          className='color-orange'
+          title='Email Adresse des Datenschutzbeauftragten des interkulturellen Pflegedienst Hannover'
           href='mailto:datenschutz@iks-hannover.de'
         >
           datenschutz@iks-hannover.de

@@ -82,7 +82,7 @@ export default () => (
         <Heading size={4} orange>
           Aktuelle Angebote
         </Heading>
-        <Text orange underline>
+        <Text orange>
           Ausbildung Pflegefachmann/-frau
         </Text>
         <Text>
@@ -107,7 +107,7 @@ export default () => (
           </li>
         </ul>
         <Text>Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit uns geschlossen werden.</Text>
-        <Text orange underline>
+        <Text orange>
           Praktikum
         </Text>
         <Text>
@@ -115,7 +115,7 @@ export default () => (
           Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der
           Pflege bekommen.
         </Text>
-        <Text orange underline>
+        <Text orange>
           Bundesfreiwilligendienst
         </Text>
         <Text>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</Text>

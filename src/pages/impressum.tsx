@@ -31,15 +31,14 @@ export default () => (
               Impressum
             </Heading>
           </div>
-          <Text center orange>
-            Interkultureller Sozialdienst GmbH Ambulante Alten- und Krankenpflege
-          </Text>
+          <Text center>Interkultureller Sozialdienst GmbH</Text>
+          <Text center>Ambulante Alten- und Krankenpflege</Text>
           <Text center>Plaza De Rosalia 1</Text>
           <Text center>30449 Hannover</Text>
-          <Text center>TEL: 0511 / 210 10 44</Text>
-          <Text center>FAX: 0511 / 210 10 66</Text>
+          <Text center>Telefon: 0511 / 210 10 44</Text>
+          <Text center>Fax: 0511 / 210 10 66</Text>
           <Text center>
-            MAIL:{' '}
+            E-Mail:{' '}
             <a className='color-orange' title='Email' href='mailto:iks-hannover@iks-hannover.de'>
               iks-hannover@iks-hannover.de
             </a>

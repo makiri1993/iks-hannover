@@ -6,8 +6,8 @@ import { NavItemProps } from './navbar/NavItem'
 
 const hand = require('../../static/img/icon_iks_hand.png')
 const house = require('../../static/img/icon_iks_haus.png')
-const mouth = require('../../static/img/icon_iks_mund.png')
-const eye = require('../../static/img/icon_iks_auge.png')
+const mouth = require('../../static/img/mund.png')
+const eye = require('../../static/img/auge.png')
 
 interface WrapperProps {
   children: React.ReactNode
@@ -33,8 +33,8 @@ const navData: NavItemProps[] = [
     subItems: [
       { title: 'Ambulante Pflege', to: '/ambulante-pflege', img: hand },
       { title: 'Wohngemeinschaften', to: '/wohngemeinschaften', img: house },
-      { title: 'Außerklinische Intensivpflege', to: '/intensivpflege', img: eye },
-      // { title: 'Tagespflege', to: '/tagespflege', img: mouth },
+      { title: 'Außerklinische Intensivpflege', to: '/intensivpflege', img: mouth },
+      // { title: 'Tagespflege', to: '/tagespflege', img: eye },
     ],
   },
   { title: 'Team', to: '/team' },

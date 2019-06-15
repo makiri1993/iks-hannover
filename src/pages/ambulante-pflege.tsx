@@ -15,7 +15,7 @@ export default ({ data }: { data: SimpleData }) => {
           {
             name: 'description',
             content:
-              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir beiten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
+              'Hier finden Sie alle Informationen zur Intensivpfelge von unserem Pflegedienst. Wir bieten eine intensivpflegerische Versorgung zu Hause oder in einer ambulant betreuten Wohngemeinschaft.',
           },
         ]}
       />
