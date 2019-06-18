@@ -69,7 +69,7 @@ export default ({ data }: { data: Props }) => {
         </Text>
         <br />
         <Image alt='Bild eines Geschenks' imageName='geschenke.png' maxWidth={300} />
-        {/* <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/> */}
+        <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/>
         <br />
         <Heading size={3} orange fontWeight={500}>
           In unseren aktuellen Angeboten findest du außerdem konkret zu besetzende Stellen:
@@ -80,8 +80,8 @@ export default ({ data }: { data: Props }) => {
               <JobTile key={index} headingSize={4} title={job.node.frontmatter.title} text={job.node.frontmatter.text} link={job.node.fields.slug} />
             ))}
           </div>
-        <Image alt='Bild eines Geldsacks' position='left' imageName='geldsack.png' maxWidth={300}/>
-        {/* <Image alt='Bild einer Linie' imageName='line-left.png' maxWidth={1000} hideOnMobile/> */}
+        <Image alt='Bild eines Geldsacks' position='right' imageName='geldsack.png' maxWidth={300}/>
+        <Image alt='Bild einer Linie' imageName='line-left.png' maxWidth={1000} hideOnMobile/>
         <br />
           <Heading size={4} orange fontWeight={500}>
             Ausbildung Pflegefachmann/-frau
@@ -109,7 +109,7 @@ export default ({ data }: { data: Props }) => {
         </ul>
         <Text>Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit uns geschlossen werden.</Text>
         <Image alt='Bild eines Stetoskop' imageName='stetoskop.png' maxWidth={300} />
-        {/* <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/> */}
+        <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/>
         <Heading size={4} orange fontWeight={500}>
           Praktikum
         </Heading>
