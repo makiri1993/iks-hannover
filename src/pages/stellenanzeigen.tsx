@@ -35,7 +35,7 @@ export default ({ data }: { data: Props }) => {
           {
             name: 'description',
             content:
-              'Sie sind auf Job suche ? Hier finden Sie die aktuellen Stellenausschreibungen des Interkulturellen Sozialdienstes für Hannover und die Region. Bewerben Sie sich!',
+              'Du sucht einen Job in einem Sozialdienst in Hannover ? Hier findest du die aktuellen Stellenausschreibungen des Interkulturellen Sozialdienstes für Hannover und die Region.',
           },
         ]}
       />

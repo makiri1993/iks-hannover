@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Heading from '../components/heading/Heading'
-import TextWithImg from '../components/imgText/TextWithImg';
+import TextWithImg from '../components/imgText/TextWithImg'
 import { graphql } from 'gatsby'
 
 interface Data {

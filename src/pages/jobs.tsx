@@ -1,10 +1,35 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
+import { graphql } from 'gatsby'
+import JobTile from '../components/jobTile/JobTile'
+import Image from '../components/img/image'
 
-export default () => (
+interface Props {
+  jobs: { edges: any }
+  data: {
+    jobs: {
+      edges: [
+        {
+          node: {
+            fields: {
+              slug: string
+            }
+            frontmatter: {
+              title: number
+              text: string
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+export default ({ data }: { data: Props }) => {
+  const { edges: jobs } = data.jobs
+  return(
   <>
     <Helmet
       title={'Jobs - Interkultureller Sozialdienst Hannover'}
@@ -23,70 +48,46 @@ export default () => (
           </Heading>
         </div>
         <Text>
-          Wir wachsen weiter und freuen uns immer über Ihre Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit Zusatzausbildung „Intensiv“) sowie
+          Wir wachsen weiter und freuen uns immer über deine Initiativbewerbung bei uns! Wir suchen examiniertes Pflegepersonal (ggf. mit Zusatzausbildung „Intensiv“) sowie
           Pflegehelfer*innen und Hauswirtschaftskräfte.
         </Text>
         <Text>
-          Die Einsatzbereiche sind dabei extrem vielfältig –Sie möchten gerne unser ambulantes Team unterstützen? Oder Sie gehen in der Betreuung unserer Demenzpatienten in den
-          Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht Ihr Organisationstalent an? Sie wünschen die Herausforderung im Intensivbereich?
+          Die Einsatzbereiche sind dabei extrem vielfältig –Du möchtest gerne unser ambulantes Team unterstützen? Oder du gehst in der Betreuung unserer Demenzpatienten in den
+          Wohngemeinschaften auf? Eine Stelle in der Schaltzentrale unseres Pflegedienstes spricht dein Organisationstalent an? Du wünschst die Herausforderung im Intensivbereich?
         </Text>
         <Text>
           Ob Vollzeit oder Teilzeit, Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter entsprechend ihrer Fähigkeiten und Wünsche einzusetzen. So legen wir
-          gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten. Wir suchen für unseren Bereich der Außerklinischen Intensivpflege examiniertes
-          Pflegepersonal und freuen uns auf Ihre Bewerbung.
+          gemeinsam die Basis für eine langfristige und vorteilhafte Partnerschaft auf beiden Seiten.
         </Text>
-        <Text underline>Wir bieten Ihnen:</Text>
-        <ul>
-          <li className='color-orange'>
-            <Text>familiäres Arbeitsklima in einem motivierten Team</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>wertschätzende Führungskultur</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>einen sicheren Arbeitsplatz in einem etablierten Unternehmen</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>umfangreiche Fort- und Weiterbildungsmöglichkeiten</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>pünktliche und leistungsgerechte Lohnzahlungen</Text>
-          </li>
-        </ul>
-        <Text underline>Sie bringen mit:</Text>
-        <ul>
-          <li className='color-orange'>
-            <Text>Freude am Umgang mit Menschen</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>Empathievermögen und Sensibilität</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>Verantwortungsbewusstsein</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>Zuverlässigkeit</Text>
-          </li>
-          <li className='color-orange'>
-            <Text>Teamfähigkeit</Text>
-          </li>
-        </ul>
         <Text>
-          Bitte lassen Sie uns Ihre vollständigen Bewerbungsunterlagen gerne per Email an
+          Bitte lasse uns jederzeit deine vollständigen Bewerbungsunterlagen gerne per Email an
           <a className='color-orange' href='mailto:iks-hannover@iks-hannover.de'>
             {' '}
             iks-hannover@iks-hannover.de
           </a>{' '}
           zukommen.
         </Text>
-        <Heading size={4} orange>
-          Aktuelle Angebote
+        <br />
+        <Image alt='Bild eines Geschenks' imageName='geschenke.png' maxWidth={300} />
+        <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/>
+        <br />
+        <Heading size={3} orange fontWeight={500}>
+          In unseren aktuellen Angeboten findest du außerdem konkret zu besetzende Stellen:
         </Heading>
-        <Text orange>
-          Ausbildung Pflegefachmann/-frau
-        </Text>
+        <br />
+        <div className='flex'>
+            {jobs.map((job: { node: { frontmatter: { title: string | undefined; text: string | undefined }; fields: { slug: string | undefined } } }, index: number) => (
+              <JobTile key={index} headingSize={4} title={job.node.frontmatter.title} text={job.node.frontmatter.text} link={job.node.fields.slug} />
+            ))}
+          </div>
+        <Image alt='Bild eines Geldsacks' position='right' imageName='geldsack.png' maxWidth={300}/>
+        <Image alt='Bild einer Linie' imageName='line-left.png' maxWidth={1000} hideOnMobile/>
+        <br />
+          <Heading size={4} orange fontWeight={500}>
+            Ausbildung Pflegefachmann/-frau
+          </Heading>
         <Text>
-          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns können Sie Ihre Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen der schulischen Ausbildung kooperieren wir
+          Wir sind ein anerkannter Ausbildungsbetrieb. Bei uns kannst du deine Ausbildung zum Pflegefachmann/-frau absolvieren. Im Rahmen der schulischen Ausbildung kooperieren wir
           mit den folgenden Pflegefachschulen:
         </Text>
         <ul>
@@ -107,19 +108,39 @@ export default () => (
           </li>
         </ul>
         <Text>Wenn ein Schulvertrag mit einer anderen Schule vorliegt, kann auch mit dieser Schule für die Ausbildung ein Kooperationsvertrag mit uns geschlossen werden.</Text>
-        <Text orange>
+        <Image alt='Bild eines Stetoskop' imageName='stetoskop.png' maxWidth={300} />
+        <Image alt='Bild einer Linie' imageName='line.png' maxWidth={1000} hideOnMobile/>
+        <Heading size={4} orange fontWeight={500}>
           Praktikum
-        </Text>
+        </Heading>
         <Text>
-          Sie suchen im Rahmen Ihrer Ausbildung einen Praktikumsplatz? Fragen Sie gerne bei uns an. Wir kooperieren unter anderem mit den Ausbildungsbereichen der MHH und der
-          Anna-Siemsen-Schule. Sie schnuppern in unsere verschiedenen Unternehmensbereiche rein und können so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der
+          Du suchst im Rahmen deiner Ausbildung einen Praktikumsplatz? Frage gerne bei uns an. Wir kooperieren unter anderem mit den Ausbildungsbereichen der MHH und der
+          Anna-Siemsen-Schule. Du schnupperst in unsere verschiedenen Unternehmensbereiche rein und kannst so einen guten Eindruck von den verschiedenen Einsatzmöglichkeiten in der
           Pflege bekommen.
         </Text>
-        <Text orange>
+        <Heading size={4} orange fontWeight={500}>
           Bundesfreiwilligendienst
-        </Text>
+        </Heading>
         <Text>Unser Betrieb ist anerkannte Bundesfreiwilligendienststelle mit der Kapazität von zwei Plätzen.</Text>
       </div>
     </div>
   </>
-)
+  )
+}
+export const query = graphql`
+  {
+    jobs: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/stellen/" } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            text
+          }
+        }
+      }
+    }
+  }
+`

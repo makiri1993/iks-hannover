@@ -8,15 +8,16 @@ interface JobTileProps {
   title?: string
   text?: string
   link?: string
+  headingSize?: number
 }
 
 export default class JobTile extends Component<JobTileProps> {
   render() {
-    const { title, text, link } = this.props
+    const { title, text, link, headingSize } = this.props
     return (
       <div className='job-tile-container'>
         <div className='job-tile-title'>
-          <Heading size={1} orange fontWeight={500}>
+          <Heading size={headingSize ? headingSize : 2} orange fontWeight={500}>
             {title}
           </Heading>
         </div>
