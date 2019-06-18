@@ -4,7 +4,7 @@ import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
 import JobTile from '../components/jobTile/JobTile'
-import Image from '../components/img/image'
+import Image from '../components/img/Image'
 
 interface Props {
   jobs: { edges: any }
