@@ -15,10 +15,18 @@ interface PflegedienstData {
       image?: object
     }
   }
+  pflegeleistungen: {
+    frontmatter: {
+      title: string
+      text: string
+      list_one: string[]
+    }
+  }
 }
 
 export default ({ data }: { data: PflegedienstData }) => {
   const { title, text_top, slogan, text_bot, image } = data.siteData.frontmatter
+  const { text: textPfl, list_one: listPfl } = data.pflegeleistungen.frontmatter
   return (
     <>
       <Helmet
@@ -45,6 +53,14 @@ export default ({ data }: { data: PflegedienstData }) => {
           <Text preLine green>
             {slogan}
           </Text>
+          <Text preLine>{textPfl}</Text>
+          <ul>
+            {listPfl.list_items.map(el => (
+              <li className='color-green'>
+                <Text>{el.item}</Text>
+              </li>
+            ))}
+          </ul>
           <TextWithImg textLeft>{text_bot}</TextWithImg>
         </div>
       </div>
@@ -67,6 +83,17 @@ export const query = graphql`
         }
         slogan
         text_bot
+      }
+    }
+    pflegeleistungen: markdownRemark(frontmatter: { pageKey: { eq: "page_pflegeleistungen" } }) {
+      frontmatter {
+        title
+        text
+        list_one {
+          list_items {
+            item
+          }
+        }
       }
     }
   }
