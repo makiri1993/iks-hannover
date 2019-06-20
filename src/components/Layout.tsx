@@ -26,7 +26,7 @@ const navData: NavItemProps[] = [
   {
     title: 'Home',
     to: '/',
-    subItems: [{ title: 'Unser Pflegedienst', to: '/pflegedienst' }, { title: 'Pflegeleistungen', to: '/pflegeleistungen' }, { title: 'Leitbilder', to: '/leitbilder' }],
+    subItems: [{ title: 'Unser Pflegedienst', to: '/pflegedienst' }, { title: 'Leitbilder', to: '/leitbilder' }],
   },
   {
     title: 'Leistungsbereiche',

@@ -3,10 +3,22 @@ import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import { graphql } from 'gatsby'
 import { SimpleData } from './pflegeleistungen'
-import TextWithImg from '../components/imgText/TextWithImg';
+import TextWithImg from '../components/imgText/TextWithImg'
 
-export default ({ data }: { data: SimpleData }) => {
-  const { title, text, image } = data.siteData.frontmatter
+interface AmbulantepflegeData {
+  siteData: {
+    frontmatter: {
+      title: string
+      text: string
+      textLeft: string
+      image?: object
+      imageLeft?: object
+    }
+  }
+}
+
+export default ({ data }: { data: AmbulantepflegeData }) => {
+  const { title, text, image, imageLeft, textLeft } = data.siteData.frontmatter
   return (
     <>
       <Helmet
@@ -27,6 +39,7 @@ export default ({ data }: { data: SimpleData }) => {
             </Heading>
           </div>
           <TextWithImg image={image} textRight>{text}</TextWithImg>
+          <TextWithImg image={imageLeft} textLeft>{textLeft}</TextWithImg>
         </div>
       </div>
     </>
@@ -39,7 +52,15 @@ export const query = graphql`
       frontmatter {
         title
         text
+        textLeft
         image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageLeft {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
