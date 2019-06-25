@@ -4,7 +4,7 @@ import React from 'react'
 import EmployeeTile from '../components/EmployeeTile'
 import FourColumns from '../components/FourColumns'
 import Heading from '../components/heading/Heading'
-import BubbleImage from '../components/bubble-image/BubbleImage'
+import HeroSlider from '../components/HeroSlider'
 import Text from '../components/text/Text'
 import Helmet from 'react-helmet'
 
@@ -76,7 +76,7 @@ export default ({ data }: { data: IndexData }) => {
           },
         ]}
       />
-      <BubbleImage images={transformedHeroImages} />
+      <HeroSlider images={transformedHeroImages} />
       <div className='max-container'>
         <div className='text-container' style={{ paddingTop: '2.4rem' }}>
           <Heading size={1} uppercase center orange fontWeight={500}>
@@ -114,7 +114,7 @@ export const query = graphql`
           slides {
             image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1800) {
                   ...GatsbyImageSharpFluid
                 }
               }
