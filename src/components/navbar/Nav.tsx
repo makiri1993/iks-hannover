@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import MetaNav from './MetaNav'
 
 const logo = require('../../../static/img/logo_iks.png')
+const slogan = require('../../../static/img/schriftzug.svg')
 
 interface Props {
   navData: NavItemProps[]
@@ -53,8 +54,9 @@ export default class Nav extends Component<Props, State> {
         <div className='navbar' ref={this.ref}>
           <div className='navbar-logo'>
             <Link to='/'>
-              <img src={logo} alt='Logo des IKS Hannover' />
+              <img src={logo} className='logo' alt='Logo des IKS Hannover' />
             </Link>
+            <img src={slogan} className='slogan' alt='Logo des IKS Hannover' />
           </div>
           {mobile ? (
             <button className={`menu-button ${transform <= 50 ? 'animation-burger' : null}`} onClick={this.handleTouch} aria-label='Button zum Öffnen und Schließen der Navigation'>

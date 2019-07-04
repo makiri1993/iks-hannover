@@ -73,9 +73,77 @@
       // top: 0.5rem;
     }
 
-    img {
+    .logo {
       width: 21vw;
       max-width: 100px;
+    }
+
+    .slogan {
+      width: 270px;
+
+      @media only screen and (max-width: 550px) {
+        width: 170px;
+
+        margin: {
+          bottom: 10px;
+          left: 5px;
+        }
+      }
+
+      animation: fadein 5s;
+      -moz-animation: fadein 5s;
+      -webkit-animation: fadein 5s;
+      -o-animation: fadein 5s;
+
+      margin: {
+        left: 25px;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes fadein {
+
+        /* Firefox */
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadein {
+
+        /* Safari and Chrome */
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-o-keyframes fadein {
+
+        /* Opera */
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
     }
   }
 }
