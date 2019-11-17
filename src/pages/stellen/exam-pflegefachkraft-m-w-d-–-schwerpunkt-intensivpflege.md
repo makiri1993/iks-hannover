@@ -4,9 +4,9 @@ title_seo: Exam. Pflegefachkraft (m/w/d) – Schwerpunkt Intensivpflege
 description_seo: Exam. Pflegefachkraft (m/w/d) – Schwerpunkt Intensivpflege
 title: Exam. Pflegefachkraft (m/w/d) – Schwerpunkt Intensivpflege
 text: >-
-  Für unsere Intensiv-Wohngemeinschaft in der List suchen wir ausgebildete
+  Für unsere 1:1 - Pflege und Intensiv-Wohngemeinschaft in der List suchen wir ausgebildete
   Pflegefachkräfte mit Kenntnissen im Bereich der Intensiv- oder
-  Beatmungspflege. 
+  Beatmungspflege.
 
   Dabei bieten wir verschiedene Arbeitszeitmodelle - ob Vollzeit oder Teilzeit,
   Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter
@@ -16,7 +16,7 @@ text: >-
 text_one: >-
   Für unsere Intensiv-Wohngemeinschaft in der List suchen wir ausgebildete
   Pflegefachkräfte mit Kenntnissen im Bereich der Intensiv- oder
-  Beatmungspflege. 
+  Beatmungspflege.
 
   Dabei bieten wir verschiedene Arbeitszeitmodelle - ob Vollzeit oder Teilzeit,
   Minijob oder Nachtdienst – wir sind stolz darauf, unsere Mitarbeiter
@@ -27,7 +27,7 @@ list_one:
   list-items:
     - item: Grund- und Behandlungspflege der Patienten
     - item: Übernahme von rehabilitierenden Maßnahmen und soziale Betreuung
-    - item: 'Kommunikation mit Angehörigen, Ärzten usw.'
+    - item: "Kommunikation mit Angehörigen, Ärzten usw."
     - item: Pflegedokumentation
 list_two:
   list-items:
@@ -46,8 +46,7 @@ list_three:
     - item: umfangreiche Fort- und Weiterbildungsmöglichkeiten
     - item: leistungsgerechte Lohnzahlungen
     - item: betriebliche Gesundheitsförderung und Altersvorsorge
-    - item: 'Sonn-, Feiertags- und Nachtarbeitszuschläge'
+    - item: "Sonn-, Feiertags- und Nachtarbeitszuschläge"
 start: Einstellungstermin per sofort oder später
 number: 2
 ---
-
