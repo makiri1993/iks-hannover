@@ -8,7 +8,7 @@ interface Props {
   columns: Column[]
 }
 
-const links: string[] = ['/pflegedienst', '/wohngemeinschaften', '/intensivpflege']
+const links: string[] = ['/pflegedienst', '/wohngemeinschaften', '/intensivpflege', '/tagespflege']
 
 export default class FourColumns extends Component<Props> {
   render() {

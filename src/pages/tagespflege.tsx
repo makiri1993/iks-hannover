@@ -3,40 +3,22 @@ import Helmet from 'react-helmet'
 import Heading from '../components/heading/Heading'
 import Text from '../components/text/Text'
 import { graphql } from 'gatsby'
-import { SimpleData } from './pflegeleistungen'
+import TextWithImg from '../components/imgText/TextWithImg'
 
 interface TagespflegeData {
   siteData: {
     frontmatter: {
       title: string
       text_one: string
-      list_one: {
-        title: string
-        text: string
-        list_items: [
-          {
-            item: string
-          }
-        ]
-      }
-      list_two: {
-        title: string
-        text: string
-        list_items: [
-          {
-            item: string
-          }
-        ]
-      }
+      image_one?: object
+      text_two: string
+      image_two?: object
     }
   }
 }
 
 export default ({ data }: { data: TagespflegeData }) => {
-  const { title, text_one, list_one, list_two } = data.siteData.frontmatter
-
-  const { title: listOneTitle, text: listOneText, list_items: listItemsListOne } = list_one
-  const { title: listTwoTitle, text: listTwoText, list_items: listItemsListTwo } = list_two
+  const { title, text_one, image_one, text_two, image_two } = data.siteData.frontmatter
   return (
     <>
       <Helmet
@@ -52,43 +34,21 @@ export default ({ data }: { data: TagespflegeData }) => {
       <div className='max-container'>
         <div className='text-container'>
           <div className='padding-heading'>
-            <Heading size={1} uppercase center red fontWeight={500}>
+            <Heading size={1} uppercase center orange fontWeight={500}>
               {title}
             </Heading>
           </div>
-          <Text preLine>{text_one}</Text>
-          <Heading size={4} uppercase red>
-            {listOneTitle}
-          </Heading>
-          <Text preLine>{listOneText}</Text>
-          <ul>
-            {listItemsListOne.map(({ item }: { item: string }) => (
-              <li className='color-red'>
-                <Text>{item}</Text>
-              </li>
-            ))}
-          </ul>
-          <Heading size={4} uppercase red>
-            {listTwoTitle}
-          </Heading>
-          <Text preLine>{listTwoText}</Text>
-          <ul>
-            {listItemsListTwo.map(({ item }: { item: string }) => (
-              <li className='color-red'>
-                <Text>{item}</Text>
-              </li>
-            ))}
-          </ul>
-          <Text>Ihre persönliche Ansprechpartnerin:</Text>
+          <TextWithImg image={image_one} textRight>{text_one}</TextWithImg>
+          <TextWithImg image={image_two} textLeft>{text_two}</TextWithImg>
           <div className='d-flex align-center'>
             <div style={{ marginRight: '1rem' }}>
-              <Heading size={4} red>
+              <Heading size={4} orange>
                 Galina Fiksmann
               </Heading>
             </div>
             <Heading size={6}>| Pflegedienstleitung</Heading>
           </div>
-          <a className='color-red' href='mailto:fiksman@iks-hannover.de'>
+          <a className='color-orange' href='mailto:fiksman@iks-hannover.de'>
             fiksmann@iks-hannover.de
           </a>
           <Text>0511 210 10 44</Text>
@@ -104,18 +64,19 @@ export const query = graphql`
       frontmatter {
         title
         text_one
-        list_one {
-          title
-          text
-          list_items {
-            item
+        image_one {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
-        list_two {
-          title
-          text
-          list_items {
-            item
+        text_two
+        image_two {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
