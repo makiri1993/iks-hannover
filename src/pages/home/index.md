@@ -60,6 +60,7 @@ special:
 daylie:
   image: /img/auge.png
   text: >-
-    Derzeit entsteht unsere Tagespflege im Ahrberg-Viertel in Hannover-Linden mit Platz für 12 Tagesgäste
+    In unserem Hauptsitz im Lindener Ahrberg-Viertel befindet sich unsere neue Tagespflege mit Platz für 12 Tagesgäste.
+    Unter fachlich professioneller pflegerischer Betreuung finden dort tagsüber kreative Aktivitäten für Seniorinnen und Senioren statt und es wird gemeinsam gekocht und gegessen.
   title: Tagespflege Leuchtturm
 ---
