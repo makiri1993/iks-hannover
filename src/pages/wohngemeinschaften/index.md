@@ -37,7 +37,7 @@ text_two: >-
   Pflegedienstes betreut.
 
   Gut zu wissen:
-  Die Miter/innen unserer Wohngemeinschaften können den Pflegedienst, der sie pflegt, grundsätzlich frei wählen.
+  Die Mieter/innen unserer Wohngemeinschaften können den Pflegedienst, der sie pflegt, grundsätzlich frei wählen.
 
   Im Unterschied zum Alten- und Pflegeheim findet in den Wohngemeinschaften ein
   ganz normales Alltagsleben statt, in das sich die Mieter der Wohngemeinschaft
