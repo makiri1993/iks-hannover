@@ -36,8 +36,10 @@ text_two: >-
   die Uhr durch qualifizierte und engagierte Arbeitskräfte unseres
   Pflegedienstes betreut.
 
+
   Gut zu wissen:
   Die Mieter/innen unserer Wohngemeinschaften können den Pflegedienst, der sie pflegt, grundsätzlich frei wählen.
+
 
   Im Unterschied zum Alten- und Pflegeheim findet in den Wohngemeinschaften ein
   ganz normales Alltagsleben statt, in das sich die Mieter der Wohngemeinschaft
@@ -60,4 +62,3 @@ text_two: >-
   die Finanzierung stehen wir Ihnen gern zur Verfügung.
 image_two: /img/wgs_2.png
 ---
-
