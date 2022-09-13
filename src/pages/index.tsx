@@ -4,7 +4,7 @@ import { HeroSlider } from "../components/HeroSlider/HeroSlider";
 
 const IndexPage = () => {
   return (
-    <main>
+    <main style={{ width: "100%", backgroundColor: "black" }}>
       <HeroSlider />
     </main>
   );
