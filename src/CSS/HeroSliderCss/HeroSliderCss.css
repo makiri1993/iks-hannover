@@ -1,5 +1,5 @@
 .Hero {
-    display: block;
+    display: flex;
     width: 100%;
     position: relative;
     align-items: end;

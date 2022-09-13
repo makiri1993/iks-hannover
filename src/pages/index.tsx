@@ -7,11 +7,10 @@ const IndexPage = () => {
     "https://via.placeholder.com/150",
     "https://via.placeholder.com/150",
     "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
   ];
 
   return (
-    <main style={{ width: "100%", backgroundColor: "black" }}>
+    <main className="flex flex-col items-center">
       <HeroSlider images={images} />
     </main>
   );

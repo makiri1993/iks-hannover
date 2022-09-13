@@ -4,15 +4,18 @@ interface HeroSliderProps {
   images: string[];
 }
 
+const handleIndex = (index: number) => {
+  if (index === 0) {
+    return "";
+  }
+};
+
 export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   return (
-    <div
-      className="Hero"
-      style={{ alignItems: "center", justifyContent: "center" }}
-    >
+    <div className="flex w-full justify-center items-center overflow-hidden overflow-x-visible">
       {/*<Img fluid={images} />*/}
       {images.map((sourceUrl, index) => (
-        <img key={index} src={sourceUrl} />
+        <img className="w-full mx-2" key={index} src={sourceUrl} />
       ))}
     </div>
   );
