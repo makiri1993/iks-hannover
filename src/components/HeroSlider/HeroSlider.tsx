@@ -1,9 +1,19 @@
 import React from "react";
 
-export const HeroSlider: React.FC = () => {
+interface HeroSliderProps {
+  images: string[];
+}
+
+export const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   return (
-    <div className="Hero">
-      <img src="https://via.placeholder.com/150x150" />
+    <div
+      className="Hero"
+      style={{ alignItems: "center", justifyContent: "center" }}
+    >
+      {/*<Img fluid={images} />*/}
+      {images.map((sourceUrl, index) => (
+        <img key={index} src={sourceUrl} />
+      ))}
     </div>
   );
 };

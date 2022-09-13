@@ -1,8 +1,10 @@
 .Hero {
     display: block;
+    width: 100%;
     position: relative;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    overflow: hidden;
     color: #fcfcfc;
     background-color: #9e9e9e;
     text-align: center;
