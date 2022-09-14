@@ -44,15 +44,17 @@ export const Head: HeadFC = () => <title>Home Page</title>;
 
 export const query = graphql`
   query MyQuery {
-    page(id: "homepageiks", idType: URI) {
-      homepageintro {
-        welcomingheading
-        welcomingtext
-        imagejasmin {
-          sourceUrl
-        }
-        imagegalina {
-          sourceUrl
+    cms {
+      page(id: "homepageiks", idType: URI) {
+        homepageintro {
+          welcomingheading
+          welcomingtext
+          imagejasmin {
+            sourceUrl
+          }
+          imagegalina {
+            sourceUrl
+          }
         }
       }
     }
