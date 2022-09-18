@@ -48,6 +48,7 @@ export const query = graphql`
       page(id: "homepageiks", idType: URI) {
         homepageintro {
           welcomingheading
+          welcomingsubheading
           welcomingtext
           imagejasmin {
             sourceUrl
