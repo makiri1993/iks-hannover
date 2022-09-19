@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 interface HeadingProps {
-  size: "xl" | "2xl" | "3xl" | "4xl";
+  size: "lg" | "xl" | "2xl" | "3xl" | "4xl";
   uppercase?: boolean;
   fontWeight?: 400 | 500 | 600 | 700 | 800 | 900;
   center?: boolean;
@@ -25,14 +25,14 @@ export const Heading: React.FC<HeadingProps> = ({
     //     center ? "text-center" : ""
     //   }`}
     // >
-    <h1
-      className={`${classname} text-${size} text-[${color}] ${
+    <h2
+      className={` ${classname} text-${size} text-[${color}]  ${
         uppercase ? "uppercase" : ""
       } ${center ? "text-center" : ""} `}
       style={{ fontWeight: fontWeight }}
     >
       {children}
-    </h1>
+    </h2>
     // </div>
   );
 };
