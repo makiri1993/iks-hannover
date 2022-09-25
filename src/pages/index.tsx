@@ -4,6 +4,7 @@ import { HeroSlider } from "../components/HeroSlider/HeroSlider";
 import { graphql } from "gatsby";
 import { WelcomingIntro } from "../components/WelcomingIntro /WelcomingIntro";
 import { Services } from "../components/Services/Services";
+import { Navigation } from "../components/Navigation/Navigation";
 
 interface HomepageProps {
   data: {
@@ -37,15 +38,11 @@ interface HomepageProps {
 }
 
 const IndexPage: React.FC<HomepageProps> = ({ data }) => {
-  const images: string[] = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-  ];
-
   return (
     <main className="flex flex-col items-center">
       {/*<HeroSlider images={images} />*/}
+      <Navigation />
+      <img className="w-full" src="https://via.placeholder.com/150" />
       <WelcomingIntro page={data.cms.page} />
       <Services nodes={data.cms.iksServices.nodes} />
     </main>
