@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+ul.testText {
+    list-style-type: circle;
+}
+li.testText{
+    margin-left: 10px;
+}
