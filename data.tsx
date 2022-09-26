@@ -1,7 +1,7 @@
 export const Paths = {
   Index: "/",
   OurNursingService: "/ourNursingService",
-  LeitBilder: "/",
+  LeitBilder: "/missionStatement",
 };
 
 export const NavigationTiles: {
