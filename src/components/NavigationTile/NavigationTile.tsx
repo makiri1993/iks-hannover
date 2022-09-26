@@ -1,11 +1,19 @@
 import React from "react";
 import { NavigationTiles } from "../../../data";
+import { Link, navigate } from "gatsby";
 
 interface NavigationTileProps {
   toggle: boolean;
 }
 
 export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
+  const handleClick = (path?: string) => {
+    if (path === undefined) {
+      return "";
+    }
+
+    navigate(path);
+  };
   return (
     <div
       className={`flex flex-col absolute bg-orange-400 z-40 transition duration-100 right-0 ml-96 top-12 ${
@@ -14,14 +22,14 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
     >
       {NavigationTiles.map((element, index) => (
         <div className="">
-          <div className="pl-8 py-2" key={index}>
+          <Link to={element.path} className="pl-8 py-2" key={index}>
             -- {element.title}
-          </div>
+          </Link>
           <div className="f">
             {element.subTitles?.map((title, subTitleIndex) => (
-              <div className="pl-16 py-2" key={index}>
+              <Link className="pl-16 py-2" key={index} to={title.path}>
                 {title.title}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
