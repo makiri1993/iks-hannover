@@ -2,6 +2,7 @@ export const Paths = {
   Index: "/",
   OurNursingService: "/ourNursingService",
   LeitBilder: "/missionStatement",
+  AmbulantePflege: "/ambulantCare",
 };
 
 export const NavigationTiles: {
@@ -21,7 +22,7 @@ export const NavigationTiles: {
     title: "Leistungsbereiche",
     path: Paths.OurNursingService,
     subTitles: [
-      { title: "Ambulante Pflege", path: Paths.OurNursingService },
+      { title: "Ambulante Pflege", path: Paths.AmbulantePflege },
       { title: "Wohngemeinschaften", path: Paths.OurNursingService },
       { title: "Außerklinische Intensivpflege", path: Paths.OurNursingService },
       { title: "Tagespflege", path: Paths.OurNursingService },
