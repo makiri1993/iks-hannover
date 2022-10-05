@@ -4,6 +4,7 @@ export const Paths = {
   LeitBilder: "/missionStatement",
   AmbulantePflege: "/ambulantCare",
   Wohngemeinschaften: "/sharedFlats",
+  Tagespflege: "/daycare",
 };
 
 export const NavigationTiles: {
@@ -26,7 +27,7 @@ export const NavigationTiles: {
       { title: "Ambulante Pflege", path: Paths.AmbulantePflege },
       { title: "Wohngemeinschaften", path: Paths.Wohngemeinschaften },
       { title: "Außerklinische Intensivpflege", path: Paths.OurNursingService },
-      { title: "Tagespflege", path: Paths.OurNursingService },
+      { title: "Tagespflege", path: Paths.Tagespflege },
     ],
   },
   { title: "Team", path: Paths.OurNursingService },
