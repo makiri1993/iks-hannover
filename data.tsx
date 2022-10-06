@@ -7,6 +7,7 @@ export const Paths = {
   Tagespflege: "/daycare",
   AusserklinischeIntensivPflege: "/intensiveCare",
   UnserTeam: "/team",
+  Jobs: "/jobs",
 };
 
 export const NavigationTiles: {
@@ -38,7 +39,7 @@ export const NavigationTiles: {
   { title: "Team", path: Paths.UnserTeam },
   {
     title: "Jobs",
-    path: Paths.OurNursingService,
+    path: Paths.Jobs,
     subTitles: [{ title: "Stellenangebot", path: Paths.OurNursingService }],
   },
   { title: "Engagement|Partner", path: Paths.OurNursingService },
