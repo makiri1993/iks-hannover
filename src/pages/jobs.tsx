@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { AmbulantCareContent } from "../components/AmbulantCareContent/AmbulantCareContent";
+import { Navigation } from "../components/Navigation/Navigation";
 
 interface JobsProps {
   data: {
@@ -30,6 +31,7 @@ interface JobsProps {
 export const jobs: React.FC<JobsProps> = ({ data }) => {
   return (
     <div className="flex flex-col items-center w-full">
+      <Navigation />
       <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
         {data.cms.page.title}
       </h1>
