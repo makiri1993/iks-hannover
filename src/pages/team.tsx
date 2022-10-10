@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
+import { Layout } from "../components/Layout/Layout";
 
 interface teamProps {
   data: {
@@ -31,8 +32,7 @@ interface teamProps {
 
 export const team: React.FC<teamProps> = ({ data }) => {
   return (
-    <div className="flex flex-col items-center w-full">
-      <Navigation />
+    <Layout classname="flex flex-col items-center w-full">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
       <div className="flex flex-col items-center w-full">
         <div className="flex flex-row justify-center w-7/12 flex-wrap-reverse">
@@ -51,7 +51,7 @@ export const team: React.FC<teamProps> = ({ data }) => {
         </div>
       </div>
       <img src={data.cms.page.teamFields.image.sourceUrl} />
-    </div>
+    </Layout>
   );
 };
 

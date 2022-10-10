@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
+import { Layout } from "../components/Layout/Layout";
 
 interface MissionStatementProps {
   data: {
@@ -41,8 +42,7 @@ export const MissionStatement: React.FC<MissionStatementProps> = ({ data }) => {
     }
   };
   return (
-    <div className="flex flex-col items-center w-full">
-      <Navigation />
+    <Layout classname="flex flex-col items-center w-full">
       <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
         {dataVariable.page.title}
       </h1>
@@ -61,7 +61,7 @@ export const MissionStatement: React.FC<MissionStatementProps> = ({ data }) => {
           </div>
         ))}
       </div>
-    </div>
+    </Layout>
   );
 };
 
