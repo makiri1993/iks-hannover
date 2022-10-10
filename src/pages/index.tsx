@@ -6,6 +6,7 @@ import { WelcomingIntro } from "../components/WelcomingIntro /WelcomingIntro";
 import { Services } from "../components/Services/Services";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Footer } from "../components/Footer/Footer";
+import { Slider } from "../components/Slider/Slider";
 
 interface HomepageProps {
   data: {
@@ -40,10 +41,10 @@ interface HomepageProps {
 
 const IndexPage: React.FC<HomepageProps> = ({ data }) => {
   return (
-    <main className="flex flex-col items-center relative z-10">
+    <main className="flex flex-col w-full items-center relative z-10">
       {/*<HeroSlider images={images} />*/}
       <Navigation />
-      <img className="w-full" src="https://via.placeholder.com/150" />
+      <Slider />
       <WelcomingIntro page={data.cms.page} />
       <Services nodes={data.cms.iksServices.nodes} />
       <Footer />
