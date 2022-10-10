@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { WelcomingIntro } from "../components/WelcomingIntro /WelcomingIntro";
 import { Services } from "../components/Services/Services";
 import { Navigation } from "../components/Navigation/Navigation";
+import { Footer } from "../components/Footer/Footer";
 
 interface HomepageProps {
   data: {
@@ -39,12 +40,13 @@ interface HomepageProps {
 
 const IndexPage: React.FC<HomepageProps> = ({ data }) => {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex flex-col items-center relative z-10">
       {/*<HeroSlider images={images} />*/}
       <Navigation />
       <img className="w-full" src="https://via.placeholder.com/150" />
       <WelcomingIntro page={data.cms.page} />
       <Services nodes={data.cms.iksServices.nodes} />
+      <Footer />
     </main>
   );
 };

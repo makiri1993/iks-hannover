@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
+import { Layout } from "../components/Layout/Layout";
 
 interface engagementPartnerProps {
   data: {
@@ -30,8 +31,7 @@ export const enagementPartner: React.FC<engagementPartnerProps> = ({
   data,
 }) => {
   return (
-    <div className="flex flex-col items-center">
-      <Navigation />
+    <Layout classname="flex flex-col items-center">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
       <p>{data.cms.page.engagementFields.engagementcontent}</p>
       <div className="flex flex-row w-9/12">
@@ -45,7 +45,7 @@ export const enagementPartner: React.FC<engagementPartnerProps> = ({
         {data.cms.page.engagementFields.partnerheading}
       </h1>
       <p>{data.cms.page.engagementFields.partnercontent}</p>
-    </div>
+    </Layout>
   );
 };
 

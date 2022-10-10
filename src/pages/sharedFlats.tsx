@@ -3,6 +3,7 @@ import { Navigation } from "../components/Navigation/Navigation";
 import { AmbulantCareContent } from "../components/AmbulantCareContent/AmbulantCareContent";
 import { graphql } from "gatsby";
 import ambulantCare from "./ambulantCare";
+import { Layout } from "../components/Layout/Layout";
 
 interface sharedFlatsProps {
   data: {
@@ -26,8 +27,7 @@ interface sharedFlatsProps {
 
 export const sharedFlats: React.FC<sharedFlatsProps> = ({ data }) => {
   return (
-    <div className="flex flex-col items-center w-full">
-      <Navigation />
+    <Layout classname="flex flex-col items-center w-full">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
       <AmbulantCareContent
         content={data.cms.page.ambulantFields.uppercontent}
@@ -39,7 +39,7 @@ export const sharedFlats: React.FC<sharedFlatsProps> = ({ data }) => {
         imageSourceUrl={data.cms.page.ambulantFields.lowerimage.sourceUrl}
         className="flex flex-row items-center  whitespace-pre-line justify-center pt-8"
       />
-    </div>
+    </Layout>
   );
 };
 

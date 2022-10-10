@@ -2,6 +2,7 @@ import React from "react";
 import { Heading } from "../components/Heading/Heading";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
+import { Layout } from "../components/Layout/Layout";
 
 interface OurNursingServiceProps {
   data: {
@@ -24,8 +25,7 @@ export const OurNursingService: React.FC<OurNursingServiceProps> = ({
   data,
 }) => {
   return (
-    <div className="flex flex-col items-center">
-      <Navigation />
+    <Layout classname="flex flex-col items-center">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
       <div className="flex justify-between justify-center w-full p-12">
         <div className="flex flex-col items-center justify-center w-1/2 mb-11">
@@ -43,7 +43,7 @@ export const OurNursingService: React.FC<OurNursingServiceProps> = ({
       <p className="mt-12 whitespace-pre-line">
         {data.cms.page.PflegedienstFields.pflegedienstservices}
       </p>
-    </div>
+    </Layout>
   );
 };
 export default OurNursingService;

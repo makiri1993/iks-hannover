@@ -17,8 +17,8 @@ interface ServicesProps {
 export const Services: React.FC<ServicesProps> = ({ nodes }) => {
   return (
     <div
-      className="flex flex-row justify-center items-start flex-wrap w-full mt-48"
-      style={{ height: "800px" }}
+      className="flex flex-row justify-center  items-start z-10 flex-wrap w-full "
+      // style={{ height: "800px" }}
     >
       {nodes.map((elements, index) => (
         <ServicesTile

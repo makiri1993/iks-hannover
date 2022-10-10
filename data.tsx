@@ -46,3 +46,29 @@ export const NavigationTiles: {
   { title: "Engagement|Partner", path: Paths.Partner },
   { title: "Presse", path: Paths.OurNursingService },
 ];
+
+export const FooterData: {
+  name: string;
+  location: string;
+  PLZ: string;
+  phone: string;
+  FAX: string;
+  Mail: string;
+}[] = [
+  {
+    name: "Interkultureller Sozialdienst GmbH",
+    location: "Plaza de Rosalia 1",
+    PLZ: "30449 Hannover",
+    phone: "0511 - 210 10 44",
+    FAX: "0511 - 210 10 66",
+    Mail: "",
+  },
+  {
+    name: "Außerklinische Intensiv- und Beatmungspflege",
+    location: "Voßstraße1",
+    PLZ: "30161 Hannover",
+    phone: "0511 - 866 43 43 4",
+    FAX: "0511 - 866 43 43 5",
+    Mail: "",
+  },
+];
