@@ -11,6 +11,15 @@ import { Slider } from "../components/Slider/Slider";
 interface HomepageProps {
   data: {
     cms: {
+      slides: {
+        nodes: {
+          slidesFields: {
+            image: {
+              sourceUrl: string;
+            };
+          };
+        }[];
+      };
       iksServices: {
         nodes: {
           title: string;
@@ -44,7 +53,8 @@ const IndexPage: React.FC<HomepageProps> = ({ data }) => {
     <main className="flex flex-col w-full items-center relative z-10">
       {/*<HeroSlider images={images} />*/}
       <Navigation />
-      <Slider />
+      <Slider nodes={data.cms.slides.nodes} />
+      {/*<HeroSlider slides={data.cms.slides} />*/}
       <WelcomingIntro page={data.cms.page} />
       <Services nodes={data.cms.iksServices.nodes} />
       <Footer />
@@ -59,6 +69,16 @@ export const Head: HeadFC = () => <title>Home Page</title>;
 export const query = graphql`
   query MyQuery {
     cms {
+      slides {
+        nodes {
+          slidesFields {
+            image {
+              sourceUrl
+            }
+          }
+        }
+      }
+
       iksServices {
         nodes {
           title

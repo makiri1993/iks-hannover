@@ -1,51 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
-export const Slider: React.FC = () => {
+interface SliderProps {
+  nodes: {
+    slidesFields: {
+      image: {
+        sourceUrl: string;
+      };
+    };
+  }[];
+}
+
+export const Slider: React.FC<SliderProps> = ({ nodes }) => {
   const [slide, setSlide] = useState(0);
-  const imageArray: string[] = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/300",
-  ];
 
-  const handlingStyles = (index: number) => {
-    if (index === 0) {
-      return "absolute  w-full item-center";
-    }
-    if (index === 1) {
-      return "absolute w-full  ";
-    }
-  };
   useEffect(() => {
     const timer = setTimeout(() => {
-      setSlide(+1);
-    }, 100);
-    timer;
+      setSlide(slide + 1);
+      if (slide === nodes.length - 1) {
+        setSlide(0);
+      }
+      timer;
+    }, 5000);
     console.log(slide);
-  }, []);
-
-  const handlingSlides = () => {
-    if (slide === 0) {
-      return 0;
-    }
-    if (slide === 1) {
-      return 1;
-    }
-    return 0;
-  };
+  }, [slide]);
 
   return (
-    <div
-      className="flex flex-row justify-center w-full overflow-hidden"
-      style={{ height: "400px" }}
-    >
+    <div className="flex flex-row justify-center w-full overflow-hidden">
       <div className="relative w-full">
-        <img
-          // style={{ width: window.innerWidth }}
-          // className={`${handlingStyles()}`}
-          className="w-7/12"
-          src={imageArray[handlingSlides()]}
-        />
+        <img src={nodes[slide].slidesFields.image.sourceUrl} />
       </div>
     </div>
   );
