@@ -5,10 +5,15 @@
 
 ul.testText {
     list-style-type: circle;
+;
 }
 li.testText{
     margin-left: 10px;
 }
+
+p.wisAtest{
+}
+
 
 .mobile-navbar{
     /*position: fixed;*/
@@ -21,4 +26,6 @@ li.testText{
     /*overflow: scroll;*/
     /*transition: all 500s ease-in-out;*/
 }
-
+.li{
+    margin-left: 60px;
+}

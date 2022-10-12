@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { AmbulantCareContent } from "../components/AmbulantCareContent/AmbulantCareContent";
+import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
 
@@ -35,7 +35,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
       <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
         {data.cms.page.title}
       </h1>
-      <AmbulantCareContent
+      <ContentImageManager
         content={data.cms.page.jobsFields.text}
         imageSourceUrl={data.cms.page.jobsFields.image.sourceUrl}
         className={"w-full"}
