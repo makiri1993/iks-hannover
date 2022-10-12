@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
-import { AmbulantCareContent } from "../components/AmbulantCareContent/AmbulantCareContent";
+import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
 import { Layout } from "../components/Layout/Layout";
 
 interface intensiveCareProps {
@@ -25,7 +25,7 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
   return (
     <Layout classname="flex flex-col items-center w-full">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
-      <AmbulantCareContent
+      <ContentImageManager
         content={data.cms.page.intensivpflegeFields.textcontent}
         imageSourceUrl={data.cms.page.intensivpflegeFields.image.sourceUrl}
         className={"flex flex-row-reverse justify-center"}

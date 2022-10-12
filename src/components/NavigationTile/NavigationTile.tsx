@@ -16,7 +16,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
   };
   return (
     <div
-      className={`flex flex-col items-end justify-start w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-10 duration-1000 ease-in-out ${
+      className={`flex flex-col items-end justify-start w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0 " : "translate-x-full "
       }`}
       style={{ top: "101px", height: "800px" }}

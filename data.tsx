@@ -26,7 +26,7 @@ export const NavigationTiles: {
   },
   {
     title: "Leistungsbereiche",
-    path: Paths.OurNursingService,
+    path: "",
     subTitles: [
       { title: "Ambulante Pflege", path: Paths.AmbulantePflege },
       { title: "Wohngemeinschaften", path: Paths.Wohngemeinschaften },
