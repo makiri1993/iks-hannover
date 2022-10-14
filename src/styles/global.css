@@ -24,18 +24,18 @@ body {
 }
 
 ul.testText {
-    list-style-type: circle;
-;
+    list-style-type: circle;;
 }
-li.testText{
+
+li.testText {
     margin-left: 10px;
 }
 
-p.wisAtest{
+p.wisAtest {
 }
 
 
-.mobile-navbar{
+.mobile-navbar {
     /*position: fixed;*/
     /*right: 0;*/
     /*display: flex;*/
@@ -46,10 +46,12 @@ p.wisAtest{
     /*overflow: scroll;*/
     /*transition: all 500s ease-in-out;*/
 }
-.li{
+
+.li {
     margin-left: 60px;
 }
-.circle-image  {
+
+.circle-image {
     width: 300px;
     height: 300px;
     -webkit-border-radius: 150px;
@@ -57,4 +59,32 @@ p.wisAtest{
     -ms-border-radius: 150px;
     -o-border-radius: 150px;
     border-radius: 150px;
+}
+
+.job h4 {
+    font-weight: 500;
+    color: #ee7917;
+    font-size: 17.5px;
+}
+.job p {
+
+    font-size: 12px;
+    color: #545456;
+}
+
+
+.job ul li::before {content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */}
+.job li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: start;
+    height: 35px;
+    margin-left: 35px
+;
 }
