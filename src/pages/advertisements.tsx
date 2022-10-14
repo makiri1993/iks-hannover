@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
+import { AdvertisementLink } from "../components/AdvertisementLink/AdvertisementLink";
 interface advertisementsProps {
   data: {
     cms: {
@@ -34,7 +35,13 @@ export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
                 {elements.jobFields.content}
               </div>
             </div>
-          ) : undefined}
+          ) : (
+            <div />
+          )}
+          {index === 0 || index === 1 ? (
+            <AdvertisementLink />
+          ) : // <AdvertisementLink />
+          undefined}
         </div>
       ))}
     </Layout>

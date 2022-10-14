@@ -5,6 +5,7 @@ import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { html } from "gatsby/dist/redux/reducers";
+import { AdvertisementLink } from "../components/AdvertisementLink/AdvertisementLink";
 
 interface JobsProps {
   data: {
@@ -86,6 +87,12 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
             className="text-sm text-[#545456] leading-7"
             dangerouslySetInnerHTML={{ __html: elements.content }}
           />
+          {index === 0 || index === 1 ? (
+            <AdvertisementLink
+              path={index === 0 ? "/intensiveNurse" : "/nurse"}
+            />
+          ) : // <AdvertisementLink />
+          undefined}
         </div>
       ))}
     </Layout>
