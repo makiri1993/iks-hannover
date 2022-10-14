@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#___gatsby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#___gatsby > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
 
 ul.testText {
     list-style-type: circle;

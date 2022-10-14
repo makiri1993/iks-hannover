@@ -14,28 +14,34 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
   title,
   sourceUrl,
 }) => {
-  const handlingTitleColor = (index: number) => {
+  const handlingTitleColorAndRoute = (index: number, routeOrStyle: boolean) => {
     if (index === 0) {
-      return "text-[#ee7917]";
+      return routeOrStyle ? "/daycare" : "text-[#ee7917]";
     }
     if (index === 1) {
-      return "text-[#00933f]";
+      return routeOrStyle ? "/intensiveCare" : "text-[#00933f]";
     }
     if (index === 2) {
-      return "text-[#009be1]";
+      return routeOrStyle ? "/sharedFlats" : "text-[#009be1]";
     }
     if (index === 3) {
-      return "text-[#ee7917]";
+      return routeOrStyle ? "/ambulantCare" : "text-[#ee7917]";
     }
   };
   console.log(index);
   console.log();
   return (
     <div className="flex flex-col justify-center items-center w-full md:w-6/12 lg:w-4/12 py-8">
-      <img className="rounded-full w-3/12" src={sourceUrl} />
+      <a
+        href={handlingTitleColorAndRoute(index, true)}
+        className="flex flex-col items-center justify-center"
+      >
+        <img className="rounded-full w-3/12" src={sourceUrl} />
+      </a>
       <h2
-        className={`items-center text-center text-3xl py-4 ${handlingTitleColor(
-          index
+        className={`items-center text-center text-3xl py-4 ${handlingTitleColorAndRoute(
+          index,
+          false
         )}`}
       >
         {title}

@@ -18,7 +18,7 @@ export const Navigation: React.FC = () => {
   console.log(toggle);
   return (
     <div
-      className="flex flex-col bg-white relative z-30 w-full text-white"
+      className="flex flex-col items-center bg-white relative z-30 w-full text-white"
       style={{ height: "100px" }}
     >
       <div className="flex flex-row justify-between overflow-hidden z-10 w-full">

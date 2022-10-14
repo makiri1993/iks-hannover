@@ -5,7 +5,9 @@ interface AmbulantCareContentProps {
   imageSourceUrl: string;
   className: string;
   styleContent?: string;
+  styleContentContainer?: string;
   styleImage?: string;
+  styleImageContainer?: string;
 }
 
 export const ContentImageManager: React.FC<AmbulantCareContentProps> = ({
@@ -14,6 +16,8 @@ export const ContentImageManager: React.FC<AmbulantCareContentProps> = ({
   className,
   styleContent,
   styleImage,
+  styleContentContainer,
+  styleImageContainer,
 }) => {
   return (
     <div className={className}>
@@ -23,12 +27,17 @@ export const ContentImageManager: React.FC<AmbulantCareContentProps> = ({
       {/*  src={imageSourceUrl}*/}
       {/*  style={{ width: "40%" }}*/}
       {/*/>  */}
-      <div className="w-full w-8/12 md:w-5/12">
+      {/*<div className="w-full w-8/12 md:w-5/12">*/}
+      <div className={styleContentContainer}>
         <p className={styleContent}>{content}</p>
       </div>
-      <div className="flex flex-col items-center justify-center md:mb-11">
+      {/*</div>*/}
+      {/*<div className="flex flex-col items-center justify-center md:mb-11">*/}
+      <div className={styleImageContainer}>
         <img className={styleImage} src={imageSourceUrl} />
       </div>
+
+      {/*</div>*/}
     </div>
   );
 };
