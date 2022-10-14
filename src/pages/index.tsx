@@ -1,6 +1,5 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
-import { HeroSlider } from "../components/HeroSlider/HeroSlider";
 import { graphql } from "gatsby";
 import { WelcomingIntro } from "../components/WelcomingIntro /WelcomingIntro";
 import { Services } from "../components/Services/Services";

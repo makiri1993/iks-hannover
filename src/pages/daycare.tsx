@@ -26,7 +26,6 @@ interface daycareProps {
 
 export const daycare: React.FC<daycareProps> = ({ data }) => {
   return (
-    // <div className="flex flex-col items-center w-full">
     <Layout classname="flex flex-col items-center w-full">
       {/*<Navigation />*/}
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
@@ -41,7 +40,6 @@ export const daycare: React.FC<daycareProps> = ({ data }) => {
         className="flex flex-row items-center  whitespace-pre-line justify-center pt-8"
       />
     </Layout>
-    // </div>
   );
 };
 
