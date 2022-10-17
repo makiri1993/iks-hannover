@@ -50,10 +50,8 @@ interface HomepageProps {
 const IndexPage: React.FC<HomepageProps> = ({ data }) => {
   return (
     <main className="flex flex-col w-full items-center relative z-10">
-      {/*<HeroSlider images={images} />*/}
       <Navigation />
       <Slider nodes={data.cms.slides.nodes} />
-      {/*<HeroSlider slides={data.cms.slides} />*/}
       <WelcomingIntro page={data.cms.page} />
       <Services nodes={data.cms.iksServices.nodes} />
       <Footer />

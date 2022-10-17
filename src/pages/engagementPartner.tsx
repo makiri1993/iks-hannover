@@ -31,20 +31,33 @@ export const enagementPartner: React.FC<engagementPartnerProps> = ({
   data,
 }) => {
   return (
-    <Layout classname="flex flex-col items-center">
+    <Layout classname="flex flex-col items-center w-full">
       <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
-      <p>{data.cms.page.engagementFields.engagementcontent}</p>
-      <div className="flex flex-row w-9/12">
+      <p className="whitespace-pre-line w-7/12 pb-8">
+        {data.cms.page.engagementFields.engagementcontent}
+      </p>
+      <div className="flex flex-row justify-center flex-wrap w-7/12 flex-wrap">
         {data.cms.partners.nodes.map((image, index) => (
-          <div className={"flex flex-row"}>
-            <img src={image.partnerFields.image.sourceUrl} />
-          </div>
+          <>
+            <img
+              className="w-6/12 md:w-4/12 lg:w-2/12 mx-2"
+              src={image.partnerFields.image.sourceUrl}
+            />
+            {index === 10 ? (
+              <div className="flex flex-col items-center w-full py-8">
+                <h1 className="text-3xl mb-4 items-center">
+                  {data.cms.page.engagementFields.partnerheading}
+                </h1>
+                <p className="whitespace-pre-line w-full">
+                  {data.cms.page.engagementFields.partnercontent}
+                </p>
+              </div>
+            ) : (
+              ""
+            )}
+          </>
         ))}
       </div>
-      <h1 className="text-3xl mb-4 items-center">
-        {data.cms.page.engagementFields.partnerheading}
-      </h1>
-      <p>{data.cms.page.engagementFields.partnercontent}</p>
     </Layout>
   );
 };
@@ -62,7 +75,7 @@ export const query = graphql`
         }
         title
       }
-      partners {
+      partners(where: { orderby: { field: DATE, order: ASC } }, first: 20) {
         nodes {
           partnerFields {
             image {
