@@ -10,6 +10,7 @@ export const Paths = {
   Jobs: "/jobs",
   Stellenanzeigen: "/advertisements",
   Partner: "/engagementPartner",
+  Presse: "/magazines",
 };
 
 export const NavigationTiles: {
@@ -45,7 +46,7 @@ export const NavigationTiles: {
     subTitles: [{ title: "Stellenangebot", path: Paths.Stellenanzeigen }],
   },
   { title: "Engagement|Partner", path: Paths.Partner },
-  { title: "Presse", path: Paths.OurNursingService },
+  { title: "Presse", path: Paths.Presse },
 ];
 
 export const FooterData: {
