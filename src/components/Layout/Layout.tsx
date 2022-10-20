@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, classname }) => {
   return (
-    <div className={classname}>
+    <div className={classname} style={{ width: window.innerWidth }}>
       <Navigation />
       {children}
       <Footer />

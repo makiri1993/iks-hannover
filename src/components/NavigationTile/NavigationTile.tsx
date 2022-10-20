@@ -35,6 +35,8 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
           </div>
         </div>
       ))}
+      <Link to={"/impressum"}>impressum </Link>
+      <Link to={"/dataSecurity"}>Datenschutz </Link>
     </div>
   );
 };
