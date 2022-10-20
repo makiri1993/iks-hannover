@@ -18,16 +18,17 @@ export const Navigation: React.FC = () => {
   console.log(toggle);
   return (
     <div
-      className="flex flex-col items-center bg-white relative z-30 w-full text-white"
+      className="flex flex-col items-center  fixed mb-12 z-30 w-full text-white"
       style={{ height: "100px" }}
     >
-      <div className="flex flex-row justify-between overflow-hidden z-10 w-full">
+      <div
+        className="flex flex-row justify-between bg-white opacity-80  z-10 w-full"
+        style={{ height: "100px" }}
+      >
         <NavigationImages />
-        <button className="right-0 absolute z-30" onClick={handleToggle}>
-          <NavigationButton />
-        </button>
-        <NavigationTile toggle={toggle} />
+        <NavigationButton toggle={toggle} handleToggle={handleToggle} />
       </div>
+      <NavigationTile toggle={toggle} />
       {/*{toggle ? <NavigationTile toggle={toggle} /> : undefined}*/}
     </div>
   );

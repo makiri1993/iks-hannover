@@ -88,3 +88,27 @@ p.wisAtest {
     margin-left: 35px
 ;
 }
+.menu-botton {
+    justify-self: flex-end;
+    width: min-content;
+    background-color: transparent;
+    border: none;
+    z-index: 70;
+
+
+}
+.animationburger :first-child{opacity: 1;background-color: #ee7917;transform: translate(0%,450%) rotate(405deg)} {
+    opacity: 1;
+}.animationburger :last-child{opacity: 1;background-color: #ee7917;transform: translate(0%,-630%) rotate(-405deg)} {
+    opacity: 1;
+}
+.burger {
+    z-index: 50;
+    transition: all 500ms ease-in-out !important;
+    display: block;
+    height: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color:#ee7917;
+    width: 30px;
+}
