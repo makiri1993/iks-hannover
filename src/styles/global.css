@@ -112,3 +112,15 @@ p.wisAtest {
     background-color:#ee7917;
     width: 30px;
 }
+
+@media (min-width: 640px) {
+
+    .navigationImagesWidth {
+        width: 400px;
+
+    }
+}
+
+.navigationImagesWidth {
+    width: 400px;
+}

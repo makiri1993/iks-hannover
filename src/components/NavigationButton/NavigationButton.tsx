@@ -18,8 +18,7 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
     <button
       className={` absolute right-0 z-50 ${
         transform <= 50 ? "animation-burger" : null
-      } ${toggle ? " w-24" : "h-8 w-24"}`}
-      aria-label="Button zum Öffnen und Schließen der Navigation"
+      } ${toggle ? " w-24" : " w-24"}`}
       onClick={handleToggle}
     >
       <span className={`burger ${toggle ? "transform rotate-[405deg]" : ""}`} />
