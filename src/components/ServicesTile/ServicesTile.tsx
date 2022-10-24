@@ -34,9 +34,9 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
     <div className="flex flex-col justify-center items-center w-full md:w-6/12 lg:w-4/12 py-8">
       <a
         href={handlingTitleColorAndRoute(index, true)}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center w-full"
       >
-        <img className="rounded-full w-3/12" src={sourceUrl} />
+        <img className="rounded-full w-4/12" src={sourceUrl} />
       </a>
       <h2
         className={`items-center text-center text-3xl py-4 ${handlingTitleColorAndRoute(
@@ -46,7 +46,9 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
       >
         {title}
       </h2>
-      <p className="w-7/12 text-center">{text}</p>
+      <p className="items-center leading-6 text-sm text-[#545456] w-10/12 text-center whitespace-pre-line">
+        {text}
+      </p>
     </div>
   );
 };

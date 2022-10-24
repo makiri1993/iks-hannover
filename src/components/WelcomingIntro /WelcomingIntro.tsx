@@ -1,5 +1,7 @@
 import React from "react";
 import { Heading } from "../Heading/Heading";
+import { PageTitle } from "../PageTitle/PageTitle";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface HomepageProps {
   page: {
@@ -13,6 +15,14 @@ interface HomepageProps {
       imagegalina: {
         sourceUrl: string;
       };
+      rolejasmin: string;
+      rolegalina: string;
+      signimagejasmin: {
+        sourceUrl: string;
+      };
+      signimagegalina: {
+        sourceUrl: string;
+      };
     };
   };
 }
@@ -20,26 +30,49 @@ interface HomepageProps {
 export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
   const GraphqlData = page.homepageintro;
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col z-20 pt-48 items-center w-full">
+      {/*<Heading*/}
+      {/*  size={"3xl"}*/}
+      {/*  uppercase={true}*/}
+      {/*  center={true}*/}
+      {/*  color={"#ee7917"}*/}
+      {/*  fontWeight={600}*/}
+      {/*  classname="pb-4"*/}
+      {/*>*/}
+      {/*  {GraphqlData.welcomingheading}*/}
+      {/*</Heading>*/}
+      <PageTitle> {GraphqlData.welcomingheading}</PageTitle>
       <Heading
-        size={"3xl"}
-        uppercase={true}
         center={true}
+        fontWeight={500}
+        size={"xl"}
         color={"#ee7917"}
-        fontWeight={600}
-        classname="pb-4"
+        classname="pb-4 leading-5"
       >
-        {GraphqlData.welcomingheading}
-      </Heading>
-      <Heading fontWeight={500} size={"xl"} color={"#ee7917"} classname="pb-4">
         {GraphqlData.welcomingsubheading}
       </Heading>
-      <p className=" w-9/12 text-center whitespace-pre-line">
+      <p className="items-center leading-6 text-sm text-[#545456] w-10/12 text-center whitespace-pre-line">
         {GraphqlData.welcomingtext}
       </p>
-      <div>
-        <img src={GraphqlData.imagejasmin.sourceUrl} />
-        <img src={GraphqlData.imagegalina.sourceUrl} />
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center py-8">
+          <img className="w-7/12" src={GraphqlData.imagejasmin.sourceUrl} />
+          <span>{GraphqlData.rolejasmin}</span>
+          <img
+            className="w-7/12 "
+            src={GraphqlData.signimagejasmin.sourceUrl}
+            alt={""}
+          />
+        </div>
+        <div className="flex flex-col items-center py-8">
+          <img className="w-7/12" src={GraphqlData.imagegalina.sourceUrl} />
+          <span>{GraphqlData.rolegalina}</span>
+          <img
+            className="w-7/12 "
+            src={GraphqlData.signimagegalina.sourceUrl}
+            alt={""}
+          />
+        </div>
       </div>
     </div>
   );

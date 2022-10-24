@@ -41,6 +41,14 @@ interface HomepageProps {
           imagegalina: {
             sourceUrl: string;
           };
+          rolejasmin: string;
+          rolegalina: string;
+          signimagejasmin: {
+            sourceUrl: string;
+          };
+          signimagegalina: {
+            sourceUrl: string;
+          };
         };
       };
     };
@@ -87,7 +95,7 @@ export const query = graphql`
           }
         }
       }
-      page(id: "homepageiks", idType: URI) {
+      page(id: "/homepageiks", idType: URI) {
         homepageintro {
           welcomingheading
           welcomingsubheading
@@ -96,6 +104,14 @@ export const query = graphql`
             sourceUrl
           }
           imagegalina {
+            sourceUrl
+          }
+          rolejasmin
+          rolegalina
+          signimagejasmin {
+            sourceUrl
+          }
+          signimagegalina {
             sourceUrl
           }
         }
