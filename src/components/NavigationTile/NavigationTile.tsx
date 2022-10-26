@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavigationTiles } from "../../../data";
 import { Link, navigate } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface NavigationTileProps {
   toggle: boolean;
@@ -16,15 +17,16 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
       setHover(false);
     }
   };
+
   return (
     <div
-      className={`flex flex-col items-end justify-start w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
+      className={`flex flex-col items-end text-[#fcfcfc] font-semibold justify-start  w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
-      style={{ top: "97px", height: toggle ? " 800px" : "0px" }}
+      style={{ top: "97px", height: toggle ? " 1000px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
-        <div className="w-full justify-start">
+        <div className="pl-16 w-full justify-start">
           <Link
             onMouseOver={handleHover}
             to={element.path}
@@ -34,22 +36,97 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
             <div
               className={`bg-white w-4 mr-2 ${hover ? "rotate-90" : ""}`}
               style={{ height: "2px" }}
+              onMouseOver={handleHover}
             />{" "}
             {element.title}
           </Link>
           <div className="flex flex-col items-start">
-            {element.subTitles?.map((title, subTitleIndex) => (
-              <Link className="pl-16 py-2" key={subTitleIndex} to={title.path}>
-                {title.title}
-              </Link>
-            ))}
+            {element.subTitles?.map((title, subTitleIndex) =>
+              index === 1 ? (
+                <div className="flex flex-row pl-16 py-4 w-full">
+                  {handleSmallNavigationImages(subTitleIndex)}
+                  <Link
+                    className="pl-2 py-2"
+                    key={subTitleIndex}
+                    to={title.path}
+                  >
+                    {title.title}
+                  </Link>
+                </div>
+              ) : (
+                <Link
+                  className="pl-16 py-2"
+                  key={subTitleIndex}
+                  to={title.path}
+                >
+                  {title.title}
+                </Link>
+              )
+            )}
           </div>
         </div>
       ))}
       <div className="flex flex-col items-start w-full">
+        <a>
+          <img src="" />
+        </a>
         <Link to={"/impressum"}>impressum </Link>
         <Link to={"/dataSecurity"}>Datenschutz </Link>
       </div>
     </div>
   );
+};
+const handleSmallNavigationImages = (index: number) => {
+  if (index === 0) {
+    return (
+      <StaticImage
+        src={
+          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Ambulante_Tagespflege_Icon copy.png"
+        }
+        alt={""}
+        width={40}
+        height={40}
+        className=""
+      />
+    );
+  }
+  if (index === 1) {
+    return (
+      <StaticImage
+        src={
+          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Wohngemeinschaften_Icon.png"
+        }
+        alt={""}
+        width={40}
+        height={40}
+        className=""
+      />
+    );
+  }
+  if (index === 2) {
+    return (
+      <StaticImage
+        src={
+          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Außerklinische_Intensivepflege_Icon.png"
+        }
+        alt={""}
+        width={40}
+        height={40}
+        className=""
+      />
+    );
+  }
+  if (index === 3) {
+    return (
+      <StaticImage
+        src={
+          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/TagespflegeIcon.png"
+        }
+        alt={""}
+        width={40}
+        height={40}
+        className=""
+      />
+    );
+  }
 };
