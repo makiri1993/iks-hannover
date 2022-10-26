@@ -36,7 +36,7 @@ export const magazines: React.FC<magazinesProps> = ({ data }) => {
           >
             <img
               style={{ height: "250px" }}
-              className="w-full "
+              className="w-full"
               src={image.pressefields.image.sourceUrl}
             />
             <a

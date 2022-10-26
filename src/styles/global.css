@@ -175,7 +175,27 @@ p.wisAtest {
 .intensiveCare p {
     color: #545456;
     font-weight: 400;
-    font-size:12.6px;
-
+    font-size: 12.6px;
 }
 
+.impressum a {
+    color:#ee7917 ;
+ }
+.data p {
+    color: #545456;
+}
+.data h4 {
+    color: #ee7917;
+    font-size: 21px;
+    font-weight: 600;
+}
+.data li {
+    margin-left: 24px;
+    color: #545456;
+}
+.data li::marker{
+    color:#ee7917 ;
+}
+.data a {
+    color: #ee7917;
+}
