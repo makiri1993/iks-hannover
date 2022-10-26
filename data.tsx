@@ -55,7 +55,8 @@ export const FooterData: {
   PLZ: string;
   phone: string;
   FAX: string;
-  Mail: string;
+  Mail?: string;
+  image: string;
 }[] = [
   {
     name: "Interkultureller Sozialdienst GmbH",
@@ -63,7 +64,9 @@ export const FooterData: {
     PLZ: "30449 Hannover",
     phone: "0511 - 210 10 44",
     FAX: "0511 - 210 10 66",
-    Mail: "",
+    Mail: "iks-hannover@iks-hannover.de",
+    image:
+      "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_baum.png",
   },
   {
     name: "Außerklinische Intensiv- und Beatmungspflege",
@@ -71,6 +74,7 @@ export const FooterData: {
     PLZ: "30161 Hannover",
     phone: "0511 - 866 43 43 4",
     FAX: "0511 - 866 43 43 5",
-    Mail: "",
+    image:
+      "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_baum.png",
   },
 ];
