@@ -9,9 +9,14 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, classname }) => {
   return (
-    <div className={classname} style={{ width: window.innerWidth }}>
+    <div className={`flex flex-col items-center w-full ${classname}`}>
       <Navigation />
-      {children}
+      <div
+        className="flex flex-col relative items-center w-full"
+        style={{ top: "110px" }}
+      >
+        {children}
+      </div>
       <Footer />
     </div>
   );

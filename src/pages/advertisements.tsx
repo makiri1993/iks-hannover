@@ -39,7 +39,7 @@ export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
             <div />
           )}
           {index === 0 || index === 1 ? (
-            <AdvertisementLink />
+            <AdvertisementLink path={""} />
           ) : // <AdvertisementLink />
           undefined}
         </div>

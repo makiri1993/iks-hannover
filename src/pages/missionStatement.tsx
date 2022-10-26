@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface MissionStatementProps {
   data: {
@@ -43,19 +44,21 @@ export const MissionStatement: React.FC<MissionStatementProps> = ({ data }) => {
   };
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
-        {dataVariable.page.title}
-      </h1>
-      <div className="w-11/12 px-8">
+      <PageTitle>{dataVariable.page.title}</PageTitle>
+      <div className="w-full px-8">
         {dataVariable.leitbilderElements.nodes.map((elements, index) => (
           <div key={index} className="my-6 w-full">
-            <h3 className="text-[#ee7917] font-medium text-2xl">
+            <h3 className="text-[#ee7917] mb-4 font-medium text-2xl">
               {handlingContent(index)}
             </h3>
-            <div className="text-[#ee7917] text-xl">{elements.title}</div>
-            <div>{elements.leitbilderElementsFields.text}</div>
+            <div className="text-[#ee7917] mb-4 text-base font-semibold">
+              {elements.title}
+            </div>
+            <p className="items-center leading-6 text-sm text-[#545456] w-full text-left whitespace-pre-line">
+              {elements.leitbilderElementsFields.text}
+            </p>
             <ul
-              className="list-disc ml-9"
+              className="mission"
               dangerouslySetInnerHTML={{ __html: elements.content }}
             />
           </div>

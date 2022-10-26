@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -14,6 +15,8 @@ body {
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
+
 }
 
 #___gatsby > div {
@@ -21,6 +24,8 @@ body {
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
+
 }
 
 ul.testText {
@@ -124,3 +129,31 @@ p.wisAtest {
 .navigationImagesWidth {
     width: 400px;
 }
+.nursing li {
+ margin-left: 30px;
+    color: #545456;
+    font-size:0.9rem ;
+
+}
+.nursing p {
+    color: #545456;
+    font-size:0.9rem ;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nursing p:nth-of-type(2){
+    color: #00933F;
+}
+.nursing p:nth-of-type(3){
+    color: #00933F;
+}
+
+.mission li {
+    list-style-type: disc;
+    font-size:0.9rem ;
+    margin-left: 30px;
+    color: #545456;
+
+}
+
+

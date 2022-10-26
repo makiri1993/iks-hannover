@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
 import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface OurNursingServiceProps {
   data: {
@@ -28,20 +29,20 @@ export const OurNursingService: React.FC<OurNursingServiceProps> = ({
 }) => {
   return (
     <Layout classname="flex flex-col items-center">
-      <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={data.cms.page.PflegedienstFields.intro}
         imageSourceUrl={data.cms.page.PflegedienstFields.image.sourceUrl}
         className={
-          "flex flex-col md:flex-row-reverse items-center md:justify-center w-full p-12"
+          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
         }
-        styleContentContainer="w-full w-8/12 md:w-5/12"
+        styleContentContainer="w-full  md:w-7/12"
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
+        styleImage="w-11/12 mb-4 md:mb-0 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center md:mb-11"
       />
-      <li
-        className="list-disc li-test testText w-9/12 mt-12 whitespace-pre-line"
+      <div
+        className="nursing whitespace-pre-line px-4"
         dangerouslySetInnerHTML={{
           __html: data.cms.page.content,
         }}
