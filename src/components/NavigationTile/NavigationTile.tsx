@@ -20,17 +20,17 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
 
   return (
     <div
-      className={`flex flex-col items-end text-[#fcfcfc] font-semibold justify-start  w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
+      className={`flex flex-col items-end text-[#fcfcfc] font-semibold justify-start w-full md:w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
       style={{ top: "97px", height: toggle ? " 1000px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
-        <div className="pl-16 w-full justify-start">
+        <div className=" md:pl-16 w-full justify-start ">
           <Link
             onMouseOver={handleHover}
             to={element.path}
-            className="flex flex-row justify-start items-center pl-6 py-6"
+            className="flex flex-row justify-start items-center md:pl-6 py-6"
             key={index}
           >
             <div
@@ -43,7 +43,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
           <div className="flex flex-col items-start">
             {element.subTitles?.map((title, subTitleIndex) =>
               index === 1 ? (
-                <div className="flex flex-row pl-16 py-4 w-full">
+                <div className="flex flex-row md:pl-16 py-4 w-full">
                   {handleSmallNavigationImages(subTitleIndex)}
                   <Link
                     className="pl-2 py-2"
@@ -55,7 +55,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
                 </div>
               ) : (
                 <Link
-                  className="pl-16 py-2"
+                  className="md:pl-16 py-2"
                   key={subTitleIndex}
                   to={title.path}
                 >

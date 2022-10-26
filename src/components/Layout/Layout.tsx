@@ -11,7 +11,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, classname }) => {
   return (
     <div
       className={`flex flex-col items-center relative w-full ${classname}`}
-      style={{ height: innerHeight }}
+      // style={{ height: innerHeight }}
     >
       <Navigation />
       <div

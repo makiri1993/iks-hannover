@@ -16,9 +16,9 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
     //   <div className="h-1 w-6 bg-[#ee7917]" />
     // </div>
     <button
-      className={` absolute right-0 z-50 ${
+      className={` absolute self-end right-0 top-0 w-full z-50 ${
         transform <= 50 ? "animation-burger" : null
-      } ${toggle ? " w-24" : " w-24"}`}
+      } ${toggle ? "w-12" : " w-12"}`}
       onClick={handleToggle}
     >
       <span className={`burger ${toggle ? "transform rotate-[405deg]" : ""}`} />
