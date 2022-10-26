@@ -83,7 +83,7 @@ const handleSmallNavigationImages = (index: number) => {
     return (
       <StaticImage
         src={
-          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Ambulante_Tagespflege_Icon copy.png"
+          "../../images/Ambulante_Tagespflege_Icon copy.png"
         }
         alt={""}
         width={40}
@@ -96,7 +96,7 @@ const handleSmallNavigationImages = (index: number) => {
     return (
       <StaticImage
         src={
-          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Wohngemeinschaften_Icon.png"
+          "../../images/Wohngemeinschaften_Icon.png"
         }
         alt={""}
         width={40}
@@ -109,7 +109,7 @@ const handleSmallNavigationImages = (index: number) => {
     return (
       <StaticImage
         src={
-          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/Außerklinische_Intensivepflege_Icon.png"
+          "../../images/Außerklinische_Intensivepflege_Icon.png"
         }
         alt={""}
         width={40}
@@ -122,7 +122,7 @@ const handleSmallNavigationImages = (index: number) => {
     return (
       <StaticImage
         src={
-          "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/TagespflegeIcon.png"
+          "../../images/TagespflegeIcon.png"
         }
         alt={""}
         width={40}

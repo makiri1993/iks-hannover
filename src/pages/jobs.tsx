@@ -40,7 +40,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
           <StaticImage
             className={className}
             src={
-              "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/geldsack.png"
+              "../images/geldsack.png"
             }
             alt={""}
           />
@@ -53,7 +53,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
           <StaticImage
             className={className}
             src={
-              "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/stetoskop.png"
+              "../images/stetoskop.png"
             }
             alt={""}
           />

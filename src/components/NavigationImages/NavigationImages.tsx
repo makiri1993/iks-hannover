@@ -5,13 +5,13 @@ export const NavigationImages: React.FC = () => {
   return (
     <div className="flex flex-row left-0 top-4 md:top-0 items-center justify-between w-9/12 md:w-7/12 lg:w-6/12 xl:w-4/12 absolute z-20 ">
       <StaticImage
-        src="/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_iks.png"
+        src="../../images/logo_iks.png"
         alt={""}
         className="mr-4"
         style={{ width: "200px" }}
       />
       <StaticImage
-        src="/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/schriftzug.png"
+        src="../../images/schriftzug.png"
         alt={""}
         className="ml-4"
         style={{ width: "700px" }}

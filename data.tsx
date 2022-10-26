@@ -66,7 +66,7 @@ export const FooterData: {
     FAX: "0511 - 210 10 66",
     Mail: "iks-hannover@iks-hannover.de",
     image:
-      "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_baum.png",
+      "../../images/logo_baum.png",
   },
   {
     name: "Außerklinische Intensiv- und Beatmungspflege",
@@ -75,6 +75,6 @@ export const FooterData: {
     phone: "0511 - 866 43 43 4",
     FAX: "0511 - 866 43 43 5",
     image:
-      "/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_baum.png",
+      "../../images/logo_baum.png",
   },
 ];

@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
               <StaticImage
                 className=" mt-12 h-full"
                 style={{ width: "200px", height: "170px" }}
-                src="/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_iks.png"
+                src="../../images/logo_iks.png"
                 alt={""}
               />
             ) : undefined}{" "}
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
               <StaticImage
                 className=""
                 style={{ width: "200px", height: "170px" }}
-                src="/Users/leonkireew/Code/techstudio-iks-Hannover/techstudio-iks-hannover/src/images/logo_baum.png"
+                src="../../images/logo_baum.png"
                 alt={""}
               />
             ) : undefined}
