@@ -21,10 +21,12 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
       } ${toggle ? "w-12" : " w-12"}`}
       onClick={handleToggle}
     >
-      <span className={`burger ${toggle ? "transform rotate-[405deg]" : ""}`} />
+      <span
+        className={`burger ${toggle ? "transform rotate-[405deg] w-48" : ""}`}
+      />
       {toggle ? undefined : <span className="burger" />}
       <span
-        className={`burger ${toggle ? "transform rotate-[-405deg] h-44" : ""}`}
+        className={`burger ${toggle ? "transform rotate-[-405deg] w-48" : ""}`}
       />
     </button>
   );

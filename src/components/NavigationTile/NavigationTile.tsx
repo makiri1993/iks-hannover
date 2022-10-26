@@ -8,36 +8,38 @@ interface NavigationTileProps {
 }
 
 export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
-  const [hover, setHover] = useState(false);
-  const handleHover = () => {
-    if (!hover) {
-      setHover(true);
-    }
-    if (hover) {
-      setHover(false);
-    }
-  };
-
+  // const [hover, setHover] = useState(false);
+  // const handleHover = () => {
+  //   if (!hover) {
+  //     setHover(true);
+  //   }
+  //   if (hover) {
+  //     setHover(false);
+  //   }
+  // };
+  // const handleRotating = () => {
+  //   if (hover) {
+  //     return "rotate-90";
+  //   }
+  // };
   return (
     <div
-      className={`flex flex-col items-end text-[#fcfcfc] font-semibold justify-start w-full md:w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
+      className={`flex flex-col items-end text-[#fcfcfc]  font-semibold justify-start w-full md:w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
-      style={{ top: "97px", height: toggle ? " 1000px" : "0px" }}
+      style={{ top: "118px", height: toggle ? " 1000px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
-        <div className=" md:pl-16 w-full justify-start ">
+        <div className=" md:pl-16 w-full justify-start">
           <Link
-            onMouseOver={handleHover}
+            // onMouseOver={handleHover}
             to={element.path}
-            className="flex flex-row justify-start items-center md:pl-6 py-6"
-            key={index}
+            className={`flex flex-row hover:rotate-90 justify-start items-center md:pl-6 py-6 `}
           >
             <div
-              className={`bg-white w-4 mr-2 ${hover ? "rotate-90" : ""}`}
+              className={`bg-white hover:rotate-90 w-4 mr-2 hover`}
               style={{ height: "2px" }}
-              onMouseOver={handleHover}
-            />{" "}
+            />
             {element.title}
           </Link>
           <div className="flex flex-col items-start">

@@ -19,7 +19,7 @@ export const Navigation: React.FC = () => {
   return (
     <div
       className="flex flex-col justify-start items-center fixed bg-white z-30 w-full text-white"
-      style={{ height: "100px", paddingTop: "41px" }}
+      style={{ height: "120px", paddingTop: "41px" }}
     >
       <div
         className="flex flex-row items-center justify-between bg-white opacity-80 z-10 w-full"

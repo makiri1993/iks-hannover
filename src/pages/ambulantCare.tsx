@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface ambulantCareProps {
   data: {
@@ -28,7 +29,7 @@ export const ambulantCare: React.FC<ambulantCareProps> = ({ data }) => {
   const dataVariable = data.cms.page.ambulantFields;
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={dataVariable.uppercontent}
         imageSourceUrl={dataVariable.upperimage.sourceUrl}
