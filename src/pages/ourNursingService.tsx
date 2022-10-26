@@ -36,13 +36,13 @@ export const OurNursingService: React.FC<OurNursingServiceProps> = ({
         className={
           "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
         }
-        styleContentContainer="w-full  md:w-7/12"
+        styleContentContainer="w-full md:w-5/12"
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
         styleImage="w-11/12 mb-4 md:mb-0 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center md:mb-11"
       />
       <div
-        className="nursing whitespace-pre-line px-4"
+        className="w-full md:w-9/12 nursing whitespace-pre-line px-4"
         dangerouslySetInnerHTML={{
           __html: data.cms.page.content,
         }}
