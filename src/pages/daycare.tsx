@@ -3,6 +3,7 @@ import { Navigation } from "../components/Navigation/Navigation";
 import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface daycareProps {
   data: {
@@ -28,8 +29,7 @@ export const daycare: React.FC<daycareProps> = ({ data }) => {
   const dataVariable = data.cms.page.ambulantFields;
   return (
     <Layout classname="flex flex-col items-center w-full">
-      {/*<Navigation />*/}
-      <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={dataVariable.uppercontent}
         imageSourceUrl={dataVariable.upperimage.sourceUrl}
@@ -37,9 +37,9 @@ export const daycare: React.FC<daycareProps> = ({ data }) => {
           "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImageContainer="flex flex-col items-center justify-center mb-11"
+        styleContentContainer="w-10/12 md:w-5/12"
+        styleImage="w-full pt-12 md:pt-0 items-center justify-center"
+        styleImageContainer="flex flex-col items-center justify-center mb-11 pr-8 w-6/12 md:w-3/12"
       />
       <ContentImageManager
         content={dataVariable.lowercontent}
@@ -48,9 +48,9 @@ export const daycare: React.FC<daycareProps> = ({ data }) => {
           "flex flex-col-reverse md:flex-row items-center md:justify-center w-full p-12"
         }
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImageContainer="flex flex-col items-center justify-center mb-11"
+        styleContentContainer="w-10/12 md:w-5/12"
+        styleImage="w-full pt-12 md:pt-0 items-center justify-center"
+        styleImageContainer="flex flex-col items-center justify-center w-6/12 md:w-3/12 pl-8 mb-11"
       />
     </Layout>
   );
