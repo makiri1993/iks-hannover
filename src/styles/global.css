@@ -150,9 +150,12 @@ p.wisAtest {
 .mission li {
     list-style-type: disc;
     font-size:0.9rem ;
-    margin-left: 30px;
     color: #545456;
+    margin:10px 0 10px 30px ;
 
+}
+.mission li::marker{
+    color: #ee7917;
 }
 
 

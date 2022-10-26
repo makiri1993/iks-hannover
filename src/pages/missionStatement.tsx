@@ -45,7 +45,7 @@ export const MissionStatement: React.FC<MissionStatementProps> = ({ data }) => {
   return (
     <Layout classname="flex flex-col items-center w-full">
       <PageTitle>{dataVariable.page.title}</PageTitle>
-      <div className="w-full px-8">
+      <div className="w-11/12 lg:w-7/12 px-8">
         {dataVariable.leitbilderElements.nodes.map((elements, index) => (
           <div key={index} className="my-6 w-full">
             <h3 className="text-[#ee7917] mb-4 font-medium text-2xl">
