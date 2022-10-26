@@ -4,7 +4,7 @@ import { FooterData } from "../../../data";
 export const Footer: React.FC = () => {
   return (
     <div
-      className="flex flex-col items-center w-full bottom-0 mt-24 z-0 bg-[#ee7917]"
+      className="flex flex-col items-center h-full w-full relative -bottom-8 mt-24 z-0 bg-[#ee7917]"
       // style={{ width: window.innerWidth }}
     >
       <div className="flex flex-col w-full items-center my-2 md:my-0 md:flex-row  md:justify-start py-4">
