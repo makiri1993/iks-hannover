@@ -19,7 +19,7 @@ export const NavigationTiles: {
   subTitles?: { title: string; path: string }[];
 }[] = [
   {
-    title: "Homepage",
+    title: "Home",
     path: Paths.Index,
     subTitles: [
       { title: "Unser Pflegedienst", path: Paths.OurNursingService },
@@ -65,8 +65,7 @@ export const FooterData: {
     phone: "0511 - 210 10 44",
     FAX: "0511 - 210 10 66",
     Mail: "iks-hannover@iks-hannover.de",
-    image:
-      "../../images/logo_baum.png",
+    image: "../../images/logo_baum.png",
   },
   {
     name: "Außerklinische Intensiv- und Beatmungspflege",
@@ -74,7 +73,6 @@ export const FooterData: {
     PLZ: "30161 Hannover",
     phone: "0511 - 866 43 43 4",
     FAX: "0511 - 866 43 43 5",
-    image:
-      "../../images/logo_baum.png",
+    image: "../../images/logo_baum.png",
   },
 ];

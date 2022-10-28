@@ -9,61 +9,21 @@ interface NavigationTileProps {
 }
 
 export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
-  const [hover, setHover] = useState(false);
-  const handleHover = () => {
-    if (!hover) {
-      setHover(true);
-    }
-    if (hover) {
-      setHover(false);
-    }
-  };
-  const handleRotating = (subTitles?: { title: string; path: string }[]) => {
-    if (subTitles !== undefined && hover) {
-      return "rotate-90";
-    }
-  };
   return (
     <div
-      className={`flex flex-col items-end text-[#fcfcfc]  font-semibold justify-start w-full md:w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
+      className={`flex flex-col items-start text-[#fcfcfc]  font-semibold justify-start w-full md:w-6/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
       style={{ top: "118px", height: toggle ? " 1000px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
-        <div className=" md:pl-16 w-full justify-start">
-          <div className="flex flex-col items-start">
-            <NavElement
-              handleHover={handleHover}
-              handleRotating={handleRotating}
-              path={element.path}
-              title={element.title}
-              subTitles={element.subTitles}
-              index={index}
-            />
-            {element.subTitles?.map((title, subTitleIndex) =>
-              index === 1 ? (
-                <div className="flex flex-row md:pl-16 py-4 w-full">
-                  {handleSmallNavigationImages(subTitleIndex)}
-                  <Link
-                    className="pl-2 py-2"
-                    key={subTitleIndex}
-                    to={title.path}
-                  >
-                    {title.title}
-                  </Link>
-                </div>
-              ) : (
-                <Link
-                  className="md:pl-16 py-2"
-                  key={subTitleIndex}
-                  to={title.path}
-                >
-                  {title.title}
-                </Link>
-              )
-            )}
-          </div>
+        <div className="w-full">
+          <NavElement
+            path={element.path}
+            title={element.title}
+            subTitles={element.subTitles}
+            index={index}
+          />
         </div>
       ))}
       <div className="flex flex-col items-start w-full">
@@ -75,50 +35,4 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
       </div>
     </div>
   );
-};
-const handleSmallNavigationImages = (index: number) => {
-  if (index === 0) {
-    return (
-      <StaticImage
-        src={"../../images/Ambulante_Tagespflege_Icon copy.png"}
-        alt={""}
-        width={40}
-        height={40}
-        className=""
-      />
-    );
-  }
-  if (index === 1) {
-    return (
-      <StaticImage
-        src={"../../images/Wohngemeinschaften_Icon.png"}
-        alt={""}
-        width={40}
-        height={40}
-        className=""
-      />
-    );
-  }
-  if (index === 2) {
-    return (
-      <StaticImage
-        src={"../../images/Außerklinische_Intensivepflege_Icon.png"}
-        alt={""}
-        width={40}
-        height={40}
-        className=""
-      />
-    );
-  }
-  if (index === 3) {
-    return (
-      <StaticImage
-        src={"../../images/TagespflegeIcon.png"}
-        alt={""}
-        width={40}
-        height={40}
-        className=""
-      />
-    );
-  }
 };
