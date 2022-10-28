@@ -1,27 +1,28 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavigationTiles } from "../../../data";
 import { Link, navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { NavElement } from "../NavElement/NavElement";
 
 interface NavigationTileProps {
   toggle: boolean;
 }
 
 export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
-  // const [hover, setHover] = useState(false);
-  // const handleHover = () => {
-  //   if (!hover) {
-  //     setHover(true);
-  //   }
-  //   if (hover) {
-  //     setHover(false);
-  //   }
-  // };
-  // const handleRotating = () => {
-  //   if (hover) {
-  //     return "rotate-90";
-  //   }
-  // };
+  const [hover, setHover] = useState(false);
+  const handleHover = () => {
+    if (!hover) {
+      setHover(true);
+    }
+    if (hover) {
+      setHover(false);
+    }
+  };
+  const handleRotating = (subTitles?: { title: string; path: string }[]) => {
+    if (subTitles !== undefined) {
+      return "rotate-90";
+    }
+  };
   return (
     <div
       className={`flex flex-col items-end text-[#fcfcfc]  font-semibold justify-start w-full md:w-7/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
@@ -31,18 +32,15 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
     >
       {NavigationTiles.map((element, index) => (
         <div className=" md:pl-16 w-full justify-start">
-          <Link
-            // onMouseOver={handleHover}
-            to={element.path}
-            className={`flex flex-row hover:rotate-90 justify-start items-center md:pl-6 py-6 `}
-          >
-            <div
-              className={`bg-white hover:rotate-90 w-4 mr-2 hover`}
-              style={{ height: "2px" }}
-            />
-            {element.title}
-          </Link>
           <div className="flex flex-col items-start">
+            <NavElement
+              handleHover={handleHover}
+              handleRotating={handleRotating}
+              path={element.path}
+              title={element.title}
+              subTitles={element.subTitles}
+              index={index}
+            />
             {element.subTitles?.map((title, subTitleIndex) =>
               index === 1 ? (
                 <div className="flex flex-row md:pl-16 py-4 w-full">
@@ -82,9 +80,7 @@ const handleSmallNavigationImages = (index: number) => {
   if (index === 0) {
     return (
       <StaticImage
-        src={
-          "../../images/Ambulante_Tagespflege_Icon copy.png"
-        }
+        src={"../../images/Ambulante_Tagespflege_Icon copy.png"}
         alt={""}
         width={40}
         height={40}
@@ -95,9 +91,7 @@ const handleSmallNavigationImages = (index: number) => {
   if (index === 1) {
     return (
       <StaticImage
-        src={
-          "../../images/Wohngemeinschaften_Icon.png"
-        }
+        src={"../../images/Wohngemeinschaften_Icon.png"}
         alt={""}
         width={40}
         height={40}
@@ -108,9 +102,7 @@ const handleSmallNavigationImages = (index: number) => {
   if (index === 2) {
     return (
       <StaticImage
-        src={
-          "../../images/Außerklinische_Intensivepflege_Icon.png"
-        }
+        src={"../../images/Außerklinische_Intensivepflege_Icon.png"}
         alt={""}
         width={40}
         height={40}
@@ -121,9 +113,7 @@ const handleSmallNavigationImages = (index: number) => {
   if (index === 3) {
     return (
       <StaticImage
-        src={
-          "../../images/TagespflegeIcon.png"
-        }
+        src={"../../images/TagespflegeIcon.png"}
         alt={""}
         width={40}
         height={40}
