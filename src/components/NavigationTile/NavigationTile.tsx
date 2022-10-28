@@ -19,7 +19,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
     }
   };
   const handleRotating = (subTitles?: { title: string; path: string }[]) => {
-    if (subTitles !== undefined) {
+    if (subTitles !== undefined && hover) {
       return "rotate-90";
     }
   };
