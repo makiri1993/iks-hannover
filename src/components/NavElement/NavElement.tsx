@@ -11,6 +11,8 @@ interface NavElementProps {
   title: string;
   subTitles?: { title: string; path: string }[];
   index: number;
+  border: boolean;
+  setBorder: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const NavElement: React.FC<NavElementProps> = ({
@@ -18,6 +20,8 @@ export const NavElement: React.FC<NavElementProps> = ({
   title,
   subTitles,
   index,
+  border,
+  setBorder,
 }) => {
   const [hover, setHover] = useState(false);
   const handleHover1 = () => {
@@ -31,11 +35,17 @@ export const NavElement: React.FC<NavElementProps> = ({
     subTitles?: { title: string; path: string }[]
   ) => {
     if (subTitles !== undefined) {
-      return undefinedOrNot ? "-rotate-90" : "";
+      return undefinedOrNot ? "-rotate-90 " : "";
     }
     if (true) {
       return "-rotate-90";
     }
+  };
+  const handleEmptyRoute = (path: string) => {
+    if (path === "") {
+      return "";
+    }
+    return "pr-8 border-r-2";
   };
   return (
     <div
@@ -44,7 +54,7 @@ export const NavElement: React.FC<NavElementProps> = ({
       onMouseLeave={handleHover2}
       key={index}
     >
-      <div className="flex flex-row items-center border-r-8 justify-start">
+      <div className={`flex flex-row w-32 items-center justify-start`}>
         <div
           className={`flex flex-row ${handleRotating(
             false,
@@ -57,7 +67,7 @@ export const NavElement: React.FC<NavElementProps> = ({
           |
         </div>
         <Link
-          activeClassName="active-page"
+          activeClassName={`${handleEmptyRoute(path)}`}
           aria-current={"page"}
           // onMouseOver={handleHover}
           to={path}
@@ -70,12 +80,24 @@ export const NavElement: React.FC<NavElementProps> = ({
         index === 1 ? (
           <div className="flex flex-row md:pl-16 py-4 w-full">
             {handleSmallNavigationImages(subTitleIndex)}
-            <Link className="pl-2 py-2" key={subTitleIndex} to={title.path}>
+            <Link
+              className="pl-2 py-2 "
+              key={subTitleIndex}
+              to={title.path}
+              activeClassName={`${handleEmptyRoute(title.path)}`}
+              aria-current={"page"}
+            >
               {title.title}
             </Link>
           </div>
         ) : (
-          <Link className="md:pl-16 py-2" key={subTitleIndex} to={title.path}>
+          <Link
+            className="md:pl-16 py-2 "
+            key={subTitleIndex}
+            to={title.path}
+            activeClassName={`${handleEmptyRoute(title.path)}`}
+            aria-current={"page"}
+          >
             {title.title}
           </Link>
         )

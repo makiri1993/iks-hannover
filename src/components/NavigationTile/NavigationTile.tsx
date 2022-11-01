@@ -9,6 +9,7 @@ interface NavigationTileProps {
 }
 
 export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
+  const [border, setBorder] = useState(false);
   return (
     <div
       className={`flex flex-col items-start text-[#fcfcfc]  font-semibold justify-start w-full md:w-6/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
@@ -23,6 +24,8 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
             title={element.title}
             subTitles={element.subTitles}
             index={index}
+            border={border}
+            setBorder={setBorder}
           />
         </div>
       ))}
