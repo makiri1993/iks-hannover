@@ -31,12 +31,12 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
         content={data.cms.page.intensivpflegeFields.textcontent}
         imageSourceUrl={data.cms.page.intensivpflegeFields.image.sourceUrl}
         className={
-          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
+          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center justify-around w-full p-12"
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
         styleContentContainer="w-full md:w-4/12"
-        styleImage="w-10/12 md:w-8/12 lg:w-6/12 pt-12 md:pt-0 items-center justify-center"
-        styleImageContainer="flex flex-col w-full md:w-9/12 lg:w-5/12 items-center lg:items-end lg:mr-8 justify-center mb-11"
+        styleImage="w-10/12 md:w-8/12 lg:w-9/12 pt-12 md:pt-0 items-center justify-center"
+        styleImageContainer="flex flex-col w-full md:w-9/12 lg:w-4/12 items-center lg:items-center justify-center mb-11"
       />
       <div className="mb-20 pl-4 md:pl-16">
         <div
