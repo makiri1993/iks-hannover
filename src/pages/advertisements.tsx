@@ -21,7 +21,7 @@ interface advertisementsProps {
 
 export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
   return (
-    <Layout classname="flex flex-col items-center">
+    <Layout classname="flex flex-col items-center w-full">
       <PageTitle>Stellenangebot</PageTitle>
       {data.cms.joboffers.nodes.map((elements, index) => (
         <div className="flex flex-col items-center w-8/12">
@@ -38,7 +38,9 @@ export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
             <div />
           )}
           {index === 0 || index === 1 ? (
-            <AdvertisementLink path={""} />
+            <AdvertisementLink
+              path={index === 0 ? "/intensiveNurse" : "/nurse"}
+            />
           ) : // <AdvertisementLink />
           undefined}
         </div>

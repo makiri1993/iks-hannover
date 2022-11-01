@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface intensiveNurseProps {
   data: {
@@ -15,12 +16,10 @@ interface intensiveNurseProps {
 
 export const intensiveNurse: React.FC<intensiveNurseProps> = ({ data }) => {
   return (
-    <Layout classname="flex flex-col items-center w-9/12 lg:w-7/12">
-      <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
-        {data.cms.page.title}
-      </h1>
+    <Layout classname="flex flex-col items-center w-full">
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <div
-        className="job"
+        className="job w-9/12 lg:w-7/12"
         dangerouslySetInnerHTML={{ __html: data.cms.page.content }}
       />
     </Layout>

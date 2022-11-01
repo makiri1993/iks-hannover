@@ -176,7 +176,7 @@ p.wisAtest {
     font-size: 1.5rem;
     /*margin-left: 2rem;*/
  /*margin-right: 2rem;*/
-    transition: transform 500ms ease-in-out;
+ /*   transition: transform 500ms ease-in-out;*/
     /*transform: rotate(90deg);*/
     /*align-self: center;*/
 }
