@@ -240,4 +240,42 @@ p.wisAtest {
 /*    width: 30px;*/
 /*}*/
 
+.animation-burger span {
+    opacity: 0;
+}
 
+.animation-burger span:first-child {
+    opacity: 1;
+    background-color: #ee7917;
+    transform: translate(0%, 450%) rotate(405deg);
+
+
+}
+
+.animation-burger span:last-child {
+    background-color:#ee7917;
+    opacity: 1;
+    transform: translate(0%, -630%) rotate(-405deg);
+
+
+}
+.menu-button {
+    justify-self: flex-end;
+    width: min-content;
+    background-color: transparent;
+    border: none;
+    z-index: 70;
+}
+
+.menu-button:focus {
+     outline: none;
+ }
+.burger {
+    z-index: 50;
+    transition: all 500ms ease-in-out !important;
+    height: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ee7917;
+    width: 30px;
+}
