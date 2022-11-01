@@ -15,7 +15,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
       className={`flex flex-col items-start text-[#fcfcfc]  font-semibold justify-start w-full md:w-6/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
-      style={{ top: "118px", height: toggle ? " 1200px" : "0px" }}
+      style={{ top: "120px", height: toggle ? " 1200px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
         <div className="w-full">
@@ -29,7 +29,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
           />
         </div>
       ))}
-      <div className="flex flex-col relative h-full top-48 lg:top-44 left-4 items-start w-full">
+      <div className="flex flex-col relative h-full top-12 lg:top-16 left-4 items-start w-full">
         <a href="https://www.facebook.com/ikshannover/">
           <StaticImage
             alt={""}

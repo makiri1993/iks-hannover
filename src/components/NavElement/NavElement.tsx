@@ -35,11 +35,9 @@ export const NavElement: React.FC<NavElementProps> = ({
     subTitles?: { title: string; path: string }[]
   ) => {
     if (subTitles !== undefined) {
-      return undefinedOrNot ? (hover ? " -rotate-90 " : " rotate-90 ") : "";
+      return undefinedOrNot ? (hover ? "" : "rotate-90 ") : "";
     }
-    if (true) {
-      return hover ? " -rotate-90" : " rotate-90 ";
-    }
+    return hover ? "rotate-90 " : "rotate-90 ";
   };
   const handleEmptyRoute = (path: string) => {
     if (path === "") {
@@ -59,7 +57,7 @@ export const NavElement: React.FC<NavElementProps> = ({
           className={`flex flex-row  ${handleRotating(
             false,
             subTitles
-          )} nav-dropdown-toggle ${
+          )} nav-dropdown-toggle transition-all duration-700 ease-in-out ${
             hover
               ? "transition-all duration-700 ease-in-out"
               : handleRotating(true, subTitles)
