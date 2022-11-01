@@ -14,6 +14,8 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
     innerHeight: 0,
   });
   const handleTouch = (): void => {
+    handleToggle();
+
     const { innerWidth, innerHeight } = window;
     const { transform, scrollHeight } = state;
     setState({ ...state, innerHeight: innerHeight - scrollHeight });
