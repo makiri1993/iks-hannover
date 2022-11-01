@@ -15,18 +15,34 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
     //   <div className="my-1 h-1 w-6 bg-[#ee7917]" />
     //   <div className="h-1 w-6 bg-[#ee7917]" />
     // </div>
+    // <button
+    //   className={` absolute self-end right-0 top-0 w-full z-50 ${
+    //     transform <= 50 ? "animation-burger" : null
+    //   } ${toggle ? "w-12" : " w-12"}`}
+    //   onClick={handleToggle}
+    // >
+    //   <span className={`burger`} />
+    //   {toggle ? undefined : <span className="burger" />}
+    //   <span className={`burger`} />
+    // </button>
     <button
-      className={` absolute self-end right-0 top-0 w-full z-50 ${
-        transform <= 50 ? "animation-burger" : null
-      } ${toggle ? "w-12" : " w-12"}`}
+      className={` z-50 absolute transition-all duration-1000 ease-in-out top-4  right-20 ${
+        toggle ? "" : ""
+      }`}
+      style={{ height: toggle ? "70px" : "20px" }}
       onClick={handleToggle}
+      aria-label="Button zum Öffnen und Schließen der Navigation"
     >
       <span
-        className={`burger ${toggle ? "transform rotate-[405deg] w-48" : ""}`}
+        className={` transition-all duration-1000 ease-in-out ${
+          toggle ? "spanTag absolute top-4" : "burger"
+        }`}
       />
-      {toggle ? undefined : <span className="burger" />}
+      <span className={`relative ${toggle ? "opacity-0" : "burger"}`} />
       <span
-        className={`burger ${toggle ? "transform rotate-[-405deg] w-48" : ""}`}
+        className={` transition-all duration-1000 ease-in-out ${
+          toggle ? "spanTag2 absolute top-12" : "burger"
+        }`}
       />
     </button>
   );

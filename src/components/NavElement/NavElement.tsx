@@ -26,9 +26,15 @@ export const NavElement: React.FC<NavElementProps> = ({
   const handleHover2 = () => {
     setHover(false);
   };
-  const handleRotating = (subTitles?: { title: string; path: string }[]) => {
+  const handleRotating = (
+    undefinedOrNot: boolean,
+    subTitles?: { title: string; path: string }[]
+  ) => {
     if (subTitles !== undefined) {
-      return "rotate-90";
+      return undefinedOrNot ? "-rotate-90" : "";
+    }
+    if (true) {
+      return "-rotate-90";
     }
   };
   return (
@@ -38,15 +44,21 @@ export const NavElement: React.FC<NavElementProps> = ({
       onMouseLeave={handleHover2}
       key={index}
     >
-      <div className="flex flex-row items-center justify-start">
+      <div className="flex flex-row items-center border-r-8 justify-start">
         <div
-          className={`flex flex-row nav-dropdown-toggle ${
-            hover ? handleRotating(subTitles) : undefined
+          className={`flex flex-row ${handleRotating(
+            false,
+            subTitles
+          )} nav-dropdown-toggle ${
+            hover ? "" : handleRotating(true, subTitles)
           }`}
+          style={{ fontSize: "24px" }}
         >
           |
         </div>
         <Link
+          activeClassName="active-page"
+          aria-current={"page"}
           // onMouseOver={handleHover}
           to={path}
           className={`flex flex-row  justify-start items-center md:pl-6 py-6 `}
