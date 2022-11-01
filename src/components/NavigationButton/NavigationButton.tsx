@@ -27,14 +27,14 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
   return (
     <button
       className={`menu-button ${
-        state.transform <= 50 ? "animation-burger" : null
+        state.transform <= 50 ? (toggle ? "animation-burger" : "") : null
       }`}
-      onClick={handleTouch}
+      onClick={handleToggle}
       aria-label="Button zum Öffnen und Schließen der Navigation"
     >
-      <span className="burger" />
-      <span className="burger" />
-      <span className="burger" />
+      <span className={`burger`} />
+      <span className={`burger`} />
+      <span className={`burger`} />
     </button>
     // <button
     //   className={` z-50 absolute transition-all duration-1000 ease-in-out top-4  right-8 ${

@@ -247,7 +247,7 @@ p.wisAtest {
 .animation-burger span:first-child {
     opacity: 1;
     background-color: #ee7917;
-    transform: translate(0%, 450%) rotate(405deg);
+    transform: translate(0%, 500%) rotate(408deg);
 
 
 }
@@ -255,7 +255,7 @@ p.wisAtest {
 .animation-burger span:last-child {
     background-color:#ee7917;
     opacity: 1;
-    transform: translate(0%, -630%) rotate(-405deg);
+    transform: translate(0%, -500%) rotate(-408deg);
 
 
 }
@@ -270,7 +270,7 @@ p.wisAtest {
 .menu-button:focus {
      outline: none;
  }
-.burger {
+.burger{
     z-index: 50;
     transition: all 500ms ease-in-out !important;
     height: 4px;
