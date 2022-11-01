@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 export const NavigationImages: React.FC = () => {
   return (
-    <div className="flex flex-row left-0 top-4 md:top-0 items-center justify-between w-9/12 md:w-6/12 lg:w-5/12 xl:w-3/12 z-20 ">
+    <div className="flex flex-row left-0 top-4 md:top-0 items-center justify-between w-8/12 md:w-6/12 lg:w-4/12 xl:w-3/12 z-20 ">
       <StaticImage
         src="../../images/logo_iks.png"
         alt={""}

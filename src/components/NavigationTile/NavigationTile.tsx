@@ -29,7 +29,7 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
           />
         </div>
       ))}
-      <div className="flex flex-col relative h-full top-24 left-4 items-start w-full">
+      <div className="flex flex-col relative h-full top-48 lg:top-44 left-4 items-start w-full">
         <a href="https://www.facebook.com/ikshannover/">
           <StaticImage
             alt={""}

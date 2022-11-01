@@ -35,10 +35,10 @@ export const NavElement: React.FC<NavElementProps> = ({
     subTitles?: { title: string; path: string }[]
   ) => {
     if (subTitles !== undefined) {
-      return undefinedOrNot ? " -rotate-90 " : "";
+      return undefinedOrNot ? (hover ? " -rotate-90 " : " rotate-90 ") : "";
     }
     if (true) {
-      return " -rotate-90";
+      return hover ? " -rotate-90" : " rotate-90 ";
     }
   };
   const handleEmptyRoute = (path: string) => {
@@ -73,7 +73,7 @@ export const NavElement: React.FC<NavElementProps> = ({
           aria-current={"page"}
           // onMouseOver={handleHover}
           to={path}
-          className={`flex flex-row  justify-start items-center pl-6 py-6 md:py-0 `}
+          className={`flex flex-row  justify-start items-center pl-6 md:py-6 md:py-0 `}
         >
           {title}
         </Link>
