@@ -73,17 +73,17 @@ export const NavElement: React.FC<NavElementProps> = ({
           aria-current={"page"}
           // onMouseOver={handleHover}
           to={path}
-          className={`flex flex-row  justify-start items-center md:pl-6 py-6 `}
+          className={`flex flex-row  justify-start items-center pl-6 py-6 md:py-0 `}
         >
           {title}
         </Link>
       </div>
       {subTitles?.map((title, subTitleIndex) =>
         index === 1 ? (
-          <div className="flex flex-row md:pl-16 py-4 w-full">
+          <div className="flex flex-row pl-8 md:pl-16 py-4 w-full">
             {handleSmallNavigationImages(subTitleIndex)}
             <Link
-              className="pl-2 py-2 "
+              className="md:pl-2 py-2 "
               key={subTitleIndex}
               to={title.path}
               activeClassName={`${handleEmptyRoute(title.path)}`}
@@ -94,7 +94,7 @@ export const NavElement: React.FC<NavElementProps> = ({
           </div>
         ) : (
           <Link
-            className="md:pl-16 py-2 "
+            className="pl-8 md:pl-16 py-2 "
             key={subTitleIndex}
             to={title.path}
             activeClassName={`${handleEmptyRoute(title.path)}`}
