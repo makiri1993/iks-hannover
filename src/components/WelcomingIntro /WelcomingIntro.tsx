@@ -31,7 +31,10 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
   const GraphqlData = page.homepageintro;
   return (
     <div className="flex flex-col z-20 pt-16 items-center w-full">
-      <PageTitle paddingBottom={2}> {GraphqlData.welcomingheading}</PageTitle>
+      <PageTitle paddingBottom={2} paddingTop="pt-14">
+        {" "}
+        {GraphqlData.welcomingheading}
+      </PageTitle>
       <Heading
         center={true}
         fontWeight={500}
