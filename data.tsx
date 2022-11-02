@@ -23,7 +23,7 @@ export const NavigationTiles: {
     path: Paths.Index,
     subTitles: [
       { title: "Unser Pflegedienst", path: Paths.OurNursingService },
-      { title: "LeitBilder", path: Paths.LeitBilder },
+      { title: "Leitbilder", path: Paths.LeitBilder },
     ],
   },
   {

@@ -5,6 +5,7 @@ import { ContentImageManager } from "../components/ContentImageMangager/ContentI
 import { Layout } from "../components/Layout/Layout";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { MailcontactLink } from "../components/MailContactLink/MailContactLink";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface intensiveCareProps {
   data: {
@@ -26,7 +27,7 @@ interface intensiveCareProps {
 export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <PageTitle>{data.cms.page.title}</PageTitle>
+      <PageTitle color={"#e53129"}>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={data.cms.page.intensivpflegeFields.textcontent}
         imageSourceUrl={data.cms.page.intensivpflegeFields.image.sourceUrl}
@@ -35,7 +36,7 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
         styleContentContainer="w-full md:w-4/12"
-        styleImage="w-10/12 md:w-8/12 lg:w-9/12 pt-12 md:pt-0 items-center justify-center"
+        styleImage="w-10/12 md:w-8/12 lg:w-9/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col w-full md:w-9/12 lg:w-4/12 items-center lg:items-center justify-center mb-11"
       />
       <div className="mb-20 pl-4 md:pl-16">
@@ -65,6 +66,12 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
             email="schillaci@iks-hannover.de"
           />
         </div>
+        <StaticImage
+          className="items-center"
+          style={{ width: "200px", height: "170px" }}
+          src="../../images/logo_baum.png"
+          alt={""}
+        />
       </div>
     </Layout>
   );

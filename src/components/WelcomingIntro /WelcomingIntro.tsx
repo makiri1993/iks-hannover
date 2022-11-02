@@ -30,14 +30,14 @@ interface HomepageProps {
 export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
   const GraphqlData = page.homepageintro;
   return (
-    <div className="flex flex-col z-20 pt-48 items-center w-full">
-      <PageTitle> {GraphqlData.welcomingheading}</PageTitle>
+    <div className="flex flex-col z-20 pt-16 items-center w-full">
+      <PageTitle paddingBottom={2}> {GraphqlData.welcomingheading}</PageTitle>
       <Heading
         center={true}
         fontWeight={500}
         size={"xl"}
         color={"#ee7917"}
-        classname="pb-4 leading-5"
+        classname="pb-4 leading-5 w-9/12 "
       >
         {GraphqlData.welcomingsubheading}
       </Heading>
@@ -47,18 +47,23 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="flex flex-col  items-center py-8">
           <img className="w-7/12" src={GraphqlData.imagejasmin.sourceUrl} />
+          <span className="text-[#ee7917] text-2xl py-3">
+            Jasmin Arbabian-Vogel
+          </span>
+
           <span>{GraphqlData.rolejasmin}</span>
           <img
-            className="w-7/12 mt-4"
+            className="w-5/12 mt-4"
             src={GraphqlData.signimagejasmin.sourceUrl}
             alt={""}
           />
         </div>
         <div className="flex flex-col items-center py-8">
           <img className="w-7/12" src={GraphqlData.imagegalina.sourceUrl} />
+          <span className="text-[#ee7917] text-2xl py-3">Galina Fiksmann</span>
           <span>{GraphqlData.rolegalina}</span>
           <img
-            className="w-7/12 mt-4"
+            className="w-5/12 mt-4"
             src={GraphqlData.signimagegalina.sourceUrl}
             alt={""}
           />

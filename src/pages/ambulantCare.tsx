@@ -29,7 +29,7 @@ export const ambulantCare: React.FC<ambulantCareProps> = ({ data }) => {
   const dataVariable = data.cms.page.ambulantFields;
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <PageTitle>{data.cms.page.title}</PageTitle>
+      <PageTitle color={"#00933f"}>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={dataVariable.uppercontent}
         imageSourceUrl={dataVariable.upperimage.sourceUrl}
@@ -38,7 +38,7 @@ export const ambulantCare: React.FC<ambulantCareProps> = ({ data }) => {
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
         styleContentContainer=" w-10/12 md:w-5/12"
-        styleImage="w-11/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
+        styleImage="w-11/12 md:w-10/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center mb-11"
       />
       <ContentImageManager
@@ -49,7 +49,7 @@ export const ambulantCare: React.FC<ambulantCareProps> = ({ data }) => {
         }
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
         styleContentContainer="w-10/12 md:w-5/12"
-        styleImage="w-11/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
+        styleImage="w-11/12 md:w-10/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center mb-11"
       />
     </Layout>

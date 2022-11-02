@@ -84,7 +84,7 @@ export const query = graphql`
         }
       }
 
-      iksServices {
+      iksServices(where: { orderby: { field: DATE, order: ASC } }) {
         nodes {
           title
           servicesFields {

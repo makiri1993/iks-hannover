@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
       >
         {FooterData.map((elements, index) => (
           <div
-            className="flex flex-col text-white justify-start items-start w-6/12 md:w-4/12 my-4 md:my-0"
+            className="flex flex-col text-white justify-start items-start w-9/12 md:w-4/12 my-4 md:my-0"
             key={index}
             style={{ height: "470px" }}
           >
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             ) : undefined}
             {index === 0 ? (
               <StaticImage
-                className=" mt-12 h-full"
+                className=" mt-18 h-full"
                 style={{ width: "200px", height: "170px" }}
                 src="../../images/logo_iks.png"
                 alt={""}

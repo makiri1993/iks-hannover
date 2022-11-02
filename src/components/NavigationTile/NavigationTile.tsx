@@ -12,10 +12,10 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
   const [border, setBorder] = useState(false);
   return (
     <div
-      className={`flex flex-col items-start text-[#fcfcfc]  font-semibold justify-start w-full md:w-6/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-1000 ease-in-out ${
+      className={`flex flex-col items-start text-[#fcfcfc]  font-semibold justify-start w-full md:w-6/12 sm:w-6/12 p-4 transition-all bg-[#ee7917] fixed right-0 z-30 duration-700 ease-in-out ${
         toggle ? "translate-x-0  " : "translate-x-full "
       }`}
-      style={{ top: "120px", height: toggle ? " 1200px" : "0px" }}
+      style={{ top: "95px", height: toggle ? " 1200px" : "0px" }}
     >
       {NavigationTiles.map((element, index) => (
         <div className="w-full">

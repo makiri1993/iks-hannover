@@ -31,7 +31,7 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
   console.log(index);
   console.log();
   return (
-    <div className="flex flex-col justify-center items-center w-full md:w-6/12 lg:w-4/12 py-8">
+    <div className="flex flex-col justify-center items-center w-11/12 md:w-6/12 lg:w-4/12 py-8">
       <a
         href={handlingTitleColorAndRoute(index, true)}
         className="flex flex-col items-center justify-center w-full"

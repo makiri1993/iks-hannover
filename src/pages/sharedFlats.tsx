@@ -30,7 +30,7 @@ export const sharedFlats: React.FC<sharedFlatsProps> = ({ data }) => {
   const dataVariable = data.cms.page.ambulantFields;
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <PageTitle>{data.cms.page.title}</PageTitle>
+      <PageTitle color={"#009be1"}>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={dataVariable.uppercontent}
         imageSourceUrl={dataVariable.upperimage.sourceUrl}
@@ -38,8 +38,8 @@ export const sharedFlats: React.FC<sharedFlatsProps> = ({ data }) => {
           "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
+        styleContentContainer="w-full w-9/12 md:w-5/12"
+        styleImage="w-9/12 md:w-10/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center mb-11"
       />
       <ContentImageManager
@@ -49,8 +49,8 @@ export const sharedFlats: React.FC<sharedFlatsProps> = ({ data }) => {
           "flex flex-col-reverse md:flex-row items-center md:justify-center w-full p-12"
         }
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
+        styleContentContainer="w-full w-9/12 md:w-5/12"
+        styleImage="w-9/12 md:w-10/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col items-center justify-center mb-11"
       />
     </Layout>
