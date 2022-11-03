@@ -6,6 +6,7 @@ import { Layout } from "../components/Layout/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { html } from "gatsby/dist/redux/reducers";
 import { AdvertisementLink } from "../components/AdvertisementLink/AdvertisementLink";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface JobsProps {
   data: {
@@ -39,9 +40,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
         <div className="w-9/12 sm:w-full item-center sm:item-start py-4">
           <StaticImage
             className={className}
-            src={
-              "../images/geldsack.png"
-            }
+            src={"../images/geldsack.png"}
             alt={""}
           />
         </div>
@@ -52,9 +51,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
         <div className="w-9/12 rounded-full sm:w-full item-center sm:item-start py-4">
           <StaticImage
             className={className}
-            src={
-              "../images/stetoskop.png"
-            }
+            src={"../images/stetoskop.png"}
             alt={""}
           />
         </div>
@@ -63,9 +60,7 @@ export const jobs: React.FC<JobsProps> = ({ data }) => {
   };
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
-        {data.cms.page.title}
-      </h1>
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={data.cms.page.jobsFields.text}
         imageSourceUrl={data.cms.page.jobsFields.image.sourceUrl}

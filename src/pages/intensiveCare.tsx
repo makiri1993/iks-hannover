@@ -27,16 +27,18 @@ interface intensiveCareProps {
 export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <PageTitle color={"#e53129"}>{data.cms.page.title}</PageTitle>
+      <PageTitle paddingBottom={5} color={"#e53129"}>
+        {data.cms.page.title}
+      </PageTitle>
       <ContentImageManager
         content={data.cms.page.intensivpflegeFields.textcontent}
         imageSourceUrl={data.cms.page.intensivpflegeFields.image.sourceUrl}
         className={
-          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center justify-around w-full p-12"
+          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center justify-around w-full p-8"
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
-        styleContentContainer="w-full md:w-4/12"
-        styleImage="w-10/12 md:w-8/12 lg:w-9/12  md:pt-0 items-center justify-center"
+        styleContentContainer="w-11/12 md:w-4/12"
+        styleImage="w-9/12 md:w-8/12 lg:w-9/12  md:pt-0 items-center justify-center"
         styleImageContainer="flex flex-col w-full md:w-9/12 lg:w-4/12 items-center lg:items-center justify-center mb-11"
       />
       <div className="mb-20 pl-4 md:pl-16">
