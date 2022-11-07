@@ -12,6 +12,9 @@ module.exports = {
         customeBlue: "#009be1",
         customeRed: "#e53129",
       },
+      screens: {
+        "4kDisplay": "2550px",
+      },
     },
   },
   plugins: [],

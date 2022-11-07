@@ -18,8 +18,8 @@ export const Navigation: React.FC = () => {
   console.log(toggle);
   return (
     <div
-      className="flex flex-col justify-start items-center fixed bg-white bg-opacity-80 z-30 w-full  text-white"
-      style={{ height: "86px" }}
+      className="flex flex-col justify-center items-center fixed bg-white bg-opacity-80 z-30 w-full  text-white"
+      style={{ height: "88.78px" }}
     >
       <div
         className="flex flex-row items-center justify-between bg-white bg-opacity-0 z-10 px-4 w-full"
