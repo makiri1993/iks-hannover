@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Navigation } from "../components/Navigation/Navigation";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface engagementPartnerProps {
   data: {
@@ -32,7 +33,7 @@ export const enagementPartner: React.FC<engagementPartnerProps> = ({
 }) => {
   return (
     <Layout classname="flex flex-col items-center w-full">
-      <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
+      <PageTitle>{data.cms.page.title}</PageTitle>
       <p className="whitespace-pre-line w-7/12 pb-8">
         {data.cms.page.engagementFields.engagementcontent}
       </p>
@@ -45,9 +46,9 @@ export const enagementPartner: React.FC<engagementPartnerProps> = ({
             />
             {index === 10 ? (
               <div className="flex flex-col items-center w-full py-8">
-                <h1 className="text-3xl mb-4 items-center">
+                <PageTitle>
                   {data.cms.page.engagementFields.partnerheading}
-                </h1>
+                </PageTitle>
                 <p className="whitespace-pre-line w-full">
                   {data.cms.page.engagementFields.partnercontent}
                 </p>

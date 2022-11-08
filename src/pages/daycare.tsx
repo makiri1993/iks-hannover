@@ -3,6 +3,7 @@ import { Navigation } from "../components/Navigation/Navigation";
 import { ContentImageManager } from "../components/ContentImageMangager/ContentImageManager";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface daycareProps {
   data: {
@@ -28,29 +29,28 @@ export const daycare: React.FC<daycareProps> = ({ data }) => {
   const dataVariable = data.cms.page.ambulantFields;
   return (
     <Layout classname="flex flex-col items-center w-full">
-      {/*<Navigation />*/}
-      <h1 className="text-3xl mb-4 items-center">{data.cms.page.title}</h1>
+      <PageTitle paddingBottom={5}>{data.cms.page.title}</PageTitle>
       <ContentImageManager
         content={dataVariable.uppercontent}
         imageSourceUrl={dataVariable.upperimage.sourceUrl}
         className={
-          "flex flex-col-reverse md:flex-row-reverse items-center md:justify-center w-full p-12"
+          "flex flex-col-reverse md:flex-row-reverse items-center md:items-start md:justify-center w-full p-8"
         }
         styleContent="w-full whitespace-pre-line text-sm leading-6 text-[#545456]"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImageContainer="flex flex-col items-center justify-center mb-11"
+        styleContentContainer="item-start w-11/12 md:w-5/12"
+        styleImage="w-10/12 md:pt-0 items-center justify-center"
+        styleImageContainer="flex flex-col items-center justify-center mb-11 pr-8 w-11/12 md:w-3/12"
       />
       <ContentImageManager
         content={dataVariable.lowercontent}
         imageSourceUrl={dataVariable.lowerimage.sourceUrl}
         className={
-          "flex flex-col-reverse md:flex-row items-center md:justify-center w-full p-12"
+          "flex flex-col-reverse md:flex-row items-center md:items-start md:justify-center w-full p-8"
         }
         styleContent="w-full whitespace-pre-line text-sm text-[#545456]"
-        styleImage="w-8/12 md:w-10/12 pt-12 md:pt-0 items-center justify-center"
-        styleContentContainer="w-full w-8/12 md:w-5/12"
-        styleImageContainer="flex flex-col items-center justify-center mb-11"
+        styleContentContainer="w-11/12 md:w-5/12"
+        styleImage="w-10/12  md:pt-0 items-center justify-center"
+        styleImageContainer="flex flex-col items-start justify-center w-11/12 md:w-3/12 pl-8 mb-11"
       />
     </Layout>
   );

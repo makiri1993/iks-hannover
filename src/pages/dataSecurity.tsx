@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 
 interface dataSecurityProps {
   data: {
@@ -15,9 +16,12 @@ interface dataSecurityProps {
 
 export const dataSecurity: React.FC<dataSecurityProps> = ({ data }) => {
   return (
-    <Layout>
-      <h2>{data.cms.page.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: data.cms.page.content }} />
+    <Layout classname="flex flex-col items-center w-full">
+      <PageTitle>{data.cms.page.title}</PageTitle>
+      <div
+        className="w-7/12 whitespace-pre-line data"
+        dangerouslySetInnerHTML={{ __html: data.cms.page.content }}
+      />
     </Layout>
   );
 };

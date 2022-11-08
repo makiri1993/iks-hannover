@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
 import { AdvertisementLink } from "../components/AdvertisementLink/AdvertisementLink";
+import { PageTitle } from "../components/PageTitle/PageTitle";
 interface advertisementsProps {
   data: {
     cms: {
@@ -20,15 +21,13 @@ interface advertisementsProps {
 
 export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
   return (
-    <Layout classname="flex flex-col items-center">
-      <h1 className="text-3xl mb-4 text-left items-center text-[#ee7917]">
-        Stellenangebot
-      </h1>
+    <Layout classname="flex flex-col items-center w-full">
+      <PageTitle>Stellenangebot</PageTitle>
       {data.cms.joboffers.nodes.map((elements, index) => (
-        <div className="flex flex-col items-center w-10/12">
-          {index === 1 || index === 2 ? (
+        <div className="flex flex-col items-center w-8/12">
+          {index === 0 || index === 1 ? (
             <div>
-              <h2 className="text-2xl font-medium text-[#ee7917] py-4">
+              <h2 className="text-4xl font-medium text-[#ee7917] py-4">
                 {elements.title}
               </h2>
               <div className="text-sm text-[#545456] leading-7">
@@ -39,7 +38,9 @@ export const advertisements: React.FC<advertisementsProps> = ({ data }) => {
             <div />
           )}
           {index === 0 || index === 1 ? (
-            <AdvertisementLink />
+            <AdvertisementLink
+              path={index === 0 ? "/intensiveNurse" : "/nurse"}
+            />
           ) : // <AdvertisementLink />
           undefined}
         </div>

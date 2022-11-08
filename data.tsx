@@ -19,11 +19,11 @@ export const NavigationTiles: {
   subTitles?: { title: string; path: string }[];
 }[] = [
   {
-    title: "Homepage",
+    title: "Home",
     path: Paths.Index,
     subTitles: [
       { title: "Unser Pflegedienst", path: Paths.OurNursingService },
-      { title: "LeitBilder", path: Paths.LeitBilder },
+      { title: "Leitbilder", path: Paths.LeitBilder },
     ],
   },
   {
@@ -55,7 +55,8 @@ export const FooterData: {
   PLZ: string;
   phone: string;
   FAX: string;
-  Mail: string;
+  Mail?: string;
+  image: string;
 }[] = [
   {
     name: "Interkultureller Sozialdienst GmbH",
@@ -63,7 +64,8 @@ export const FooterData: {
     PLZ: "30449 Hannover",
     phone: "0511 - 210 10 44",
     FAX: "0511 - 210 10 66",
-    Mail: "",
+    Mail: "iks-hannover@iks-hannover.de",
+    image: "../../images/logo_baum.png",
   },
   {
     name: "Außerklinische Intensiv- und Beatmungspflege",
@@ -71,6 +73,6 @@ export const FooterData: {
     PLZ: "30161 Hannover",
     phone: "0511 - 866 43 43 4",
     FAX: "0511 - 866 43 43 5",
-    Mail: "",
+    image: "../../images/logo_baum.png",
   },
 ];

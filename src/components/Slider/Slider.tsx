@@ -27,9 +27,16 @@ export const Slider: React.FC<SliderProps> = ({ nodes }) => {
   }, [slide]);
 
   return (
-    <div className="flex flex-row z-0 justify-center w-full overflow-hidden">
-      <div className="relative w-full">
-        <img src={nodes[slide].slidesFields.image.sourceUrl} />
+    <div
+      className="flex flex-row z-10 relative justify-center w-full overflow-hidden"
+      style={{ top: "89px" }}
+    >
+      <div className=" z-10 w-full" style={{ minHeight: "260px" }}>
+        <img
+          style={{ minHeight: "260px" }}
+          className="w-full"
+          src={nodes[slide].slidesFields.image.sourceUrl}
+        />
       </div>
     </div>
   );

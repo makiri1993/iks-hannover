@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -14,6 +15,8 @@ body {
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
+
 }
 
 #___gatsby > div {
@@ -21,6 +24,8 @@ body {
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    width: 100%;
+
 }
 
 ul.testText {
@@ -87,4 +92,190 @@ p.wisAtest {
     height: 35px;
     margin-left: 35px
 ;
+}
+
+
+
+
+.navigationImagesWidth {
+    width: 400px;
+}
+.nursing li {
+    margin-left: 30px;
+    color: #545456;
+    font-size: 0.9rem;
+}
+.nursing p {
+    color: #545456;
+    font-size:0.9rem ;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nursing p:nth-of-type(2){
+    color: #00933F;
+}
+.nursing p:nth-of-type(3){
+    color: #00933F;
+}
+
+.mission li {
+    list-style-type: disc;
+    font-size:0.9rem ;
+    color: #545456;
+    margin:10px 0 10px 30px ;
+
+}
+.mission li::marker{
+    color: #ee7917;
+}
+
+.intensiveCare li {
+    list-style-type: disc;
+    font-size:0.9rem ;
+    color: #545456;
+    margin:10px 0 10px 30px ;
+}
+.intensiveCare li::marker{
+    color: #ee7917;
+}
+.intensiveCare p:nth-of-type(2) {
+    color: #e53129;
+    font-size:17.5px;
+    font-weight: 600;
+}
+.intensiveCare p {
+    color: #545456;
+    font-weight: 400;
+    font-size: 12.6px;
+}
+
+.impressum a {
+    color:#ee7917 ;
+ }
+.data p {
+    color: #545456;
+}
+.data h4 {
+    color: #ee7917;
+    font-size: 21px;
+    font-weight: 600;
+}
+.data li {
+    margin-left: 24px;
+    color: #545456;
+}
+.data li::marker{
+    color:#ee7917 ;
+}
+.data a {
+    color: #ee7917;
+}
+.nav-dropdown-toggle:first-child:hover {
+/*// display: inline-flex;*/
+    /*color: $color-white;*/
+    font-size: 1.5rem;
+    /*margin-left: 2rem;*/
+ /*margin-right: 2rem;*/
+ /*   transition: transform 500ms ease-in-out;*/
+    /*transform: rotate(90deg);*/
+    /*align-self: center;*/
+}
+.active-page{
+    border-right: 0.5px ;
+}
+.burger {
+    z-index: 50;
+    transition: all 500ms ease-in-out !important;
+    display: flex;
+    flex-direction: column;
+    height: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color:#ee7917;
+    width: 30px;
+}
+
+/*.burger span {*/
+/*    opacity: 0;*/
+/*}*/
+
+.spanTag {
+    opacity: 1;
+    background-color: #ee7917;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0%, 450%) rotate(405deg);
+    z-index: 70;
+    width: 30px;
+    height: 4px;
+
+
+
+}
+
+.spanTag2 {
+    background-color: #ee7917;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0%, -630%) rotate(-405deg);
+    z-index: 70;
+    height: 4px;
+    width: 30px;
+
+
+}
+
+
+
+
+/*.burger {*/
+/*    z-index: 50;*/
+/*    transition: all 500ms ease-in-out !important;*/
+/*//display: block;*/
+/*    height: 4px;*/
+/*    margin-top: 1rem;*/
+/*    margin-bottom: 1rem;*/
+/*    background-color:#ee7917;*/
+/*    width: 30px;*/
+/*}*/
+
+.animation-burger span {
+    opacity: 0;
+}
+
+.animation-burger span:first-child {
+    opacity: 1;
+    background-color: #ee7917;
+    transform: translate(0%, 500%) rotate(408deg);
+
+
+}
+
+.animation-burger span:last-child {
+    background-color:#ee7917;
+    opacity: 1;
+    transform: translate(0%, -500%) rotate(-408deg);
+
+
+}
+.menu-button {
+    justify-self: flex-end;
+    width: min-content;
+    background-color: transparent;
+    border: none;
+    z-index: 70;
+}
+
+.menu-button:focus {
+     outline: none;
+ }
+.burger{
+    z-index: 50;
+    transition: all 500ms ease-in-out !important;
+    height: 4px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ee7917;
+    width: 30px;
 }
