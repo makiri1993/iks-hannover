@@ -9,10 +9,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, classname }) => {
   return (
-    <div
-      className={`flex flex-col items-center relative w-full ${classname}`}
-      // style={{ height: innerHeight }}
-    >
+    <div className={`flex flex-col items-center relative w-full ${classname}`}>
       <Navigation />
       <div
         className="flex flex-col relative items-center w-full"

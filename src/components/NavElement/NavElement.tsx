@@ -69,7 +69,6 @@ export const NavElement: React.FC<NavElementProps> = ({
         <Link
           activeClassName={`${handleEmptyRoute(path)}`}
           aria-current={"page"}
-          // onMouseOver={handleHover}
           to={path}
           className={`flex flex-row  justify-start items-center pl-6 md:py-6 md:py-0 `}
         >
@@ -113,7 +112,6 @@ const handleSmallNavigationImages = (index: number) => {
         alt={""}
         width={40}
         height={40}
-        className=""
       />
     );
   }

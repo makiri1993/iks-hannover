@@ -23,7 +23,6 @@ export const Slider: React.FC<SliderProps> = ({ nodes }) => {
       }
       timer;
     }, 5000);
-    console.log(slide);
   }, [slide]);
 
   return (

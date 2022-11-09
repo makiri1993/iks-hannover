@@ -28,8 +28,7 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
       return routeOrStyle ? "/ambulantCare" : "text-[#ee7917]";
     }
   };
-  console.log(index);
-  console.log();
+
   return (
     <div className="flex flex-col justify-center items-center w-11/12 md:w-6/12 lg:w-4/12 py-8">
       <a

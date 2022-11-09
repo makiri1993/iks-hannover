@@ -20,11 +20,6 @@ export const Heading: React.FC<HeadingProps> = ({
   children,
 }) => {
   return (
-    // <div
-    //   className={`text-orange-600 ${size} ${color} ${fontWeight} ${uppercase}${
-    //     center ? "text-center" : ""
-    //   }`}
-    // >
     <h2
       className={` ${classname} text-${size} text-[${color}]  ${
         uppercase ? "uppercase" : ""
@@ -33,6 +28,5 @@ export const Heading: React.FC<HeadingProps> = ({
     >
       {children}
     </h2>
-    // </div>
   );
 };

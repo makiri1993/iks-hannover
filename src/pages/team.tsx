@@ -51,7 +51,7 @@ export const team: React.FC<teamProps> = ({ data }) => {
                 src={elements.employeeFields.image.sourceUrl}
               />
             </div>
-            <h2 className="w-full text-lg font-semibold text-[#ee7917] pb-2">
+            <h2 className="w-full text-lg pt-2 font-semibold text-[#ee7917] pb-2">
               {elements.title}
             </h2>
             <div className="flex flex-col text-base items-center leading-4">
@@ -59,7 +59,6 @@ export const team: React.FC<teamProps> = ({ data }) => {
                 {elements.employeeFields.role}
               </span>
               <span className="w-full text-[#ee7917] text-sm text-center">
-                {/*{elements.employeeFields.email}*/}
                 <a href={"mailto:" + elements.employeeFields.email}>
                   {elements.employeeFields.email}
                 </a>
