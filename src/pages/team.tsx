@@ -60,7 +60,9 @@ export const team: React.FC<teamProps> = ({ data }) => {
               </span>
               <span className="w-full text-[#ee7917] text-sm text-center">
                 {/*{elements.employeeFields.email}*/}
-                <a>email</a>
+                <a href={"mailto:" + elements.employeeFields.email}>
+                  {elements.employeeFields.email}
+                </a>
               </span>
             </div>
           </div>
