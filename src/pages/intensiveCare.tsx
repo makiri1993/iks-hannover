@@ -6,7 +6,6 @@ import { Layout } from "../components/Layout/Layout";
 import { PageTitle } from "../components/PageTitle/PageTitle";
 import { MailcontactLink } from "../components/MailContactLink/MailContactLink";
 import { StaticImage } from "gatsby-plugin-image";
-import imag from "../images/logo_baum.png";
 
 interface intensiveCareProps {
   data: {
@@ -26,7 +25,6 @@ interface intensiveCareProps {
 }
 
 export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
-  const image = "../../ima";
   return (
     <Layout classname="flex flex-col items-center w-full">
       <PageTitle paddingBottom={5} color={"#e53129"}>
@@ -81,7 +79,6 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
           <StaticImage
             className="items-center z-50 w-72 sm:w-96"
             // style={{ width: "300px", height: "170px" }}
-            // src="../../images/logo_baum.png"
             src="../images/schriftzug_Wohngemeinschaft.png"
             alt={""}
           />
