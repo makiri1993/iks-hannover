@@ -72,13 +72,11 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
           <StaticImage
             className="items-center w-6/12"
             style={{ width: "200px", height: "170px" }}
-            // src="../../images/logo_baum.png"
             src="../images/logo_baum.png"
             alt={""}
           />
           <StaticImage
             className="items-center z-50 w-72 sm:w-96"
-            // style={{ width: "300px", height: "170px" }}
             src="../images/schriftzug_Wohngemeinschaft.png"
             alt={""}
           />
