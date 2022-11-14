@@ -49,7 +49,9 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
       </p>
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="flex flex-col  items-center py-8">
-          <img className="w-7/12" src={GraphqlData.imagejasmin.sourceUrl} />
+          <img className="w-7/12" src={GraphqlData.imagejasmin.sourceUrl}
+               alt="Profile picture Jasmin "
+          />
           <span className="text-[#ee7917] text-2xl py-3">
             Jasmin Arbabian-Vogel
           </span>
@@ -58,17 +60,21 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
           <img
             className="w-5/12 mt-4"
             src={GraphqlData.signimagejasmin.sourceUrl}
-            alt="Profile picture Jasmin "
+            alt="Signature Image Jasmin"
           />
         </div>
         <div className="flex flex-col items-center py-8">
-          <img className="w-7/12" src={GraphqlData.imagegalina.sourceUrl} />
+          <img
+            className="w-7/12"
+            src={GraphqlData.imagegalina.sourceUrl}
+            alt="Profile picture Galina"
+          />
           <span className="text-[#ee7917] text-2xl py-3">Galina Fiksmann</span>
           <span>{GraphqlData.rolegalina}</span>
           <img
             className="w-5/12 mt-4"
             src={GraphqlData.signimagegalina.sourceUrl}
-            alt="Profile picture Galina"
+            alt="Signature Image Galina"
           />
         </div>
       </div>
