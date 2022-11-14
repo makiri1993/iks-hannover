@@ -30,15 +30,15 @@ export const NavigationTile: React.FC<NavigationTileProps> = ({ toggle }) => {
         </div>
       ))}
       <div className="flex flex-col relative h-full top-12 lg:top-16 left-4 items-start w-full">
-        <a href="https://www.facebook.com/ikshannover/">
+        <a aria-label="Facebook" href="https://www.facebook.com/ikshannover/">
           <StaticImage
             alt={""}
             className="w-1/12"
             src="../../images/fb_icon.png"
           />
         </a>
-        <Link to={"/impressum"}>impressum </Link>
-        <Link to={"/dataSecurity"}>Datenschutz </Link>
+        <Link aria-label="Impressum" to={"/impressum"}>impressum </Link>
+        <Link aria-label="Datenschutz" to={"/dataSecurity"}>Datenschutz </Link>
       </div>
     </div>
   );

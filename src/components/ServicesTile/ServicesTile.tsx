@@ -32,8 +32,10 @@ export const ServicesTile: React.FC<ServicesTileProps> = ({
   return (
     <div className="flex flex-col justify-center items-center w-11/12 md:w-6/12 lg:w-4/12 py-8">
       <a
+        aria-label="Links to Service Pages"
         href={handlingTitleColorAndRoute(index, true)}
         className="flex flex-col items-center justify-center w-full"
+        
       >
         <img className="rounded-full w-4/12" src={sourceUrl} alt="Service Logos" />
       </a>

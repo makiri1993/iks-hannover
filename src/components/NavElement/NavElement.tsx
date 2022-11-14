@@ -85,6 +85,7 @@ export const NavElement: React.FC<NavElementProps> = ({
               to={title.path}
               activeClassName={`${handleEmptyRoute(title.path)}`}
               aria-current={"page"}
+              aria-label="Links to Service Pages and has the image Logo left to it"
             >
               {title.title}
             </Link>
@@ -96,6 +97,8 @@ export const NavElement: React.FC<NavElementProps> = ({
             to={title.path}
             activeClassName={`${handleEmptyRoute(title.path)}`}
             aria-current={"page"}
+            aria-label="all other tiles of the Navigation"
+
           >
             {title.title}
           </Link>
