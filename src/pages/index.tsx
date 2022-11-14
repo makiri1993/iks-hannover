@@ -57,7 +57,7 @@ interface HomepageProps {
 
 const IndexPage: React.FC<HomepageProps> = ({ data }) => {
   return (
-    <main className="flex flex-col w-full items-center relative z-10">
+    <main lang="ger-Ger" className="flex flex-col w-full items-center relative z-10">
       <Navigation />
       <Slider nodes={data.cms.slides.nodes} />
       <WelcomingIntro page={data.cms.page} />
