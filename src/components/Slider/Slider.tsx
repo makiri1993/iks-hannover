@@ -33,6 +33,7 @@ export const Slider: React.FC<SliderProps> = ({ nodes }) => {
       <div className=" z-10 w-full" style={{ minHeight: "260px" }}>
         <img
           style={{ minHeight: "260px" }}
+          alt="Homepage-Slides"
           className="w-full"
           src={nodes[slide].slidesFields.image.sourceUrl}
         />

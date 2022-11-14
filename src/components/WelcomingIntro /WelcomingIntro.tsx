@@ -58,7 +58,7 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
           <img
             className="w-5/12 mt-4"
             src={GraphqlData.signimagejasmin.sourceUrl}
-            alt={""}
+            alt="Profile picture Jasmin "
           />
         </div>
         <div className="flex flex-col items-center py-8">
@@ -68,7 +68,7 @@ export const WelcomingIntro: React.FC<HomepageProps> = ({ page }) => {
           <img
             className="w-5/12 mt-4"
             src={GraphqlData.signimagegalina.sourceUrl}
-            alt={""}
+            alt="Profile picture Galina"
           />
         </div>
       </div>

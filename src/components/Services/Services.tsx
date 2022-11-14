@@ -19,7 +19,6 @@ export const Services: React.FC<ServicesProps> = ({ nodes }) => {
     <div className="flex flex-col items-center">
       <div
         className="flex flex-row justify-center items-start z-10 flex-wrap w-full "
-        // style={{ height: "800px" }}
       >
         {nodes.map((elements, index) => (
           <ServicesTile
