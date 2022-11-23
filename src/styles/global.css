@@ -16,7 +16,7 @@ body {
     align-items: center;
     flex-grow: 1;
     width: 100%;
-
+    object-fit: cover;
 }
 
 #___gatsby > div {
@@ -64,6 +64,7 @@ p.wisAtest {
     -ms-border-radius: 150px;
     -o-border-radius: 150px;
     border-radius: 150px;
+    object-fit: cover;
 }
 
 .job h4 {
