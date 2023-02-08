@@ -60,7 +60,7 @@ export const intensiveCare: React.FC<intensiveCareProps> = ({ data }) => {
           <MailcontactLink
             name="Marion Hartmann"
             role="Leitung der Intensivpflege"
-            email="hartman@iks-hannover.de"
+            email="hartmann@iks-hannover.de"
           />{" "}
           <MailcontactLink
             name="Marco Schillaci"
