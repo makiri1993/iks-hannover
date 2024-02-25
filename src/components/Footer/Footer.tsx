@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
                 <a href="mailto:iks-hannover@iks-hannover.de">
                   Mail:{elements.Mail}
                 </a>
-                <Link className="underline" to={"/Impressum"}>
+                <Link className="underline" to={"/impressum"}>
                   Impressum
                 </Link>
                 <Link className="underline" to={"/dataSecurity"}>
